@@ -1,6 +1,5 @@
 Notes:
 
-
 Igda.org - International games developers association
 
 Games take ~ 2 years to build
@@ -13,8 +12,6 @@ Console have shelf life of 10 years
 
 Make predictions for the game you're building at the present for the future
 
-
-
 Look at the trends
 
 Identity trends that you have no control over
@@ -25,13 +22,11 @@ Make predictions
 
 Always check if right
 
-
 Hardware industry dominated by mobiles
 
 Low power/cost
 
 Compute and storage
-
 
 GPU outlier
 
@@ -45,13 +40,11 @@ AI - emotion
 
 Like, guy here is swearing lot, let's reduce difficulty
 
-
 3 types of gamers
 
 Price (in)sensitive - (best graphics and hardware) performance for price
 
 Mobile game - social, casual, innovative. Not willing to pay much
-
 
 AAA games?
 
@@ -61,21 +54,17 @@ All about money
 
 Take a risk to lower cost
 
-
 2 types of games
 
 Small and cheap - mobile
-
 
 Large and expensive - lots of money spent before game is actually made. E.g gta5
 
 Middle gap so maybe adjust programming for art? So art's going to be cheaper and quicker with pre-designed art
 
-
 Satalite for communication? Less delay between input
 
 May happen 2020
-
 
 Game risk = movie risk
 
@@ -87,9 +76,7 @@ End of DRM - piracy proof
 
 Rethink of the end device we use
 
-
 American idol. Made it able to vote - interact. But if record to skip adverts, can't vote
-
 
 Hardware prices will go down
 
@@ -108,7 +95,6 @@ New class of device may show up
 Or console price build will become cheaper
 
 Gamers have lots of disabled people
-
 
 Are you targeting money or market?
 
