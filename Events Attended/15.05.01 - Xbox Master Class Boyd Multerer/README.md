@@ -2,7 +2,6 @@ Notes
 
 
 Igda.org - International games developers association
-
 Games take ~ 2 years to build
 
 Be careful of the game development life cycle (check on wiki)
