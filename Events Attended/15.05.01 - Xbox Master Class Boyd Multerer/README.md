@@ -1,7 +1,8 @@
-Notes
+Notes:
 
 
 Igda.org - International games developers association
+
 Games take ~ 2 years to build
 
 Be careful of the game development life cycle (check on wiki)
@@ -11,6 +12,7 @@ Build for the future
 Console have shelf life of 10 years
 
 Make predictions for the game you're building at the present for the future
+
 
 
 Look at the trends
