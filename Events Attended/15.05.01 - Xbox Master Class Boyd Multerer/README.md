@@ -7,6 +7,7 @@
 - Console have shelf life of 10 years
 - Make predictions for the game you're building at the present for the future
 
+
 Look at the trends
 - Identity trends that you have no control over
 - Choose a few for timeframe
