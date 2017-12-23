@@ -5,4 +5,4 @@ I got paired up with a fellow student, an artist and two other programmers, and 
 
 It was the first time ever being at an event like this and I was surrounded by people graduated, working professionally and going to this event for fun so I stated my skills - little bit of GameMaker, Unity and C#, Blender, and Java, and tried to help out as much as I could. I ended up not doing very much and eventually sat and watched how a team works together to build a game. 
 
-We called the finished game "Splat" and uploaded the game onto the Global Game Jam site for people to play. Unfortunately now the game has been taken down from the website and we're only left with the source files. I'll see if I can recreate the game with the source files though! 
+We called the finished game "Splat" and uploaded the game onto the [Global Game Jam site](https://globalgamejam.org/2015/games/splat-0) for people to play. Unfortunately now the game has been taken down from the website and we're only left with the source files. I'll see if I can recreate the game with the source files though! 
