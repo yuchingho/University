@@ -41,7 +41,7 @@ This repository is not yet finished but will be when all the tasks below are com
 - [ ] 6) Semester Two - Level Design
 
 #### 4) UWS Fourth Year
-- [ ] 1) 
+
 
 #### Events Attended
 - [ ] 15.01.26 to 15.01.28 - Global Game Jam Glasgow Caledonian
