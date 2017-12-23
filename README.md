@@ -31,7 +31,7 @@ In January 2017 I wanted to create my own website and to achieve that I found [N
 - [ ] 7) Semester Two - THR218 Beginning Acting
 
 ## 3) UWS Third Year
-- [ ] 1) Semester One - Creative Technology Professionalism
+- [x] 1) Semester One - Creative Technology Professionalism
 - [ ] 2) Semester One - HTML5 & JavaScript Games Project
 - [ ] 3) Both Semesters - Game Development Project
 - [ ] 4) Semester Two - Advanced Programming Mobile Devices
