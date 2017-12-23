@@ -1,8 +1,8 @@
 ## Hello
 
-This repository will contain lectures, lab work and projects from when I entered university in September 2014 to when I graduate.
+This repository will contain lectures, lab work and projects from when I entered university to when I graduate.
 
-In January 2017 I wanted to create my own website and to achieve that I found [Neocities] (https://neocities.org/), a website that allowed users to create their own custom website with HTML5, JavaScript and CSS. At the start, I had very little experience with those languages but over time my skills and confidence increased. Later that year, I started using Github more seriously and decided to transfer my site over. 
+In January 2017 I wanted to create my own website and to achieve that I found [Neocities](https://neocities.org/), a website that allowed users to create their own custom website with HTML5, JavaScript and CSS. At the start, I had very little experience with those languages but over time my skills and confidence increased. Later that year, I started using Github more seriously and decided to transfer my site over. 
 
 This repository is not yet finished but will be when all the tasks below are completed.
 
