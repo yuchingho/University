@@ -2,9 +2,7 @@ These are the events I went to during my university time. The above folders are 
 
 ## UWS First Year
 - Brothers: A Tale of Two Sons
-  > A talk I attended that got me thinking about my serious game for Chemistry\
-  _\*Spoiler\*_\
-  It was about "Serious Games" and different ways gameification can enhance lives. Several examples were given like:\
+  > A talk I attended that got me thinking about my Chemistry game.  It was about "Serious Games" and different ways gameification can enhance lives. Several examples were given like:\
   Keeping below the speed limit - a speed camera was placed on a highway and if drivers kept below the speed limit, they were automatically entered into the national lottery.\
   [Games solve 10 Year Old HIV Puzzle in 10 days](https://www.zmescience.com/research/studies/gamers-solve-decade-old-hiv-puzzle-in-ten-days/)\
   [Brothers: A Tale of Two Sons](http://www.brothersthegame.com/) taught the loss of someone close to you through how the controller was held.
