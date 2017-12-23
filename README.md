@@ -1,4 +1,4 @@
-## Hello
+# Hello
 
 This repository will contain lectures, lab work and projects from when I entered university to when I graduate.
 
@@ -42,8 +42,8 @@ In January 2017 I wanted to create my own website and to achieve that I found [N
 
 
 #### Events Attended
-- [ ] 15.01.26 to 15.01.28 - Global Game Jam Glasgow Caledonian
-- [ ] 15.02.20 to 15.02.22 - Scottish Institute for Enterprise & UWS Games Development Society Game Jam
+- [x] 15.01.26 to 15.01.28 - Global Game Jam Glasgow Caledonian
+- [x] 15.02.20 to 15.02.22 - Scottish Institute for Enterprise & UWS Games Development Society Game Jam
 - [x] 15.05.01 - Xbox Master Class Boyd Multerer
-- [ ] 15.05.05 to 15.05.07 - UWS Animation Game Jam
-- [ ] 17.11.10 - Arnold Clark Hack Day
+- [x] 15.05.05 to 15.05.07 - UWS Animation Game Jam
+- [x] 17.11.10 - Arnold Clark Hack Day
