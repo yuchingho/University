@@ -65,4 +65,12 @@ These are the events I went to during my university time. The above folders are 
 - [Grads in Games](http://gradsingames.com/) - finding jobs in the game development industry
 - Riot API - access to League game data
 - Jagex - video game company, best known for RuneScape
+- quill18creates (Unity Youtube tutorials)
+- ratemyplacement website
+- adoptanintern website
+- s1jobs website
+- cwjobs website
+- jobserve website
+- practiceaptitute tests website
+- Trainee Finder website
 - LeogLand?
