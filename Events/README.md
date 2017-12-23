@@ -1,5 +1,5 @@
-These are the events I went to during my university time. The above folders are more specific ones while the ones below are more general with random notes.
-
+These are the events I went to during my university time.\
+The above folders are for specific events while the documents and below are more general.
 ## UWS First Year
 - Brothers: A Tale of Two Sons
   > A talk I attended that got me thinking about my Chemistry game.  It was about "Serious Games" and different ways gameification can enhance lives. Several examples were given like:\
