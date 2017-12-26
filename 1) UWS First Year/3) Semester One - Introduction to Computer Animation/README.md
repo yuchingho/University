@@ -46,6 +46,7 @@ As for the videos, they are from a web-page with no way to save it, so I am reco
 
 ## Week05
 - [ ] Assessment01
+- [x] Assessment02 - Multiple choice test: 27/30
 
 ## Week06
 - [x] Recording Tutorial01
@@ -98,5 +99,6 @@ As for the videos, they are from a web-page with no way to save it, so I am reco
 - [ ] Doing Tutorial03
 
 ## Week10 +
-- [ ] Assessment03
-- [ ] Assessment04
+- [ ] Assessment03 - Very Good. Strange looking but good.
+- [ ] Assessment04 - Very Good. The odd problem with the camera and the vehicle but on the whole, very good animation and use of camera.
+Overall Final Mark - A
