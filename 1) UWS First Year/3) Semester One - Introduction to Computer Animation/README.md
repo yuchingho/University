@@ -97,4 +97,6 @@ As for the videos, they are from a web-page with no way to save it, so I am reco
 - [ ] Doing Tutorial02
 - [ ] Doing Tutorial03
 
-## Assessment03 and Assessment04
+## Week10 +
+- [ ] Assessment03
+- [ ] Assessment04
