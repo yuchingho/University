@@ -1,1 +1,1 @@
-# university
+Creative Computing Profession taught me about the different aspects of the Game Industry and did give a very interesting lecture on Intellectual Property, but the general consensus was that this module should have been in later years when the information would be more relevant to students about to step into the industry.
