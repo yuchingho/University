@@ -1,5 +1,5 @@
 Resources Folder contain the assets used to build Example.gmk file.\
-Example.gmk show how the game was programmed.\
+Example.gmk shows how the game was programmed.\
 Example.pdf gives a tutorial on how the game was programmed.\
 MP4 Link directs to a Google Drive video showing the game played.
 
