@@ -16,4 +16,4 @@ I had several experiences that influnced my final idea:
 - As a Student Guide, surveys had to be completed.
 - Learning from my modules "Programming for Native App Interaction" and "Programming for Mobile Devices"
 
-My final idea was a prototype web application so students can be more involved with university life - enrollment, seeing their own personal timetable because they've logged in with their Banner ID, seeing notifications specific to their course, university events and being able to complete surveys from their phones instead of Student Guides chasing around students with iPads. I wrote up a Design Document and built a very simple prototype with HTML5.
+My final idea was a prototype web application so students can be more involved with university life - enrollment, seeing their own personal timetable because they've logged in with their Banner ID, seeing notifications specific to their course, university events and being able to complete surveys from their phones and earn rewards. I wrote up a Design Document and built a very simple prototype with HTML5.
