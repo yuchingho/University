@@ -1,4 +1,4 @@
-# Grades
+# Grades Level 7
 
 | | Subject | Mark | Grade | Credit | ECTS Points |
 | :--: | --- | :--: | :--: | :--: | :--: |
