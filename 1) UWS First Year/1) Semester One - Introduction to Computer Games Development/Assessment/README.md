@@ -1,4 +1,4 @@
-# Introduction to Computer Games Development Assessment
+# Assessment
 
 Assessment.pdf gives the outline of the submission:
 - A Game Design Document
