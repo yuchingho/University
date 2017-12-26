@@ -14,3 +14,6 @@
 | PED 151 | Beginner Fitness: Exercise Basics| 1.0 | 1.0 | 0.000 | S |
 | PED 151 | Beginner Fitness: Weight Training | 1.0 | 1.0 | 0.000 | S |
 |  | Spring Semester GPA |  |  |  | 3.5 |
+
+During my time in America, always googling the conversion unit rate became exhausting so I took the most commonly used units and built an extremely simple app with Android Studio.\
+I quickly built a version and released the app on the Google Play Store in November 2016 but of September 2017, I removed it and released an updated version - [Simple Unit Converter Repository](https://github.com/yuchingho/SimpleUnitConverter)
