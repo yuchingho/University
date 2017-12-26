@@ -1,4 +1,4 @@
-# Grades Level 
+# Grades 
 | | | Credits | Credits | Numeric | Letter |
 | :--: | --- | :--: | :--: | :--: | :--: |
 | | __Subject__ | __Attempted__ | __Earned__ | __Grade__ | __Grade__ |
