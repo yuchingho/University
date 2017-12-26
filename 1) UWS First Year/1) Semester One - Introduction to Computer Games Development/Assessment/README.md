@@ -6,5 +6,6 @@ Assessment.pdf gives the outline of the submission:
 - CD Cover
 - GameMaker Executable File
 
-The Audio and Images folders are the assets I used to build the game and LoL_Maze.gm81 is the GameMaker file which you can see how it was programmed.\
+Audio and Images Folders contain the assets used to build LoL_Maze.gm81 file.\
+LoL_Maze.gm81 shows how the game was programmed.\
 LoL_Maze.exe is the file to play the game.
