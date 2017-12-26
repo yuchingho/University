@@ -13,6 +13,7 @@ As I am recompiling my university work, I have lost quite a few files so I am re
 - [x] Doing Tutorial02 and creating GIF
 - [x] Doing Tutorial03 and creating GIF
 - [x] Doing Tutorial04 and creating GIF
+- [x] Doing Week's lab work
 
 ## Week02
 - [x] Recording Tutorial01
@@ -26,12 +27,14 @@ As I am recompiling my university work, I have lost quite a few files so I am re
 - [ ] Doing Tutorial04 and creating GIF
 - [ ] Doing Tutorial05 and creating GIF
 - [ ] Doing Tutorial06 and creating GIF
+- [ ] Doing Week's lab work
 
 ## Week03
 - [x] Recording Tutorial01
 - [x] Recording Tutorial02
 - [ ] Doing Tutorial01 and creating GIF
 - [ ] Doing Tutorial02 and creating GIF
+- [ ] Doing Week's lab work
 
 ## Week04
 - [x] Recording Tutorial01
@@ -42,6 +45,7 @@ As I am recompiling my university work, I have lost quite a few files so I am re
 - [ ] Doing Tutorial02 and creating GIF
 - [ ] Doing Tutorial03 and creating GIF
 - [ ] Doing Tutorial04 and creating GIF
+- [ ] Doing Week's lab work
 
 ## Week05
 - [ ] Assessment01
