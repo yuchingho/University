@@ -1,0 +1,220 @@
+﻿﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>UWS Rewards Prototype</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" />
+    <link rel = "stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css"/>
+    <script src = "http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src = "http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+    <style type = "text/css">.img { display: block; margin-left: auto; margin-right: auto; }</style>
+</head>
+<body>
+
+<!-- Registration --><div data-role = "page" id = "home" align = "center">
+    <div data-role = "header"><h1>Registration (Only shows once)</h1></div><div data-role = "content">
+    <center><img id = "UWSLogo" src = "logo.png" style = "width: 50%; height: 50%;" alt = "UWSLogo"></center>
+    <div align = "left" style = "padding-left: 25vw">
+        <p> Filling out details</p>
+        <p> - First name</p>
+        <p> - (Middle name)</p>
+        <p> - Last name</p>
+        <p> - Date of Birth</p>
+        <p> - Banner ID</p>
+        <p> - Selection of Campus</p>
+        <p> - Selection of Year</p>
+        <p> - Selection of School</p>
+        <p> - Course studying</p>
+        <p> - Student Selection</p>
+    </div>
+    <ul data-role = "listview" data-inset = "true">
+        <li><a href = "#pg1">Confirm</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Registration (Only shows once)</h4></div>
+</div><!-- Registration -->
+<!-- Page --><div data-role = "page" id = "pg1">
+    <div data-role = "header"><h1>UWS Rewards Prototype</h1></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <li><a href = "#points">Points = [Number] (Nothing)</a></li>
+        <li><a href = "#events">Events (Nothing)</a></li>
+        <li><a href = "#timetable">Timetable (Nothing)</a></li>
+        <li><a href = "#t1module1">Trimester01 Module01</a></li>
+        <li><a href = "#t1module2">Trimester01 Module02 (Nothing)</a></li>
+        <li><a href = "#t1module3">Trimester01 Module03 (Nothing)</a></li>
+        <li><a href = "#t2module1">Trimester02 Module01 <br>[Greyed Out] (Nothing)</a></li>
+        <li><a href = "#t2module2">Trimester02 Module02 <br>[Greyed Out] (Nothing)</a></li>
+        <li><a href = "#t2module3">Trimester02 Module03 <br>[Greyed Out] (Nothing)</a></li>
+        <p style = "margin: 20px"><u>Self-Service Banner</u></p>
+        <li><a href = "#grades">Grades (Nothing)</a></li>
+        <li><a href = "#attendance">Attendance Records (Nothing)</a></li>
+        <li><a href = "#sports">Sports and Societies</a></li>
+        <li><a href = "#unionevents">Student Union Events</a></li>
+        <li><a href = "#volunteering">Volunteering</a></li>
+        <p style = "margin: 20px">When applicable, a pop-up will appear for the most important surveys</p>
+        <li><a href = "#surveys">Surveys</a></li>
+        <li><a href = "#engagement">Student Engagement</a></li>
+        <li><a href = "#studentjobs">Student Jobs</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>UWS Rewards Prototype</h4></div>
+</div><!-- Page -->
+<!-- t01module01 --><div data-role = "page" id = "t1module1">
+    <div data-role = "header"><h1>Module01</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset="true">
+        <li><a href = "#lecturer">Lecturer Name</a></li>
+        <li><a href = "#">Assessments (Nothing)</a></li>
+        <li><a href = "#week1">Week 1</a></li>
+        <p style = "margin: 20px">Carries on with Week 2, 3, etc...</p>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Module01</h4></div>
+</div><!-- t01module01 -->
+<!-- Lecturer --><div data-role = "page" id = "lecturer">
+    <div data-role = "header"><h1>Lecturer</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <li><a href = "#">Email (Nothing)</a></li>
+        <li><a href = "#">Office Location (Nothing)</a></li>
+        <li><a href = "#">Office Hours (Nothing)</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Lecturer</h4></div>
+</div><!-- Lecturer -->
+<!-- Week01 --><div data-role = "page" id = "week1">
+    <div data-role = "header"><h1>Week01</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <li><a href = "#">Lecture (Nothing)</a></li>
+        <p style = "margin: 20px">Downloadable</p>
+        <li><a href = "#">Lab (Nothing)</a></li>
+        <p style = "margin: 20px">Downloadable</p>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Week01</h4></div>
+</div><!-- Week01 -->
+<!-- Sports --><div data-role = "page" id = "sports">
+    <div data-role = "header"><h1>Sports and Societies</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <p style = "margin: 20px"><br>Bronze</p>
+        <p style = "margin: 20px">Silver</p>
+        <p style = "margin: 20px">Gold</p>
+        <li><a href = "#football">Football</a></li>
+        <li><a href = "#">Complete list of Sports and Societies (Nothing)</a></li>
+    </ul>
+</div>
+    <div data-role="footer" data-position="fixed"><h4>Sports and Societies</h4></div>
+</div><!-- Sports -->
+<!-- Football --><div data-role = "page" id = "football">
+    <div data-role = "header"><h1>Football</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <p style = "margin: 20px"><br>Explanation of Football at UWS</p>
+        <p style = "margin: 20px">When</p>
+        <p style = "margin: 20px">Where</p>
+        <p style = "margin: 20px">How many points you earn</p>
+        <li><a href = "#">Attendance (Nothing)</a></li>
+        <li><a href = "#">Week01 (Nothing)</a></li>
+        <li><a href = "#">Week02 (Nothing)</a></li>
+        <li><a href = "#">Week03 (Nothing)</a></li>
+        <li><a href = "#">Join the team? (Nothing)</a></li>
+        <li><a href = "#">Become a representative of the club? (Nothing)</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Football</h4></div>
+</div><!-- Football -->
+<!-- StudentUnion_Events --><div data-role = "page" id = "unionevents">
+    <div data-role = "header"><h1>Student Union Events</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <p style = "margin: 20px"><br><u>What's On</u></p>
+        <li><a href = "#">Fresher's Week</a></li>
+        <li><a href = "#">Monday night - Pub Quiz</a></li>
+        <li><a href = "#">Tuesday night -  Skint Tuesdays</a></li>
+        <li><a href = "#">Wednesday night - Free pool</a></li>
+        <li><a href = "#">Thursday night - Karaoke night</a></li>
+        <li><a href = "#">Friday night - Last Union Party!</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Student Union Events</h4></div>
+</div><!-- StudentUnion_Events -->
+<!-- Volunteering --><div data-role = "page" id = "volunteering">
+    <div data-role = "header"><h1>Volunteering</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <li><a href ="#">Gardening (Nothing)</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Volunteering</h4></div>
+</div><!-- Volunteering -->
+<!-- Engagement --><div data-role = "page" id = "engagement">
+    <div data-role = "header"><h1>Student Engagement</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <li><a href ="#">Zombie Night (Nothing)</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Student Engagement</h4></div>
+</div><!-- Engagement -->
+<!-- Surveys --><div data-role = "page" id = "surveys">
+    <div data-role = "header"><h1>Surveys</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <li><a href = "#">Student Dissertations (Nothing)</a></li>
+        <li><a href = "#">Catering Survey (Nothing)</a></li>
+        <li><a href = "#">NSS Survey (Nothing)</a></li>
+        <li><a href = "#">UKES Survey (Nothing)</a></li>
+        <li><a href = "#">NUS Survey (Nothing)</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Surveys</h4></div>
+</div><!-- Surveys -->
+<!-- StudentJobs --><div data-role = "page" id = "studentjobs">
+    <div data-role = "header"><h1>Student Jobs</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <p style = "margin: 20px"><br>Get involved with the university!</p>
+        <li><a href = "#guide">Student Guide/Buddy</a></li>
+        <li><a href = "#">Student Fellowship (Nothing)</a></li>
+        <li><a href = "#">Student Representative (Nothing)</a></li>
+        <li><a href = "#">Student Ambassador (Nothing)</a></li>
+        <li><a href = "#">Student Warden (Nothing)</a></li>
+        <p style = "margin: 20px">Volunteer within the university!</p>
+        <li><a href = "#">Volunteering Jobs (Nothing)</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Student Jobs</h4></div>
+</div><!-- StudentJobs -->
+<!-- StudentGuide --><div data-role = "page" id = "guide">
+    <div data-role = "header"><h1>Student Guide</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <p style = "margin: 20px"><br>Explanation of what a Student Guide is.</p>
+        <p style = "margin: 20px">What you can do.</p>
+        <p style = "margin: 20px">How much impact you will have. </p>
+        <p style = "margin: 20px">How it will affect your CV. </p>
+        <p style = "margin: 20px">How many hours required per week. </p>
+        <p style = "margin: 20px">If paid, how much is earned per hour.</p>
+        <p style = "margin: 20px">How you rank up as you carry on. </p>
+        <p style = "margin: 20px">How many points you will earn and how the points will multiply for every year you're doing it.</p>
+        <p style = "margin: 20px">e.g.</p>
+        <p style = "margin: 20px">1st Year as Student Guide - Normal points earned.</p>
+        <p style = "margin: 20px">2nd Year as Student Guide - Normal points earned x 2</p>
+        <p style = "margin: 20px">3rd Year as Student Guide - Normal points earned x 3</p>
+        <p style = "margin: 20px">4th Year as Student Guide - Normal points earned x 4</p>
+        <li><a href = "#apply">Apply</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Student Guide</h4></div>
+</div><!-- StudentGuide -->
+<!-- Apply --><div data-role = "page" id = "apply">
+    <div data-role = "header"><h1>Apply!</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <li><a href = "#">This year is full! (Nothing)</a></li>
+        <li><a href = "#apply2">Apply for next year.</a></li>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Apply!</h4></div>
+</div><!-- Apply -->
+<!-- Apply2 --><div data-role = "page" id = "apply2">
+    <div data-role = "header"><h1>Application Process</h1><a href = "#" data-rel = "back" dataicon = "back">Back</a></div><div data-role = "content">
+    <ul data-role = "listview" data-inset = "true">
+        <p style = "margin: 20px"><br>How to Apply</p>
+        <p style = "margin: 20px">When to Apply</p>
+    </ul>
+</div>
+    <div data-role = "footer" data-position = "fixed"><h4>Application Process</h4></div>
+</div><!-- Apply2 -->
+
+</body>
+</html>
