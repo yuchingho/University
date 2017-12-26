@@ -34,10 +34,10 @@ In January 2017 I wanted to create my own website and to achieve that, I found [
 ## 2017 UWS Third Year
 - [x] 1) Semester One - Creative Technology Professionalism
 - [ ] 2) Semester One - HTML5 & JavaScript Games Project
-- [ ] 3) Both Semesters - Game Development Project
-- [ ] 4) Semester Two - Advanced Programming Mobile Devices
-- [ ] 5) Semester Two - Research Methods in Computing
-- [ ] 6) Semester Two - Level Design
+3) Both Semesters - Game Development Project
+4) Semester Two - Advanced Programming Mobile Devices
+5) Semester Two - Research Methods in Computing
+6) Semester Two - Level Design
 
 ## 2018 UWS Fourth Year
 
