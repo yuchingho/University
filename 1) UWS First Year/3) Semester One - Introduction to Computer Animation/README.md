@@ -7,7 +7,7 @@ Introduction to Computer Animation was focused on:
 </p>
 
 
-This folder is not finished, and will be when I have completed all of below:
+This folder is not finished, and will be when I have completed all of below:\
 As I am recompiling my university work, I have lost quite a few files so I am redoing the tutorials. As for the videos, they are from a web-page with no way to save it, so I am recording them all with [OBS Studio](https://obsproject.com/) and uploading it onto my Vimeo page.
 ## Week01
 - [x] Recording Tutorial01
