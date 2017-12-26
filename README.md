@@ -19,8 +19,8 @@ In January 2017 I wanted to create my own website and to achieve that, I found [
 - [ ] 4) Semester Two - Programming for Native App Interaction
 - [ ] 5) Semester Two - Programming for Mobile Devices
 - [ ] 6) Semester Two - Computing Project
-- [ ] UWS Student Association Free Shop
-- [ ] UWS Student Fellowship
+- [x] UWS Student Association Free Shop
+- [x] UWS Student Fellowship
 
 ## 2016 Mercer University Erasmus Year
 - [ ] 1) Semester One - CSC205 Programming II
