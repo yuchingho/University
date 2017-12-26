@@ -1,7 +1,7 @@
 # Grades 
-| | | Credits | Credits | Numeric | Letter |
+| | Subject | Credits | Credits | Numeric | Letter |
 | :--: | --- | :--: | :--: | :--: | :--: |
-| | __Subject__ | __Attempted__ | __Earned__ | __Grade__ | __Grade__ |
+| |  | __Attempted__ | __Earned__ | __Grade__ | __Grade__ |
 | CSC 205 | Programming II | 4.0 | 4.0 | 0.000 | C |
 | PSY 101 | Introduction to Psychology | 3.0 | 3.0 | 0.000 | B |
 | SOC 101 | Introductory Sociology | 3.0 | 3.0 | 0.000 | C |
