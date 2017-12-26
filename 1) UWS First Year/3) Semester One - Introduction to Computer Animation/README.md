@@ -100,5 +100,5 @@ As for the videos, they are from a web-page with no way to save it, so I am reco
 
 ## Week10 +
 - [ ] Assessment03 - Very Good. Strange looking but good.
-- [ ] Assessment04 - Very Good. The odd problem with the camera and the vehicle but on the whole, very good animation and use of camera.
+- [ ] Assessment04 - Very Good. The odd problem with the camera and the vehicle but on the whole, very good animation and use of camera.\
 Overall Final Mark - A
