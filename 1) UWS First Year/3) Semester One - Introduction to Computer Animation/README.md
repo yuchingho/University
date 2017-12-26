@@ -2,6 +2,11 @@ Introduction to Computer Animation was focused on:
 - 2D Animation using Adobe Flash Professional CS6
 - 3D Animation using Blender
 
+<p align="center">
+  <img src="https://github.com/yuchingho/university/blob/master/1)%20UWS%20First%20Year/3)%20Semester%20One%20-%20Introduction%20to%20Computer%20Animation/Week06%20-%20Introduction%20to%20Blender/Blender%20Quick%20Controls.png?raw=true" alt="Blender Quick Controls"/>
+</p>
+
+
 This folder is not finished, and will be when I have completed all of below:
 As I am recompiling my university work, I have lost quite a few files so I am redoing the tutorials. As for the videos, they are from a web-page with no way to save it, so I am recording them all with [OBS Studio](https://obsproject.com/) and uploading it onto my Vimeo page.
 ## Week01
