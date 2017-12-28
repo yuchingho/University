@@ -1,1 +1,1 @@
-# university
+Beginner Health: Nutrition in the Fast Lane focused on the [American Dietetic Association Complete Food and Nutrition Guide, Revised and Updated 4th Edition by Roberta Larson Duyff](https://www.amazon.com/gp/product/0470912073/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1) and completed assignments after reading parts of the book.
