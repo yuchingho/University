@@ -27,4 +27,4 @@ If you don't believe you are the character, then the viewers won't believe you. 
 It's easy to forget from nervousness but you want to reminder the viewer who you are; and if you're shooting for a big role, this video could quite literally change your life.
 10. Finally, do something that will make you stand out from the crowd!\
 Following rules and instructions get you far, but showcase your talent!\
-[An example video](https://www.youtube.com/watch?v=h8YJt6iQPNA).
+[An example video](https://www.youtube.com/watch?v=h8YJt6iQPNA)
