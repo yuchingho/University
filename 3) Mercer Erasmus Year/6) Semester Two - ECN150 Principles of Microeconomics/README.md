@@ -1,1 +1,1 @@
-# university
+Principles of Microeconomics focused on powerpoints and note-taking and online multiple choice tests were given out to test the knowledge learnt.
