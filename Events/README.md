@@ -71,3 +71,10 @@ The above folders are for specific events while the documents and below are more
 - practiceaptitute tests website
 - Trainee Finder website
 - LeogLand?
+
+## UWS Third Year
+Computing and Creative Technologies Employer Event Companies
+- Iomart (Cloud Server)
+- Veracity UK Ltd (Security)
+- Arnold Clark
+- Traveltek
