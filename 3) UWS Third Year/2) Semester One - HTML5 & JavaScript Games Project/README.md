@@ -1,1 +1,0 @@
-HTML5 & JavaScript Games Programming was focused on learning JavaScript and using the Phaser Framework to create a game that could then be embedded into a website. The assessment developed for this module was put into a seperate repository [Bubble Aliens](https://github.com/yuchingho/BubbleAliens).
