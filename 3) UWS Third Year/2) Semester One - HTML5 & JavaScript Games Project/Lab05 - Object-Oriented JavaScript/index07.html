@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+	<script>
+        var character_obj;
+        var human_obj;
+        var king;
+        var princess;
+
+        character_obj = function (objName) {
+            this.theNameObj = objName;
+            console.log("The "+this.theNameObj+" object is created");
+            this.characterSays = this.theNameObj + " says 'moooo";
+            this.walk = function() {
+                console.log(this.theNameObj + " can walk");
+            };
+            this.characterAlwaysSays = "hm'";
+        }; 
+        
+        human_obj = function (accessories) {
+            this.clothes = "Shirt";
+            this.accessories = accessories;
+        }; 
+
+        human_obj.prototype = new character_obj("Human King");
+        
+        king = new human_obj("Crown");
+        princess = new human_obj("Tiara");
+        
+        console.log(king.clothes);
+        console.log(king.accessories);
+        console.log(princess.clothes);
+        console.log(princess.accessories);
+        
+        
+        king.walk();
+
+	</script>
+    </head>
+    <body>
+    </body>
+</html>

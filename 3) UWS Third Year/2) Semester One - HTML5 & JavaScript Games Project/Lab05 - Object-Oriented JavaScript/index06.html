@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+	<script>
+        var character_obj;
+        var human_obj;
+        var orc_obj;
+        var cow_obj;
+
+        character_obj = function (objName) {
+            this.theNameObj = objName;
+            console.log("The "+this.theNameObj+" object is created");
+            this.characterSays = this.theNameObj + " says 'moooo";
+            this.walk = function() {
+                console.log(this.theNameObj + " can walk");
+            };
+            this.characterAlwaysSays = "hm'";
+        }; 
+        
+        character_obj.prototype.talk = function() {
+            console.log(this.theNameObj + " can talk");
+        };
+        
+        human_obj = new character_obj("Human");
+        human_obj.walk();
+        
+        orc_obj = new character_obj("Orc");
+        orc_obj.walk();
+        
+        cow_obj = new character_obj("Cow");
+        cow_obj.walk();
+        
+        
+        
+        
+        console.log("-----------------1. try to change walk method in character_obj and doesnt work---------------------");
+        character_obj.walk = function() {
+            console.log(this.theNameObj + " can more walk");
+        };
+        human_obj.walk();
+        orc_obj.walk();
+        cow_obj.walk();
+        console.log("---------------------------------------------------------------")
+        
+        
+        console.log("-----------------2. ADD walk method into human_obj---------------------");
+        human_obj.walk = function() {
+            console.log(this.theNameObj + " can walk upright");
+        };
+        human_obj.walk();
+        orc_obj.walk();
+        cow_obj.walk();
+         console.log("---------------------------------------------------------------")
+       
+        
+        
+        console.log("-----------------3. CHANGE talk method in character_obj---------------------");        
+        character_obj.prototype.talk = function() {
+            console.log(this.theNameObj + " can talk like other character");
+        };
+        human_obj.talk();
+        orc_obj.talk();
+        cow_obj.talk();
+        console.log("---------------------------------------------------------------")
+	</script>
+    </head>
+    <body>
+    </body>
+</html>

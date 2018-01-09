@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+	<script>
+        var character_obj;
+        var human_obj;
+        var orc_obj;
+
+        character_obj = function (objName) {
+            this.theNameObj = objName;
+            console.log("The "+this.theNameObj+" object is created");
+            this.characterSays = this.theNameObj + " says 'moooo";
+            this.walk = function() {
+                console.log(this.theNameObj + " can walk");
+            };
+            this.characterAlwaysSays = "hm'";
+        }; 
+        
+        character_obj.prototype.talk = function() {
+            console.log(this.theNameObj + " can talk");
+        };
+        
+        human_obj = new character_obj("Human");        
+        orc_obj = new character_obj("Orc");
+        console.log(human_obj.characterSays + " " + human_obj.characterAlwaysSays);
+        console.log(orc_obj.characterSays + " " + orc_obj.characterAlwaysSays);
+        
+        console.log("--------------------Change the property values-----------------------------")
+        human_obj.characterSays = "This is Human Speaking";
+        orc_obj.characterAlwaysSays = "rrrrrrrr'";
+
+        console.log(human_obj.characterSays + " " + human_obj.characterAlwaysSays);
+        console.log(orc_obj.characterSays + " " + orc_obj.characterAlwaysSays);
+
+	</script>
+    </head>
+    <body>
+    </body>
+</html>
