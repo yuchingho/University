@@ -13,7 +13,7 @@ In January 2017 I wanted to create my own website and to achieve that, I found [
 - [x] 6) Semester Two - Computing Systems
 
 ## 2015 UWS Second Year
-- [ ] 1) Semester One - Computer Games Design
+- [x] 1) Semester One - Computer Games Design
 - [ ] 2) Semester One - HTML5 & JavaScript Programming
 - [ ] 3) Semester One - Digital Asset Development
 - [ ] 4) Semester Two - Programming for Native App Interaction
