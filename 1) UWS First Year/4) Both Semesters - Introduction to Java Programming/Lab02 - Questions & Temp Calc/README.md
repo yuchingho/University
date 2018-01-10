@@ -1,14 +1,23 @@
 # Console Output
 
-1. Hello World!
+1. What's your name?
+> Yu-Ching
 
-2. Hello World!
+How old are you?
+> 99
 
-3. Hello, Yu-Ching Ho
+Hello Yu-Ching. 99 is a nice age.
 
-4. Ho, Yu-Ching
+How tall are you in cm?
+> 999
 
-5. Hi, my name is Yu-Ching Ho.\
-I am 99 years old and I am 999cm.
+999cm is a good height.
 
-6. Initials outlined with asterisks
+2. What Fahrenheit temperature do you want converted into Celsius?\
+Please enter your temperature:
+> 32
+32.0°F is 0.0°C
+
+3. The first die comes up as 3.\
+The second die comes up as 1.\
+Your total roll is 4.
