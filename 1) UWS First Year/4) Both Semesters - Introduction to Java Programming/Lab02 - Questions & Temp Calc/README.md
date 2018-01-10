@@ -16,6 +16,7 @@ How tall are you in cm?
 2. What Fahrenheit temperature do you want converted into Celsius?\
 Please enter your temperature:
 > 32
+
 32.0°F is 0.0°C
 
 3. The first die comes up as 3.\
