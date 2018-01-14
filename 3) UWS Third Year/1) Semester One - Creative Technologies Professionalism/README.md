@@ -1,0 +1,1 @@
+Creative Technologies Professionalism focused on being professional in the Creative Industries, creating and increasing your portfolio with content and networking through guest speakers and LinkedIn.
