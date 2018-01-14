@@ -1,6 +1,6 @@
 This repository will contain lectures, lab work and projects from when I entered the University of the West of Scotland (UWS) to when I graduate.
 
-In January 2017 I wanted to create my own website with [Neocities](https://neocities.org/), though in December 2017 I started using Github andW decided to transfer my site over. This repository will not be finished until all tasks are ticked, and when I have graduated.
+In January 2017, I started creating my own website with [Neocities](https://neocities.org/), however in December 2017 I decided to transfer what I had created so far on Neocities over to Github. This repository will not be finished until all tasks are ticked, and when I have graduated.
 
 ## 2014 UWS First Year
 - [x] 1) Semester One - Introduction to Computer Games Development
@@ -32,10 +32,10 @@ In January 2017 I wanted to create my own website with [Neocities](https://neoci
 ## 2017 UWS Third Year
 - [x] 1) Semester One - Creative Technology Professionalism
 - [x] 2) Semester One - HTML5 & JavaScript Games Project
-3) Both Semesters - Game Development Project
+3) Both Semesters - Games Development Project
 4) Semester Two - Advanced Programming Mobile Devices
-5) Semester Two - Research Methods in Computing
-6) Semester Two - Level Design
+5) Semester Two - 3D Level Design
+6) Semester Two - Research Methods in Computing
 
 ## 2018 UWS Fourth Year
 
