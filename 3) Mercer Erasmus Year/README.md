@@ -8,6 +8,7 @@
 | PED 161 | Beginner Health: Nutrition in the Fast Lane | 1.0 | 1.0 | 0.000 | S |
 |  | First Year Student Experience |  |  | 0.000 | S |
 |  | Fall Semester GPA |  |  |  | 2.3 |
+|  |  |  |  |  |  |
 | CSC 204 | Programming I | 4.0 | 4.0 | 0.000 | B+ |
 | ECN 150 | Principles of Microeconomics | 3.0 | 3.0 | 0.000 | B |
 | THR 218 | Beginning Acting | 3.0 | 3.0 | 0.000 | A |
