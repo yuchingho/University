@@ -74,7 +74,11 @@ The above folders are for specific events while the documents and below are more
 
 ## UWS Third Year
 Computing and Creative Technologies Employer Event Companies
-- Iomart (Cloud Server)
-- Veracity UK Ltd (Security)
+- Game Dev Map website
+- STV
+- Harvey Nash
+- Veracity UK Ltd (Security), student placements
+- Morgan Stanley, TAP Graduate program
 - Arnold Clark
+- Iomart (Cloud Server)
 - Traveltek
