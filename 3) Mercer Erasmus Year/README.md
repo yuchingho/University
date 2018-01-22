@@ -6,7 +6,7 @@
 | PSY 101 | Introduction to Psychology | 3.0 | 3.0 | 0.000 | B |
 | SOC 101 | Introductory Sociology | 3.0 | 3.0 | 0.000 | C |
 | PED 161 | Beginner Health: Nutrition in the Fast Lane | 1.0 | 1.0 | 0.000 | S |
-|  | First Year Student Experience |  |  | 0.000 | S |
+| UNV 101 | First-Year-Student-Experience | 1.0 | 1.0 | 0.000 | S |
 |  | Fall Semester GPA |  |  |  | 2.3 |
 |  |  |  |  |  |  |
 | CSC 204 | Programming I | 4.0 | 4.0 | 0.000 | B+ |
