@@ -5,8 +5,8 @@ In January 2017, I started creating my own website with [Neocities](https://neoc
 ## 2014 UWS First Year
 - [x] 1) Semester One - Introduction to Computer Games Development
 - [x] 2) Semester One - Creative Computing Profession
-- [x] 3) Semester One - Introduction to Computer Animation
-- [ ] 4) Both Semesters - Introduction to Java Programming
+- 3) Semester One - Introduction to Computer Animation
+- [x] 4) Both Semesters - Introduction to Java Programming
 - [x] 5) Semester Two - Design for Interaction
 - [x] 6) Semester Two - Computing Systems
 
