@@ -1,3 +1,3 @@
 [The event](https://www.eventbrite.co.uk/e/uws-animation-and-game-jam-tickets-16690988195) started just after university ended for the summer. The theme was "communication" and our idea was progressing through how people communicated with each other and even though it made humanity closer, it also made us more isolated.
 
-My job was to research on the history of communcation between people, get image and audio references, and work on background ideas with a team-member. Different animatic parts were split between the other members and [the video Bonds](https://vimeo.com/232222349) was made.
+My job was to research on the history of communcation between people, get image and audio references, and work on background ideas with a team-member. Different animatic parts were split between the other members and [the video Bonds](https://youtu.be/_OIMqH19pn4) was made.
