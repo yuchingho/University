@@ -4,10 +4,10 @@ Example.pdf gives a tutorial on how the game was programmed.
 
 | GameMaker File |  |
 | --- | --- |
-|Example01 - 1945.gmk | [Video](https://vimeo.com/248778082) |
-|Example02 - 1945.gmk | [Video](https://vimeo.com/248778100) |
-|Example03 - 1945.gmk | [Video](https://vimeo.com/248778113) |
-|Example04 - 1945.gmk | [Video](https://vimeo.com/248778139) |
-|Example05 - 1945.gmk | [Video](https://vimeo.com/248778170) |
-|Example06 - 1945.gmk | [Video](https://vimeo.com/248778187) |
-|Example07 - 1945.gmk | [Video](https://vimeo.com/248778210) |
+|Example01 - 1945.gmk | [Video](https://youtu.be/i7YIqon1no4) |
+|Example02 - 1945.gmk | [Video](https://youtu.be/hG5Swd4LF5s) |
+|Example03 - 1945.gmk | [Video](https://youtu.be/fys1I7fGnW4) |
+|Example04 - 1945.gmk | [Video](https://youtu.be/Lj1WAmBauwg) |
+|Example05 - 1945.gmk | [Video](https://youtu.be/stPBmGstLOw) |
+|Example06 - 1945.gmk | [Video](https://youtu.be/C3c8zsNDqjw) |
+|Example07 - 1945.gmk | [Video](https://youtu.be/wRJa7VqPOkE) |

@@ -4,8 +4,8 @@ Example.pdf gives a tutorial on how the game was programmed.
 
 | GameMaker File |  |
 | --- | --- |
-|Example01 - Platform.gmk | [Video](https://vimeo.com/248778421) |
-|Example02 - Platform.gmk | [Video](https://vimeo.com/248778428) |
-|Example03 - Platform.gmk | [Video](https://vimeo.com/248778435) |
-|Example04 - Platform.gmk | [Video](https://vimeo.com/248778448) |
-|Example05 - Platform.gmk | [Video](https://vimeo.com/248778471) |
+|Example01 - Platform.gmk | [Video](https://youtu.be/le_WJVHljnE) |
+|Example02 - Platform.gmk | [Video](https://youtu.be/rK754S6p8gE) |
+|Example03 - Platform.gmk | [Video](https://youtu.be/qRwj68MmZ9w) |
+|Example04 - Platform.gmk | [Video](https://youtu.be/Dum_cQ3vuIU) |
+|Example05 - Platform.gmk | [Video](https://youtu.be/RHdWG86EVdo) |

@@ -1,0 +1,695 @@
+[17:45.10.681]  - MobaXterm version: 9.1 Beta 0
+[17:45.10.687]  - Command line: "C:\Users\Yoshi\Documents\University Mercer\Programming II with Andy Digh\MobaXterm\MobaXterm_Personal_9.1.exe" 
+[17:45.10.687]  - Win32 version: 6.3.2.9600.
+[17:45.10.687]  - CurDir: C:\Users\Yoshi\DOCUME~1\UNIVER~2\PROGRA~1\MOBAXT~1\
+[17:45.10.688]  - PersonalDir: C:\Users\Yoshi\DOCUME~1\
+[17:45.10.688]  - AppDataDir: C:\Users\Yoshi\AppData\Roaming\
+[17:45.10.688]  - LocalAppDataDir: C:\Users\Yoshi\AppData\Roaming\
+[17:45.10.690]  - DesktopDir: C:\Users\Yoshi\Desktop\
+[17:45.10.690]  - MobaProfileDir: C:\Users\Yoshi\DOCUME~1\
+[17:45.10.691]  - Free space in MobaProfileDir folder: 77283MB
+[17:45.10.691]  - TempDir: C:\Users\Yoshi\AppData\Local\Temp\
+[17:45.10.691]  - Free space in TempDir folder: 77283MB
+[17:45.10.691]  - Monitor #0: 1366x768
+[17:45.10.692]  - Monitor #1: 1366x768
+[17:45.10.692]  - User name: Yoshi
+[17:45.10.692]  - Computer name: YOSHILAPTOP
+[17:45.10.692]  - CygUtils: C:\Users\Yoshi\DOCUME~1\UNIVER~2\PROGRA~1\MOBAXT~1\CygUtils.plugin
+[17:45.10.692]  - Uptime: 4 days, 04:37:28
+[17:45.10.692]  - Workaround for multiple taskbars enabled
+[17:45.10.693]  - Windows PATH: C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\GtkSharp\2.12\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;
+[17:45.10.693]  
+[17:45.10.693]  Begin Form1.FormCreate
+[17:45.10.693]  Detecting installed/portable version
+[17:45.10.693]  --> portable version
+[17:45.10.694]  
+[17:45.10.694]  Detecting IniSettings
+[17:45.10.695]  MobaXterm will take its configuration from file "C:\Users\Yoshi\DOCUME~1\UNIVER~2\PROGRA~1\MOBAXT~1\MobaXterm.ini".
+[17:45.10.696]  (selected ini file seems to be writeable)
+[17:45.10.696]  --> IniSettings= C:\Users\Yoshi\DOCUME~1\UNIVER~2\PROGRA~1\MOBAXT~1\MobaXterm.ini
+[17:45.10.697]  
+[17:45.10.698]  Detecting MobaXVTDir
+[17:45.10.698]  BEGIN IsFolderRW(C:\Users\Yoshi\AppData\Local\Temp\Mxt91)
+[17:45.10.735]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\drives, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\cygdrive);
+[17:45.10.738]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\drives, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\mnt);
+[17:45.10.743]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\drives, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\media);
+[17:45.10.746]  CreerLienSymbolique(/proc/registry, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\registry);
+[17:45.10.760]  END IsFolderRW(C:\Users\Yoshi\AppData\Local\Temp\Mxt91) --> OK
+[17:45.10.760]  --> MobaXVTDir= C:\Users\Yoshi\AppData\Local\Temp\Mxt91
+[17:45.10.761]  
+[17:45.10.761]  Detecting BinExeDir
+[17:45.10.761]  --> BinExeDir= C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\
+[17:45.10.762]  --> SessionsDir= C:\Users\Yoshi\AppData\Local\Temp\Mxt91\tmp\sessions
+[17:45.10.762]  
+[17:45.10.762]  Detecting MobaXVTHomeDir
+[17:45.10.763]  --> MobaXVTHomeDir= C:\Users\Yoshi\AppData\Local\Temp\Mxt91\tmp\home_Yoshi
+[17:45.10.763]  
+[17:45.10.764]  Skin detection
+[17:45.10.764]  Skin selected: 
+[17:45.10.764]  Set Application Title
+[17:45.10.771]  Skin selected: 
+[17:45.10.882]  Process list:  nvscpapisvr.exe, igfxCUIService.exe, AvastSvc.exe, WmiPrvSE.exe, armsvc.exe, ZeroConfigService.exe, EvtEng.exe, mDNSResponder.exe, OfficeClickToRun.exe, AdminService.exe, NvNetworkService.exe, SDUpdSvc.exe, SDFSSvc.exe, RegSrvc.exe, GfExperienceService.exe, GameScannerService.exe, Memory Compression, SDWSCSvc.exe, unsecapp.exe, PresentationFontCache.exe, SearchIndexer.exe, WmiPrvSE.exe, IAStorDataMgrSvc.exe, iPodService.exe, C:\Windows\System32\sihost.exe, C:\Windows\System32\taskhostw.exe, C:\Windows\System32\igfxEM.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Windows\System32\igfxHK.exe, C:\Windows\System32\igfxTray.exe, C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe, C:\Program Files\WindowsApps\Microsoft.MicrosoftStickyNotes_1.1.24.0_x64__8wekyb3d8bbwe\Microsoft.StickyNotes.exe, C:\Program Files (x86)\NVIDIA Corporation\Update Core\NvBackend.exe, C:\Program Files (x86)\ASUS\ASUS Smart Gesture\AsTPCenter\x64\AsusTPLoader.exe, C:\Windows\System32\SettingSyncHost.exe, C:\Program Files (x86)\ASUS\ASUS Smart Gesture\AsTPCenter\x64\AsusTPCenter.exe, AsusTPHelper.exe, C:\Program Files (x86)\ASUS\ASUS Smart Gesture\AsTPCenter\x64\AsusSGPlusBTServer64.exe, C:\Program Files (x86)\ASUS\ASUS Smart Gesture\AsTPCenter\x64\AsusSmartGestureDetector64.exe, C:\Program Files\Realtek\Audio\HDA\RAVCpl64.exe, C:\Program Files\Realtek\Audio\HDA\RAVBg64.exe, C:\Program Files\Realtek\Audio\HDA\RAVBg64.exe, C:\Program Files\Realtek\Audio\HDA\RAVBg64.exe, C:\Windows\RTFTrack.exe, C:\Program Files (x86)\Lenovo\Energy Manager\Energy Manager.exe, C:\Program Files (x86)\Lenovo\Energy Manager\utility.exe, C:\Program Files\Synaptics\SynTP\SynTPEnh.exe, SynTPHelper.exe, C:\Program Files (x86)\Rainlendar2\Rainlendar2.exe, C:\Program Files (x86)\Spybot - Search & Destroy 2\SDTray.exe, avastui.exe, fontdrvhost.exe, unsecapp.exe, C:\Program Files (x86)\Razer\Synapse\RzSynapse.exe, C:\ProgramData\Razer\Synapse\RzStats\RzStats.Manager.exe, C:\Program Files (x86)\Razer\InGameEngine\32bit\RazerIngameEngine.exe, C:\Users\Yoshi\AppData\Local\razer\InGameEngine\cache\RzStats.Manager\rzcefrenderprocess.exe, C:\Program Files\Intel\Intel(R) Rapid Storage Technology\IAStorIcon.exe, C:\Program Files\Lenovo\Lenovo Solution Center\LSCNotify.exe, C:\Windows\System32\dllhost.exe, C:\Windows\System32\ApplicationFrameHost.exe, C:\Windows\ImmersiveControlPanel\SystemSettings.exe, C:\Program Files\WindowsApps\Microsoft.Windows.Photos_16.722.10060.0_x64__8wekyb3d8bbwe\Microsoft.Photos.exe, C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_17.7167.40727.0_x64__8wekyb3d8bbwe\HxCalendarAppImm.exe, C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_17.7167.40727.0_x64__8wekyb3d8bbwe\HxTsr.exe, C:\Program Files\WindowsApps\Microsoft.WindowsCalculator_10.1608.2213.0_x64__8wekyb3d8bbwe\Calculator.exe, C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_17.7167.40727.0_x64__8wekyb3d8bbwe\HxMail.exe, C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Microsoft Office\Office15\WINWORD.EXE, C:\Windows\splwow64.exe, C:\Program Files\Realtek\Audio\HDA\FMAPP.exe, audiodg.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe, C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AcroRd32.exe, C:\eclipse\eclipse.exe, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe, C:\Program Files (x86)\Notepad++\notepad++.exe, SearchProtocolHost.exe, SearchFilterHost.exe, C:\Windows\System32\smartscreen.exe, C:\Users\Yoshi\Documents\University Mercer\Programming II with Andy Digh\MobaXterm\MobaXterm_Personal_9.1.exe
+[17:45.10.992]  Begin AddMobaConsoleFont
+[17:45.10.995]  End AddMobaConsoleFont
+[17:45.10.995]  Begin Lancement des threads
+[17:45.10.995]  End Lancement des threads
+[17:45.11.110]  End Form1.Create
+[17:45.11.110]  
+[17:45.11.111]  CREATION Form4
+[17:45.11.143]  BEGIN WMSize
+[17:45.11.147]  END WMSize
+[17:45.11.506]  BEGIN WMSize
+[17:45.11.507]  END WMSize
+[17:45.11.566]  Begin Form4.Create
+[17:45.11.578]  NbPingus = 4
+[17:45.11.578]  Begin LoadBookmarksFromIni
+[17:45.11.579]      FindOrCreateTreeFolders() (1)
+[17:45.11.591]  Begin RecreerLesMenusDeBookmarks
+[17:45.11.592]  RecreerLesMenusDeBookmarks: FreeerLesBookmarksMenuItems(Form1.Xserver3)
+[17:45.11.592]  RecreerLesMenusDeBookmarks: FreeerLesBookmarksMenuItems(Bookmarks1)
+[17:45.11.592]  sTreeView1.assign(Treesessions)
+[17:45.11.593]  Calcul SheetSessions
+[17:45.11.594]  CreerSessionMenuItems
+[17:45.11.601]  CreerAliases
+[17:45.11.604]  TreeSessions.Expand
+[17:45.11.604]  End RecreerLesMenusDeBookmarks
+[17:45.11.604]  End LoadBookmarksFromIni
+[17:45.11.604]  BEGIN LoadMacrosFromIni
+[17:45.11.604]  END LoadMacrosFromIni
+[17:45.11.608]  Form4Create1
+[17:45.11.609]  Form4Create2
+[17:45.11.629]  BEGIN AdapterFlechesDeLaSidebar
+[17:45.11.629]  END AdapterFlechesDeLaSidebar
+[17:45.11.646]  Form4Create3
+[17:45.11.648]  GetMinWidth = 1084
+[17:45.11.649]  GetMinHeight = 529
+[17:45.11.650]  BEGIN WMSize
+[17:45.11.652]  END WMSize
+[17:45.11.657]  BEGIN WMSize
+[17:45.11.665]  END WMSize
+[17:45.11.680]  Form4Create4
+[17:45.11.680]  IsNTFS(C:\) --> NTFS
+[17:45.11.681]  Slash drive is NTFS.
+[17:45.11.681]  Form4Create5
+[17:45.11.681]  Form4Create6
+[17:45.11.682]  Displaysidebarontheleft1Click: FormClick
+[17:45.11.688]  BEGIN AdapterFlechesDeLaSidebar
+[17:45.11.688]  END AdapterFlechesDeLaSidebar
+[17:45.11.688]  Form4Create7
+[17:45.11.689]  Form4Create8
+[17:45.11.689]  Form4Create9
+[17:45.11.689]  ShowButtonsbar1Click: FormClick
+[17:45.11.690]  Form4Create10
+[17:45.11.690]  Form4Create12
+[17:45.11.690]  SmallButtons1Click: FormClick
+[17:45.11.701]  GetMinWidth = 1084
+[17:45.11.701]  GetMinHeight = 525
+[17:45.11.703]  Form4Create13
+[17:45.11.704]  Form4Create14
+[17:45.11.704]  End Form4.Create
+[17:45.11.705]  
+[17:45.11.706]  CREATION FormParams
+
+[17:45.13.181]  Begin TFormParams.FormCreate
+[17:45.13.193]  End TFormParams.FormCreate
+[17:45.13.194]  
+[17:45.13.194]  CREATION FormSessionEdit
+
+[17:45.16.050]  Begin FormSessionEdit.Create
+[17:45.16.375]  BEGIN TFormSessionEdit.FindIP
+[17:45.16.423]  END TFormSessionEdit.FindIP
+[17:45.16.423]  Begin SetupEnumAvailableComPorts
+[17:45.16.425]  Begin SetupEnumAvailableComPorts: SetupDiClassGuidsFromName
+[17:45.16.439]  Begin SetupEnumAvailableComPorts: SetupDiGetClassDevs
+[17:45.16.468]  Begin SetupEnumAvailableComPorts: SetupDiEnumDeviceInfo
+[17:45.16.469]  Begin SetupEnumAvailableComPorts: SetupDiGetDeviceRegistryProperty
+[17:45.16.471]  Begin SetupEnumAvailableComPorts: SetupDiGetDeviceRegistryProperty
+[17:45.16.478]  Begin SetupEnumAvailableComPorts: SetupDiEnumDeviceInfo
+[17:45.16.479]  Begin SetupEnumAvailableComPorts: SetupDiGetDeviceRegistryProperty
+[17:45.16.480]  Begin SetupEnumAvailableComPorts: SetupDiGetDeviceRegistryProperty
+[17:45.16.488]  Begin SetupEnumAvailableComPorts: SetupDiEnumDeviceInfo
+[17:45.16.489]  Begin SetupEnumAvailableComPorts: SetupDiDestroyDeviceInfoList
+[17:45.16.492]  End SetupEnumAvailableComPorts
+[17:45.16.515]  End FormSessionEdit.Create
+[17:45.16.515]  
+[17:45.16.516]  CREATION FormIconChooser
+[17:45.16.561]  Begin FormIconChooser.Create
+[17:45.16.563]  End FormIconChooser.Create
+[17:45.16.564]  
+[17:45.16.565]  CREATION FormBookFolderEdit
+[17:45.16.618]  Begin FormBookFolderEdit.Create
+[17:45.16.621]  End FormBookFolderEdit.Create
+[17:45.16.624]  
+[17:45.16.624]  CREATION FormAbout
+[17:45.16.849]  Begin FormAbout.Create
+[17:45.16.851]  End FormAbout.Create
+[17:45.16.851]  
+[17:45.16.852]  CREATION FormTransparente
+[17:45.16.884]  
+[17:45.16.884]  CREATION FormQuickShow
+[17:45.16.925]  Begin TFormQuickShow.FormCreate
+[17:45.16.927]  End TFormQuickShow.FormCreate
+[17:45.16.928]  
+[17:45.16.930]  CREATION FormNetscan
+[17:45.17.039]  
+[17:45.17.040]  CREATION FormNetstat
+[17:45.17.045]  Begin FormNetstat.Create
+[17:45.17.051]  Begin FormNetstat.Create
+[17:45.17.059]  
+[17:45.17.061]  CREATION FormPortForwarding
+[17:45.17.410]  Begin TFormPortForwarding.FormCreate
+[17:45.17.410]  End TFormPortForwarding.FormCreate
+[17:45.17.411]  
+[17:45.17.411]  CREATION FormPortForwardingEdit
+[17:45.17.468]  
+[17:45.17.469]  CREATION FormDesktopShortcut
+[17:45.17.490]  
+[17:45.17.491]  CREATION FormImportExport
+[17:45.17.513]  
+[17:45.17.513]  CREATION FormHotKeys
+[17:45.17.778]  Begin TFormHotKeys.FormCreate
+[17:45.17.784]  End TFormHotKeys.FormCreate
+[17:45.17.785]  
+[17:45.17.785]  CREATION FormKeyboard
+[17:45.17.840]  
+[17:45.17.840]  CREATION FormDownloadBloquant
+[17:45.17.900]  
+[17:45.17.901]  CREATION FormStorePasswords
+[17:45.17.968]  
+[17:45.17.969]  CREATION FormInputDialog
+[17:45.18.011]  
+[17:45.18.011]  CREATION FormRemoteSave
+[17:45.18.046]  
+[17:45.18.046]  CREATION FormSaveTerm
+[17:45.18.094]  
+[17:45.18.095]  CREATION FormChooseComPort
+[17:45.18.139]  
+[17:45.18.139]  CREATION FormServices
+[17:45.18.633]  
+[17:45.18.634]  CREATION FormMsgDialog
+[17:45.18.666]  
+[17:45.18.666]  CREATION FormColorsSelector
+[17:45.18.868]  
+[17:45.18.872]  CREATION FormCygUtilsMsg
+[17:45.18.992]  
+[17:45.18.995]  CREATION FormMobApt
+[17:45.19.207]  
+[17:45.19.211]  CREATION FormTwitter
+[17:45.19.275]  
+[17:45.19.276]  CREATION FormMasterPassword
+[17:45.19.335]  
+[17:45.19.335]  CREATION FormPluginCreator
+[17:45.19.457]  
+[17:45.19.458]  CREATION FormTermConfirmClose
+[17:45.19.492]  
+[17:45.19.492]  CREATION FormManagePasswords
+[17:45.19.539]  Begin TFormManagePasswords.FormCreate
+[17:45.19.540]  End TFormManagePasswords.FormCreate
+[17:45.19.541]  
+[17:45.19.542]  CREATION FormManageMacros
+[17:45.19.911]  
+[17:45.19.912]  CREATION FormEditMacroLine
+[17:45.20.053]  
+[17:45.20.059]  CREATION FormFindInTerm
+[17:45.20.183]  
+[17:45.20.189]  CREATION FormDetachedTab
+[17:45.20.212]  
+[17:45.20.217]  FIN CREATION FORMS
+[17:45.20.223]  
+[17:45.20.236]  Begin Form1.Show
+[17:45.20.244]  End Form1.Show
+[17:45.20.523]  Begin Form1.Timer1Timer
+[17:45.20.526]  
+[17:45.20.527]  
+[17:45.20.528]  
+[17:45.20.528]  
+[17:45.20.529]  ================================================================================
+[17:45.20.530]  ~    INI file content (C:\Users\Yoshi\DOCUME~1\UNIVER~2\PROGRA~1\MOBAXT~1\MobaXterm.ini)    ~
+[17:45.20.531]  ================================================================================
+[17:45.20.532]  
+[17:45.20.533]  
+[Misc]
+LastSession=cobra.cs.mercer.edu|#109#0%cobra.cs.mercer.edu%22%%%-1%-1%%%22%%0%-1%Interactive shell%%%-1%0%0%0%%1080%%0%0#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%#0
+SessionP=329390394928
+
+[Recently started]
+16=
+15=
+14=
+13=
+12=
+11=
+10=
+9=
+8=
+7=
+6=
+5=
+4=
+3=
+2=cobra.cs.mercer.edu.
+1=cobra.cs.mercer.edu
+
+[WindowPos_YOSHILAPTOP_1_1366]
+CompactMode=0
+MonitorCount=1
+Left=0
+Top=0
+Width=1382
+Height=744
+Maximized=1
+SidebarVisible=1
+SidebarWidth=353
+
+[Display]
+SidebarRight=0
+C10Checked=1
+C11Checked=1
+C12Checked=1
+C13Checked=0
+C14Checked=0
+VisibleTabNum=1
+VisibleTabClose=1
+MenuAndButtons=2
+BtnType2=2
+
+[SSH]
+SFTPShowDotFiles=1
+SFTPAsciiMode=0
+
+[WindowPos_YOSHILAPTOP_2_1366]
+CompactMode=0
+MonitorCount=2
+Left=0
+Top=0
+Width=1382
+Height=744
+Maximized=1
+SidebarVisible=1
+SidebarWidth=400
+
+[Bookmarks]
+SubRep=
+ImgNum=41
+cobra.cs.mercer.edu=#109#0%cobra.cs.mercer.edu%22%%%-1%-1%%%22%%0%-1%Interactive shell%%%-1%0%0%0%%1080%%0%0#MobaFont%10%0%0%0%15%236,236,236%0,0,0%180,180,192%0%-1%0%%xterm%-1%0%0,0,0%54,54,54%255,96,96%255,128,128%96,255,96%128,255,128%255,255,54%255,255,128%96,96,255%128,128,255%255,54,255%255,128,255%54,255,255%128,255,255%236,236,236%255,255,255%80%24%0%1%-1%<none>%#0
+
+[EditorWindowPos]
+Left=0
+Top=0
+Width=1366
+Height=728
+Maximized=0
+
+[17:45.20.719]  
+[17:45.20.723]  
+[17:45.20.726]  ================================================================================
+[17:45.20.728]  
+[17:45.20.730]  
+[17:45.20.733]  
+[17:45.20.734]  
+[17:45.20.735]  BEGIN CreerFstab
+[17:45.20.737]  CreerFstab: RootDirectory = C:/Users/Yoshi/AppData/Local/Temp/Mxt91
+[17:45.20.739]  CreerFstab: HomeDirectory = C:/Users/Yoshi/AppData/Local/Temp/Mxt91/tmp/HOME_Y~1
+[17:45.20.743]  END CreerFstab
+[17:45.20.745]  Begin extraireFichiers1
+[17:45.20.746]  BEGIN CreerProfile
+[17:45.20.749]  END CreerProfile
+[17:45.20.749]  BEGIN CreerSshConfig
+[17:45.20.758]  END CreerSshConfig
+[17:45.20.759]  Begin CreerBaseProfile
+[17:45.20.836]  NEW PLUGIN: mobase
+[17:45.20.842]  End Ouverture plugin mobase
+[17:45.20.843]  NEW PLUGIN: C:\Users\Yoshi\DOCUME~1\UNIVER~2\PROGRA~1\MOBAXT~1\CygUtils.plugin
+[17:45.20.895]  End Ouverture plugin C:\Users\Yoshi\DOCUME~1\UNIVER~2\PROGRA~1\MOBAXT~1\CygUtils.plugin
+[17:45.20.899]  End CreerBaseProfile
+[17:45.20.900]  BEGIN MkGroupFile
+[17:45.20.901]  BEGIN GetLocalGroups
+[17:45.20.908]  END GetLocalGroups
+[17:45.20.928]  MkGroupFile OK
+[17:45.20.930]  END MkGroupFile
+[17:45.20.931]  BEGIN MkPasswdFile
+[17:45.20.933]  Current Domain: YOSHILAPTOP
+[17:45.20.933]  BEGIN Bui_GetWindowsUsersAccount
+[17:45.20.936]  END Bui_GetWindowsUsersAccount
+[17:45.20.944]  MkPasswdFile OK
+[17:45.20.945]  END MkPasswdFile
+[17:45.20.946]  Begin CreerNsswitch
+[17:45.20.948]  End CreerNsswitch
+[17:45.20.949]    Request for file extraction: /bin/scrdaemons
+[17:45.20.950]      Extracting "/bin/scrdaemons"
+[17:45.20.964]      File extracted from CygUtils.plugin.
+[17:45.20.965]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\scrdaemons, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\init.d\tftp);
+[17:45.20.968]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\scrdaemons, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\init.d\ftp);
+[17:45.20.972]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\scrdaemons, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\init.d\http);
+[17:45.20.977]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\scrdaemons, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\init.d\ssh);
+[17:45.20.981]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\scrdaemons, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\init.d\telnet);
+[17:45.20.985]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\scrdaemons, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\init.d\nfs);
+[17:45.20.988]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\scrdaemons, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\init.d\vnc);
+[17:45.20.993]    Request for file extraction: /bin/cygtermd.exe
+[17:45.20.993]      Extracting "/bin/cygtermd.exe"
+[17:45.21.042]      File extracted from CygUtils.plugin.
+[17:45.21.043]    Request for file extraction: /bin/cygz.dll
+[17:45.21.044]      Extracting "/bin/cygz.dll"
+[17:45.21.102]    Request for file extraction: /bin/cyggcc_s-1.dll
+[17:45.21.103]      Extracting "/bin/cyggcc_s-1.dll"
+[17:45.21.163]      File extracted from CygUtils.plugin.
+[17:45.21.166]      File extracted from CygUtils.plugin.
+[17:45.21.167]    Request for file extraction: /bin/cyggcc_s-1.dll
+[17:45.21.170]      Extracting "/bin/cyggcc_s-1.dll"
+[17:45.21.175]      File extracted from CygUtils.plugin.
+[17:45.21.176]    Request for file extraction: /bin/cygwin-console-helper.exe
+[17:45.21.183]      Extracting "/bin/cygwin-console-helper.exe"
+[17:45.21.232]      File extracted from CygUtils.plugin.
+[17:45.21.237]    Request for file extraction: /bin/ssh.exe
+[17:45.21.240]      Extracting "/bin/ssh.exe"
+[17:45.21.267]      File extracted from CygUtils.plugin.
+[17:45.21.276]    Request for file extraction: /etc/bash.bash_logout
+[17:45.21.282]    Request for file extraction: /etc/profile.d
+[17:45.21.289]    Request for file extraction: /etc/profile.d/*
+[17:45.21.296]  CreerRaccourciVersMobaXterm(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\MobaListPorts, -listports);
+[17:45.21.303]  CreerRaccourciVersMobaXterm(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\MobaPictureViewer, -picview);
+[17:45.21.309]  CreerRaccourciVersMobaXterm(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\MobaCalc, -calc);
+[17:45.21.313]  CreerRaccourciVersMobaXterm(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\MobaTextEditor, -edit);
+[17:45.21.318]  CreerRaccourciVersMobaXterm(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\MobaCompareFiles, -compfiles);
+[17:45.21.325]  CreerRaccourciVersMobaXterm(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\MobaCompareFolders, -compfolders);
+[17:45.21.331]    Request for file extraction: /usr/share/terminfo/78/xterm
+[17:45.21.334]      Extracting "/usr/share/terminfo/78/xterm"
+[17:45.21.355]      File extracted from CygUtils.plugin.
+[17:45.21.356]    Request for file extraction: /usr/share/terminfo/63/cygwin
+[17:45.21.360]      Extracting "/usr/share/terminfo/63/cygwin"
+[17:45.21.378]      File extracted from CygUtils.plugin.
+[17:45.21.379]    Request for file extraction: /etc/bash_completion
+[17:45.21.383]      Extracting "/etc/bash_completion"
+[17:45.21.404]      File extracted from CygUtils.plugin.
+[17:45.21.405]    Request for file extraction: /usr/share/zoneinfo/posixrules
+[17:45.21.407]      Extracting "/usr/share/zoneinfo/posixrules"
+[17:45.21.426]      File extracted successfully.
+[17:45.21.428]    Request for file extraction: /etc/inputrc
+[17:45.21.430]      Extracting "/etc/inputrc"
+[17:45.21.447]      File extracted from CygUtils.plugin.
+[17:45.21.448]  End extraireFichiers1
+[17:45.21.448]  CreerLienSymbolique(/proc/registry, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\registry);
+[17:45.21.453]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\bash.exe, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\sh);
+[17:45.21.457]  CreerLienSymbolique(C:\WINDOWS\system32\drivers\etc\hosts, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\hosts);
+[17:45.21.462]  CreerLienSymbolique(C:\WINDOWS\system32\drivers\etc\networks, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\networks);
+[17:45.21.467]  CreerLienSymbolique(C:\WINDOWS\system32\drivers\etc\protocol, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\protocol);
+[17:45.21.471]  CreerLienSymbolique(C:\WINDOWS\system32\drivers\etc\services, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\etc\services);
+[17:45.21.476]  CreerLienSymbolique(C:\Users\Yoshi\Desktop\, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\tmp\home_Yoshi\Desktop);
+[17:45.21.480]  CreerLienSymbolique(C:\Users\Yoshi\DOCUME~1\, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\tmp\home_Yoshi\MyDocuments);
+[17:45.21.484]  CreerLienSymbolique(C:\Users\Yoshi\DOCUME~1\UNIVER~2\PROGRA~1\MOBAXT~1\, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\tmp\home_Yoshi\LauncherFolder);
+[17:45.21.496]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\drives, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\cygdrive);
+[17:45.21.502]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\drives, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\mnt);
+[17:45.21.508]  CreerLienSymbolique(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\drives, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\media);
+[17:45.21.517]  Begin WaitForAllThreads
+[17:45.21.518]  End WaitForAllThreads
+[17:45.21.534]  Begin Form4.FormActivate
+[17:45.21.537]  
+[17:45.21.538]  Form4.Activate();
+[17:45.21.547]  Form4.FormActivate1
+[17:45.21.549]  Form4.FormActivate2
+[17:45.21.558]  Form4.FormActivate3
+[17:45.21.570]  Form4.FormActivate4
+[17:45.21.571]  Form4.FormActivate5
+[17:45.21.572]  Begin LoadParamsFromIni: C:\Users\Yoshi\DOCUME~1\UNIVER~2\PROGRA~1\MOBAXT~1\MobaXterm.ini
+[17:45.21.572]  LoadParamsFromIni: ComboFontName.Font.Name:=MobaFont
+[17:45.21.573]  LoadParamsFromIni: ComboFontName.ItemIndex:=15
+[17:45.21.576]  LoadParamsFromIni: ComboFontName.Font.Charset:=0
+[17:45.21.578]  LoadParamsFromIni1
+[17:45.21.579]  LoadParamsFromIni2
+[17:45.21.597]  LoadParamsFromIni3
+[17:45.21.598]  LoadParamsFromIni4
+[17:45.21.598]  LoadParamsFromIni5
+[17:45.21.599]  LoadParamsFromIni6
+[17:45.21.600]  Begin TFormManagePasswords.sRadioButton4Click
+[17:45.21.601]  End TFormManagePasswords.sRadioButton4Click
+[17:45.21.602]  LoadParamsFromIni7
+[17:45.21.602]  LoadParamsFromIni8
+[17:45.21.603]  LoadParamsFromIni9
+[17:45.21.603]  LoadParamsFromIni10
+[17:45.21.639]  LoadParamsFromIni11
+[17:45.21.645]  LoadParamsFromIni12
+[17:45.21.646]  LoadParamsFromIni13
+[17:45.21.647]  LoadParamsFromIni14
+[17:45.21.921]  LoadParamsFromIni15
+[17:45.21.923]  LoadParamsFromIni16
+[17:45.21.923]  End LoadParamsFromIni
+[17:45.21.925]  Begin TFormPortForwarding.Timer1Timer
+[17:45.21.925]  (SSHTunnel)    Begin TFormPortForwarding.LoadIni
+[17:45.21.925]  (SSHTunnel)    End TFormPortForwarding.LoadIni
+[17:45.21.927]  End TFormPortForwarding.Timer1Timer
+[17:45.21.930]  Form4.FormActivate: OldMaximized:=Form4.WindowState
+[17:45.21.933]  Form4.FormActivate: TermImage.Canvas.Font.Assign(MobaFont)
+[17:45.21.940]  Form4.FormActivate: TermImage.Canvas.Font.Size:=10
+[17:45.21.948]  Form4.FormActivate: TermImage.Canvas.Font.Name:=MobaFont
+[17:45.21.952]  Form4.FormActivate: Starting "GetMinHeight"
+[17:45.21.958]  GetMinHeight = 525
+[17:45.21.962]  Form4.FormActivate: Form4.Constraints.MinHeight:=525
+[17:45.21.965]  GetMinWidth = 1084
+[17:45.21.968]  Form4.FormActivate: Form4.Constraints.MinWidth:=1084
+[17:45.21.970]  Form4.FormActivate: Form4.Left:=141
+[17:45.21.976]  Begin GetNextAvailableX
+[17:45.21.983]  End GetNextAvailableX = 0
+[17:45.21.983]  
+[17:45.21.984]    CurrentX = 0
+[17:45.21.984]  ChDir(Form1.BaseDir): C:\Users\Yoshi\Documents\University Mercer\Programming II with Andy Digh\MobaXterm\
+[17:45.21.985]  FirstParam: 
+[17:45.21.985]  Launching NewTab
+[17:45.21.986]  BEGIN TFormXterm.NewTab(home, 135, 0)
+[17:45.22.013]  NewTab: Application.ProcessMessages
+[17:45.22.040]  NewTab: Timer1_Disable
+[17:45.22.040]  
+[17:45.22.041]  NewTab
+[17:45.22.147]  Begin Form4.FormActivate
+[17:45.22.174]  BEGIN WMSize
+[17:45.22.229]  BEGIN TFormXterm.FormResize
+[17:45.22.230]    TFormXterm.FormResize: CentrerBtnReattachTab
+[17:45.22.232]    TFormXterm.FormResize: SplitModeResize
+[17:45.22.233]    TFormXterm.FormResize: TabMax<=0. Exiting...
+[17:45.22.234]  BEGIN TFormXterm.FormResize
+[17:45.22.234]    TFormXterm.FormResize: CentrerBtnReattachTab
+[17:45.22.234]    TFormXterm.FormResize: SplitModeResize
+[17:45.22.234]    TFormXterm.FormResize: TabMax<=0. Exiting...
+[17:45.22.235]  END WMSize
+[17:45.22.283]  NewTab: Cts1.BeginUpdate;
+[17:45.22.284]  Changement d'indice Q = 0
+[17:45.22.285]  NewTab: Cts1.EndUpdates
+[17:45.22.351]  Changement d'indice A = 0
+[17:45.22.351]  Begin WaitForAllThreads
+[17:45.22.352]  End WaitForAllThreads
+[17:45.22.353]  
+[17:45.22.354]  LancerRxvt(home, Home);
+[17:45.22.354]  
+[17:45.22.356]  SetEnvironmentVariable(LOCALE, en_GB.UTF-8)
+[17:45.22.357]  SetEnvironmentVariable(PATH, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[17:45.22.358]  Enabling MOBANOACL
+[17:45.22.359]  
+[17:45.22.359]  ShellExecute: motty.exe
+[17:45.22.359]  
+[17:45.22.360]  CreerSessionMoTTY(1, home, Home)
+[17:45.22.368]  Setting LOCALE=en_GB.UTF-8
+[17:45.22.376]  CreerSessionMoTTY(-1, TCPCapture, TCPCapture)
+[17:45.22.377]  Setting LOCALE=en_GB.UTF-8
+[17:45.22.498]  
+[17:45.22.499]      FindWindow()
+[17:45.22.499]    Moxt2.SetParent
+[17:45.22.826]  Application.OnMessage:=AppMessage
+[17:45.22.833]  Changement d'indice C = 0
+[17:45.22.835]  BEGIN DisplayCurrentTab
+[17:45.22.837]  DisplayCurrentTab: FormClick
+[17:45.22.838]  (SSH-Browser) DisplayCurrentTab(0): ActiverPanel14
+[17:45.22.840]  (SSH-Browser) BEGIN ActiverPanel14
+[17:45.22.841]  (SSH-Browser) BEGIN DesactiverPanel14
+[17:45.22.842]  (SSH-Browser) END DesactiverPanel14
+[17:45.22.842]  (SSH-Browser) END ActiverPanel14;
+[17:45.22.842]  DisplayCurrentTab: Cts1.BeginUpdate;
+[17:45.22.842]  DisplayCurrentTab: Cts1.EndUpdates
+[17:45.22.843]  DisplayCurrentTab: Show selected tab
+[17:45.22.877]  BEGIN ResizeTerminal
+[17:45.22.878]  END ResizeTerminal
+[17:45.22.878]  DisplayCurrentTab: Hide other tabs
+[17:45.22.879]  DisplayCurrentTab: Adapting buttons enable/disable states
+[17:45.22.882]  DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[17:45.22.884]  DisplayCurrentTab: DistribuerLeFocus
+[17:45.22.887]  BEGIN WMNewTab: 0
+[17:45.22.888]  WMNewTab: FormClick
+[17:45.22.888]  WMNewTab: LooseFocus
+[17:45.22.888]  BEGIN WMNewTab: 0
+[17:45.22.889]  WMNewTab: FormClick
+[17:45.22.889]  WMNewTab: LooseFocus
+[17:45.22.890]  BEGIN WMNewTab: 0
+[17:45.22.890]  WMNewTab: FormClick
+[17:45.22.890]  WMNewTab: LooseFocus
+[17:45.22.890]  BEGIN WMNewTab: 0
+[17:45.22.891]  WMNewTab: FormClick
+[17:45.22.892]  WMNewTab: LooseFocus
+[17:45.22.907]  END DisplayCurrentTab
+[17:45.22.908]  NewTab_ReEnable_Timer1
+[17:45.22.917]  
+[17:45.22.918]  Launching bookmarks();
+[17:45.22.919]  Launching sBitBtn7Click(sBitBtn7);
+[17:45.22.920]  sBitBtn7Click: FormClick
+[17:45.22.921]  Begin LancerXWin();
+[17:45.22.922]      BEGIN JvThreadXressources.Execute(nil);
+[17:45.22.923]      END JvThreadXressources.Execute(nil);
+[17:45.24.086]  BEGIN ExecuteSessionTree
+[17:45.24.086]  ExecuteSessionTree: FormClick
+[17:45.24.097]  BEGIN ExecuterLaSessionSelectionee
+[17:45.24.097]  ExecuterLaSessionSelectionee: FormClick
+[17:45.24.104]  ExecuterLaSessionSelectionee0
+[17:45.24.105]  ExecuterLaSessionSelectionee1
+[17:45.24.105]  ExecuterLaSessionSelectionee2
+[17:45.24.106]  ExecuterLaSessionSelectionee3
+[17:45.24.106]  BEGIN ChargerLaSession
+[17:45.24.199]  ChargerLaSession1
+[17:45.24.234]  ChargerLaSession2
+[17:45.24.235]  ChargerLaSession3
+[17:45.24.236]  ChargerLaSession4
+[17:45.24.236]  ChargerLaSession5
+[17:45.24.237]  ChargerLaSession6
+[17:45.24.239]  ChargerLaSession7
+[17:45.24.242]  ChargerLaSession8
+[17:45.24.243]  ChargerLaSession8_ssh_1
+[17:45.24.252]  ChargerLaSession8_ssh_2
+[17:45.24.253]  ChargerLaSession8_ssh_3
+[17:45.24.253]  ChargerLaSession8_ssh_4
+[17:45.24.255]  ChargerLaSession9
+[17:45.24.378]  ChargerLaSession10
+[17:45.24.378]  END ChargerLaSession
+[17:45.24.378]  ExecuterLaSessionSelectionee4
+[17:45.24.379]  LaunchSession0
+[17:45.24.390]  LaunchSession1
+[17:45.24.390]  LaunchSession4
+[17:45.24.408]  LaunchSession5
+[17:45.24.409]  BEGIN TFormXterm.NewTab(ssh "cobra.cs.mercer.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , 109, 0)
+[17:45.24.412]  NewTab: Application.ProcessMessages
+[17:45.24.437]  NewTab: Timer1_Disable
+[17:45.24.438]  
+[17:45.24.438]  NewTab
+[17:45.24.522]  NewTab: Cts1.BeginUpdate;
+[17:45.24.526]  Changement d'indice Q = 1
+[17:45.24.527]  NewTab: Cts1.EndUpdates
+[17:45.24.547]  Changement d'indice A = 1
+[17:45.24.547]  Begin WaitForAllThreads
+
+[17:45.28.591]  Cts1MouseDown: FormClick
+
+[17:45.30.272]  BEGIN ExecuteSessionTree
+[17:45.30.272]  ExecuteSessionTree: FormClick
+[17:45.30.281]  BEGIN ExecuterLaSessionSelectionee
+[17:45.30.282]  ExecuterLaSessionSelectionee: FormClick
+[17:45.30.284]  ExecuterLaSessionSelectionee0
+[17:45.30.285]  ExecuterLaSessionSelectionee1
+[17:45.30.287]  ExecuterLaSessionSelectionee2
+[17:45.30.289]  ExecuterLaSessionSelectionee3
+[17:45.30.289]  BEGIN ChargerLaSession
+[17:45.30.300]  ChargerLaSession1
+[17:45.30.323]  ChargerLaSession2
+[17:45.30.324]  ChargerLaSession3
+[17:45.30.326]  ChargerLaSession4
+[17:45.30.328]  ChargerLaSession5
+[17:45.30.330]  ChargerLaSession6
+[17:45.30.335]  ChargerLaSession7
+[17:45.30.344]  ChargerLaSession8
+[17:45.30.345]  ChargerLaSession8_ssh_1
+[17:45.30.346]  ChargerLaSession8_ssh_2
+[17:45.30.349]  ChargerLaSession8_ssh_3
+[17:45.30.350]  ChargerLaSession8_ssh_4
+[17:45.30.350]  ChargerLaSession9
+[17:45.30.407]  ChargerLaSession10
+[17:45.30.408]  END ChargerLaSession
+[17:45.30.408]  ExecuterLaSessionSelectionee4
+[17:45.30.410]  LaunchSession0
+[17:45.30.419]  LaunchSession1
+[17:45.30.422]  LaunchSession4
+[17:45.30.434]  LaunchSession5
+[17:45.30.435]  BEGIN TFormXterm.NewTab(ssh "cobra.cs.mercer.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , 109, 0)
+[17:45.30.438]  NewTab: Application.ProcessMessages
+[17:45.30.447]  NewTab: Timer1_Disable
+[17:45.30.448]  
+[17:45.30.448]  NewTab
+[17:45.30.488]  NewTab: Cts1.BeginUpdate;
+[17:45.30.489]  Changement d'indice Q = 2
+[17:45.30.490]  NewTab: Cts1.EndUpdates
+[17:45.30.498]  Changement d'indice A = 2
+[17:45.30.499]  Begin WaitForAllThreads
+[17:45.31.061]  End WaitForAllThreads
+[17:45.31.063]  
+[17:45.31.065]  LancerRxvt(ssh "cobra.cs.mercer.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , cobra.cs.mercer.edu);
+[17:45.31.066]  
+[17:45.31.071]  SetEnvironmentVariable(LOCALE, en_GB.UTF-8)
+[17:45.31.072]  SetEnvironmentVariable(PATH, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[17:45.31.073]  Enabling MOBANOACL
+[17:45.31.074]  
+[17:45.31.075]  ShellExecute: motty.exe
+[17:45.31.075]  
+[17:45.31.076]  CreerSessionMoTTY(3, ssh "cobra.cs.mercer.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , cobra.cs.mercer.edu)
+[17:45.31.079]    Request for file extraction: /bin/motty.exe
+[17:45.31.082]      Extracting "/bin/motty.exe"
+[17:45.31.417]      File extracted successfully.
+[17:45.31.449]  SetEnvironmentVariable(LOCALE, en_GB.UTF-8)
+[17:45.31.457]  SetEnvironmentVariable(PATH, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin;C:\WINDOWS\;C:\WINDOWS\system32\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\)
+[17:45.31.459]  Enabling MOBANOACL
+[17:45.31.465]    Request for file extraction: /bin/cygtermd.exe
+[17:45.31.466]      Extracting "/bin/cygtermd.exe"
+[17:45.31.469]      File extracted from CygUtils.plugin.
+[17:45.31.471]  File not found:  C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\cygwin1.dll
+[17:45.31.473]  File not found:  C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\bash.exe
+[17:45.31.476]  File not found:  C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\busybox.exe
+[17:45.31.481]  BEGIN ShellExecuteS(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\motty.exe, -load "C:\Users\Yoshi\AppData\Local\Temp\Mxt91\tmp\sessions\TERM1997763")
+[17:45.31.823]      ShellExecuteS: ShellExecuteEx succeeded.
+[17:45.31.978]  SetTitle(2, cobra.cs.mercer.edu);
+[17:45.31.995]      ShellExecuteS: WaitForInputIdle succeeded.
+[17:45.31.999]  END ShellExecuteS(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin\motty.exe, -load "C:\Users\Yoshi\AppData\Local\Temp\Mxt91\tmp\sessions\TERM1997763")
+[17:45.32.000]  
+[17:45.32.002]      FindWindow(CMoTTY)
+[17:45.32.008]        --> succeeded
+[17:45.32.303]    Moxt2.SetParent
+[17:45.32.308]  Cts1MouseDown: FormClick
+[17:45.32.326]  BEGIN TFormXterm.Cts1ButtonCloseTabClick
+[17:45.32.327]  
+[17:45.32.328]  BEGIN CloseTab(2)
+[17:45.32.328]  CloseTab:  Tab is external app
+[17:45.32.329]  END CloseTab(2)
+[17:45.32.330]  END TFormXterm.Cts1ButtonCloseTabClick
+[17:45.32.336]  BEGIN WMNewTab: 36
+[17:45.32.336]  WMNewTab: FormClick
+[17:45.32.336]  WMNewTab: LooseFocus
+[17:45.32.343]  Changement d'indice G = 2
+[17:45.32.814]  Application.OnMessage:=AppMessage
+[17:45.32.820]  Begin Form4.FormActivate
+[17:45.32.822]  Changement d'indice C = 2
+[17:45.32.824]  BEGIN DisplayCurrentTab
+[17:45.32.826]  DisplayCurrentTab: FormClick
+[17:45.32.827]  (SSH-Browser) DisplayCurrentTab(2): ActiverPanel14
+[17:45.32.828]  (SSH-Browser) BEGIN ActiverPanel14
+[17:45.32.828]  (SSH-Browser) BEGIN DesactiverPanel14
+[17:45.32.829]  (SSH-Browser) END DesactiverPanel14
+[17:45.32.830]  (SSH-Browser) END ActiverPanel14;
+[17:45.32.832]  DisplayCurrentTab: Cts1.BeginUpdate;
+[17:45.32.834]  DisplayCurrentTab: Cts1.EndUpdates
+[17:45.32.835]  DisplayCurrentTab: Show selected tab
+[17:45.32.848]  DisplayCurrentTab: Hide other tabs
+[17:45.32.867]  DisplayCurrentTab: Adapting buttons enable/disable states
+[17:45.32.871]  DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[17:45.32.874]  DisplayCurrentTab: DistribuerLeFocus
+[17:45.32.875]  END DisplayCurrentTab
+[17:45.32.878]  NewTab_ReEnable_Timer1
+[17:45.32.915]  LaunchSession6
+[17:45.32.916]  ExecuterLaSessionSelectionee5
+[17:45.32.918]  END ExecuterLaSessionSelectionee
+[17:45.32.921]  END ExecuteSessionTree
+[17:45.32.929]  End WaitForAllThreads
+[17:45.32.932]  
+[17:45.32.935]  LancerRxvt(ssh "cobra.cs.mercer.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , cobra.cs.mercer.edu);
+[17:45.32.936]  
+[17:45.32.940]  SetEnvironmentVariable(LOCALE, en_GB.UTF-8)
+[17:45.32.943]  SetEnvironmentVariable(PATH, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[17:45.32.945]  Enabling MOBANOACL
+[17:45.32.946]  
+[17:45.32.947]  ShellExecute: motty.exe
+[17:45.32.947]  
+[17:45.32.948]  CreerSessionMoTTY(3, ssh "cobra.cs.mercer.edu" -l PleaseAskMe -p 22 -Y -o ForwardX11Trusted=yes -o ForwardX11=yes  -C -o Compression=yes  -Z , cobra.cs.mercer.edu)
+[17:45.32.955]  SetEnvironmentVariable(LOCALE, en_GB.UTF-8)
+[17:45.32.961]  SetEnvironmentVariable(PATH, C:\Users\Yoshi\AppData\Local\Temp\Mxt91\bin;C:\WINDOWS\;C:\WINDOWS\system32\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\)
+[17:45.32.963]  Enabling MOBANOACL
+[17:45.32.969]  !!!! Exception EFCreateError: Cannot create file "C:\Users\Yoshi\AppData\Local\Temp\Mxt91\tmp\sessions\TERM1997763". The process cannot access the file because it is being used by another process during SaveStringListToUnixFile(C:\Users\Yoshi\AppData\Local\Temp\Mxt91\tmp\sessions\TERM1997763)
