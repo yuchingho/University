@@ -1,1 +1,1 @@
-https://drive.google.com/open?id=1Koy9IMFbukxuam1idZwmtIGTYxdSNaRl
+Digital Asset Development focused on the creation of assets and the programs used, like Audacity, Adobe Photoshop CS6, and Adobe Premiere Pro CS6. The labs were given as practice and in a [seperate repository](https://github.com/yuchingho/UnrealRooms) contains my assessment work.
