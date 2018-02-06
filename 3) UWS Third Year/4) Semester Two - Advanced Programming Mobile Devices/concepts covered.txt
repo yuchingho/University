@@ -1,0 +1,9 @@
+Encapsulation
+Inheritance
+Polymorphism
+Abstraction
+Overloading
+jQuery
+UML Use-Case Diagrams
+Use-Case Diagrams
+Class Diagrams
