@@ -13,10 +13,10 @@ In January 2017, I started creating my own website with [Neocities](https://neoc
 ## 2015 UWS Second Year
 - [x] 1) Semester One - Computer Games Design
 - [ ] 2) Semester One - HTML5 & JavaScript Programming
-- [ ] 3) Semester One - Digital Asset Development
-- [ ] 4) Semester Two - Programming for Native App Interaction
+- [x] 3) Semester One - Digital Asset Development
+- [x] 4) Semester Two - Programming for Native App Interaction
 - [ ] 5) Semester Two - Programming for Mobile Devices
-- [ ] 6) Semester Two - Computing Project
+- [x] 6) Semester Two - Computing Project
 - [x] UWS Student Association Free Shop
 - [x] UWS Student Fellowship
 
