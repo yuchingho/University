@@ -11,6 +11,9 @@ Audio and Images Folders contain the assets used to build LoL_Maze.gm81 file.\
 LoL_Maze.gm81 shows how the game was programmed.\
 LoL_Maze.exe is the file to play the game.
 
+## LoL_Maze
+The Maze of League of Legends was created to help completely new League players ease into the game. It is a complex game, so a maze game with easy controls will show how the game can feel like by using allies, enemies, and objectives. 
+
 ## Marks Breakdown
 
 | Marks | Element |
