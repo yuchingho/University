@@ -12,13 +12,11 @@ The Scenes pdfs were given out as guidelines, like how "Contentless Scenes" and 
 
 In the second half, I learnt basic stage fighting and how camera angles and "reacting" to your partner trick the audience into believing the action; heard interesting stories about [Screen Actors Guild](https://www.sagaftra.org/) and [Voicebunny](https://voicebunny.com/) and learnt 10 valuable lessons for live video interviews:
 1. Have diffuse lights pointing towards you as it would be in a professional photoshoot. This means there won't be any shadow on your face; and if you can't find strong diffuse light, use natural sunlight.
-![Light](https://imgur.com/00vT20E.jpg)
 <p align="center">
   <img src="https://github.com/yuchingho/University/blob/master/3)%20Mercer%20Erasmus%20Year/7)%20Semester%20Two%20-%20THR218%20Beginning%20Acting/Light.png?raw=true" alt="Light"/>
 </p>
 
 2. Stand if needed, to have the camera placed at a height where your head, neck, shoulders and bit of chest should fill the screen from top to bottom, like a headshot.
-![Headshot](https://imgur.com/Bh0TNeQ.jpg)
 <p align="center">
   <img src="https://github.com/yuchingho/University/blob/master/3)%20Mercer%20Erasmus%20Year/7)%20Semester%20Two%20-%20THR218%20Beginning%20Acting/Headshot.jpg?raw=true" alt="Headshot"/>
 </p>
