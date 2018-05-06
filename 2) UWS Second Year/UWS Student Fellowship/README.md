@@ -18,4 +18,4 @@ I had several experiences that influnced my final idea:
 
 My final idea was a prototype web application so students can be more involved with university life - enrollment, seeing their own personal timetable because they've logged in with their Banner ID, seeing notifications specific to their course, university events and being able to complete surveys from their phones and earn rewards.
 
-A [seperate repository](https://github.com/yuchingho/UWSRewardsPrototype) contains the design document and a simple prototype built with jQuery.
+A [seperate repository](https://github.com/yuchingho/jQueryUWSRewards) contains the design document and a simple prototype built with jQuery.
