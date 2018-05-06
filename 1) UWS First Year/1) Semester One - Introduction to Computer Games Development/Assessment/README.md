@@ -12,7 +12,13 @@ LoL_Maze.gm81 shows how the game was programmed.\
 LoL_Maze.exe is the file to play the game.
 
 ## LoL_Maze
-The Maze of League of Legends was created to help completely new League players ease into the game. It is a complex game, so a maze game with easy controls will show how the game can feel like by using allies, enemies, and objectives. 
+The Maze of League of Legends was created to help completely new League players ease into the game. It is a complex game, so a maze game with easy controls will show how the game can feel like by using allies, enemies, and objectives.
+
+[Portfolio](https://yuchingho.neocities.org/)
+[Play on Itch](https://yuchingho.itch.io/league-maze)
+[YouTube](https://youtu.be/qZtnu4YWFSM)
+[IndieDB](http://www.indiedb.com/members/yuchingho111/)
+[Wordpress](https://yuchingho.wordpress.com/)
 
 ## Marks Breakdown
 
