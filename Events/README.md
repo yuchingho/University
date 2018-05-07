@@ -70,7 +70,6 @@ The above folders are for specific events while the documents and below are more
 - jobserve website
 - practiceaptitute tests website
 - Trainee Finder website
-- LeogLand?
 
 ## UWS Third Year
 Computing and Creative Technologies Employer Event Companies

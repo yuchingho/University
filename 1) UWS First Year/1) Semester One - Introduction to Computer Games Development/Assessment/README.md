@@ -1,4 +1,12 @@
-# Assessment
+The Maze of League of Legends was created to help completely new League players ease into the game. It is a complex game, so a maze game with easy controls will show how the game can feel like by using allies, enemies, and objectives.
+
+[Portfolio](https://yuchingho.neocities.org/)\
+[Play on Itch](https://yuchingho.itch.io/league-maze)\
+[YouTube](https://youtu.be/qZtnu4YWFSM)\
+[IndieDB](http://www.indiedb.com/members/yuchingho111/)\
+[Wordpress](https://yuchingho.wordpress.com/)
+
+## Assessment
 
 Assessment.pdf gives the outline of the submission:
 - A Game Design Document
@@ -7,18 +15,9 @@ Assessment.pdf gives the outline of the submission:
 - GameMaker Executable File
 
 One of Lab03 was chosen to help with the the final assessment, and I chose "Creating Maze Games".\
-Audio and Images Folders contain the assets used to build LoL_Maze.gm81 file.\
+Audio and Images Folders contain the assets used to build LoL_Maze.gm81 file.
 LoL_Maze.gm81 shows how the game was programmed.\
 LoL_Maze.exe is the file to play the game.
-
-## LoL_Maze
-The Maze of League of Legends was created to help completely new League players ease into the game. It is a complex game, so a maze game with easy controls will show how the game can feel like by using allies, enemies, and objectives.
-
-[Portfolio](https://yuchingho.neocities.org/)\
-[Play on Itch](https://yuchingho.itch.io/league-maze)\
-[YouTube](https://youtu.be/qZtnu4YWFSM)\
-[IndieDB](http://www.indiedb.com/members/yuchingho111/)\
-[Wordpress](https://yuchingho.wordpress.com/)
 
 ## Marks Breakdown
 
