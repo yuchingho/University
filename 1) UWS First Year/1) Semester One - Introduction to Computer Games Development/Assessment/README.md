@@ -1,8 +1,9 @@
 The Maze of League of Legends was created to help completely new League players ease into the game. It is a complex game, so a maze game with easy controls will show how the game can feel like by using allies, enemies, and objectives.
 
-[Portfolio](https://yuchingho.neocities.org/)\
 [Play on Itch](https://yuchingho.itch.io/league-maze)\
-[YouTube](https://youtu.be/qZtnu4YWFSM)\
+[YouTube](https://youtu.be/qZtnu4YWFSM)
+
+[Portfolio](https://yuchingho.neocities.org/)\
 [IndieDB](http://www.indiedb.com/members/yuchingho111/)\
 [Wordpress](https://yuchingho.wordpress.com/)
 
