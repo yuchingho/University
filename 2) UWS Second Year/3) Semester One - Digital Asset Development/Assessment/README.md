@@ -8,9 +8,9 @@ Rooms is a Level Design Environment to show off high quality models and textures
 [Wordpress](https://yuchingho.wordpress.com/)
 
 From my [Google Drive](https://drive.google.com/open?id=1Koy9IMFbukxuam1idZwmtIGTYxdSNaRl)
-- Blender Room02 contains Blender files for the models in Room02 
-- Blender Room03 contains Blender files for the models in Room03
-- Unreal Rooms is the Unreal Project
+- Blender Room02 Folder contains Blender files for the models in Room02 
+- Blender Room03 Folder contains Blender files for the models in Room03
+- Unreal Rooms Folder is the Unreal Project
     - Inside _Rooms-EXE-Windows Folder contains the executable file, or play on Itch
 - Animation Jam.psd is the Photoshop file
 
