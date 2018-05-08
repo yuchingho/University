@@ -10,7 +10,11 @@ Rooms is a small environment to show off high quality models and textures produc
 
 ## Assessment01 - Audacity, Adobe Photoshop CS6, and Adobe Premiere Pro CS6
 The assessment was about an upcoming Animation Jam and split into two parts:
-1) Making a Poster
+1) Making a Poster - Animation Jam.png
+<p align="center">
+  <img src="https://github.com/yuchingho/University/blob/master/2)%20UWS%20Second%20Year/3)%20Semester%20One%20-%20Digital%20Asset%20Development/Assessment/Assessment01%20Animation%20Jam.png?raw=true" alt="Animation Jam"/>
+</p>
+
 2) Making a [Video](https://youtu.be/NspRm2WFxl4)
 
 ## Assessment02 - Unreal Game Engine
