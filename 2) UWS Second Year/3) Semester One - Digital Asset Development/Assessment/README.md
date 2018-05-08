@@ -1,4 +1,4 @@
-Rooms is a Level Design Environment to show off high quality models and textures produced. The Blender models and Unreal project can be downloaded from [Google Drive](https://drive.google.com/open?id=1Koy9IMFbukxuam1idZwmtIGTYxdSNaRl).
+Rooms is a Level Design Environment to show off high quality models and textures produced.
 
 [Play on Itch](https://yuchingho.itch.io/rooms)\
 [YouTube](https://youtu.be/XCwwLIuUZGs)
@@ -6,6 +6,14 @@ Rooms is a Level Design Environment to show off high quality models and textures
 [Portfolio](https://yuchingho.neocities.org/)\
 [IndieDB](http://www.indiedb.com/members/yuchingho111/)\
 [Wordpress](https://yuchingho.wordpress.com/)
+
+From my [Google Drive](https://drive.google.com/open?id=1Koy9IMFbukxuam1idZwmtIGTYxdSNaRl)
+- Blender Room02 contains Blender files for the models in Room02 
+- Blender Room03 contains Blender files for the models in Room03
+- Unreal Rooms
+    - Inside _Rooms-EXE-Windows Folder contains the executable file, or play on Itch
+- Animation Jam.psd is the Photoshop file
+
 
 
 ## Assessment01 - Audacity, Adobe Photoshop CS6, and Adobe Premiere Pro CS6
