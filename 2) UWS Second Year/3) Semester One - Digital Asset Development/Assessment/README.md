@@ -1,7 +1,7 @@
-Rooms is a small environment to show off high quality models and textures produced. The Blender models and Unreal project can be downloaded from [Google Drive](https://drive.google.com/open?id=1Koy9IMFbukxuam1idZwmtIGTYxdSNaRl).
+Rooms is a Level Design Environment to show off high quality models and textures produced. The Blender models and Unreal project can be downloaded from [Google Drive](https://drive.google.com/open?id=1Koy9IMFbukxuam1idZwmtIGTYxdSNaRl).
 
-[Play on Itch]()\
-[YouTube](ShortenedLink)
+[Play on Itch](https://yuchingho.itch.io/rooms)\
+[YouTube](https://youtu.be/XCwwLIuUZGs)
 
 [Portfolio](https://yuchingho.neocities.org/)\
 [IndieDB](http://www.indiedb.com/members/yuchingho111/)\
