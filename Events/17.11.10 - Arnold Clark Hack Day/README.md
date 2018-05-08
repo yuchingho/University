@@ -1,10 +1,9 @@
 ## 2017 Arnold Clark Hack Day Application
 
-To get into the Hack Day, applicants wrote a program showing how old a person would be on different planets.
-
+To get into the Hack Day, applicants wrote a program showing how old a person would be on different planets.\
 Space_Age_Calculator.java shows the code written, and the result when complied is shown below:
 
-## Space_Age_Calculator Console Output
+### Space_Age_Calculator Console Output
 
 Please enter your age: 
 > 99
