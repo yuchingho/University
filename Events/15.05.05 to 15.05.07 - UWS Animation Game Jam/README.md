@@ -1,3 +1,11 @@
-[The event](https://www.eventbrite.co.uk/e/uws-animation-and-game-jam-tickets-16690988195) started just after university ended for the summer. The theme was "communication" and our idea was progressing through how people communicated with each other and even though it made humanity closer, it also made us more isolated.
+Bonds is an animatic showing the history of how people communicated with each other; and by making humanity more connected, we also made ourselves more isolated.
 
-My job was to research on the history of communcation between people, get image and audio references, and work on background ideas with a team-member. Different animatic parts were split between the other members and [the video Bonds](https://youtu.be/_OIMqH19pn4) was made.
+[YouTube](https://youtu.be/_OIMqH19pn4)
+
+[Portfolio](https://yuchingho.neocities.org/)\
+[IndieDB](http://www.indiedb.com/members/yuchingho111/)\
+[Wordpress](https://yuchingho.wordpress.com/)
+
+## 2015 UWS Animation Jam
+
+The [UWS Animation Jam](https://www.eventbrite.co.uk/e/uws-animation-and-game-jam-tickets-16690988195) event's theme was "communication". Different animatic parts were split between the other members and my role was to research on the history of humanity's communcation, get image and audio references, and work on background ideas with a team-member.
