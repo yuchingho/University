@@ -1,5 +1,16 @@
-This was my first Game Jam and it was quite an experience - I arrived ahead of registration time and watched as people brought in desktops, multiple screens, food and onesies. This made me feel quite unprepared as I only had a laptop, money and sleeping bag :sweat_smile:
+Splat is a game where you are falling from a plane and you try to control yourself to grab the parachute. The indicator points to where parachute is and your goal is to not be hit by the falling objects - as they can rip off your limbs - and grab the parachute to land safely.
 
-This was the [keynote video](https://www.youtube.com/watch?v=NVl8o85YGNE) and the [theme announcement](https://www.youtube.com/watch?v=N1W5VxdNyNk). The theme was "What will you do?" and after brainstorming, my team came up with the idea of controlling a falling person from a plane and try surviving. Our group finished the game "Splat" and uploaded the source files onto the [Global Game Jam site](https://globalgamejam.org/2015/games/splat-0). 
+[Play on Itch](https://yuchingho.itch.io/splat)\
+[YouTube](https://youtu.be/_-F7lOQdqdI)
 
-A [seperate repository](https://github.com/yuchingho/Splat) contains the Unity project and executable file to play the game.
+[Portfolio](https://yuchingho.neocities.org/)\
+[IndieDB](http://www.indiedb.com/members/yuchingho111/)\
+[Wordpress](https://yuchingho.wordpress.com/)
+
+## 2015 Global Game Jam Glasgow Caledonian
+
+The [keynote video](https://www.youtube.com/watch?v=NVl8o85YGNE) and theme "[ What do we do now?](https://www.youtube.com/watch?v=N1W5VxdNyNk)" were presented and after brainstorming, my team came up with the idea of controlling a falling person from a plane and try surviving.
+
+- _Splat-EXE-Windows Folder contains the executable file, or play on Itch
+- Source Files Folder contains the files our group made and uploaded onto the [Global Game Jam site](https://globalgamejam.org/2015/games/splat-0)
+- UnitySplat Folder is the Unity project
