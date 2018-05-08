@@ -1,3 +1,3 @@
-The 2nd Game Jam was hosted at The University of the West of Scotland with the [Scottish Institute for Enterprise (SIE) and the UWS Games Development Society](https://www.eventbrite.co.uk/e/sie-uws-gds-game-jam-tickets-15718480398). 
+## 2015 UWS Games Development Society Game Jam
 
-The theme was "Out of Time" and my team had created the beginnings of a board game. Instead of programming and animating, my team created it out of paper to create the "Native Pixel Wars" board game which won the "Best Innovation" award.
+The [Scottish Institute for Enterprise (SIE) and the UWS Games Development Society](https://www.eventbrite.co.uk/e/sie-uws-gds-game-jam-tickets-15718480398) event's theme was "out of time". Our group created a board game called "Native Pixel Wars" with paper which won the "Best Innovation" award.

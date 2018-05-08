@@ -1,4 +1,4 @@
-# Notes from Talk:
+## Notes from Talk:
 
 Igda.org - International games developers association\
 Games take ~ 2 years to build\

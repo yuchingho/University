@@ -1,6 +1,10 @@
-Arnold Clark was hosting a Hack Day and they had the applicants write a piece of code when applying. The short test was to show how "old" you were on other planets. I wasn't accepted but this was the code I wrote and the result it gave:
+## 2017 Arnold Clark Hack Day Application
 
-# Space_Age_Calculator Console Output
+To get into the Hack Day, applicants wrote a program showing how old a person would be on different planets.
+
+Space_Age_Calculator.java shows the code written, and the result when complied is shown below:
+
+## Space_Age_Calculator Console Output
 
 Please enter your age: 
 > 99
