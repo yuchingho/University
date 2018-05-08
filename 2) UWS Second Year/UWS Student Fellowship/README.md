@@ -18,10 +18,8 @@ Taken from the expired website description:
 
 After meeting with the other members, our goal was to come up with ideas that could improve the university.\
 I had several experiences that influnced my final idea:
-- The university's website UX could be more streamlined
-- As a Student Guide, surveys had to be completed.
+- The university's website UI UX could be more streamlined
+- As a Student Guide, surveys had to be completed
 - Learning from my modules "Programming for Native App Interaction" and "Programming for Mobile Devices"
 
 My final idea was a prototype web application so students can be more involved with university life - enrollment, seeing their own personal timetable because they've logged in with their Banner ID, seeing notifications specific to their course, university events and being able to complete surveys from their phones and earn rewards.
-
-A [seperate repository](https://github.com/yuchingho/jQueryUWSRewards) contains the design document and a simple prototype built with jQuery.
