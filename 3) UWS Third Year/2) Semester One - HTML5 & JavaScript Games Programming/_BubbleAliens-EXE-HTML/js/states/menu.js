@@ -1,0 +1,6 @@
+var menuState = {
+    
+    create: function() {
+        
+    },
+};
