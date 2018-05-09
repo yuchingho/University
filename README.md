@@ -42,10 +42,10 @@ This repository will not be finished until all tasks are ticked, and when I have
 ## 2017 UWS Third Year
 - [x] 1) Semester One - Creative Technology Professionalism
 - [x] 2) Semester One - HTML5 & JavaScript Games Project
-3) Both Semesters - Games Development Project
-4) Semester Two - Advanced Programming Mobile Devices
-5) Semester Two - 3D Level Design
-6) Semester Two - Research Methods in Computing
+- [x] 3) Both Semesters - Games Development Project
+- [x] 4) Semester Two - Advanced Programming Mobile Devices
+- [x] 5) Semester Two - 3D Level Design
+- [x] 6) Semester Two - Research Methods in Computing
 
 ## 2018 UWS Fourth Year
 
