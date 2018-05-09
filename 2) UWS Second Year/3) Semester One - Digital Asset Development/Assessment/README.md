@@ -7,22 +7,22 @@ Rooms is a Level Design Environment to show off high quality models and textures
 [IndieDB](http://www.indiedb.com/members/yuchingho111/)\
 [Wordpress](https://yuchingho.wordpress.com/)
 
-From my [Google Drive](https://drive.google.com/open?id=1Koy9IMFbukxuam1idZwmtIGTYxdSNaRl)
+## Assessment
+
+From my [Google Drive](https://drive.google.com/open?id=1Koy9IMFbukxuam1idZwmtIGTYxdSNaRl) -
 - BlenderRoom02 Folder contains Blender files for the models in Room02 
 - BlenderRoom03 Folder contains Blender files for the models in Room03
 - UnrealRooms Folder is the Unreal Project
-    - Inside _Rooms-EXE-Windows Folder contains the executable file, or play on Itch
+    - _Rooms-EXE-Windows Folder contains the executable file, or play on Itch
 - AnimationJam is the Photoshop file
-
-
 
 ## Assessment01 - Audacity, Adobe Photoshop CS6, and Adobe Premiere Pro CS6
 The assessment was about an upcoming Animation Jam and split into two parts:
 1) Making a Poster - Animation Jam.png
-2) Making a [Video](https://youtu.be/NspRm2WFxl4)
+2) [Making a Video](https://youtu.be/NspRm2WFxl4)
 
 ## Assessment02 - Unreal Game Engine
-This was making a three-part room with Unreal and put into 
+This was making a three-part room with Unreal and put into:
 1) Room 1 (start): should be the starting point of the level, and should be empty of all objects other than a light source of some description (for example, a point light, spot light or emissive glow from a wall surface).
 
 2) Room 2 (textured object): must contain an imported 3D static mesh asset, which can be a geometric primitive (such as a cube) or something more complex. It must incorporate at least three different materials you have designed yourself, each of which must include a texture created in Photoshop and imported into Unreal.
