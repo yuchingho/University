@@ -12,5 +12,5 @@ Splat is a game where you are falling from a plane and you try to control yourse
 The [keynote video](https://www.youtube.com/watch?v=NVl8o85YGNE) and theme "[ What do we do now?](https://www.youtube.com/watch?v=N1W5VxdNyNk)" were presented and after brainstorming, our group came up with the idea of controlling a falling person from a plane and try surviving.
 
 - Source Files Folder contains the files our group made and uploaded onto the [Global Game Jam site](https://globalgamejam.org/2015/games/splat-0)
-- UnitySplat Folder is the Unity project
+- UnitySplat Folder is the Unity Project
 - _Splat-EXE-Windows Folder contains the executable file, or play on Itch
