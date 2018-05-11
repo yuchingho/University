@@ -1,5 +1,5 @@
-SpaceX Travel is a Level Design Environment of a to-scale model of half of our Solar System. Everything is correctly scaled apart from the Sun.\
-
+SpaceX Travel is a Level Design Environment of a to-scale model of half of our Solar System.\
+Everything is correctly scaled apart from the Sun.
 
 [Play on Itch](https://yuchingho.itch.io/spacex-travel)\
 [YouTube](YouTubeShortenedLink)
