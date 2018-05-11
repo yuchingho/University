@@ -1,6 +1,0 @@
-var endState = {
-    
-    create: function() {
-        
-    },
-};

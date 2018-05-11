@@ -1,36 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-    <title>Bubble Aliens</title>          
+    <title>Bubble Aliens</title>
     <style>
-        html {
-            background: "/tiled/bg.png" no-repeat center fixed; 
-            background-size: 100% 100%;
-        }
+    #bg {
+        background: url(tiled/bg.png);
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     </style>
-    <script src = "js/phaser.min.js"></script>
-    
-    <!-- Game States -->
-    <script src = "js/states/boot.js"></script>
-    <script src = "js/states/load.js"></script>
-    <script src = "js/states/menu.js"></script>
-    <script src = "js/states/play.js"></script>
-    <script src = "js/states/end.js"></script>
-    
-    <!-- Add new JS files as created -->
-    <script src = "js/world.js"></script>
-    <script src = "js/player.js"></script>
-    
-    
-    
-    
-    <script src = "js/game.js"></script>
-    
+    <script src = "phaser.min.js"></script>
+    <script src = "game.js"></script>
 </head>
-<body>
-    <div class = "container" align = "center">
-        <div id = "BubbleAliens"></div>
-    </div>
+    
+<body id = "bg">
+    <div class = "container" align = "center"><div id = "BubbleAliens"></div></div>
 </body>
 </html>
