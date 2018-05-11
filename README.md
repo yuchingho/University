@@ -15,7 +15,7 @@ This repository will not be finished until all tasks are ticked, and when I have
 ## 2014 UWS First Year
 - [x] 1) Semester One - Introduction to Computer Games Development
 - [x] 2) Semester One - Creative Computing Profession
-- [x] 3) Semester One - Introduction to Computer Animation
+- [ ] 3) Semester One - Introduction to Computer Animation
 - [x] 4) Both Semesters - Introduction to Java Programming
 - [x] 5) Semester Two - Design for Interaction
 - [x] 6) Semester Two - Computing Systems

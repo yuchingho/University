@@ -14,9 +14,8 @@ Some Phaser Example Sprites were used or created through Piskel, Photoshop. The 
 
 If downloaded, an editor like [Brackets](http://brackets.io/), [Webstorm](https://www.jetbrains.com/webstorm/), [Komodo Edit](https://www.activestate.com/komodo-ide/downloads/edit) or using [XAMPP](https://www.apachefriends.org/index.html) is required to open the project and play the game via the "index.html" file. 
 
-![XAMPP Notes](https://imgur.com/PTVICDy.png)
 <p align="center">
-  <img src="https://github.com/yuchingho/University/blob/master/3)%20Mercer%20Erasmus%20Year/7)%20Semester%20Two%20-%20THR218%20Beginning%20Acting/Light.png?raw=true" alt="Light"/>
+  <img src="https://raw.githubusercontent.com/yuchingho/University/master/3)%20UWS%20Third%20Year/2)%20Semester%20One%20-%20HTML5%20%26%20JavaScript%20Games%20Programming/XAMPP.png?raw=true" alt="XAMPP"/>
 </p>
 
 ## Marks Breakdown
