@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt SpellingTest" company="" webLink="http://" view-date="2017-09-11" view-index="0" gantt-divider-location="414" resource-divider-location="300" version="2.8.5" locale="en_GB">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Name" width="236" order="0"/>
+        <field id="tpc0" name="Week" width="50" order="1"/>
+        <field id="tpd4" name="Begin date" width="59" order="2"/>
+        <field id="tpd5" name="End date" width="65" order="3"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+            <taskproperty id="tpc0" name="Week" type="custom" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Meeting Minutes" color="#8cb6ce" meeting="false" start="2017-09-13" duration="51" complete="0" expand="true">
+            <customproperty taskproperty-id="tpc0" value="02 - 12"/>
+        </task>
+        <task id="16" name="Game Idea" color="#8cb6ce" meeting="false" start="2017-09-13" duration="11" complete="0" expand="true">
+            <notes><![CDATA[Introduction and method of communication established and a shared Google Drive, Github, Trello were also established. 
+
+Three potential ideas were brain-stormed and after landing on an idea, the best game engine to create a 2D RPG was Unity as we all wanted to familiarise with a popular professional game engine.  ]]></notes>
+            <customproperty taskproperty-id="tpc0" value="02 - 04"/>
+        </task>
+        <task id="9" name="Game Design Document" color="#8cb6ce" meeting="false" start="2017-09-27" duration="11" complete="0" expand="true">
+            <notes><![CDATA[Document started and completed in bullet-point format.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="04 - 06"/>
+        </task>
+        <task id="11" name="Technical Report" color="#8cb6ce" meeting="false" start="2017-09-27" duration="11" complete="0" expand="true">
+            <notes><![CDATA[Document started and completed in bullet-point format]]></notes>
+            <customproperty taskproperty-id="tpc0" value="04 - 06"/>
+        </task>
+        <task id="19" name="Prototype Unity and Github" color="#8cb6ce" meeting="false" start="2017-10-11" duration="26" complete="0" expand="true">
+            <notes><![CDATA[The main idea was to be fleshed out before the prototype was to be started.
+
+Over the weeks, we allocated tasks but discovered quite late that a very odd problem with Unity and Github was occurring and our local projects weren't syncing correctly. 
+
+We decided to quickly move the project over to GameMaker 8.1 Lite over the next week to get ready for the presentation.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="06 - 11"/>
+        </task>
+        <task id="38" name="GameMaker 8.1 Lite" color="#8cb6ce" meeting="false" start="2017-11-15" duration="6" complete="0" expand="true">
+            <notes><![CDATA[The sprites were completed so they were easy to import but the coding had to be done from scratch. We originally had two fight scenes, but as the problem was discovered late and imported to a new game engine, there was only time to do one fight scene.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="11 - 12"/>
+        </task>
+        <task id="7" name="Presentation Preparation" color="#8cb6ce" meeting="false" start="2017-11-15" duration="11" complete="0" expand="true">
+            <notes><![CDATA[The overall document was tidied up from bullet-points and prototype completed.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="11 - 13"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

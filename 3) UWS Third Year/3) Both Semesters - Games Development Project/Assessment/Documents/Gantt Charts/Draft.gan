@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt Draft SpellingTest" company="" webLink="http://" view-date="2017-08-04" view-index="0" gantt-divider-location="414" resource-divider-location="300" version="2.8.5" locale="en_GB">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="236" order="0"/>
+        <field id="tpc0" name="Week" width="50" order="1"/>
+        <field id="tpd4" name="Begin date" width="59" order="2"/>
+        <field id="tpd5" name="End date" width="65" order="3"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+            <taskproperty id="tpc0" name="Week" type="custom" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Meeting Minutes" color="#8cb6ce" meeting="false" start="2017-09-13" duration="51" complete="0" expand="true">
+            <notes><![CDATA[Keep adding each week.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="02 - 12"/>
+        </task>
+        <task id="1" name="Project Coursework Specification" color="#8cb6ce" meeting="false" start="2017-09-13" duration="6" complete="0" expand="true">
+            <notes><![CDATA[Game idea specified.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="02 - 03"/>
+        </task>
+        <task id="2" name="Base Game Design Document" color="#8cb6ce" meeting="false" start="2017-09-20" duration="16" complete="0" expand="true">
+            <notes><![CDATA[Baseline Bullet-points with dates. Risk-analysis. Technical Design Document. Keep on adding as we build prototype.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="03 - 06"/>
+        </task>
+        <task id="3" name="Additional Game Design Document" color="#8cb6ce" meeting="false" start="2017-10-20" duration="19" complete="0" expand="true">
+            <notes><![CDATA[Keep adding to Document as build prototype.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="06 - 11"/>
+        </task>
+        <task id="4" name="Prototype" color="#8cb6ce" meeting="false" start="2017-10-11" duration="3" complete="0" expand="true">
+            <notes><![CDATA[Intro Scene. Text/Animation, whatever. (3) Locations - Wizard tower, cast-out location and neighbouring location. 2 examples of combat system.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="06 - 11"/>
+        </task>
+        <task id="5" name="Finalise Prototype and Document" color="#8cb6ce" meeting="false" start="2017-11-15" duration="6" complete="0" expand="true">
+            <notes><![CDATA[Finalise Prototype and Document. Make bullet-points to sentences.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="11 - 12"/>
+        </task>
+        <task id="6" name="Presentation Preparation" color="#8cb6ce" meeting="false" start="2017-11-15" duration="10" complete="0" expand="true">
+            <notes><![CDATA[Ensure Protoype is working. Presentation slides.]]></notes>
+            <customproperty taskproperty-id="tpc0" value="11 - 13"/>
+        </task>
+        <task id="7" name="Presentation" meeting="false" start="2017-11-29" duration="1" complete="0" expand="true">
+            <customproperty taskproperty-id="tpc0" value="        13"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
