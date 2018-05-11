@@ -1,1 +1,2 @@
-# university
+Research Methods in Computing focused on the writing a document that can help towards 4th Year Honours Research.\
+As my dissertation will focus on serious games, I wrote a document documented "Can Games become Teachers".

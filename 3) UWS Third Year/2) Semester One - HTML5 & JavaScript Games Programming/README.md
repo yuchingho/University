@@ -1,1 +1,1 @@
-HTML5 & JavaScript Games Programming was focused on learning JavaScript and using the Phaser Framework. The assessment took the whole semester and the goal was to create a game that could then be embedded into a website.
+HTML5 & JavaScript Games Programming was focused on learning JavaScript and using the Phaser Framework.

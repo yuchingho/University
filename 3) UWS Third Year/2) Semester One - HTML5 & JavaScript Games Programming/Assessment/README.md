@@ -2,7 +2,7 @@ Bubble Aliens is a short serious game designed to teach people about hydrocarbon
 
 The game has several bugs - collision handling sometimes messes up, text sprites aren't destroyed correctly, sounds overlap, and a major bug of which bubbles don't reset correctly until it's been popped again and thus the same unit can spawn multiple times.
 
-[Play on Itch]()\
+[Play on Itch](https://yuchingho.itch.io/bubble-aliens)\
 [YouTube](ShortenedLink)
 
 [Portfolio](https://yuchingho.neocities.org/)\
@@ -10,7 +10,7 @@ The game has several bugs - collision handling sometimes messes up, text sprites
 [Wordpress](https://yuchingho.wordpress.com/)
 
 ## Assessment
-Some Phaser Example Sprites were used or created through Piskel, Photoshop. The map created with Tiled and the background music was taken from Phaser Example Bodenstaendig_2000. Other audio files were downloaded from [soundbible](http://soundbible.com) or created myself and edited with Audacity. 
+Some Phaser Example Sprites were used or created through Piskel, Photoshop. The map created with Tiled and the background music was taken from Phaser Example Bodenstaendig_2000. Other audio files were downloaded from [Soundbible](http://soundbible.com) or created myself and edited with Audacity. 
 
 If downloaded, an editor like [Brackets](http://brackets.io/), [Webstorm](https://www.jetbrains.com/webstorm/), [Komodo Edit](https://www.activestate.com/komodo-ide/downloads/edit) or using [XAMPP](https://www.apachefriends.org/index.html) is required to open the project and play the game via the "index.html" file. 
 
