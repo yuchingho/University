@@ -3,7 +3,7 @@ Bubble Aliens is a short serious game designed to teach people about hydrocarbon
 The game has several bugs - collision handling sometimes messes up, text sprites aren't destroyed correctly, sounds overlap, and a major bug of which bubbles don't reset correctly until it's been popped again and thus the same unit can spawn multiple times.
 
 [Play on Itch](https://yuchingho.itch.io/bubble-aliens)\
-[YouTube](ShortenedLink)
+[YouTube](https://youtu.be/KCYWLSK5n3I)
 
 [Portfolio](https://yuchingho.neocities.org/)\
 [IndieDB](http://www.indiedb.com/members/yuchingho111/)\
