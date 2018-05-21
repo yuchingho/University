@@ -2,11 +2,8 @@ SpaceX Travel is a Level Design Environment of a to-scale model of half the Sola
 Everything is correctly scaled apart from the Sun.
 
 [Play on Itch](https://yuchingho.itch.io/spacex-travel)\
-[YouTube](https://youtu.be/EmloSZn0GBQ)
-
-[Portfolio](https://yuchingho.neocities.org/)\
-[IndieDB](http://www.indiedb.com/members/yuchingho111/)\
-[Wordpress](https://yuchingho.wordpress.com/)
+[YouTube](https://youtu.be/EmloSZn0GBQ)\
+[Portfolio](https://yuchingho.com/)
 
 ## Assessment
 

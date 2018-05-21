@@ -1,12 +1,8 @@
-## UWS
+The University of the West of Scotland reposity will contain lectures, lab work and projects from when I entered to when I graduate. My Portfolio website was created with [Neocities](https://neocities.org/), but have sinced moved over to Wordpress:
 
-The University of the West of Scotland reposity will contain lectures, lab work and projects from when I entered to when I graduate. My Portfolio website was created with [Neocities](https://neocities.org/), and have branched out to other websites as well:
-
-[Portfolio](https://yuchingho.neocities.org/)\
+[Portfolio](https://yuchingho.com/)\
 [Itch](https://yuchingho.itch.io/)\
 [Twitter](https://twitter.com/yuchingho111/)\
-[IndieDB](http://www.indiedb.com/members/yuchingho111/)\
-[Wordpress](https://yuchingho.wordpress.com/)\
 [Instagram](https://www.instagram.com/yuchingho111/)\
 [Paypal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=4RD2FSRRB5278)
 
