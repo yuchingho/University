@@ -9,6 +9,5 @@ Everything is correctly scaled apart from the Sun.
 
 From my [Google Drive](https://drive.google.com/open?id=1R1lNS-LBC9hOGZwLcxBbY1HKJ2zoL6aH) -
 - BlenderFolders contains Blender files and images for UV wrapping
-- Maya Folder contains an unused spaceship model
 - UnrealSpaceXTravel Folder is the Unreal Project
     - _SpaceXTravel-EXE-Windows Folder contains the executable file, or play on Itch
