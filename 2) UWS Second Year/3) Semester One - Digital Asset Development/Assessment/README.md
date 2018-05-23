@@ -6,12 +6,12 @@ Rooms is a Level Design Environment to show off high quality models and textures
 
 ## Assessment
 
-From my [Google Drive](https://drive.google.com/open?id=1Koy9IMFbukxuam1idZwmtIGTYxdSNaRl) -
+From my [OneDrive](https://1drv.ms/f/s!Aop7ymLBugIggge8X_gd5pCYpIJ3) -
 - BlenderRoom02 Folder contains Blender files for the models in Room02 
 - BlenderRoom03 Folder contains Blender files for the models in Room03
-- UnrealRooms Folder is the Unreal Project
+- AnimationJam is a Photoshop file
+- UnrealRooms.zip is the Unreal Project
     - _Rooms-EXE-Windows Folder contains the executable file, or play on Itch
-- AnimationJam is the Photoshop file
 
 ## Assessment01 - Audacity, Adobe Photoshop CS6, and Adobe Premiere Pro CS6
 The assessment was about an upcoming Animation Jam and split into two parts:

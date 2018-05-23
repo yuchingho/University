@@ -7,7 +7,9 @@ Everything is correctly scaled apart from the Sun.
 
 ## Assessment
 
-From my [Google Drive](https://drive.google.com/open?id=1R1lNS-LBC9hOGZwLcxBbY1HKJ2zoL6aH) -
-- BlenderFolders contains Blender files and images for UV wrapping
-- UnrealSpaceXTravel Folder is the Unreal Project
+From my [OneDrive](https://1drv.ms/f/s!Aop7ymLBugIgggZxG_xmA6VxAnZd) -
+- BlenderPlanet contains Blender files for the planet models
+- MenuEnd is a Photoshop file
+- MenuStart is a Photoshop file
+- UnrealSpaceXTravel.zip is the Unreal Project
     - _SpaceXTravel-EXE-Windows Folder contains the executable file, or play on Itch
