@@ -11,5 +11,5 @@ From my [OneDrive](https://1drv.ms/f/s!Aop7ymLBugIgggZxG_xmA6VxAnZd) -
 - BlenderPlanet contains Blender files for the planet models
 - MenuEnd is a Photoshop file
 - MenuStart is a Photoshop file
-- UnrealSpaceXTravel.zip is the Unreal Project
+- SpaceXTravel.zip is the Unreal Project
     - _SpaceXTravel-EXE-Windows Folder contains the executable file, or play on Itch

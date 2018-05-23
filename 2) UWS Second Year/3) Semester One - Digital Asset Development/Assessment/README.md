@@ -10,7 +10,7 @@ From my [OneDrive](https://1drv.ms/f/s!Aop7ymLBugIggge8X_gd5pCYpIJ3) -
 - BlenderRoom02 Folder contains Blender files for the models in Room02 
 - BlenderRoom03 Folder contains Blender files for the models in Room03
 - AnimationJam is a Photoshop file
-- UnrealRooms.zip is the Unreal Project
+- Rooms.zip is the Unreal Project
     - _Rooms-EXE-Windows Folder contains the executable file, or play on Itch
 
 ## Assessment01 - Audacity, Adobe Photoshop CS6, and Adobe Premiere Pro CS6
