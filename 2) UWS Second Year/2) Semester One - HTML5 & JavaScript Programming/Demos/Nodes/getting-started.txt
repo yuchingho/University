@@ -1,0 +1,21 @@
+Getting Started:
+================
+
+Download and install Node.js from http://nodejs.org.
+In a command window, move to the folder you unzipped this file into.
+Run Node.js followed by the JS file you wish to execute.  For example
+C:>Node HelloServer.js
+will run the simple web server script.
+Open a browser and point it to the port number given at the end of the 
+JS file you are executing - e.g. http://localhost:8888 (for HelloServer.js)
+
+Browser through the rest of the scripts.  For a workable web server, execute:
+
+C:>Node httpSeerver.js
+
+And point the browser at this domain with a web file name at the end, e.g.
+
+http://localhost:9090/index.html
+
+For more info, look at http://nodejs.org.
+

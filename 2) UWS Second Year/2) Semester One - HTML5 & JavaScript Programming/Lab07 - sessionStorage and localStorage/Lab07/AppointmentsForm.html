@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        html { height: 100%; }
+        body { height: 100%; margin: 0; padding: 0; }
+        #map_canvas { height: 100%; }
+        #tbl {
+            background-color: #778899;
+        }
+        #tbl th {
+            background-color: #778899;
+            color: black;
+        }
+        #tbl tr:nth-child(even) {
+            background-color: #1e90ff;
+        }
+        #tbl tr:nth-child(odd) {
+            background-color: #20b2aa;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/appointmentType.js"></script>
+    <script type="text/javascript" src="js/appointmentForm.js"></script>
+    <title>Appointments</title>
+</head>
+<body>
+    <header>
+        <h1>Appointments Book</h1>
+        <p>Enter appointment details and press OK to add, Cancel to revert.</p>
+    </header>
+    <table>
+        <tr>
+            <td>Subject:</td><td><input type="text" size="40" id="subject" /></td>
+        </tr>
+        <tr>
+            <td>Description</td><td><textarea rows="5" cols="50" maxlength="200" id="description"></textarea></td>
+        </tr>
+        <tr>
+            <td>Due Date:</td><td><input type="date" id="duedate" /></td>
+        </tr>
+        <tr>
+            <td>Due Time:</td><td><select id="duetime"></select></td>
+        </tr>
+        <tr>
+            <td>Location:</td><td><input type="text" id="postcode"/></td>
+        </tr>
+    </table>
+    <button id="ok">OK</button><button id="cancel">Cancel</button>
+</body>
+</html>

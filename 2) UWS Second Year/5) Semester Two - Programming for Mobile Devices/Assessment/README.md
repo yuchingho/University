@@ -1,0 +1,1 @@
+The Programming for Mobile Devices Assessment was done in a group project, and my other team-member submitted the working application whereas I have the documentation.

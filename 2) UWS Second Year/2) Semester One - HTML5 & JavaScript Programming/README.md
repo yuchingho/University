@@ -1,1 +1,1 @@
-# university
+HTML5 & JavaScript Programming focused on the introduction to web development with CSS, HTML5, and JavaScript.

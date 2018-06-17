@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# Currency conversion app.
+# (c) A.McMonnies, 2015
+# 23-02-2015 16:45 Version 0.1
+
+NETWORK:
+*
+
+CACHE:
+index.html
+http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css
+http://code.jquery.com/jquery-1.10.2.min.js
+http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js
+js/lab2.js
+js.fixer-symbols.js

@@ -1,1 +1,1 @@
-# university
+Programming for Mobile Devices focused on the introduction to mobile application development with CSS, HTML5, JavaScript, jQuery, and XML.

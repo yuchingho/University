@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <canvas id="canvas" width="400" height="200">
+        This text is only visible if the canvas tag is not supported.
+    </canvas>
+    <p/>
+    <form>
+        Line Colour:
+        <select id="line" onchange="changeLine();">
+            <option value="#fff">None</option>
+            <option value="#000" selected>Black</option>
+            <option value="#00f">Blue</option>
+            <option value="#f00">Red</option>
+            <option value="#0f0">Green</option>
+            <option value="#ff0">Yellow</option>
+            <option value="#fc0">Orange</option>
+            <option value="#f0f">Purple</option>
+            <option value="#0ff">Cyan</option>
+        </select>
+        &nbsp;&nbsp;Fill Colour:
+        <select id="fill" onchange="changeFill();">
+            <option value="#fff" selected>None</option>
+            <option value="#000">Black</option>
+            <option value="#00f">Blue</option>
+            <option value="#f00">Red</option>
+            <option value="#0f0">Green</option>
+            <option value="#ff0">Yellow</option>
+            <option value="#fc0">Orange</option>
+            <option value="#f0f">Purple</option>
+            <option value="#0ff">Cyan</option>
+        </select>
+        &nbsp;&nbsp;Shape:
+        <select id="shape" onchange="changeShape();">
+            <option selected>None</option>
+            <option>Line</option>
+            <option>Rectangle</option>
+            <option>Circle</option>
+            <option>Triangle</option>
+        </select>
+    </form>
+</body>
+<script type="text/javascript" src="drawing.js">
+    /*
+    var canvas = document.getElementById("canvas"),
+        context = canvas.getContext("2d"),
+        fillColour = "#ff0000", // red
+        outlineColour = "#000"; // black
+    context.fillStyle = fillColour;
+    context.strokeStyle = outlineColour;
+    context.beginPath();
+    context.moveTo(50, 50);
+    context.lineTo(150, 50);
+    context.lineTo(150, 150);
+    context.closePath();
+    context.lineWidth = 5;
+    context.stroke();
+    context.fill();
+    */
+</script>
+</html>

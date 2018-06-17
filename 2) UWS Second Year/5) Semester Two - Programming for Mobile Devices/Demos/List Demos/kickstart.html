@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kickstart a jQuery Mobile App in a Window</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <a href="#" id="iphone" w="320" h="480">Click to open a 320x480 (iPhone) window</a></br>
+    <a href="#" id="vga" w="480" h="640">Click to open a 480x640 window</a></br>
+    <a href="#" id="iphone4" w="640" h="960">Click to open a 640x960 (iPhone 4) window</a></br>
+    <a href="#" id="iphone5" w="640" h="1136">Click to open a 640x1136 (iPhone 5) window</a></br>
+    <a href="#" id="galaxys" w="480" h="800">Click to open a 480x800 (Galaxy S) window</a></br>
+    <a href="#" id="galaxysiii" w="720" h="1280">Click to open a 720x1280 (Galaxy SIII) window</a></br>
+    <a href="#" id="razr" w="540" h="960">Click to open a 540x960 (Droid Razr) window</a></br>
+
+    <script>
+        /*globals $,window*/
+        $("a").bind('click', function (evt) {
+            var id = $(this).attr("id"),
+                    width = $(this).attr("w"),
+                    height = $(this).attr("h");
+            window.open("main.html", id, "menubar=no,status=no,toolbar=no,location=no,width=" + width + ",height=" + height);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        html { height: 100%; }
+        body { height: 100%; margin: 0; padding: 0; }
+        #map_canvas { height: 100%; }
+        #tbl {
+            position: relative;
+            left: 20px;
+            background-color: #778899;
+        }
+        #tbl th {
+            background-color: #778899;
+            color: black;
+        }
+        #tbl tr:nth-child(even) {
+            background-color: #1e90ff;
+        }
+        #tbl tr:nth-child(odd) {
+            background-color: #20b2aa;
+        }
+        button {
+            padding: 5px;
+        }
+        #toolbar {
+            position: relative;
+            left: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/appointmentType.js"></script>
+    <script type="text/javascript" src="js/appointmentList.js"></script>
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3Cw-Aj3UzIEvsLeQ_1FXXUPb-4Y544mQ&sensor=false">
+    </script>
+    <!-- note - sensor = false in this app because we're doing a postcode lookup. -->
+    <title>Appointments</title>
+</head>
+<body>
+    <header>
+        <h1>Appointments Book</h1>
+        <p>Click on an appointment to select it for editing. Check completed and the "Remove Completed" to delete it.</p>
+    </header>
+    <div id="table"></div>
+    <div id="toolbar">
+        <button id="addnew">Add New</button><button id="cleanUp">Remove Completed</button>
+    </div>
+    <div id="map_div" style="width:250px; height:250px;"></div>
+</body>
+</html>

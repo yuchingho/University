@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)http://moodlearchive2017.uws.ac.uk/pluginfile.php/509207/mod_resource/content/1/mailto.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Sending Emails</title>
+</head>
+<body>
+    <label for="email">Email address:</label>
+    <input type="text" size="30" id="email">
+    <br>
+    <button id="add">Add address to list</button>
+    <br>
+    <ul id="recipientList">
+
+    </ul>
+    <button id="send">Send</button>
+
+    <script>
+        var email = document.getElementById("email"),
+            recipients = document.getElementById("recipientList"),
+            addButton = document.getElementById("add"),
+            sendButton = document.getElementById("send"),
+            list = [];
+
+        /**
+         * Show all the entered email addresses in a
+         * <ul> element on the page.
+         */
+        function updateList(l) {
+            // Show the current list of addresses...
+            var listHTML = "<li>" + l.join("</li><li>") + "</li>";
+            recipients.innerHTML = listHTML;
+        }
+
+        /**
+         * Whenever the user presses the add button,
+         * test if there is a mail address, add it to
+         * the list of recipients and then update the
+         * on-screen list.
+         * (Note - it would be good to validate the
+         *  address too, to make sure it is a good
+         *  email address).
+         */
+        addButton.onclick = function() {
+            if(email.value !== "") {
+                // Add this email address to the list...
+                list.push(email.value);
+                updateList(list);
+                email.value = "";
+            }
+        };
+
+        /**
+         * The basic principle is to open a new browser
+         * window with a URL that is the "mailto:" link.
+         * All we need to do is to join together the list
+         * of mail addresses (with comma seperators), pre-
+         * pend "mailto:" and use that as the URL in a call
+         * to window.open()...
+         */
+        sendButton.onclick = function() {
+            var mailURL = "mailto:" + list.join(",");
+            window.location.href = mailURL;
+        }
+    </script>
+
+</body></html>

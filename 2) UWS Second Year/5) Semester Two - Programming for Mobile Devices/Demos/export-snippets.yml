@@ -1,0 +1,62 @@
+- trigger: event
+  description: Insert an event handler
+  scope: javascript
+  mTime: 1455651833014
+  text: |
+        $("${1}").on('${2}', function() {
+        
+        });
+
+- trigger: jqm
+  description: Add jQuery Mobile HTML
+  scope: html
+  mTime: 1455564635495
+  text: |
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+            <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+
+- trigger: page
+  description: Add jQuery Mobile page markup
+  scope: html
+  mTime: 1455564906286
+  text: |
+            <div id="${1}" data-role="page">
+                <div data-role="header">
+                    <h1>${2}</h1>
+                    <a href="#" data-rel="back" data-icon="back">Back</a> 
+                </div>
+                <div data-role="content">
+                </div>
+                <div data-role="footer" data-position="fixed" class="ui-bar">
+                    <nav>
+                    <div data-role="navbar">
+                        <a href="#">Nav 1</a>
+                        <a href="#">Nav 2</a>
+                    </div>
+                    </nav>
+                </div>
+            </div>
+        
+
+- trigger: list
+  description: A jQuery Mobile List-View.
+  scope: html
+  mTime: 1455650979928
+  text: |
+        <ul id="${1}" data-role="listview" data-inset="true">
+        
+        </ul>
+
+- scope: css
+  trigger: notrunc
+  description: Disable text truncation for specified elements.
+  mTime: 1455651145706
+  text: |
+        body .ui-li .ui-li-desc ui-title ui-footer {
+         white-space: normal
+        }
+

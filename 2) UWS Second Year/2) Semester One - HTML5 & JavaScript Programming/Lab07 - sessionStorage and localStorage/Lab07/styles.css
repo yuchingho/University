@@ -1,0 +1,27 @@
+body{
+    background-color: papayawhip;
+    color: darkred;
+}
+li{
+    color: maroon;
+    font-family: cursive;
+    list-style-type: square;
+}
+table {
+    border-collapse:collapse;
+    padding: 15px;
+}
+th {
+    background-color: tomato;
+}
+tr:nth-child(even) {
+    background-color: coral;
+}
+tr:nth-child(odd) {
+    background-color: gold;
+}
+td {
+    height: 20px;
+    vertical-align: middle;
+    padding: 5px;
+}

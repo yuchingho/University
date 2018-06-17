@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Collections</title>
+</head>
+<body>
+    <heading>
+        <h1>A Custom Collection type</h1>
+        <img src="img/HTML5-logo.png"/>
+    </heading>
+    <p>The collection class embedded in this page contains a number of tests whose results can
+    be viewed by opening the console window (Ctrl+Shift+J).</p>
+    <p>Once the console is open, you can try out the collection type for yourself.</p>
+    <p> Go through the following steps:</p>
+    <ol>
+        <li>c = new Collection();</li>
+        <li>c.add('one', 1);</li>
+        <li>c.add('two', 'TWO');</li>
+        <li>c.add('fred', 'fred@bloggo.com');</li>
+        <li>c.add('Google', 'www.google.co.uk');</li>
+        <li>c.add('img', new Image());</li>
+        <li>c.keys();  // should show the list of keys. </li>
+        <li>f = function( obj ) { console.log( obj.toString(); }</li>
+        <li>c.forEach(f);   // should list all of the objects</li>
+        <li>function Thing(){};  // A new type</li>
+        <li>c = new Collection(Thing);   // c is now a typed collection</li>
+        <li>c.add("Fred", "Fred");  // should return false - "Fred" not a thing</li>
+        <li>a.add("Thing", new Thing()); // should return true - a Thing</li>
+    </ol>
+</body>
+<script type="text/javascript" src="js/collection.js"></script>
+</html>

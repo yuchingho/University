@@ -1,0 +1,29 @@
+CACHE MANIFEST
+
+# 2014-03-18  Version 0.21
+
+NETWORK:
+*
+
+CACHE:
+webapis.html
+touch.html
+camera.html
+file.html
+indexeddb.html
+webDB.html
+js/touch.js
+js/camera.js
+js/file.js
+js/indexeddb.js
+js/dialogs.js
+js/webDB.js
+js/manifest.js
+img/favicon.ico
+http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css
+http://code.jquery.com/jquery-1.9.1.min.js
+http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js
+http://code.jquery.com/mobile/1.3.2/images/icons-18-black.png
+http://code.jquery.com/mobile/1.3.2/images/icons-18-white.png
+http://code.jquery.com/mobile/1.3.2/images/icons-36-black.png
+http://code.jquery.com/mobile/1.3.2/images/icons-36-white.png

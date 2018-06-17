@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>APIs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script src="maps.js"></script>
+    <script src="lab4.js"></script>
+</head>
+<body>
+    <div data-role="page" id="homepage">
+
+        <div data-role="header">
+            <h1>Home</h1>
+        </div>
+
+        <div data-role="content">
+            <a href="#mappage" data-role="button">Maps</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+         </div>
+    </div>
+
+    <div data-role="page" id="mappage">
+
+        <div data-role="header">
+            <h1>Maps</h1>
+            <a href="#" data-rel="back" data-icon="back"></a>
+        </div>
+
+        <div data-role="content">
+            <div id="map-canvas"></div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+         </div>
+    </div>
+</body>
+</html>

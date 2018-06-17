@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-Page App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="app2.css"/>
+    <script src="multi-page.js"></script>
+</head>
+<body>
+
+    <!-- Each of these top-level <div> elements is a "page" of the app.
+         They should be marked up like this (with class="page" and id="<some unique identifier>").
+         It would also make sense to have at least one blank line between pages, so you can identify
+         them easily when looking at the code...
+    -->
+    <div class="page" id="home">
+        <button id="to-list">Show List</button>
+        <button id="to-form">Show Form</button>
+    </div>
+
+
+    <div class="page" id="list">
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>https://itunes.apple.com/gb/rss/topmovies/limit=10/genre=4401/xml
+        <br/>
+        <button name="back">Home</button>
+    </div>
+
+
+    <div class="page" id="form">
+        <form id="f">
+            <label for="name">Name:</label><input id="name" type="text"/><br/><br/>
+            <label for="email">Email:</label><input id="email" type="text"/><br/>
+        </form>
+        <br/>
+        <button name="back">Home</button>
+    </div>
+</body>
+</html>

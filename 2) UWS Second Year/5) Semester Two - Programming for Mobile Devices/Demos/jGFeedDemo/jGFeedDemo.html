@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html manifest="app.manifest">
+<head>
+    <title>jGFeed Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+    <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+    <script src="jgfeed.js"></script>
+    <script src="jGFeedDemo.js"></script>
+</head>
+<body>
+    <div id="home" data-role="page">
+        <div data-role="header" data-add-back-btn="true" >
+            <h1>Demo of jQuery.jGfeed.js Library</h1>
+        </div>
+        <div data-role="content">
+            <h2>App Details</h2>
+            <p>This demo app shows how to use the the jquery.jgfeed library code
+               to retrieve RSS feeds as well-defined objects.  The app shows a
+               number of different RSS feeds being accessed.</p>
+            <ul data-role="listview" data-inset="true">
+                <li><a id="weatherFeed" href="#weather">BBC Weather Feed</a></li>
+                <li><a id="railFeed" href="#rail">ScotRail Timetable/News Feed</a></li>
+                <li><a id="footyFeed" href="#footy">BBC Football News Feed</a></li>
+                <li><a id="anyFeed" href="#any">Add your own RSS Feed</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar">
+            <h3>(c) A McMonnies, School of Computing</h3>
+        </div>
+    </div>
+
+    <div id="weather" data-role="page">
+        <div data-role="header" data-add-back-btn="true" >
+            <h1 id="weatherTitle"></h1>
+            <a href="#" data-role="button" data-icon="back" data-rel="back">Back</a>
+        </div>
+        <div data-role="content">
+            <ul id="weatherList" data-role="listview" data-inset="true">
+                <!-- Weather reports go here. -->
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar">
+        </div>
+    </div>
+
+    <div id="rail" data-role="page">
+        <div data-role="header" data-add-back-btn="true" >
+            <h1 id="railTitle"></h1>
+            <a href="#" data-role="button" data-icon="back" data-rel="back">Back</a>
+        </div>
+        <div data-role="content">
+            <ul id="railList" data-role="listview" data-inset="true">
+                <!-- Rail reports go here. -->
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar">
+        </div>
+    </div>
+
+    <div id="footy" data-role="page">
+        <div data-role="header" data-add-back-btn="true" >
+            <h1 id="footyTitle"></h1>
+            <a href="#" data-role="button" data-icon="back" data-rel="back">Back</a>
+        </div>
+        <div data-role="content">
+            <ul id="footyList" data-role="listview" data-inset="true">
+                <!-- Football news items go here. -->
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar">
+        </div>
+    </div>
+
+    <div id="any" data-role="page">
+        <div data-role="header" data-add-back-btn="true" >
+            <h1 id="anyTitle"></h1>
+            <a href="#" data-role="button" data-icon="back" data-rel="back">Back</a>
+        </div>
+        <div data-role="content">
+            <input type="text" id="feedUrl" placeholder="Enter feed URL"/>
+            <a href="#" id="getFeed" data-role="button">Get Feed</a>
+            <ul id="anyList" data-role="listview" data-inset="true">
+                <!-- Feed items go here. -->
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar">
+        </div>
+    </div>
+</body>
+</html>

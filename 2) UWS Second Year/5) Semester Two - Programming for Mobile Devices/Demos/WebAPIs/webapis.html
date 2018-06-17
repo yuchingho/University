@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html> <!-- ONCE TESTING IS COMPLETED:  manifest="cache.manifest"> -->
+<head>
+    <title>Web APIs Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <!-- Un-comment the lline below to include manifest processing progress info in the console window. -->
+    <!-- <script src="js/manifest.js"></script> -->
+</head>
+<body>
+    <div data-role="page" id="home">
+
+        <div data-role="header">
+            <h1>API Menu</h1>
+        </div>
+
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="touch.html" data-ajax="false" id="touch">Touch API</a></li>
+                <li><a href="camera.html" data-ajax="false" id="camera">Camera API</a></li>
+                <li><a href="file.html" data-ajax="false" id="file">File API</a></li>
+                <li><a href="indexeddb.html" data-ajax="false" id="indexdb">IndexedDb API</a></li>
+                <li><a href="webDB.html" data-ajax="false" id="webdb">WebDB API</a></li>
+            </ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h3 id="date">Date: </h3>
+        </div>
+    </div>
+
+    <script>
+        $("#date").text("Date: " + new Date().toDateString());
+    </script>
+</body>
+</html>

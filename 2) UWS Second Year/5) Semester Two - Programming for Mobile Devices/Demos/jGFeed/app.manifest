@@ -1,0 +1,20 @@
+CACHE MANIFEST
+
+# 2013-10-22  Version 1.014
+
+NETWORK:
+*
+
+CACHE:
+jGFeedDemo.html
+jGFeedDemo.js
+jgfeed.js
+jquery.js
+jquery.mobile.css
+jquery.mobile.js
+favicon.ico
+images/ajax-loader.gif
+images/icons-18-black.png
+images/icons-18-white.png
+images/icons-36-black.png
+images/icons-36-white.png

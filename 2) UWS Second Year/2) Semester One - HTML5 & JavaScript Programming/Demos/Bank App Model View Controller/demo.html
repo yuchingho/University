@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        aside{
+            width:220px;
+            padding:10px;
+            border:5px solid gray;
+            margin:0px;
+            position:absolute;
+            right:0px;
+        }
+        h2{color:blue}
+        summary{
+            width:400px;
+            padding:10px;
+            border:5px solid red;
+            margin:0px;
+            font-size:10pt
+        }
+    </style>
+</head>
+<body>
+    <hgroup>
+        <header>
+            <h1>HTML5 Mark-up Tags</h1>
+        </header>
+        <details>An example of the new HTML tags for semantic document mark-up</details>
+    </hgroup>
+    <article>
+        <h2>The purpose of Mark-up tags</h2>
+        <p>Mark-up tags are used to surround text in a document in a semantic way.
+        For example, instead of using &lt;h1&gt;Some heading information&lt;/h1&gt;,
+        a designer can use &lt;header&gt;Some heading information&lt;/header&gt;.  The
+        &lt;header&gt; tag designates that the purpose of this area of text is to act as a header
+        within a document, while a &lt;h1&gt; tag simply denotes that a specific format is to
+        be used.
+        </p>
+        <figure><img src="page.png"></figure><figcaption>Figure 1: This page without CSS</figcaption>
+        <aside>Typically, the format applied by &lt;hn&gt; tags is defined by specific <mark>Cascading
+        Style Sheet</mark> rules.</aside>
+        <br/><br/><br/><br/>
+    </article>
+    <article>
+        <h2>Mark-up and CSS</h2>
+        <p>For the new mark-up tags to have a visible effect on a document, it is necessary to apply
+        style definitions to them, using CSS rules.  For example, within the HTML content, a creator can
+        mark a section of text as being an &lt;aside&gt;.  To then provide a suitable style for this, a
+        CSS rule can be created so that all &lt;aside&gt; tags appear in a box out to the right of the page,
+        with a border and a different background colour.</p>
+    </article>
+    <summary>Summary: HTML5 provides several new tags for semantically marking up documents.</summary>
+    <footer><nav>
+        <a href="canvas.html">The Canvas Element</a>
+        <a href="GeoLocation">The Geo-Location API</a>
+        <a href="localstorage.html">Local Storage in HTML5</a>
+        <a href="offline.html">Going Offline</a>
+    </nav></footer>
+</body>
+</html>

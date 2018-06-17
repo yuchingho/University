@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <script src="js/dialogs.js"></script>
+    <script src="js/webDB.js"></script>
+</head>
+<body>
+    <div data-role="page" id="main">
+
+        <div data-role="header">
+            <h1>WebDB Demo</h1>
+            <a href="#" data-rel="back" data-icon="back">Back</a>
+        </div>
+
+        <div data-role="content">
+            <h3 id="message"></h3>
+            <ul id="results" data-role="listview" data-inset="true">
+
+            </ul>
+            <a href="#addPage" id="add" data-role="button" data-icon="plus" style="position:absolute;bottom:40px;">Add Item</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h3 id="count">Number of Records: </h3>
+         </div>
+    </div>
+
+    <div data-role="dialog" id="addPage">
+
+        <div data-role="header">
+            <h1>Add New Data</h1>
+        </div>
+
+        <div data-role="content">
+            <form action="#">
+                <label for="name">Name:</label><input type="text" id="name" placeholder="First Last"/>
+                <label for="email">Email:</label><input type="email" id="email"/>
+                <a href="#" id="doadd" data-role="button" data-icon="plus" data-inline="true">Add Item</a>
+                <a href="#" id="cancel" data-role="button" data-rel="back" data-icon="cross" data-inline="true">Cancel</a>
+            </form>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h3 id="rid">Record ID: </h3>
+        </div>
+    </div>
+</body>
+</html>

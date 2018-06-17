@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Node.js Demo Applications</title>
+</head>
+<body>
+    <h1>Node.js Demo Apps</h1>
+    <p>This page links to a number of demos which use Node.js as a "mini server".  Each of the pages listed below
+       is set up as a file that can be executed by the Node.js server.  To serve any of them:</p>
+    <ul>
+        <li>Download/install the Node.js application at <a href="http://node.js.org">node.js.org</a></li>
+        <li>Execute the Node.js application in a Command window (or Terminal on OS-X), passing one of the sample
+            files as a parameter.  You may need to enter the whole path to the program to run it:
+            e.g C:\Program Files\Node\Node.js hello.js</li>
+        <li>Open a browser at http://localhost:[port-number] to see the page in your browser (replace [port-number]
+            with the number passed as a parameter to the http.createServer() function - e..g 8888).  Ports for
+            each demo are listed below.</li>
+    </ul>
+    <p>The following demos are in this folder:</p>
+    <ul>
+        <li>HelloServer.js (port 8888) - simply responds to every request with "Hello World!".</li>
+        <li>HelloDOMServer.js (port 8889) - replies with a full web page - still always "Hello World".</li>
+        <li>NodeCalculator.js (port 8080) - this serves a simple HTML form with input fields.  If you press the submit
+            button, node will print out the input fields button on the terminal window.  It is a simple demo of how
+            to get form data.  If you want a calculator, finish it!</li>
+        <li>WriteFile.js (port 8890) - writes a file to the same folder the script file is in.  Demonstrates file
+            operations.</li>
+        <li>httpServer.js (port 9090) - this is a complete web server that can serve html, css, js, gif, png and jpg
+            files.  Enough to cover everything you would do in your project.  Try running the server and then browsing
+            to any of the HTML files in the folder (index.html [this one], geo-location.html, Lab1.html).</li>
+        <li>args.js (port 8890) - lists the arguments passed to the page- e.g if you start up the server with the
+            command: >Node args.js one two three - the server will list the three arguments (one two three) on the
+            terminal window.  This is very useful for configuring an app at run-time - e.g. passing in the name of the
+            folder that contains image files.</li>
+    </ul>
+
+</body>
+</html>

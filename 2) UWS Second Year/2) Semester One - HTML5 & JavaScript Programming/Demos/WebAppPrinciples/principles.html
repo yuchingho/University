@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        .overview{
+            text-align: left;
+            color: darkblue;
+            background-color: yellow;
+            border-style: double;
+            border-color: darkred;
+            border-width: 2px;
+        }
+        .ui{
+            padding: 5%;
+            background-color: aliceblue;
+            border-style: double;
+            border-color: darkred;
+            border-width: 2px;
+        }
+        .list{
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: lightcoral;
+            border-style: double;
+            border-color: darkmagenta;
+            list-style-type: square;
+        }
+    </style>
+    <title>Web App Principles</title>
+    <script src="js/principles.js"></script>
+</head>
+<body>
+    <div class="overview">
+        <h2>Basic Web-App Principles</h2>
+        <p>This simple demo app contains all of the features you would need to
+           provide in a web-app (excepting object-orientation, which has been
+           thoroughly covered elsewhere).  In it you will find HTML mark-up and
+           related code for a simple User-Interface and the event handlers needed
+           to drive it.</p>
+        <p>Below you can see a simple user-interface - a text box with buttons
+           to collect the text from the text-box into Javascript variables, and
+           to clear the current text-box content.  Text added using this U-I will
+           be appended to a list which will be displayed in the bottom box.</p>
+        <p>For the U-I elements to be usable from Javascript, each has been given
+           an ID property.  A good convention to use in this is that every ID should
+           be lower-case text.</p>
+        <p>In the Javascript code, we will need to set up a number of things:
+        </p>
+        <ul>
+            <li>Storage for the values entered.  This will be a simple Javascript array.</li>
+            <li>Functions to extract the text from the text box and assign it to Javascript
+                variables, and to clear out the text from the text box.</li>
+            <li><i>Event Handlers</i> - functions to react to user-interface events, such
+                as the user clicking on a button</li>
+        </ul>
+        <p>To set up the above list, we will use with <pre>window.onload</pre> event handler
+           that the browser provides.  This will wire up the events we want to react to to the
+           code we want executed in response to these events.</p>
+    </div>
+    <div class="ui">
+        <label for="name">Enter your name:</label>
+        <input type="text" size="20" id="name"/><br/>
+        <button id="ok">OK</button>
+        <button id="cancel">Cancel</button>
+    </div>
+    <div class="list">
+        <ul id="list">
+
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Page Title</title> 
+	<!-- 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+	 -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+	<script src="jsdemo.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Page content goes here.</p>		
+		<ul>
+			<li><a href="#listpage" data-transition="flip">List View</a></li>
+			<li><a href="#page2" data-transition="flip">Page 2</a></li>
+			<li><a href="#page3" data-rel="dialog" data-transition="pop">Page 3 (dialog)</a></li>			
+		</ul>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- This page will be a to-do list -->
+<!-- Items in it will be persistent, using HTML5 storage -->
+<div data-role="page" id="listpage" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>List View</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<div date-role="fieldcontain">
+			<input type="text" name="newitem" id="newitem" placeholder="Add Item" size="20" onkeypress=addItem(event)></input>
+		</div>
+		<p/>
+		<ul data-role="listview" data-inset="true" id="list" name="list" data-theme="a">
+			<!-- An empty list. -->
+		</ul>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="page2" data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Page content goes here.</p>		
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="page3"  data-add-back-btn="true">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Page content goes here.</p>		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>

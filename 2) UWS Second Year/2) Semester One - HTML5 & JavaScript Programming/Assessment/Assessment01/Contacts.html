@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Add new contact</title>
+</head>
+
+<style type="text/css">
+    body
+    {
+        margin: 0;
+        padding: 0;
+        color: #FFFFFF;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        background-color: #fff;
+    }
+    h1
+    {
+        padding-top: 20px;
+        padding-right: 55px;
+        padding-left: 85px;
+        color:  #FFFFFF;
+        text-shadow: 2px 2px #004F69;
+        font-family:Helvetica;
+    }
+    label
+    {
+        margin-left: 20px;
+        margin-right: 20px;
+        color:  #FFFFFF;
+    }
+    .container
+    {
+        width: 515px;
+        background: #0099CC;
+        margin: auto;
+        border-radius: 25px;
+        padding-bottom:10px;
+        box-shadow: 5px 5px 5px #888888;
+    }
+    .header
+    {
+        background-color: #FFFFFF;
+        alignment-adjust:central
+    }
+    .content
+    {
+        padding:15px;
+    }
+
+    #pic
+    {
+        width:100px;
+        margin-left:10px;
+    }
+</style>
+
+<body>
+
+<div class="content">
+<div class="container">
+    <h1> Add New Contact</h1>
+    <form name="contact" method="post">
+    <table class="center" id="tabcontact">
+    <tr>
+        <td><label>First Name</label></td>
+        <td><input type="text" name="name" size="40" placeholder="Insert First name"></td>
+    </tr>
+    <tr>
+        <td><label>Last Name</label></td>
+        <td><input type="text" name="name" size="40" placeholder="Insert Last name"></td>
+    </tr>
+    <tr class="trspace">
+        <td><label>Sex</label></td>
+        <td>
+            <input type="radio" name="sex" value="male" > Male
+            <input type="radio" name="sex" value="female"> Female
+            <input type="radio" name="sex" value="other" Checked> Other
+        </td>
+    <tr>
+        <td><label>Birthday</label></td>
+        <td><input type="date" name="bday"></td>
+    </tr>
+    <tr>
+        <td><label>Marital Status</label></td>
+        <td>
+            <select name="mstatus">
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+            </select>
+        </td>
+    </tr>
+    <tr class="trspace">
+        <td><label>Personal Email</label></td>
+        <td><input type="text" name="email" size="40" placeholder="Insert a valid email address"></td>
+    </tr>
+    <tr>
+        <td><label>Work Email</label></td>
+        <td><input type="text" name="email" size="40" placeholder="Insert a valid email address"></td>
+    </tr>
+    <tr>
+        <td><label>Mobile Number</label></td>
+        <td><input type="text" name="telephone" size="40" placeholder="Insert phone number"></td>
+    </tr>
+    <tr>
+        <td><label>Work Number</label></td>
+        <td><input type="text" name="telephone" size="40" placeholder="Insert phone number"></td>
+    </tr>
+    <tr class="trspace">
+        <td><label>Address</label></td>
+        <td><input type="text" name="address" size="40" placeholder="Insert home address"></td>
+    </tr>
+    <tr class="trspace">
+        <td><label>City</label></td>
+        <td><input type="text" name="city" size="40" placeholder="Insert City"></td>
+    </tr>
+    <tr>
+        <td><label>Postcode</label></td>
+        <td><input type="text" name="address" size="40" placeholder="Insert postcode"></td>
+    </tr>
+    <tr class="trspace">
+        <td><label>Organisation</label></td>
+        <td><input type="text" name="organisation" size="40" placeholder="Insert organisation"></td>
+    </tr>
+    <tr class="trspace">
+        <td><label>Group</label></td>
+        <td>
+            <input type="checkbox" name="Family" value="Family">Family
+            <input type="checkbox" name="Friends" value="Friends"> Friends
+            <input type="checkbox" name="Work" value="Work">Work
+            <input type="checkbox" name="Other" value="Other">Other
+        </td>
+    </tr>
+    <tr class="trspace">
+        <td><label>Contact Picture</label></td>
+        <td><input type="file" name="pic" accept="image/*"><input type="submit"></td>
+    </tr>
+    <tr>
+        <td><label><img src="account.png" alt="contact" id="pic"></label></td>
+        <td><textarea name="note" cols="40" rows="6" placeholder="Notes"></textarea></td>
+    </tr>
+    <tr>
+        <td><button type="reset" value="Reset">Reset</button></td>
+    <td><input type="button" name="saveButton" id="saveButton" value="Save" onClick="alert('Contact saved');"></td>
+    </tr>
+    </table>
+    </form>
+</div>
+</div>
+</body>
+</html>

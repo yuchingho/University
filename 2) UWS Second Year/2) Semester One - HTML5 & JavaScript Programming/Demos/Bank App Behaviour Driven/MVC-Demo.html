@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MVC-Demo</title>
+</head>
+<body>
+    <heading>
+        <h2>MVC - This is the View</h2>
+    </heading>
+    <form id="viewForm">
+        <h2>Bank Account U-I</h2>
+        <table id="transactions" border="1">
+
+        </table>
+        Current Balance: <h3 id="balance"></h3>
+        <hr/>
+        <p/>Amount: <input type="text" id="amount" size="10">
+        <button id="deposit" name="transaction">Deposit</button>&nbsp;
+        <button id="withdraw" name="transaction">Withdraw</button>&nbsp;
+    </form>
+</body>
+<script type="text/javascript" src="js/model.js"></script>
+<script type="text/javascript" src="js/view.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+</html>

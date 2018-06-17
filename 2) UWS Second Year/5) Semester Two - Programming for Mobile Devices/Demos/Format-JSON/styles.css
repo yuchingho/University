@@ -1,0 +1,6 @@
+table { table-layout:fixed; border:1; cellpadding:2; width:100%;  }
+table td { overflow: hidden;}
+table td.p1 {width:16px;color:red;font-size:300%;}
+table td.p2 {width:16px;color:orange;font-size:300%;}
+table td.p3 {width:16px;color:green;font-size:300%;}
+img {padding-left:70px; }

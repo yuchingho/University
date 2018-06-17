@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formatting JSON Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+    <style type="text/css">.img {padding-left:70px; }</style>
+    <script src="fmtjson.js"></script>
+</head>
+<body>
+
+    <div data-role="page" id="login">
+
+        <div data-role="header">
+            <h1>Login page:</h1>
+        </div>
+
+        <div data-role="content">
+            <label for="email">Email Address:</label>
+            <input id="email" size="30" placeholder="example@email.com"/>
+            <a id="loadlist" href="#listpage" data-role="button">Load List</a>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+         </div>
+    </div>
+
+    <div data-role="page" id="listPage">
+        <div data-role="header">
+            <h1></h1>
+            <a href="#" data-rel="back" data-icon="back">Back</a>
+        </div>
+
+        <div data-role="content">
+            <ul id="list" data-role="listview">
+                <!-- JSON Data will go here... -->
+            </ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+         </div>
+    </div>
+
+    <div data-role="dialog" id="confirm" data-title="Are you sure?">
+        <div data-role="content">
+            <h3 class="confirmHead">???</h3>
+            <p class="confirmMessage">???</p>
+            <a href="#" id="confirmOK" data-role="button" data-theme="b" data-rel="back">OK</a>
+            <a href="#" id="confirmCancel" data-role="button" data-theme="c" data-rel="back">Cancel</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- Submitted by B00255970 & B00264983 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=5.0, user-scalable=no" />
+    <style type="text/css">
+        html {  height: 100%; }
+        body {  height: 100%;  padding: 20px; }
+        #map_canvas {  height: 100%;  }
+        h1 {  color: ;  font-family: Verdana;  font-size: 30px;  }
+        #pcode {  text-transform: uppercase;  }
+
+    </style>
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3Cw-Aj3UzIEvsLeQ_1FXXUPb-4Y544mQ&sensor=false">
+    </script>
+    <script type="text/javascript" src="JavaScript/Models.js"></script>
+    <title></title>
+</head>
+<body>
+<form id="form" action="#">
+
+    <a href="contacts.html">Back to Contacts Page</a>
+    <p align="left"> Please enter the postcode in proper format. </p>
+    <p align="left"> e.g. PA1 1AA</p>
+    <div id="pcode"><input type="text" size="10" id="postcode"/><button id="showmap">Show Map</button></div>
+    <p align="left"> </p>
+
+</form>
+<div id="map_div" style="width:400px; height:400px;"></div>
+</body>
+</html>
+<!-- -------------------------------------------------------------------------------------------------------------
+---- Code taken from "Simple GeoTag & Map application" in Moodle Demo's ----------------------------------------->
+

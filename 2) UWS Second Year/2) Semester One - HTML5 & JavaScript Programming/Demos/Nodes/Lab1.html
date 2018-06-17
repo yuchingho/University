@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 1</title>
+    <script type="text/javascript" src="js/Lab1.js"></script>
+</head>
+<body>
+    <heading>
+        <h1>HTML 5 Test Page</h1>
+        <p id="heading"></p>
+    </heading>
+    <h3>Info about this project:</h3>
+    <p>This project is intended as a "get started in HTML & Javascript" demonstration.</p>
+    <p>The activities in it are centered around building a simple HTML5 page and then getting
+    it to interact with Javascript code.</p>
+    <p>Abilities you should expect to gain from completing this lab:</p>
+    <ul>
+        <li>Creating a simple HTML file that loads properly into a browser.</li>
+        <li>Adding HTML controls for list selection, button input, date input and numerical range input</li>
+        <li>Attaching a Javascript code file to the HTML file</li>
+        <li>Adding HTML elements to a HTML file through scripting.</li>
+        <li>Triggering JS code using events - particularly <b>window.onload</b>, <b>button.onclick</b>, <b>list.onchange</b> and <b>input.oninput</b>.</li>
+        <li>Performing simple operations such a date arithmetic in Javascript.</li>
+    </ul>
+    <p id="test"></p>
+    <p/>
+    <button id="button">Press Me</button>&nbsp;&nbsp;Handling button.onclick events.
+    <p/>
+    Colours: <select id="list">
+        <option value="#fff">White</option>
+        <option value="#f00">Red</option>
+        <option value="#0f0">Green</option>
+        <option value="#00f">Blue</option>
+        <option value="#ff0">Yellow</option>
+        <option value="#0ff">Cyan</option>
+        <option value="#f0f">Magenta</option>
+    </select>&nbsp;&nbsp;Item selection. Note - the coding for this version is different from the lab version.
+    <p/>
+    Your Birthday: <input type="date" id="dob"/>&nbsp;&nbsp;Date input selection & calculations.<p/>
+    A Number: <input type="range" id="range" min="1" max="10" value="1"><span id="value">1</span>&nbsp;&nbsp;Numeric range input.
+</body>
+</html>

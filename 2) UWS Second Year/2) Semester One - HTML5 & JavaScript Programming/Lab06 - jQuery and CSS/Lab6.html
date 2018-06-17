@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Style-sheets</title>
+</head>
+<body>
+    <heading>
+        <h1>CSS Style-sheets</h1>
+    </heading>
+    <h2>A guide to Cascading Style Sheets</h2>
+    <p>Cascading Style Sheets (CSS) is a language used to assign formatting to HTML documents.
+       Styles are defined as simple (textual) rules that indicate how particular elements are
+       to appear in the HTML mark-up.  There are three ways in which style information can be
+       added to an HTML document:</p>
+    <ul>
+        <li><strong>Inline</strong> styles, in which styling information is added directly to
+            HTML elements in the mark-up. You have already done this using the 'style' attribute. </li>
+        <li><strong>Embedded</strong> styles, which are blocks of CSS information added to the
+            HTML document (usually in the &lt;head&gt; section</li>
+        <li><strong>External</strong> style-sheets, which are seperate files (usually with .css
+            appended to the end of their name) which defines families of style rules that can be
+            applied to HTML documents in a more structured way.</li>
+    </ul>
+    <h2>Style Priorities</h2>
+    <p>Style-sheets rules are applied to elements in a document, and will then automatically apply
+       to any child elements.  For example, a style rule applied to a &lt;table&gt; element will
+       automatically apply to all of the child elements of the table - its heading row, the table
+       rows and the cells within a row.  However, a more specific rule can then be applied to child
+       elements, so a &lt;tr&gt; rule will override the corresponding parent table's rules.</p>
+    <h2>A table for styling</h2>
+    <table border='1'>
+        <thead>
+            <th>Type</th><th>Example</th><th>Description</th>
+        </thead>
+        <tr>
+            <td>Colour</td><td> p{ color: blue; }</td><td>Sets the foreground colour of all &lt;p&gt; elements to the
+                named colour.</td>
+        </tr><tr>
+            <td>Background colour</td><td> body{ background-color: lightgray;}</td><td>Sets the document's background
+                colour.</td>
+        </tr><tr>
+            <td>Text Transformations</td><td> h1{ text-transform: capitalize;}</td><td>Sets all of the text in all
+                &lt;h1&gt; elements to be title-case capitalized</td>
+        </tr><tr>
+            <td>Font</td><td> p{ font-family: cursive;}</td><td>Sets the content of all &lt;p&gt; elements
+                to display in the given font-type.</td>
+        </tr>
+    </table>
+    <h2>Styling Forms</h2>
+    <p>Form elements can also be styled using CSS rules.  This can be used to highlight specific elements, align
+       form elements more clearly or even dynamically change elements (using some Javascript code to apply different
+       styles to elements in particular states.</p>
+    <form action="#">
+        <p><label for="name">Name</label> <input type="text" id="name" /></p>
+        <p><label for="e-mail">E-mail</label> <input type="text" id="e-mail" /></p>
+        <p class="submit"><input type="submit" value="Submit" /></p>
+    </form>
+    <hr/>
+</body>
+</html>

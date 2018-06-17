@@ -1,0 +1,122 @@
+<html>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+	<script src="jqlist.js"></script>
+</head>
+<body>
+<div data-role="page" data-role="listview" id="one">
+	<div data-role="header">
+		<h1>A ListView Page</h1>		
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" id="list">
+			<li><a href="#sem1">Semester 1 Classes</a></li>
+			<li><a href="#sem2">Semester 2 Classes</a></li>
+			<li><a href="researchactivity.html">Research Activity</a></li>
+		</ul>
+		<p/>
+		<button id="addbtn">Add Item</button>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+<div data-role="page"  data-add-back-btn="true" id="sem1">
+	<div data-role="header">
+		<h1>Semester 1 Classes</h1>		
+	</div>
+	<div data-role="content">
+		<div data-role="collapsible-set">
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Intro. to Programming for Mobile Devices</h3>
+				<p>This module follows on from COM07027, Introduction
+				   to programming, and covers the development of web-apps
+				   for mobile devices in the first part, and native 
+				   Android development in the second part.</p>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Intro to Programming</h3>
+				<p>This module covers programming principles and methods
+				   using C++ as the development language.</p>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Advanced Web Games Development</h3>
+				<p>This module covers the development of computer games
+				   software using the Java programming language.  It is
+				   assumed that students will have a basic knowledge of 
+				   Java or a similar structured or object-oriented
+				   programming language.</p>
+			</div>
+		</div>
+		<br/>
+		<button><a href="#colour_dialog" data-rel="dialog">Select a colour</a></button>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+<div data-role="page"  data-add-back-btn="true" id="sem2">
+	<div data-role="header">
+		<h1>Semester 2 Classes</h1>		
+	</div>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li><a href="sem1">2D Graphics Programming</a></li>
+			<li><a href="sem2">Mobile & Web Games Dev.</a></li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+<div data-role="page" data-add-back-btn="true" id="test">
+	<div data-role="header">
+		<h1>Test Target</h1>		
+	</div>
+	<div data-role="content">
+		<p> Content of target page</p>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Target Footer</h4>
+	</div>	
+</div>
+<div data-role="page" data-add-back-button="true" id="colour_dialog">
+	<div data-role="header">
+		<h1>Choose One</h1>		
+	</div>
+	<div data-role="content">
+		<ul data-role="listview" data-inset=="true">
+			<li class="col_pick" id="red"><a href="#sem1" data-rel="back">Red</a></li>
+			<li class="col_pick" id="green"><a href="#sem1" data-rel="back">Green</a></li>
+			<li class="col_pick" id="blue"><a href="#sem1" data-rel="back">Blue</a></li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<h4>Colour Picker Page</h4>
+	</div>		
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
