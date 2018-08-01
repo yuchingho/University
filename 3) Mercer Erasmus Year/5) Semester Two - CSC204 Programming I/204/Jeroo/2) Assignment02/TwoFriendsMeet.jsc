@@ -1,0 +1,41 @@
+@Java
+method happinessTurn()     {
+     turn(RIGHT);
+     turn(RIGHT);
+     turn(RIGHT);
+     turn(RIGHT);
+}
+@@
+// Assignment 2
+// Yoshi
+
+method main()     {
+
+     Jeroo Bugs = new Jeroo(90);
+     Jeroo Daffy = new Jeroo (0, 23, WEST, 90);
+     
+     while(Bugs.isClear(AHEAD) && Daffy.isClear(AHEAD))     {
+          while(Bugs.isClear(AHEAD) && Daffy.isClear(AHEAD))     {
+               Bugs.plant();
+               Bugs.hop();
+               Daffy.plant();
+               Daffy.hop();
+
+               // Bugs has met Daffy and does a spin of joy!
+               // Daffy does the same!
+               if(Bugs.isJeroo(AHEAD))     {
+                     Bugs.happinessTurn();
+                    Daffy.happinessTurn();
+               }
+          }
+          
+          if(Bugs.isFacing(WEST) && Bugs.isWater(AHEAD))     {
+               Bugs.plant();
+          }
+ 
+          else     {
+               Bugs.turn(RIGHT);
+               Daffy.turn(LEFT);
+          }  
+     }
+}

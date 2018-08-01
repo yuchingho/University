@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Earth
+comment0.text=\r\n\ This\ is\ Earth.\ Or\ at\ least\ some\ remote,\ uninhabited\ part\ of\ Earth.\ Here,\ Greeps\ can\r\n\ land\ and\ look\ for\ piles\ of\ tomatoes...\r\n\ \r\n\ @author\ Michael\ Kolling\r\n\ @version\ 1.0\r\n\ \r\n\ Yu-Ching's\ Assignment\r\n\ \r\n
+comment1.params=
+comment1.target=Earth()
+comment1.text=Create\ a\ new\ world.
+comment2.params=map
+comment2.target=void\ jumpToMap(int)
+comment2.text=Jump\ to\ the\ given\ map\ number\ (1..n).
+comment3.params=mapNo
+comment3.target=void\ showMap(int)
+comment3.text=Set\ up\ the\ start\ scene.
+comment4.params=time
+comment4.target=void\ mapFinished(int)
+comment4.text=Game\ is\ over.\ Stop\ running,\ display\ score.
+comment5.params=time
+comment5.target=void\ displayScore(int)
+comment6.params=
+comment6.target=void\ displayFinalScore()
+comment7.params=
+comment7.target=void\ clearWorld()
+comment8.params=time
+comment8.target=void\ wait(int)
+numComments=9

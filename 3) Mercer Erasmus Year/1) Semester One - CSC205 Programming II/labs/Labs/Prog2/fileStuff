@@ -1,0 +1,10 @@
+                //Get all files from directory
+                File curDir = new File(".");
+                String[] fileNames = curDir.list();
+                ArrayList<String> data = new ArrayList<String>();
+
+                //Find files which may have data. (aka, are in the .dat format)
+                for(String s:fileNames)
+                        if(s.endsWith(".dat"))
+                                data.add(s);
+

@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Timer
+comment0.text=\r\n\ A\ timer\ is\ a\ conter\ that\ automatically\ counts\ up\ as\ time\ goes\ on.\r\n\ This\ timer\ also\ checks\ whether\ the\ map\ has\ been\ completed\ (either\ time\r\n\ is\ up,\ or\ all\ tomatoes\ are\ gone).\r\n\ \r\n\ @author\ M\ Kolling\r\n\ @version\ 1.0\r\n\ \r\n\ Yu-Ching's\ Assignment\r\n\ \r\n
+comment1.params=
+comment1.target=Timer()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=Count\ time.\ Notify\ of\ 'Game\ Over'\ when\ game\ time\ is\ reached.
+comment3.params=
+comment3.target=void\ checkFinish()
+comment3.text=Check\ whether\ this\ map\ is\ finished.\ This\ is\ the\ case\ if\ time\ is\ up,\ or\ all\ tomatoes\ are\ gone.
+comment4.params=
+comment4.target=boolean\ timeOut()
+comment4.text=Return\ true\ if\ game\ time\ is\ up.
+comment5.params=
+comment5.target=boolean\ allTomatoesGone()
+comment5.text=Return\ true\ if\ there\ are\ no\ tomatoes\ left\ in\ this\ map.
+comment6.params=
+comment6.target=void\ gameOver()
+comment6.text=Notify\ that\ the\ level\ is\ over.
+numComments=7

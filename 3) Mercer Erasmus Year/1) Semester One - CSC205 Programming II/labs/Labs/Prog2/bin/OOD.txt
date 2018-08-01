@@ -1,0 +1,8 @@
+myLibrary will ask the user to enter in the correct file name: library.dat; if the user does not enter in the 
+correct file name, a catch IOException error message will be displayed.
+A menu will then pop up, asking the user to select between 3 choices: "Display all book records", "Search for a 
+book by its title" or "Exit Search Program".
+Choice One will display the first book, and will cycle through the library.dat with each enter key, and the user
+can press "m" to exit and be taken back to the menu.
+Choice Two will search and display one book then exit back to the menu.
+Choice Three will terminate the program.

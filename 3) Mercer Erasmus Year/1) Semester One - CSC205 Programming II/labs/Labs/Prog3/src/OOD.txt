@@ -1,0 +1,4 @@
+This project is a database where the manager can enter in new Employee's names and wages. The manager can select 
+if the person is getting paid hourly or annually; afterwards the manager can calculate their paychecks by entering 
+in individually how many hours they worked, raise all their wages at once and download what he has put in in an 
+employee.dat file and upload that file once the system has quit.

@@ -1,0 +1,21 @@
+@Java
+method turnNorth()     {
+     while(!isFacing (NORTH))     {
+          turn(LEFT);
+     }     
+}
+@@
+method main()     { 
+
+     // Create 4 Jeroos, facing each direction
+     Jeroo south = new Jeroo (2, 2, SOUTH);
+     Jeroo east = new Jeroo (4, 4, EAST);
+     Jeroo north = new Jeroo (6, 6, NORTH);
+     Jeroo west = new Jeroo (8, 8, WEST);
+   
+     // Have each of them face north.
+     south.turnNorth();
+     east.turnNorth();
+     north.turnNorth();
+     west.turnNorth();  
+}

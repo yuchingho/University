@@ -1,0 +1,46 @@
+@Java
+method scoutFlower()     {
+     if(!isFlower(AHEAD))     {
+          turn(RIGHT);
+     }
+     if (!isFlower(AHEAD))    {
+          turn(RIGHT);
+     }
+     if(!isFlower(AHEAD))     {
+          turn(RIGHT);
+     }
+     if(!isFlower(AHEAD))     {
+          turn(RIGHT);
+     }
+}
+@@
+method main()     { 
+
+     Jeroo flowerHunter = new Jeroo();
+   
+     while(!flowerHunter.isFlower(AHEAD))     {
+          if(flowerHunter.isWater(AHEAD))     {
+               if(flowerHunter.isFacing(EAST))     {
+                    flowerHunter.turn(RIGHT);
+                    flowerHunter.hop();
+                    flowerHunter.turn(RIGHT);
+               }
+               else     {
+                    flowerHunter.turn(LEFT);
+                    flowerHunter.hop();
+                    flowerHunter.turn(LEFT);
+               }
+               
+          }
+          flowerHunter.scoutFlower();
+          flowerHunter.hop();
+     }
+     
+     while(flowerHunter.isFlower(AHEAD))     {
+          flowerHunter.pick();
+          flowerHunter.hop();
+          flowerHunter.pick();
+          flowerHunter.scoutFlower();
+     }
+
+}

@@ -1,0 +1,10 @@
+This program will read numbers from the file "bingo.in" to the fillCard method.
+
+fillCard method will fill the 5-by-5 matrix printCard with random numbers from 1 to 75.
+
+When playGame is called, it will generate random numbers from 1 to 75 and checkForWin is called to check if a sum of the row/column/diagonal will be equal to 0.
+
+If the sum is equal to 0, the Bingo Matrix will reprint with the marked "X's" and the player has won the game.
+
+
+

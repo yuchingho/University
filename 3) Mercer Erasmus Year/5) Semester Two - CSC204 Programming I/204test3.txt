@@ -1,0 +1,60 @@
+4)
+public static boolean isEven(int x) {
+	return (x%2 == 0);
+}
+
+6)
+nextInt(int N)
+N == 6, gives number between 0 --> 5
+don't need static because instantiating objects
+public int cast() {
+	return (1+ generator * nextInt(sides));
+}
+
+7)
+public static int rollCount(int x) {
+	Die die = new Die(6);
+	int count = 1;
+	int roll = die.cast();
+
+	while(roll != x) {
+		roll = d.cast();
+		count++;
+	}
+	return count;
+}
+
+8)
+"not return anything" == void
+public static void printStars(int x) {
+	for(int i = 0; i <= x; i++) {
+		System.out.print("*");
+		System.out.println();
+	}
+}
+
+9)
+public static void printTriangle (int x) {
+	for(int i = 0; i <= x; i++) {
+		printStars(i);
+	}
+}
+
+10)
+Picture t3Pic = new Picture();
+t3Pic.pick();
+
+for(int x = 0; x < t3Pic.getWidth(); x++)
+	for (int y = 0; y < t3Pic.getHeight(); y++) {
+		Color c = t3Pic.getColorAt(x, y);
+		int r = c.getRed();
+		int g = c.getGreen();
+		int b = c.getBlue();
+
+		r = r/2;
+		g = g/2;
+		b = b/2;
+
+		Color newColour = new Color(r, g, b);
+		t3Pic.setColorAt(x, y, newColour);
+	}

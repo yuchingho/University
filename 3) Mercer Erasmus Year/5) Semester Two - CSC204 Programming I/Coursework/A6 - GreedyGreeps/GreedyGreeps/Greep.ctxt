@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Greep
+comment0.text=\r\n\ A\ Greep\ is\ an\ alien\ creature\ that\ likes\ to\ collect\ tomatoes.\r\n\ \r\n\ @author\ (your\ name\ here)\r\n\ @version\ 0.1\r\n\ \r\n\ Yu-Ching's\ Assignment\r\n\ \r\n
+comment1.params=
+comment1.target=Greep()
+comment1.text=Default\ constructor\ for\ testing\ purposes.
+comment2.params=ship
+comment2.target=Greep(Ship)
+comment2.text=Create\ a\ Greep\ with\ its\ home\ space\ ship.
+comment3.params=
+comment3.target=void\ act()
+comment3.text=Do\ what\ a\ greep's\ gotta\ do.
+comment4.params=
+comment4.target=void\ checkFood()
+comment4.text=Is\ there\ any\ food\ here\ where\ we\ are?\ If\ so,\ try\ to\ load\ some\!
+comment5.params=
+comment5.target=java.lang.String\ getAuthorName()
+comment5.text=This\ method\ specifies\ the\ name\ of\ the\ author\ (for\ display\ on\ the\ result\ board).
+comment6.params=
+comment6.target=java.lang.String\ getCurrentImage()
+comment6.text=This\ method\ specifies\ the\ image\ we\ want\ displayed\ at\ any\ time.\ (No\ need\ to\ change\ this\ for\ the\ competition.)
+numComments=7

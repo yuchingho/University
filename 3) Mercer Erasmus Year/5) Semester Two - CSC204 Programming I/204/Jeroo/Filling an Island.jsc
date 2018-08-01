@@ -1,0 +1,29 @@
+@Java
+
+@@
+method main()     {
+
+     Jeroo jeroo = new Jeroo(1000);
+     
+     while(jeroo.isClear(AHEAD))     {
+          while(jeroo.isClear(AHEAD))     {
+               jeroo.plant();
+               jeroo.hop();
+               
+               if(jeroo.isNet(AHEAD))     {
+                    jeroo.toss();
+                    jeroo.plant();
+               }
+          }
+          jeroo.turn(RIGHT);   
+     }
+     
+
+     if((!jeroo.isClear(AHEAD)) && jeroo.isNet(AHEAD))     {
+          jeroo.toss();
+          jeroo.plant();
+     }
+     
+     jeroo.plant();
+     jeroo.hop(3);
+}

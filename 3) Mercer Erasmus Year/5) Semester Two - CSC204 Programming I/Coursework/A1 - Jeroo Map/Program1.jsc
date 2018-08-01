@@ -1,0 +1,193 @@
+@Java
+method diagonalOne()     {
+     plant();
+     hop();
+     
+     turn(LEFT);
+     plant();
+     hop();
+     
+     turn(RIGHT);
+     plant();
+     hop();
+     
+     turn(LEFT);
+     plant();
+     hop();
+     
+     turn(RIGHT);
+     plant();
+     hop();
+     
+     turn(LEFT);
+     plant();
+     hop();
+     
+     turn(RIGHT);
+     plant();
+     hop();
+     
+     turn(LEFT);
+     plant();
+     hop();
+     
+     turn(RIGHT);
+     plant();
+     hop();
+     
+     turn(LEFT);
+     plant();
+     hop();
+     
+     plant();
+}
+
+method diagonalTwo()     {
+     plant();
+     hop();
+     
+     turn(RIGHT);
+     plant();
+     hop();
+     
+     turn(LEFT);
+     plant();
+     hop();
+     
+     plant();
+     hop();
+     
+     turn(RIGHT);
+     plant();
+     hop();
+     
+     turn(LEFT);
+     plant();
+     hop();
+     
+     plant();
+}
+
+method plant7()     {
+     plant();
+     hop();
+     plant();
+     hop();
+     plant();
+     hop();
+     plant();
+     hop();
+     plant();
+     hop();
+     plant();
+     hop();
+     plant();
+     hop();
+}
+
+method plant5()     {
+     plant();
+     hop();
+     plant();
+     hop();
+     plant();
+     hop();
+     plant();
+     hop();
+     plant();
+     hop();
+}
+
+method plant3()     {
+     plant();
+     hop();
+     plant();
+     hop();
+     plant();
+     hop();
+}
+@@
+// Assignment 1 - Jeroo Initials
+// Due Jan 18, 2017.
+// Yoshi
+
+method main()     {
+
+     Jeroo first = new Jeroo (4, 3, SOUTH, 18);
+     Jeroo first2 = new Jeroo (4, 10, SOUTH, 14);
+     
+     Jeroo second = new Jeroo (4, 13, SOUTH, 19);
+     Jeroo second2 = new Jeroo (4, 20, SOUTH, 19);
+     
+     // Starting 'Y'
+     first.diagonalOne();     // First diagonal
+     first2.diagonalTwo();    // Second diagonal
+     first2.turn(RIGHT);
+     first2.hop();
+     first2.turn(LEFT);
+     first2.hop(2);
+     
+     // Starting 'Y' line
+     first.turn(RIGHT);
+     first.hop();
+     first.plant7();
+     first.hop(2);
+     
+     first2.plant7();
+     first2.hop(2);
+     
+     // Starting 'H'
+     second.plant5();
+     second2.plant5();
+     
+     second.turn(LEFT);
+     second2.turn(RIGHT);
+     
+     second.plant3();
+     second2.plant3();
+     second.plant();
+     second2.plant();
+     
+     second.turn(RIGHT);
+     second.hop();
+     second2.turn(LEFT);
+     second2.hop();
+     
+     second.turn(RIGHT);
+     second2.turn(LEFT);
+     second.plant3();
+     second2.plant3();
+     
+     second.turn(LEFT);
+     second2.turn(RIGHT);
+     second.plant7();
+     second2.plant7();
+     
+     second.hop(2);
+     second2.hop(2);
+     
+     // Getting Jeroos in position
+     first.turn(LEFT);
+     first.hop(2);
+     first.turn(LEFT);
+     first.hop(4);
+     
+     first2.turn(LEFT);
+     first2.hop(4);
+     first2.turn(LEFT);
+     first2.hop(4);
+     first2.turn(RIGHT);
+     
+     second.turn(RIGHT);
+     second.hop(3);
+     second.turn(RIGHT);
+     second.hop(3);
+     second.turn(LEFT);
+     
+     second2.turn(RIGHT);
+     second2.hop(9);
+     second2.turn(RIGHT);
+     second2.hop(3);
+     second2.turn(RIGHT);
+     second2.turn(RIGHT);
+}

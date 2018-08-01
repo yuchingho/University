@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=ScoreBoard
+comment0.text=\r\n\ The\ ScoreBoard\ is\ used\ to\ display\ results\ on\ the\ screen.\ It\ can\ display\ some\r\n\ text\ and\ several\ numbers.\r\n\ \r\n\ @author\ M\ Kolling\r\n\ @version\ 1.0\r\n\ \r\n\ Yu-Ching's\ Version\r\n\ \r\n
+comment1.params=
+comment1.target=ScoreBoard()
+comment2.params=title\ text\ prefix\ map\ scores
+comment2.target=ScoreBoard(java.lang.String,\ java.lang.String,\ java.lang.String,\ int,\ int[])
+comment2.text=Create\ a\ score\ board\ for\ an\ interim\ result.
+comment3.params=title\ text\ prefix\ scores
+comment3.target=ScoreBoard(java.lang.String,\ java.lang.String,\ java.lang.String,\ int[])
+comment3.text=Create\ a\ score\ board\ for\ the\ final\ result.
+comment4.params=title\ text\ prefix\ score
+comment4.target=void\ makeImage(java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
+comment4.text=Make\ the\ score\ board\ image.
+comment5.params=mapNo\ scores
+comment5.target=void\ addMapScores(int,\ int[])
+comment5.text=\r\n\ Add\ the\ scores\ for\ the\ individual\ maps\ to\ the\ score\ board.\ 'scores'\ is\ an\r\n\ array\ with\ all\ scores,\ 'mapNo'\ is\ the\ number\ of\ the\ current\ map\ (array\ entries\r\n\ past\ this\ value\ have\ no\ valid\ value).\r\n
+comment6.params=name\ scores
+comment6.target=void\ printResultToTerminal(java.lang.String,\ int[])
+numComments=7

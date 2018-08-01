@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Paint
+comment0.text=\r\n\ Paint\ drops\ that\ can\ be\ left\ on\ the\ ground.\ Unfortunately,\ the\ ground\ is\ soft,\ and\ \r\n\ paint\ sinks\ in\ with\ time.\ After\ some\ time,\ it\ will\ have\ disappeared.\r\n\ \r\n\ @author\ Michael\ Kolling\r\n\ @version\ 1.0.1\r\n\ \r\n\ Yu-Ching's\ Assignment\r\n\ \r\n
+comment1.params=
+comment1.target=Paint()
+comment1.text=Create\ some\ paint,\ of\ default\ color.
+comment2.params=color
+comment2.target=Paint(java.lang.String)
+comment2.text=Create\ some\ paint,\ of\ specific\ fixed\ colors.\ Legal\ color\ values\ are\:\ "red",\ "orange"\ and\ "purple".
+comment3.params=
+comment3.target=void\ act()
+comment3.text=With\ passing\ time,\ the\ color\ fades,\ and\ will\ eventually\ disappear.
+comment4.params=
+comment4.target=java.lang.String\ getColor()
+comment4.text=Return\ the\ color\ name\ of\ this\ paint\ drop.
+comment5.params=
+comment5.target=void\ updateImage()
+comment5.text=Make\ the\ image
+numComments=6
