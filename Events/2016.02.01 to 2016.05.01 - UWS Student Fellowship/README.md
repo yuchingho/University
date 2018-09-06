@@ -1,6 +1,6 @@
-UWS Rewards is a prototype mobile-app to increase student engagement and satisfaction within the university. The "index.html" file in the __UWS Rewards Folder__ can be opened with an editor like [Brackets](http://brackets.io/), [Webstorm](https://www.jetbrains.com/webstorm/), or [Komodo Edit](https://www.activestate.com/komodo-ide/downloads/edit).
+UWS Rewards is a prototype mobile-app to increase student engagement and satisfaction within the university. The "index.html" file in the __UWS Rewards__ folder can be opened with an editor like [Brackets](http://brackets.io/), [Webstorm](https://www.jetbrains.com/webstorm/), or [Komodo Edit](https://www.activestate.com/komodo-ide/downloads/edit).
 
-It can also be tested on my [Portfolio](https://yuchingho.com/) with this link - [UWS Rewards Prototype](https://yuchingho.neocities.org/UWS-Rewards-Prototype.html). It is best seen from a mobile.
+It can [be tested here](https://yuchingho.neocities.org/UWS-Rewards-Prototype.html). It is best seen from a mobile.
 
 ## UWS Student Fellowship
 
