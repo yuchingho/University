@@ -3,5 +3,4 @@ The University of the West of Scotland reposity will contain lectures, lab work,
 [Portfolio](https://yuchingho.com/)\
 [Itch](https://yuchingho.itch.io/)\
 [Twitter](https://twitter.com/yuchingho111/)\
-[Instagram](https://www.instagram.com/yuchingho111/)\
-[Paypal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=4RD2FSRRB5278)
+[Instagram](https://www.instagram.com/yuchingho111/)
