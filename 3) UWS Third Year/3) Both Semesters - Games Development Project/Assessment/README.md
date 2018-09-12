@@ -1,8 +1,8 @@
 Spelling Test is a small game about a young wizard apprentice overcoming his master, proving that he was worthy all along.
 
+[Portfolio](https://yuchingho.com/)\
 [Play on Itch](https://yuchingho.itch.io/spelling-test)\
-[YouTube](https://youtu.be/Nqi0lJqTfHE)\
-[Portfolio](https://yuchingho.com/)
+[YouTube](https://youtu.be/Nqi0lJqTfHE)
 
 ## Assessment
 - Documents Folder contains the processes went through to create this game

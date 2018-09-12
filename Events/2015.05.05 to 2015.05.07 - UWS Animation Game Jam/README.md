@@ -1,7 +1,7 @@
 Bonds is an animatic showing the history of how people communicated with each other; and by making humanity more connected, we also made ourselves more isolated.
 
-[YouTube](https://youtu.be/_OIMqH19pn4)\
-[Portfolio](https://yuchingho.com/)
+[Portfolio](https://yuchingho.com/)\
+[YouTube](https://youtu.be/_OIMqH19pn4)
 
 ## 2015 UWS Animation Jam
 

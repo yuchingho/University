@@ -1,8 +1,8 @@
 Rooms is a Level Design Environment to show off high quality models and textures produced.
 
+[Portfolio](https://yuchingho.com/)\
 [Play on Itch](https://yuchingho.itch.io/rooms)\
-[YouTube](https://youtu.be/XCwwLIuUZGs)\
-[Portfolio](https://yuchingho.com/)
+[YouTube](https://youtu.be/XCwwLIuUZGs)
 
 ## Assessment
 
