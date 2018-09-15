@@ -6,5 +6,5 @@
 | COMP09090 | HTML5 & JavaScript Games Programming | 91.0 | A1 | 20 | 10 |
 | COMP09097 | Games Development Project | 52.5 | B2 | 40 | 10 |
 | COMP09078 | Advanced Programming Mobile Devices | 44.0 | C | 20 | 10 |
-| COMP09095  | 3D Level Design | 53.8 | B2 | 20 | 10 |
+| COMP09095 | 3D Level Design | 53.8 | B2 | 20 | 10 |
 | COMP09092 | Research Methods in Computing | 63.0 | B1 | 10 | 10 |
