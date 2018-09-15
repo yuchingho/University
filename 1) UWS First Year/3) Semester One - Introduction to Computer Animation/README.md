@@ -7,9 +7,9 @@ Introduction to Computer Animation was focused on:
 </p>
 
 | Assessment  | Mark |
-| ------------- | ------------- |
-| 1  | 25/30  |
-| 2  | Multiple choice test: 27/30  |
-| 3  | Very Good. Strange looking but good.  |
-| 4  | Very Good. The odd problem with the camera and the vehicle but on the whole, very good animation and use of camera.  |
-| Overall Final Mark  | A Cell  |
+| :---: | ------------- |
+| 1 | 25/30  |
+| 2 | Multiple choice test: 27/30  |
+| 3 | Very Good. Strange looking but good.  |
+| 4 | Very Good. The odd problem with the camera and the vehicle but on the whole, very good animation and use of camera.  |
+| Overall Final Mark  | A |
