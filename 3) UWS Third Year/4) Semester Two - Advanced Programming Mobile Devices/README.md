@@ -1,2 +1,1 @@
-Advanced Mobile Programming focused on programming concepts and diagrams used to build an application.\
-The marking was split in half - exam and application, which was built in a seperate repository <a href="https://github.com/yuchingho/AndroidGymBuddy">Gym Buddy</a>.
+Advanced Mobile Programming focused on programming concepts and diagrams used to build an application.
