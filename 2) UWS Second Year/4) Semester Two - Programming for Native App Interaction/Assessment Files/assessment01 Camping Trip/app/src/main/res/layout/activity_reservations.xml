@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.uws.assessment01campingtrip.reservations"
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Your Reservation"
+                android:id="@+id/reservationsText"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="__________________________"
+                android:id="@+id/textView21" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Park Choice"
+                android:id="@+id/parkChoiceOut" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textLayout"
+                    android:weightSum="1">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Date:"
+                        android:id="@+id/textView19" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_weight="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Residence:"
+                        android:id="@+id/textView3" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Nights:"
+                        android:id="@+id/textView4" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Adults:"
+                        android:id="@+id/textView5" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Teens:"
+                        android:id="@+id/textView6" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Children:"
+                        android:id="@+id/textView7" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Over 21?"
+                        android:id="@+id/textView8" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Pets:"
+                        android:id="@+id/textView9" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Total cost:"
+                        android:id="@+id/textView10" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="28dp"
+                    android:layout_height="fill_parent" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/outputLayout">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="214dp"
+                        android:layout_height="match_parent">
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Date"
+                                android:id="@+id/dateChoiceOut" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text=" / "
+                                android:id="@+id/textView22" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Month"
+                                android:id="@+id/monthChoiceOut" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text=" / 2016"
+                                android:id="@+id/textView23" />
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Residence"
+                            android:id="@+id/residenceChoiceOut" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Nights"
+                            android:id="@+id/nightsOutput" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Adults"
+                            android:id="@+id/adultsOutput" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Teens"
+                            android:id="@+id/teensOutput" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Children"
+                            android:id="@+id/childrenOutput" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Overage"
+                            android:id="@+id/overageOutput" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Pet"
+                            android:id="@+id/petsOutput" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="£ "
+                                android:id="@+id/textView12" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="Cost"
+                                android:id="@+id/costOutput" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="menu"
+                android:id="@+id/menuButton"
+                android:layout_gravity="center_horizontal|right" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
