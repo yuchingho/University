@@ -81,3 +81,9 @@ Computing and Creative Technologies Employer Event Companies
 - Arnold Clark
 - Iomart (Cloud Server)
 - Traveltek
+
+## UWS Fourth Year
+- 06/09/18 - Passport to Success by Dr Les Hutchison
+- 02/10/18 - SEC Glasgow Scottish Graduate Fair 2018
+- 04/10/18 - Morgan Stanley Presents: Technical Interviews Demystified
+- 11/10/18 - Morgan Stanley Technology Projects and Graduate Careers Fair
