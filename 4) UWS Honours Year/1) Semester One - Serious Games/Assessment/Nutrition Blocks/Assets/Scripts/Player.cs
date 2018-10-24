@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    Rigidbody2D Rigidbody2D;
     BoxCollider2D BoxCollider2D;
     Animator Animator;
     public float Speed;
 
 	void Start()
     {
-        Rigidbody2D = GetComponent<Rigidbody2D>();
         BoxCollider2D = GetComponent<BoxCollider2D>();
         Animator = GetComponent<Animator>();
 	}
@@ -22,29 +20,19 @@ public class Player : MonoBehaviour {
     }
 
     void Movement()
-    {   // To not flip character, Rigidbody2D Contraints freeze Z
+    {
         if (Input.GetKey(KeyCode.LeftArrow))
-        {
+        {   // localScale: x == left/right | y == up/down
             Animator.Play("Running");
-            transform.localScale = new Vector2(-1, 1);  // x == left/right | y == up/down
+            transform.localScale = new Vector2(-1, 1);
             transform.position += Vector3.left * Time.deltaTime * Speed;
         }
-        
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            Animator.Play("Idle");
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             Animator.Play("Running");
             transform.localScale = new Vector2(1, 1);
             transform.position += Vector3.right * Time.deltaTime * Speed;
         }
-
-        if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            Animator.Play("Idle");
-        }
+        else { Animator.Play("Idle"); }
     }
 }
