@@ -33,6 +33,9 @@ public class Player : MonoBehaviour {
             transform.localScale = new Vector2(1, 1);
             transform.position += Vector3.right * Time.deltaTime * Speed;
         }
-        else { Animator.Play("Idle"); }
+        else
+        {
+            Animator.Play("Idle");
+        }
     }
 }
