@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - block
+  - fruit
+  - grains
+  - dairy
+  - meat
+  - bad
   layers:
   - Default
   - TransparentFX

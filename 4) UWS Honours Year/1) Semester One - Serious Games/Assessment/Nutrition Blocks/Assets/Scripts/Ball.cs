@@ -23,56 +23,85 @@ public class Ball : MonoBehaviour {
         // for ball to be on paddle, y = -9.648623
         SpriteRenderer = GetComponent<SpriteRenderer>();
         SpriteRenderer.sprite = WhiteDefault;
-        CheckWhite = true;
-        CheckGreen = false;
-        CheckYellow = false;
-        CheckBlue = false;
-        CheckRed = false;
-        CheckPurple = false;
+        CheckWhite = true; CheckGreen = false; CheckYellow = false; CheckBlue = false; CheckRed = false; CheckPurple = false;
     }
 
     void Update() 
     {
-        BallChange();
-	}
-
-    void BallChange()
-    {
         if (Input.GetKey(KeyCode.Q)) { BallWhite(); }
-        if (Input.GetKey(KeyCode.W)) { SpriteRenderer.sprite = GreenFruit; }
+        if (Input.GetKey(KeyCode.W)) { BallGreen(); }
         if (Input.GetKey(KeyCode.E)) { BallYellow(); }
-        if (Input.GetKey(KeyCode.Alpha1)) { SpriteRenderer.sprite = BlueDairy; }
-        if (Input.GetKey(KeyCode.Alpha2)) { SpriteRenderer.sprite = RedMeat; }
-        if (Input.GetKey(KeyCode.Alpha3)) { SpriteRenderer.sprite = PurpleBad; }
+        if (Input.GetKey(KeyCode.Alpha1)) { BallBlue(); }
+        if (Input.GetKey(KeyCode.Alpha2)) { BallRed(); }
+        if (Input.GetKey(KeyCode.Alpha3)) { BallPurple(); }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Block Grains" && CheckYellow == true)
+        if (collision.gameObject.tag == "block" && CheckWhite == true)
         {
+            Debug.Log("Default");
+        }
 
+        if (collision.gameObject.tag == "fruit" && CheckGreen == true)
+        {
+            Debug.Log("Fruit");
+        }
+
+        if (collision.gameObject.tag == "grains" && CheckYellow == true)
+        {
+            Debug.Log("Grains");
+        }
+
+        if (collision.gameObject.tag == "dairy" && CheckBlue == true)
+        {
+            Debug.Log("Dairy");
+        }
+
+        if (collision.gameObject.tag == "meat" && CheckRed == true)
+        {
+            Debug.Log("Meat");
+        }
+
+        if (collision.gameObject.tag == "bad" && CheckPurple == true)
+        {
+            Debug.Log("Bad");
         }
     }
 
     public void BallWhite()
     {
         SpriteRenderer.sprite = WhiteDefault;
-        CheckWhite = true;
-        CheckGreen = false;
-        CheckYellow = false;
-        CheckBlue = false;
-        CheckRed = false;
-        CheckPurple = false;
+        CheckWhite = true; CheckGreen = false; CheckYellow = false; CheckBlue = false; CheckRed = false; CheckPurple = false;
+    }
+
+    public void BallGreen()
+    {
+        SpriteRenderer.sprite = GreenFruit;
+        CheckWhite = false; CheckGreen = true; CheckYellow = false; CheckBlue = false; CheckRed = false; CheckPurple = false;
     }
 
     public void BallYellow()
     {
         SpriteRenderer.sprite = YellowGrain;
-        CheckWhite = false;
-        CheckGreen = false;
-        CheckYellow = true;
-        CheckBlue = false;
-        CheckRed = false;
-        CheckPurple = false;
+        CheckWhite = false; CheckGreen = false; CheckYellow = true; CheckBlue = false; CheckRed = false; CheckPurple = false;
+    }
+
+    public void BallBlue()
+    {
+        SpriteRenderer.sprite = BlueDairy;
+        CheckWhite = false; CheckGreen = false; CheckYellow = false; CheckBlue = true; CheckRed = false; CheckPurple = false;
+    }
+
+    public void BallRed()
+    {
+        SpriteRenderer.sprite = RedMeat;
+        CheckWhite = false; CheckGreen = false; CheckYellow = false; CheckBlue = false; CheckRed = true; CheckPurple = false;
+    }
+
+    public void BallPurple()
+    {
+        SpriteRenderer.sprite = PurpleBad;
+        CheckWhite = false; CheckGreen = false; CheckYellow = false; CheckBlue = false; CheckRed = false; CheckPurple = true;
     }
 }
