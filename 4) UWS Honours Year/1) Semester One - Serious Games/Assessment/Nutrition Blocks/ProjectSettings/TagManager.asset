@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - block
   - fruit
   - grains
   - dairy
   - meat
   - bad
+  - wall
   layers:
   - Default
   - TransparentFX

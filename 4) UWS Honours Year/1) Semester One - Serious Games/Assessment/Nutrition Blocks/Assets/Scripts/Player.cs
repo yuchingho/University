@@ -7,8 +7,10 @@ public class Player : MonoBehaviour {
     BoxCollider2D BoxCollider2D;
     Animator Animator;
     public float Speed;
+    public float LeftScreenEdge;    // -21.1
+    public float RightScreenEdge;   //  21.1
 
-	void Start()
+    void Start()
     {
         BoxCollider2D = GetComponent<BoxCollider2D>();
         Animator = GetComponent<Animator>();
@@ -37,5 +39,8 @@ public class Player : MonoBehaviour {
         {
             Animator.Play("Idle");
         }
+
+        if (transform.position.x < LeftScreenEdge) { transform.position = new Vector2(LeftScreenEdge, transform.position.y); }
+        if (transform.position.x > RightScreenEdge) { transform.position = new Vector2(RightScreenEdge, transform.position.y); }
     }
 }
