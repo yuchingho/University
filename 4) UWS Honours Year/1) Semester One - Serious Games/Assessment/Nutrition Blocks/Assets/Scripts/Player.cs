@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    BoxCollider2D BoxCollider2D;
+    Rigidbody2D Rigidbody2D;
     Animator Animator;
+    public bool Control;
     public float Speed;
-    public float LeftScreenEdge;    // -21.1
-    public float RightScreenEdge;   //  21.1
 
     void Start()
     {
-        BoxCollider2D = GetComponent<BoxCollider2D>();
+        Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
-	}
-	
-	void Update()
+        Control = true;
+    }
+
+    void Update()
     {
-        Movement();
+        if (Control == true) { Movement(); }
+
+        if (gameObject.transform.position.y >= -12.5)
+        {
+            Control = false;
+            Animator.Play("Idle");
+        }
     }
 
     void Movement()
@@ -39,8 +45,5 @@ public class Player : MonoBehaviour {
         {
             Animator.Play("Idle");
         }
-
-        if (transform.position.x < LeftScreenEdge) { transform.position = new Vector2(LeftScreenEdge, transform.position.y); }
-        if (transform.position.x > RightScreenEdge) { transform.position = new Vector2(RightScreenEdge, transform.position.y); }
     }
 }

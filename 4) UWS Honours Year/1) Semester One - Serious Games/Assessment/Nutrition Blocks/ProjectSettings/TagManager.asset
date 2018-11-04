@@ -10,6 +10,7 @@ TagManager:
   - meat
   - bad
   - wall
+  - ground
   layers:
   - Default
   - TransparentFX

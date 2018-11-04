@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour {
     SpriteRenderer SpriteRenderer;
     Rigidbody2D Rigidbody2D;
     public float AngleX;
-    public float AngleY;
+    int BallDir;
     public float Speed;
     public float SpeedCurrent;
     public bool Launched;
@@ -29,6 +29,7 @@ public class Ball : MonoBehaviour {
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        BallDir = Random.Range(0, 2) * 2 - 1;   // Ball Dir can be positive or negative
         Launched = false;
         CheckWhite = true; CheckGreen = false; CheckYellow = false; CheckBlue = false; CheckRed = false; CheckPurple = false;
         SpriteRenderer.sprite = WhiteDefault;
@@ -41,10 +42,10 @@ public class Ball : MonoBehaviour {
         {   // Starting y of ball = -9.648623
             transform.position = new Vector2(Target.transform.position.x, Target.transform.position.y + 3.351377f);
         }
-        if (Input.GetKey(KeyCode.Space) && Launched == false)
+        if (Input.GetKey(KeyCode.UpArrow) && Launched == false)
         {
             Launched = true;
-            Rigidbody2D.AddForce(new Vector2(AngleX, AngleY) * Speed);  // Gravity RigidBody == 0
+            Rigidbody2D.AddForce(new Vector2(AngleX * BallDir, 5) * Speed);  // Gravity RigidBody == 0
         }
         if (Input.GetKey(KeyCode.Q)) { BallWhite(); }
         if (Input.GetKey(KeyCode.W)) { BallGreen(); }
@@ -52,11 +53,21 @@ public class Ball : MonoBehaviour {
         if (Input.GetKey(KeyCode.Alpha1)) { BallBlue(); }
         if (Input.GetKey(KeyCode.Alpha2)) { BallRed(); }
         if (Input.GetKey(KeyCode.Alpha3)) { BallPurple(); }
+
+        // If Ball is below certain y, check Player's Rigidbody freezeRotation as off.
+        if (gameObject.transform.position.y <= -11.63f)
+        {
+            Target.GetComponent<Rigidbody2D>().freezeRotation = false;
+        }
+        else
+        {
+            Target.GetComponent<Rigidbody2D>().freezeRotation = true;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "wall" && collision.gameObject.tag != "Player" && CheckWhite == true)
+        if (CheckWhite == true && collision.gameObject.tag != "wall" && collision.gameObject.tag != "Player" && collision.gameObject.tag != "ground")
         {   // White Ball can destroy all blocks. If destroy a good food block, score down. If destroy bad food block, score up.
             Destroy(collision.gameObject);
         }
