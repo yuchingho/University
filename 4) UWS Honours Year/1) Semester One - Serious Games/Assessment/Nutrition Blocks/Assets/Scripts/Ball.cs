@@ -6,12 +6,17 @@ public class Ball : MonoBehaviour {
 
     SpriteRenderer SpriteRenderer;
     Rigidbody2D Rigidbody2D;
+
+    // Ball
+    int Direction;
     public float AngleX;
-    int BallDir;
     public float Speed;
     public float SpeedCurrent;
     public bool Launched;
     public GameObject Target;
+
+    // Blocks
+    Game Points;    // Getting Game.cs
     public bool CheckWhite;
     public bool CheckGreen;
     public bool CheckYellow;
@@ -29,8 +34,13 @@ public class Ball : MonoBehaviour {
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
-        BallDir = Random.Range(0, 2) * 2 - 1;   // Ball Dir can be positive or negative
+
+        // Ball
+        Direction = Random.Range(0, 2) * 2 - 1;   // BallDir can be 1 / -1
         Launched = false;
+
+        // Blocks
+        Points = GameObject.Find("ManagerGame").GetComponent<Game>();
         CheckWhite = true; CheckGreen = false; CheckYellow = false; CheckBlue = false; CheckRed = false; CheckPurple = false;
         SpriteRenderer.sprite = WhiteDefault;
     }
@@ -43,9 +53,9 @@ public class Ball : MonoBehaviour {
             transform.position = new Vector2(Target.transform.position.x, Target.transform.position.y + 3.351377f);
         }
         if (Input.GetKey(KeyCode.UpArrow) && Launched == false)
-        {
+        {   // Launching the ball to start the game.
             Launched = true;
-            Rigidbody2D.AddForce(new Vector2(AngleX * BallDir, 5) * Speed);  // Gravity RigidBody == 0
+            Rigidbody2D.AddForce(new Vector2(AngleX * Direction, 5) * Speed);  // Gravity RigidBody == 0
         }
         if (Input.GetKey(KeyCode.Q)) { BallWhite(); }
         if (Input.GetKey(KeyCode.W)) { BallGreen(); }
@@ -55,14 +65,8 @@ public class Ball : MonoBehaviour {
         if (Input.GetKey(KeyCode.Alpha3)) { BallPurple(); }
 
         // If Ball is below certain y, check Player's Rigidbody freezeRotation as off.
-        if (gameObject.transform.position.y <= -11.63f)
-        {
-            Target.GetComponent<Rigidbody2D>().freezeRotation = false;
-        }
-        else
-        {
-            Target.GetComponent<Rigidbody2D>().freezeRotation = true;
-        }
+        if (gameObject.transform.position.y <= -11.63f) { Target.GetComponent<Rigidbody2D>().freezeRotation = false; }
+        else { Target.GetComponent<Rigidbody2D>().freezeRotation = true; }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -75,6 +79,7 @@ public class Ball : MonoBehaviour {
         if (collision.gameObject.tag == "fruit" && CheckGreen == true)
         {
             Destroy(collision.gameObject);
+            Points.ScoreCurrent = Points.ScoreCurrent + 10;
         }
 
         if (collision.gameObject.tag == "grains" && CheckYellow == true)

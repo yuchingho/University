@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    Rigidbody2D Rigidbody2D;
     Animator Animator;
     public bool Control;
     public float Speed;
 
     void Start()
     {
-        Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         Control = true;
     }
