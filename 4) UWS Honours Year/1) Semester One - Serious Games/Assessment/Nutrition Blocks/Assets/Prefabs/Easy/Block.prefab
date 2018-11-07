@@ -19,13 +19,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4157270898833638}
-  - component: {fileID: 114355043767305054}
+  - component: {fileID: 114034134130670302}
   - component: {fileID: 33847759002787760}
   - component: {fileID: 23125827452486232}
   - component: {fileID: 60536509737352904}
   m_Layer: 0
   m_Name: Block
-  m_TagString: Untagged
+  m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742100954545152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -133,7 +133,7 @@ PolygonCollider2D:
       - {x: 0.5075519, y: 0.20010123}
       - {x: 0.50250065, y: 0.3999907}
       - {x: 0.5001235, y: 0.5000911}
---- !u!114 &114355043767305054
+--- !u!114 &114034134130670302
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,8 +141,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1742100954545152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3bd17a059529b4e9675319fba9f7c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 875ebf8814646f849b6c78410cd06812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Empty: 0
-  Easy: []
+  BlockSpecs: {fileID: 11400000, guid: 84976b507b2b11148be889d0b98712c5, type: 2}
+  FoodType: 
+  Value: 0

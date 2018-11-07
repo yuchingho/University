@@ -379,7 +379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &397111780
 MonoBehaviour:
@@ -389,17 +389,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 397111778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3bd17a059529b4e9675319fba9f7c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e62fca1666f94a428c8f40c639ac5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Empty: 0
+  BlocksFilled: 0
+  State: 2
+  Beginner:
+  - Name: White Default
+    Block: {fileID: 1742100954545152, guid: 466d4a9c2d4666742ba4a3a35566a12c, type: 2}
+    SpawnPercent: 70
+  - Name: Green Fruit
+    Block: {fileID: 1849234199085072, guid: af684253e89dfce45a8aa0a160bf4910, type: 2}
+    SpawnPercent: 6
+  - Name: Yellow Grains
+    Block: {fileID: 1847463500315856, guid: c0ad1b7076521c24c8687e8b588eaf07, type: 2}
+    SpawnPercent: 6
+  - Name: Blue Dairy
+    Block: {fileID: 1642582606910628, guid: b5fd9afed285e844eb3f61f693f3fc80, type: 2}
+    SpawnPercent: 6
+  - Name: Red Meat
+    Block: {fileID: 1706602544992386, guid: 61c94795acb5181439e5471d217e8eb8, type: 2}
+    SpawnPercent: 6
+  - Name: Purple Bad
+    Block: {fileID: 1485397781192296, guid: 63b00cb206c32364f84d6b49e79c06e0, type: 2}
+    SpawnPercent: 6
   Easy:
-  - {fileID: 1742100954545152, guid: 466d4a9c2d4666742ba4a3a35566a12c, type: 2}
-  - {fileID: 1849234199085072, guid: af684253e89dfce45a8aa0a160bf4910, type: 2}
-  - {fileID: 1847463500315856, guid: c0ad1b7076521c24c8687e8b588eaf07, type: 2}
-  - {fileID: 1642582606910628, guid: b5fd9afed285e844eb3f61f693f3fc80, type: 2}
-  - {fileID: 1706602544992386, guid: 61c94795acb5181439e5471d217e8eb8, type: 2}
-  - {fileID: 1485397781192296, guid: 63b00cb206c32364f84d6b49e79c06e0, type: 2}
+  - Name: White Default
+    Block: {fileID: 0}
+    SpawnPercent: 0
+  - Name: Green Fruit
+    Block: {fileID: 0}
+    SpawnPercent: 0
+  - Name: Yellow Grains
+    Block: {fileID: 0}
+    SpawnPercent: 0
+  - Name: Blue Dairy
+    Block: {fileID: 0}
+    SpawnPercent: 0
+  - Name: Red Meat
+    Block: {fileID: 0}
+    SpawnPercent: 0
+  - Name: Purple Bad
+    Block: {fileID: 0}
+    SpawnPercent: 0
 --- !u!114 &397111781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,8 +443,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167d9fcafb763184ba9f4f9d92e37cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreCurrent: 0
+  BallLaunched: 0
+  BallSpeedCurrent: 0
+  BallSpeed: 225
+  PlayerIsPlaying: 0
+  PlayerSpeed: 25
   ScoreUI: {fileID: 367967270}
+  ScoreCurrent: 0
+  Difficulty: 0
 --- !u!1 &892829831
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,9 +461,10 @@ GameObject:
   - component: {fileID: 892829833}
   - component: {fileID: 892829832}
   - component: {fileID: 892829834}
+  - component: {fileID: 892829835}
   m_Layer: 0
   m_Name: Paddle
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,20 +556,36 @@ PolygonCollider2D:
       - {x: -3.9894364, y: 1.941509}
       - {x: -4.1108513, y: 2.0277927}
       - {x: -4.1099687, y: 2.6292722}
-      - {x: -2.8549764, y: 2.787009}
-      - {x: -2.1372201, y: 2.6672132}
-      - {x: -1.4302181, y: 2.789727}
-      - {x: -0.8134189, y: 2.6654212}
-      - {x: -0.39711478, y: 2.668122}
-      - {x: -0.19994514, y: 2.800171}
-      - {x: 0.19997387, y: 2.8004456}
-      - {x: 0.40195698, y: 2.6640842}
-      - {x: 0.80026126, y: 2.664561}
-      - {x: 1.4270414, y: 2.788593}
-      - {x: 2.1852365, y: 2.6600816}
-      - {x: 2.8568997, y: 2.782622}
+      - {x: -2.1404822, y: 2.9002674}
+      - {x: 0.0064201434, y: 2.6633317}
+      - {x: 2.1447845, y: 2.8980682}
       - {x: 4.111859, y: 2.5781143}
       - {x: 4.105979, y: 2.0448472}
+--- !u!61 &892829835
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 892829831}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06731486, y: -2.3729393}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.23, y: 0.73}
+    newSize: {x: 8.25, y: 0.73}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.236117, y: 3.7786746}
+  m_EdgeRadius: 0
 --- !u!1 &934229439
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,9 +595,9 @@ GameObject:
   m_Component:
   - component: {fileID: 934229441}
   - component: {fileID: 934229444}
-  - component: {fileID: 934229440}
   - component: {fileID: 934229443}
   - component: {fileID: 934229442}
+  - component: {fileID: 934229440}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -603,11 +658,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 934229439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -9.648623, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &934229442
 CircleCollider2D:
@@ -656,10 +711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AngleX: 4
-  Speed: 100
-  SpeedCurrent: 0
-  Launched: 0
-  Target: {fileID: 936158668}
   CheckWhite: 0
   CheckGreen: 0
   CheckYellow: 0
@@ -668,7 +719,7 @@ MonoBehaviour:
   CheckPurple: 0
   WhiteDefault: {fileID: 21300000, guid: a686050cbb560324e866f67b517bf03d, type: 3}
   GreenFruit: {fileID: 21300000, guid: cb07ab1d3d2824a45b85c96b10fb2e89, type: 3}
-  YellowGrain: {fileID: 21300000, guid: fc989886881a45542820e94f58ebcdc3, type: 3}
+  YellowGrains: {fileID: 21300000, guid: fc989886881a45542820e94f58ebcdc3, type: 3}
   BlueDairy: {fileID: 21300000, guid: ccaab5d5ea68c8546bba300df6af7c25, type: 3}
   RedMeat: {fileID: 21300000, guid: 70dfb739144ba91468eadec386cb7dcb, type: 3}
   PurpleBad: {fileID: 21300000, guid: 7eaef9ffca5934340903fd641e6fbc65, type: 3}
@@ -681,10 +732,10 @@ GameObject:
   m_Component:
   - component: {fileID: 936158672}
   - component: {fileID: 936158671}
-  - component: {fileID: 936158670}
-  - component: {fileID: 936158669}
-  - component: {fileID: 936158674}
   - component: {fileID: 936158673}
+  - component: {fileID: 936158674}
+  - component: {fileID: 936158669}
+  - component: {fileID: 936158670}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -767,8 +818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe2a536dfa7c644db4ee9f1f930d2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Control: 0
-  Speed: 25
 --- !u!4 &936158672
 Transform:
   m_ObjectHideFlags: 0
@@ -782,7 +831,7 @@ Transform:
   - {fileID: 892829833}
   - {fileID: 1103459509}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &936158673
 Rigidbody2D:
@@ -813,7 +862,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.08073413, y: -0.029002428}
@@ -1002,6 +1051,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1107689698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107689699}
+  m_Layer: 0
+  m_Name: '---------------------------'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1107689699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1107689698}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1249156671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0000002, y: 1.0000002}
   m_EdgeRadius: 0
 --- !u!23 &1623629981
 MeshRenderer:
@@ -1306,8 +1383,8 @@ Transform:
   m_Father: {fileID: 1249156672}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2056221339
-BoxCollider2D:
+--- !u!60 &2056221339
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1328,9 +1405,21 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5000167, y: 0.50011635}
+      - {x: -0.50007623, y: -1.1347393}
+      - {x: -0.41659802, y: -0.5004482}
+      - {x: -0.31226093, y: -1.1328561}
+      - {x: -0.20809887, y: -0.5172323}
+      - {x: -0.10378676, y: -1.1334648}
+      - {x: 0.00031411773, y: -0.5023238}
+      - {x: 0.10422358, y: -1.136586}
+      - {x: 0.20831102, y: -0.5076885}
+      - {x: 0.33354235, y: -1.134622}
+      - {x: 0.41665822, y: -0.49854788}
+      - {x: 0.50030416, y: -1.1424421}
+      - {x: 0.50001025, y: 0.50020885}
 --- !u!23 &2056221340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1460,7 +1549,7 @@ RectTransform:
   m_Children:
   - {fileID: 367967269}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

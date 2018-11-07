@@ -19,13 +19,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4404312308904904}
-  - component: {fileID: 114255839201702106}
   - component: {fileID: 33968836789128800}
   - component: {fileID: 23711219926224870}
   - component: {fileID: 60142160920569580}
   m_Layer: 0
   m_Name: Block Fruit
-  m_TagString: fruit
+  m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,16 +132,3 @@ PolygonCollider2D:
       - {x: 0.5075519, y: 0.20010123}
       - {x: 0.50250065, y: 0.3999907}
       - {x: 0.5001235, y: 0.5000911}
---- !u!114 &114255839201702106
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1849234199085072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3bd17a059529b4e9675319fba9f7c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Empty: 0
-  Easy: []
