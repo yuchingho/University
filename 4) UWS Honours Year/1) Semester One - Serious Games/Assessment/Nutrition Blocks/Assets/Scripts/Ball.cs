@@ -11,12 +11,12 @@ public class Ball : MonoBehaviour {
     GameObject PlayerObject;
     int Direction;
     public float AngleX;
-    public bool CheckWhite;
-    public bool CheckGreen;
-    public bool CheckYellow;
-    public bool CheckBlue;
-    public bool CheckRed;
-    public bool CheckPurple;
+    public bool CheckDefault;
+    public bool CheckFruit;
+    public bool CheckGrains;
+    public bool CheckDairy;
+    public bool CheckMeat;
+    public bool CheckBad;
     public Sprite WhiteDefault; // #e2e2e2.
     public Sprite GreenFruit;   // #00ff01.
     public Sprite YellowGrains; // #ffeb01.
@@ -33,12 +33,7 @@ public class Ball : MonoBehaviour {
         PlayerObject = GameObject.Find("Player"); // For the Ball to be ontop of Player before launching.
         Direction = Random.Range(0, 2) * 2 - 1;   // Direction can be left(1) or right(-1).
         SpriteRenderer.sprite = WhiteDefault;
-        CheckWhite = true;
-        CheckGreen = false;
-        CheckYellow = false;
-        CheckBlue = false;
-        CheckRed = false;
-        CheckPurple = false;
+        BallWhite();
     }
 
     void Update()
@@ -66,68 +61,68 @@ public class Ball : MonoBehaviour {
         if (ManagerGame.PlayerIsPlaying == false)
         {   // Reducing the bouce of ball with below when Ball hits Player.
             Rigidbody2D.drag = 1; Rigidbody2D.gravityScale = 2;
-            if (collision.gameObject.tag == "ground") { CircleCollider2D.sharedMaterial = null; }
+            if (collision.gameObject.tag == "wall") { CircleCollider2D.sharedMaterial = null; }
         }
     }
 
     public void BallWhite()
     {
         SpriteRenderer.sprite = WhiteDefault;
-        CheckWhite = true;
-        CheckGreen = false;
-        CheckYellow = false;
-        CheckBlue = false;
-        CheckRed = false;
-        CheckPurple = false;
+        CheckDefault = true;
+        CheckFruit = false;
+        CheckGrains = false;
+        CheckDairy = false;
+        CheckMeat = false;
+        CheckBad = false;
     }
     public void BallGreen()
     {
         SpriteRenderer.sprite = GreenFruit;
-        CheckWhite = false;
-        CheckGreen = true;
-        CheckYellow = false;
-        CheckBlue = false;
-        CheckRed = false;
-        CheckPurple = false;
+        CheckDefault = false;
+        CheckFruit = true;
+        CheckGrains = false;
+        CheckDairy = false;
+        CheckMeat = false;
+        CheckBad = false;
     }
     public void BallYellow()
     {
         SpriteRenderer.sprite = YellowGrains;
-        CheckWhite = false;
-        CheckGreen = false;
-        CheckYellow = true;
-        CheckBlue = false;
-        CheckRed = false;
-        CheckPurple = false;
+        CheckDefault = false;
+        CheckFruit = false;
+        CheckGrains = true;
+        CheckDairy = false;
+        CheckMeat = false;
+        CheckBad = false;
     }
     public void BallBlue()
     {
         SpriteRenderer.sprite = BlueDairy;
-        CheckWhite = false;
-        CheckGreen = false;
-        CheckYellow = false;
-        CheckBlue = true;
-        CheckRed = false;
-        CheckPurple = false;
+        CheckDefault = false;
+        CheckFruit = false;
+        CheckGrains = false;
+        CheckDairy = true;
+        CheckMeat = false;
+        CheckBad = false;
     }
     public void BallRed()
     {
         SpriteRenderer.sprite = RedMeat;
-        CheckWhite = false;
-        CheckGreen = false;
-        CheckYellow = false;
-        CheckBlue = false;
-        CheckRed = true;
-        CheckPurple = false;
+        CheckDefault = false;
+        CheckFruit = false;
+        CheckGrains = false;
+        CheckDairy = false;
+        CheckMeat = true;
+        CheckBad = false;
     }
     public void BallPurple()
     {
         SpriteRenderer.sprite = PurpleBad;
-        CheckWhite = false;
-        CheckGreen = false;
-        CheckYellow = false;
-        CheckBlue = false;
-        CheckRed = false;
-        CheckPurple = true;
+        CheckDefault = false;
+        CheckFruit = false;
+        CheckGrains = false;
+        CheckDairy = false;
+        CheckMeat = false;
+        CheckBad = true;
     }
 }

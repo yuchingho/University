@@ -26,21 +26,21 @@ public class BlockValue : MonoBehaviour {
         if (collision.gameObject.name == "Ball")
         {
             // CheckWhite and FoodBlock Default.
-            if (BallScript.CheckWhite == true && BlockSpecs.FoodType == BlockSpecs.Food.Default)
+            if (BallScript.CheckDefault == true && BlockSpecs.FoodType == BlockSpecs.Food.Default)
             {
                 ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
                 Destroy(this.gameObject);
             }
 
             // CheckWhite and FoodBlock Rest except for Bad.
-            if (BallScript.CheckWhite == true && BlockSpecs.FoodType != BlockSpecs.Food.Default)
+            if (BallScript.CheckDefault == true && BlockSpecs.FoodType != BlockSpecs.Food.Default)
             {
                 ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue; // edit value for destroying a good block
                 Destroy(this.gameObject);
             }
 
             // CheckWhite and FoodBlock Bad.
-            if (BallScript.CheckWhite == true && BlockSpecs.FoodType == BlockSpecs.Food.Bad)
+            if (BallScript.CheckDefault == true && BlockSpecs.FoodType == BlockSpecs.Food.Bad)
             {
                 ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
                 Destroy(this.gameObject);

@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 138783568}
   m_Layer: 0
   m_Name: Ground Invisible
-  m_TagString: ground
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,7 +274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &367967268
 GameObject:
@@ -393,45 +393,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlocksFilled: 0
-  State: 2
+  State: 0
   Beginner:
-  - Name: White Default
-    Block: {fileID: 1742100954545152, guid: 466d4a9c2d4666742ba4a3a35566a12c, type: 2}
-    SpawnPercent: 70
-  - Name: Green Fruit
-    Block: {fileID: 1849234199085072, guid: af684253e89dfce45a8aa0a160bf4910, type: 2}
-    SpawnPercent: 6
-  - Name: Yellow Grains
-    Block: {fileID: 1847463500315856, guid: c0ad1b7076521c24c8687e8b588eaf07, type: 2}
-    SpawnPercent: 6
-  - Name: Blue Dairy
-    Block: {fileID: 1642582606910628, guid: b5fd9afed285e844eb3f61f693f3fc80, type: 2}
-    SpawnPercent: 6
-  - Name: Red Meat
-    Block: {fileID: 1706602544992386, guid: 61c94795acb5181439e5471d217e8eb8, type: 2}
-    SpawnPercent: 6
-  - Name: Purple Bad
-    Block: {fileID: 1485397781192296, guid: 63b00cb206c32364f84d6b49e79c06e0, type: 2}
-    SpawnPercent: 6
+  - Name: Default
+    Block: {fileID: 1664550596499568, guid: 804542befa6b0fc479c3704481704cb6, type: 2}
+    SpawnPercent: 90
+  - Name: Fruit
+    Block: {fileID: 1396711235460744, guid: 3eb1248df0e19a24394f32dc2dba2777, type: 2}
+    SpawnPercent: 2
+  - Name: Grains
+    Block: {fileID: 1293778788974874, guid: d19bc6156b7a9cf47a048faf3ccfe696, type: 2}
+    SpawnPercent: 2
+  - Name: Dairy
+    Block: {fileID: 1079082366669686, guid: d201ac2e8945e6f4297c777dccc7a14b, type: 2}
+    SpawnPercent: 2
+  - Name: Meat
+    Block: {fileID: 1499842362939878, guid: 9475bfb34b4611a4e81b993214336723, type: 2}
+    SpawnPercent: 2
+  - Name: Bad
+    Block: {fileID: 1525238009675586, guid: 23204a049ed91cd4b8bb5fba577e9502, type: 2}
+    SpawnPercent: 2
   Easy:
-  - Name: White Default
-    Block: {fileID: 0}
-    SpawnPercent: 0
-  - Name: Green Fruit
-    Block: {fileID: 0}
-    SpawnPercent: 0
-  - Name: Yellow Grains
-    Block: {fileID: 0}
-    SpawnPercent: 0
-  - Name: Blue Dairy
-    Block: {fileID: 0}
-    SpawnPercent: 0
-  - Name: Red Meat
-    Block: {fileID: 0}
-    SpawnPercent: 0
-  - Name: Purple Bad
-    Block: {fileID: 0}
-    SpawnPercent: 0
+  - Name: Default
+    Block: {fileID: 1664550596499568, guid: 804542befa6b0fc479c3704481704cb6, type: 2}
+    SpawnPercent: 70
+  - Name: Fruit
+    Block: {fileID: 1396711235460744, guid: 3eb1248df0e19a24394f32dc2dba2777, type: 2}
+    SpawnPercent: 6
+  - Name: Grains
+    Block: {fileID: 1293778788974874, guid: d19bc6156b7a9cf47a048faf3ccfe696, type: 2}
+    SpawnPercent: 6
+  - Name: Dairy
+    Block: {fileID: 1079082366669686, guid: d201ac2e8945e6f4297c777dccc7a14b, type: 2}
+    SpawnPercent: 6
+  - Name: Meat
+    Block: {fileID: 1499842362939878, guid: 9475bfb34b4611a4e81b993214336723, type: 2}
+    SpawnPercent: 6
+  - Name: Bad
+    Block: {fileID: 1525238009675586, guid: 23204a049ed91cd4b8bb5fba577e9502, type: 2}
+    SpawnPercent: 6
 --- !u!114 &397111781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,11 +443,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167d9fcafb763184ba9f4f9d92e37cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BallLaunched: 0
-  BallSpeedCurrent: 0
   BallSpeed: 225
-  PlayerIsPlaying: 0
+  BallSpeedCurrent: 0
+  BallLaunched: 0
   PlayerSpeed: 25
+  PlayerIsPlaying: 0
   ScoreUI: {fileID: 367967270}
   ScoreCurrent: 0
   Difficulty: 0
@@ -711,12 +711,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AngleX: 4
-  CheckWhite: 0
-  CheckGreen: 0
-  CheckYellow: 0
-  CheckBlue: 0
-  CheckRed: 0
-  CheckPurple: 0
+  CheckDefault: 0
+  CheckFruit: 0
+  CheckGrains: 0
+  CheckDairy: 0
+  CheckMeat: 0
+  CheckBad: 0
   WhiteDefault: {fileID: 21300000, guid: a686050cbb560324e866f67b517bf03d, type: 3}
   GreenFruit: {fileID: 21300000, guid: cb07ab1d3d2824a45b85c96b10fb2e89, type: 3}
   YellowGrains: {fileID: 21300000, guid: fc989886881a45542820e94f58ebcdc3, type: 3}
@@ -865,7 +865,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08073413, y: -0.029002428}
+  m_Offset: {x: 0.040973336, y: -0.12033296}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.52755433, y: 0.5}
@@ -876,7 +876,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9299998, y: 3.8819947}
+  m_Size: {x: 1.8954873, y: 3.6993337}
   m_EdgeRadius: 0
 --- !u!1 &1089115334
 GameObject:
@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 1249156672}
   m_Layer: 0
   m_Name: Boundaries
-  m_TagString: wall
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1109,7 +1109,7 @@ Transform:
   - {fileID: 1623629979}
   - {fileID: 1089115335}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1623629978
 GameObject:
@@ -1549,7 +1549,7 @@ RectTransform:
   m_Children:
   - {fileID: 367967269}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

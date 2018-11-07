@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu (fileName = "BlockSpecs", menuName = "Block")]
+[CreateAssetMenu (fileName = "Specs FoodType", menuName = "Food Block")]
 public class BlockSpecs : ScriptableObject {
 
     public enum Food { Default, Fruit, Grains, Dairy, Meat, Bad};

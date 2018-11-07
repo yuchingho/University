@@ -15,7 +15,7 @@ public class ManagerSpawn : MonoBehaviour {
         public int SpawnPercent;
     }
 
-    public enum SpawnState { Spawning, Waiting, Counting };
+    public enum SpawnState { Counting, Spawning, Waiting };
     public SpawnState State = SpawnState.Counting;
     public SettingDifficulty[] Beginner;
     public SettingDifficulty[] Easy;
