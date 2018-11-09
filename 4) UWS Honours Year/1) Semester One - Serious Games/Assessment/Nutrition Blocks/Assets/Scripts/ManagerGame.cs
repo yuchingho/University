@@ -9,6 +9,7 @@ public class ManagerGame : MonoBehaviour {
     public float BallSpeedCurrent;
     public bool BallLaunched;
     public float PlayerSpeed;
+    public float PlayerSpeedCurrent;    // if PlayerIsPlaying == false && PlayerSpeedCurrent ++ 0, respawn, for lives?
     public bool PlayerIsPlaying;
     public Text ScoreUI;
     public float ScoreCurrent;

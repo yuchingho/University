@@ -41,8 +41,8 @@ public class ManagerSpawn : MonoBehaviour {
     IEnumerator SpawnBlocks (SettingDifficulty _Difficulty)
     {
         State = SpawnState.Spawning;  
-        for (int x = -20; x <= 10; x = x + 5)   // x = 20,
-        for (int y =   4; y <= 4; y = y + 2)    // y = 10
+        for (int y =  10; y >=  4; y = y - 2)    // x = 20,
+        for (int x = -20; x <= 20; x = x + 5)    // y = 10
         {   // Spawning 36 blocks.
             Instantiate(_Difficulty.Block, new Vector2(x, y), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);

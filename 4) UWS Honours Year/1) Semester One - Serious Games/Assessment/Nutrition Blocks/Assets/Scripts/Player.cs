@@ -17,6 +17,7 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
+        ManagerGame.PlayerSpeedCurrent = Rigidbody2D.velocity.magnitude;
         if (ManagerGame.PlayerIsPlaying == true) { Movement(); }
         // If Player hit by Ball, Player stops moving.
         else { Rigidbody2D.freezeRotation = false; Animator.Play("Idle"); }
