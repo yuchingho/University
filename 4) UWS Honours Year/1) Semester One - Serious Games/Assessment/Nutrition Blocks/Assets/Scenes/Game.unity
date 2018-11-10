@@ -397,41 +397,41 @@ MonoBehaviour:
   Beginner:
   - Name: Default
     Block: {fileID: 1664550596499568, guid: 804542befa6b0fc479c3704481704cb6, type: 2}
-    SpawnPercent: 90
+    SpawnChance: 90
   - Name: Fruit
     Block: {fileID: 1396711235460744, guid: 3eb1248df0e19a24394f32dc2dba2777, type: 2}
-    SpawnPercent: 2
+    SpawnChance: 2
   - Name: Grains
     Block: {fileID: 1293778788974874, guid: d19bc6156b7a9cf47a048faf3ccfe696, type: 2}
-    SpawnPercent: 2
+    SpawnChance: 2
   - Name: Dairy
     Block: {fileID: 1079082366669686, guid: d201ac2e8945e6f4297c777dccc7a14b, type: 2}
-    SpawnPercent: 2
+    SpawnChance: 2
   - Name: Meat
     Block: {fileID: 1499842362939878, guid: 9475bfb34b4611a4e81b993214336723, type: 2}
-    SpawnPercent: 2
+    SpawnChance: 2
   - Name: Bad
     Block: {fileID: 1525238009675586, guid: 23204a049ed91cd4b8bb5fba577e9502, type: 2}
-    SpawnPercent: 2
+    SpawnChance: 2
   Easy:
   - Name: Default
     Block: {fileID: 1664550596499568, guid: 804542befa6b0fc479c3704481704cb6, type: 2}
-    SpawnPercent: 70
+    SpawnChance: 70
   - Name: Fruit
     Block: {fileID: 1396711235460744, guid: 3eb1248df0e19a24394f32dc2dba2777, type: 2}
-    SpawnPercent: 6
+    SpawnChance: 6
   - Name: Grains
     Block: {fileID: 1293778788974874, guid: d19bc6156b7a9cf47a048faf3ccfe696, type: 2}
-    SpawnPercent: 6
+    SpawnChance: 6
   - Name: Dairy
     Block: {fileID: 1079082366669686, guid: d201ac2e8945e6f4297c777dccc7a14b, type: 2}
-    SpawnPercent: 6
+    SpawnChance: 6
   - Name: Meat
     Block: {fileID: 1499842362939878, guid: 9475bfb34b4611a4e81b993214336723, type: 2}
-    SpawnPercent: 6
+    SpawnChance: 6
   - Name: Bad
     Block: {fileID: 1525238009675586, guid: 23204a049ed91cd4b8bb5fba577e9502, type: 2}
-    SpawnPercent: 6
+    SpawnChance: 6
 --- !u!114 &397111781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,6 +447,7 @@ MonoBehaviour:
   BallSpeedCurrent: 0
   BallLaunched: 0
   PlayerSpeed: 25
+  PlayerSpeedCurrent: 0
   PlayerIsPlaying: 0
   ScoreUI: {fileID: 367967270}
   ScoreCurrent: 0

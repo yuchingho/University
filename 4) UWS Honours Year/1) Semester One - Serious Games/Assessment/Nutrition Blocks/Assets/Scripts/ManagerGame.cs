@@ -8,6 +8,7 @@ public class ManagerGame : MonoBehaviour {
     public float BallSpeed;
     public float BallSpeedCurrent;
     public bool BallLaunched;
+    // How to set Ball Speed Limit so ball doesn't slow down to unplayable?
     public float PlayerSpeed;
     public float PlayerSpeedCurrent;    // if PlayerIsPlaying == false && PlayerSpeedCurrent ++ 0, respawn, for lives?
     public bool PlayerIsPlaying;

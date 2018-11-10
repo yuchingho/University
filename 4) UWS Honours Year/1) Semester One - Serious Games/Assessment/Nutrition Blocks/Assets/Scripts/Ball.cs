@@ -40,7 +40,7 @@ public class Ball : MonoBehaviour {
     {   // Displaying speed of ball in Inspector.
         ManagerGame.BallSpeedCurrent = Rigidbody2D.velocity.magnitude;
         if (ManagerGame.BallLaunched == false)
-        {   // Starting Ball Y = -9.648623.
+        {   // Starting Ball Y = -9.648623, so Ball is ontop of Player.
             transform.position = new Vector2(PlayerObject.transform.position.x, PlayerObject.transform.position.y + 3.351377f);
         }
         if (Input.GetKey(KeyCode.Space) && ManagerGame.BallLaunched == false)
@@ -48,6 +48,7 @@ public class Ball : MonoBehaviour {
             ManagerGame.BallLaunched = true;                    // Gravity of RigidBody == 0.
             Rigidbody2D.AddForce(new Vector2(AngleX * Direction, 5) * ManagerGame.BallSpeed);
         }
+
         if (Input.GetKey(KeyCode.Q)) { BallWhite(); }
         if (Input.GetKey(KeyCode.W)) { BallGreen(); }
         if (Input.GetKey(KeyCode.E)) { BallYellow(); }

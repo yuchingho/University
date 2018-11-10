@@ -12,7 +12,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         public string Name;
         public GameObject Block;
-        public int SpawnPercent;
+        public int SpawnChance;
     }
 
     public enum SpawnState { Counting, Spawning, Waiting };
@@ -31,31 +31,42 @@ public class ManagerSpawn : MonoBehaviour {
         GameObject[] ActiveBlocks = GameObject.FindGameObjectsWithTag("block");
         if (ActiveBlocks.Length == 0) { BlocksFilled = false; }
 
-        if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Beginner && State != SpawnState.Spawning && BlocksFilled == false)
+        if (State != SpawnState.Spawning && BlocksFilled == false)
         {
-            StartCoroutine(SpawnBlocks(Beginner[0])); // still need the spawn percentage
-            // https://answers.unity.com/questions/225985/spawn-system-working-but-not-the-way-i-want.html
+            switch (ManagerGame.Difficulty)
+            {
+                case ManagerGame.DifficultyState.Beginner:
+                    StartCoroutine(SpawnBlocks(Beginner[0]));
+                    //SpawnBlocks(Beginner[0]) = SpawnBlocks.SpawnChance;
+                    break;
+            }
+
+
+            /*
+            if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Beginner)
+            {
+                StartCoroutine(SpawnBlocks(Beginner[0])); // still need the spawn percentage
+            }
+
+            if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Easy)
+            {   // Change Beginner[0] to Easy
+                StartCoroutine(SpawnBlocks(Beginner[0])); // still need the spawn percentage
+            }
+            */
         }
     }
 
     IEnumerator SpawnBlocks (SettingDifficulty _Difficulty)
     {
-        State = SpawnState.Spawning;  
-        for (int y =  10; y >=  4; y = y - 2)    // x = 20,
-        for (int x = -20; x <= 20; x = x + 5)    // y = 10
-        {   // Spawning 36 blocks.
+        State = SpawnState.Spawning;
+        for (int y =   8; y >=  4; y = y - 2)    // y =  8,
+        for (int x = -20; x <= 20; x = x + 5)    // x = 20
+        {   // Spawning 27 blocks.
             Instantiate(_Difficulty.Block, new Vector2(x, y), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
         }
         BlocksFilled = true;
         State = SpawnState.Waiting;
         yield break;
-    }
-
-    // switch case, if below number of points, start, then easy, etc, percentage probability show up
-    public void Difficulty()
-    {
-
-    }
-    
+    }   
 }
