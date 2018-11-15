@@ -93,4 +93,24 @@ public class SpawnSystem : MonoBehaviour {
                 break;
         }
     }
+
+    /*
+    void DifficultySet()
+    {
+        if (State == SpawnState.Waiting && AllBlocksDestroyed == false)
+        {
+            switch (ManagerGame.Difficulty)
+            {
+                case ManagerGame.DifficultyState.Beginner:
+                    Beginner[0].SpawnChance = 90;
+                    Beginner[1].SpawnChance = 2;
+                    Beginner[2].SpawnChance = 2;
+                    Beginner[3].SpawnChance = 2;
+                    Beginner[4].SpawnChance = 2;
+                    Beginner[5].SpawnChance = 2;
+                    break;
+            }
+        }
+    }
+    */
 }

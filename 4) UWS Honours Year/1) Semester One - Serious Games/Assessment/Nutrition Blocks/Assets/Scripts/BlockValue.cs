@@ -17,7 +17,7 @@ public class BlockValue : MonoBehaviour {
         FoodType = BlockSpecs.FoodType.ToString();  // Displaying BlockSpec's enum.
         PointValue = BlockSpecs.PointValue;         // Displaying BlockSpec's Value.
 
-        // Different values for different difficulties.
+        // Different values for different difficulties - carry on with it...
         if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Easy) { PointValue = PointValue * 2; }
     }
 

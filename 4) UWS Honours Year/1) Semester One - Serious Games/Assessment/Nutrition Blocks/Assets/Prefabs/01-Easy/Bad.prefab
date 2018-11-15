@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4628579234885088}
+  - component: {fileID: 114126896467168790}
   - component: {fileID: 33671109289223968}
   - component: {fileID: 23869806925311488}
   - component: {fileID: 60270389705365426}
@@ -132,3 +133,17 @@ PolygonCollider2D:
       - {x: 0.5075519, y: 0.20010123}
       - {x: 0.50250065, y: 0.3999907}
       - {x: 0.5001235, y: 0.5000911}
+--- !u!114 &114126896467168790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1525238009675586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875ebf8814646f849b6c78410cd06812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockSpecs: {fileID: 11400000, guid: ba09e2d9d3e9c174c8cc4794e0741b35, type: 2}
+  FoodType: 
+  PointValue: 0

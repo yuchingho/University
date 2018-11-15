@@ -5,27 +5,40 @@ using UnityEngine;
 public class ManagerSpawn : MonoBehaviour {
 
     ManagerGame ManagerGame;    // Getting ManagerGame.cs
-    public bool BlocksFilled;
+    public bool AllBlocksSpawned;
+    public bool AllBlocksDestroyed;
     public enum SpawnState { Spawning, Waiting };
     public SpawnState State = SpawnState.Waiting;
     public Transform[] SpawnPoints;
-    // WHY DOES THIS WORK???????????????????????????????????????????????????????
+    int SpawnIndex;
+
     [System.Serializable]
     public class Blocks
     {
-        public string Name;
-        public GameObject Block;
-        public int Spawn;
+        public string BlockName;
+        public GameObject BlockPrefab;
+        public int SpawnChance;
     }
 
     public Blocks[] Beginner = new Blocks[6];
+    public Blocks[] Easy = new Blocks[6];
 
     void Start()
     {
         ManagerGame = GameObject.Find("ManagerGame").GetComponent<ManagerGame>();
-        BlocksFilled = false;
-        DifficultySet();
+        AllBlocksSpawned = false;
+        AllBlocksDestroyed = false;
+        SpawnIndex = 0;
         StartCoroutine(SpawnLoop());
+    }
+
+    void Update()
+    {   // Counting all Blocks in scene, then checking if Blocks have been destroyed, resetting BlocksFilled.
+        GameObject[] ActiveBlocks = GameObject.FindGameObjectsWithTag("block");
+        if (ActiveBlocks.Length == 27) { AllBlocksSpawned = true; AllBlocksDestroyed = false; }
+        if (ActiveBlocks.Length ==  0) { AllBlocksSpawned = false; AllBlocksDestroyed = true; }
+
+        // still need to respawn when all destroyed
     }
 
     IEnumerator SpawnLoop()
@@ -33,58 +46,31 @@ public class ManagerSpawn : MonoBehaviour {
         while (true)
         {
             SpawnBlocks();
-            yield return new WaitForSeconds(1);
-        }
-    }
-
-    void Update()
-    {   // Counting all Blocks in scene, then checking if Blocks have been destroyed, resetting BlocksFilled.
-        GameObject[] ActiveBlocks = GameObject.FindGameObjectsWithTag("block");
-        if (ActiveBlocks.Length == 0)
-        {
-            BlocksFilled = false;
-            SpawnBlocks();
-        }
-        else
-        {
-            BlocksFilled = true;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
     void SpawnBlocks()
     {
-        float random = Random.Range(0, 100);
-        int lowLim;
-        int hiLim = 0;
+        State = SpawnState.Spawning;
+        int RangeLowest;        // Choose random lowest number. 
+        int RangeHighest = 0;   // Choose random highest number.
+        float RangeBetween = Random.Range(0, 100);  // Choose a random number inbetween highest and lowest.
+
+        // if moving up difficulties...
+        // player not being able to move while it's spawning
+
         for (int i = 0; i < Beginner.Length; i++)
         {
-            lowLim = hiLim;
-            hiLim += Beginner[i].Spawn;
-            if (random >= lowLim && random < hiLim)
-            {
-                Debug.Log(random);
-                Transform Blockobj = SpawnPoints[Random.Range(0, SpawnPoints.Length)];
-                Instantiate(Beginner[i].Block, Blockobj.position, Blockobj.rotation);
+            RangeLowest = RangeHighest;
+            RangeHighest += Beginner[i].SpawnChance;
+            if (RangeBetween >= RangeLowest && RangeBetween < RangeHighest && SpawnIndex < SpawnPoints.Length)
+            {   // If RangeBetween is below the highest and lowest, and SpawnIndex to remove IndexOutOfBounds.
+                Transform PositionToSpawn = SpawnPoints[SpawnIndex];    // Spawn random prefab at SpawnPoints.position.
+                Instantiate(Beginner[i].BlockPrefab, PositionToSpawn.position, Quaternion.identity);
+                SpawnIndex++;   // Through every iteration, SpawnPoints[i++].
             }
-        }
-    }
-
-    void DifficultySet()
-    {
-        if (State == SpawnState.Waiting && BlocksFilled == false)
-        {
-            switch (ManagerGame.Difficulty)
-            {
-                case ManagerGame.DifficultyState.Beginner:
-                    //Instantiate(Beginner[0], SpawnPoints[0].transform.position, Quaternion.identity);
-                    Beginner[0].Spawn = 90;
-                    Beginner[1].Spawn = 2;
-                    Beginner[2].Spawn = 2;
-                    Beginner[3].Spawn = 2;
-                    Beginner[4].Spawn = 2;
-                    Beginner[5].Spawn = 2;
-                    break;
-            }
+            else { State = SpawnState.Waiting; }
         }
     }
 }
