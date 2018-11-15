@@ -6,67 +6,85 @@ public class ManagerSpawn : MonoBehaviour {
 
     ManagerGame ManagerGame;    // Getting ManagerGame.cs
     public bool BlocksFilled;
-
+    public enum SpawnState { Spawning, Waiting };
+    public SpawnState State = SpawnState.Waiting;
+    public Transform[] SpawnPoints;
+    // WHY DOES THIS WORK???????????????????????????????????????????????????????
     [System.Serializable]
-    public class SettingDifficulty
+    public class Blocks
     {
         public string Name;
         public GameObject Block;
-        public int SpawnChance;
+        public int Spawn;
     }
 
-    public enum SpawnState { Counting, Spawning, Waiting };
-    public SpawnState State = SpawnState.Counting;
-    public SettingDifficulty[] Beginner;
-    public SettingDifficulty[] Easy;
+    public Blocks[] Beginner = new Blocks[6];
 
     void Start()
     {
         ManagerGame = GameObject.Find("ManagerGame").GetComponent<ManagerGame>();
         BlocksFilled = false;
+        DifficultySet();
+        StartCoroutine(SpawnLoop());
     }
-	
-	void Update()
+
+    IEnumerator SpawnLoop()
+    {
+        while (true)
+        {
+            SpawnBlocks();
+            yield return new WaitForSeconds(1);
+        }
+    }
+
+    void Update()
     {   // Counting all Blocks in scene, then checking if Blocks have been destroyed, resetting BlocksFilled.
         GameObject[] ActiveBlocks = GameObject.FindGameObjectsWithTag("block");
-        if (ActiveBlocks.Length == 0) { BlocksFilled = false; }
+        if (ActiveBlocks.Length == 0)
+        {
+            BlocksFilled = false;
+            SpawnBlocks();
+        }
+        else
+        {
+            BlocksFilled = true;
+        }
+    }
 
-        if (State != SpawnState.Spawning && BlocksFilled == false)
+    void SpawnBlocks()
+    {
+        float random = Random.Range(0, 100);
+        int lowLim;
+        int hiLim = 0;
+        for (int i = 0; i < Beginner.Length; i++)
+        {
+            lowLim = hiLim;
+            hiLim += Beginner[i].Spawn;
+            if (random >= lowLim && random < hiLim)
+            {
+                Debug.Log(random);
+                Transform Blockobj = SpawnPoints[Random.Range(0, SpawnPoints.Length)];
+                Instantiate(Beginner[i].Block, Blockobj.position, Blockobj.rotation);
+            }
+        }
+    }
+
+    void DifficultySet()
+    {
+        if (State == SpawnState.Waiting && BlocksFilled == false)
         {
             switch (ManagerGame.Difficulty)
             {
                 case ManagerGame.DifficultyState.Beginner:
-                    StartCoroutine(SpawnBlocks(Beginner[0]));
-                    //SpawnBlocks(Beginner[0]) = SpawnBlocks.SpawnChance;
+                    //Instantiate(Beginner[0], SpawnPoints[0].transform.position, Quaternion.identity);
+                    Beginner[0].Spawn = 90;
+                    Beginner[1].Spawn = 2;
+                    Beginner[2].Spawn = 2;
+                    Beginner[3].Spawn = 2;
+                    Beginner[4].Spawn = 2;
+                    Beginner[5].Spawn = 2;
                     break;
             }
-
-
-            /*
-            if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Beginner)
-            {
-                StartCoroutine(SpawnBlocks(Beginner[0])); // still need the spawn percentage
-            }
-
-            if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Easy)
-            {   // Change Beginner[0] to Easy
-                StartCoroutine(SpawnBlocks(Beginner[0])); // still need the spawn percentage
-            }
-            */
         }
     }
-
-    IEnumerator SpawnBlocks (SettingDifficulty _Difficulty)
-    {
-        State = SpawnState.Spawning;
-        for (int y =   8; y >=  4; y = y - 2)    // y =  8,
-        for (int x = -20; x <= 20; x = x + 5)    // x = 20
-        {   // Spawning 27 blocks.
-            Instantiate(_Difficulty.Block, new Vector2(x, y), Quaternion.identity);
-            yield return new WaitForSeconds(0.1f);
-        }
-        BlocksFilled = true;
-        State = SpawnState.Waiting;
-        yield break;
-    }   
 }
