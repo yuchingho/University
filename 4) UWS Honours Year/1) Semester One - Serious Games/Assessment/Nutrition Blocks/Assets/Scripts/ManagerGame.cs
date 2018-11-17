@@ -26,6 +26,7 @@ public class ManagerGame : MonoBehaviour {
 	
 	void Update() 
     {
+        // Time.timeScale = 0.5f; // Slow-motion if needed.
         if (BallLaunched == true)
         {
             //ScoreCurrent += Time.deltaTime; // n0 == to 0dp.
