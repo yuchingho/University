@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ManagerGame : MonoBehaviour {
 
@@ -27,12 +28,16 @@ public class ManagerGame : MonoBehaviour {
 	void Update() 
     {
         // Time.timeScale = 0.5f; // Slow-motion if needed.
+        if (Input.GetKey(KeyCode.R)) { SceneManager.LoadScene("Game"); }
+        if (Input.GetKey(KeyCode.Escape)) { Application.Quit(); }
+
+
         if (BallLaunched == true)
         {
             //ScoreCurrent += Time.deltaTime; // n0 == to 0dp.
             ScoreUI.text = ScoreCurrent.ToString("n0");
         }
         // add rest of difficulties for score checkpoints
-        if (ScoreCurrent >= 1000) { Difficulty = DifficultyState.Easy; }
+        if (ScoreCurrent >= 1000 && ScoreCurrent <= 2000) { Difficulty = DifficultyState.Easy; }
     }
 }
