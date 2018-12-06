@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BlockValue : MonoBehaviour {
 
-    ManagerGame ManagerGame;    // Getting ManagerGame.cs
-    Ball BallScript;
-    public BlockSpecs BlockSpecs;
-    public string FoodType;
-    public int PointValue;
+    ManagerGame ManagerGame;        // Getting the ManagerGame Script.
+    Ball BallScript;                // Getting the BallScript Script.
+    public BlockSpecs BlockSpecs;   // Getting the BlockSpecs Script. (Class - Scriptable Object)
+    public string FoodType;         // Getting the BlockSpecs FoodType.
+    public int PointValue;          // Getting the BlockSpecs PointValue.
 
     void Start()
     {
@@ -21,6 +21,7 @@ public class BlockValue : MonoBehaviour {
         if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Easy) { PointValue = PointValue * 2; }
     }
 
+    // Adds PointValue to ScoreCurrent when Ball destroys Blocks. Also checks the Boolean values checklist.
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Ball")

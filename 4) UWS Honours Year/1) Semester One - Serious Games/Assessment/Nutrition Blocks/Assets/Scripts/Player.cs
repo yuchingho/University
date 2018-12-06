@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    ManagerGame ManagerGame;    // Getting ManagerGame.cs.
+    ManagerGame ManagerGame;    // Getting the ManagerGame Script.
     Rigidbody2D Rigidbody2D;
     Animator Animator;
+    SpriteRenderer SpriteRenderer;
 
     void Start()
     {
         ManagerGame = GameObject.Find("ManagerGame").GetComponent<ManagerGame>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         ManagerGame.PlayerSpeedCurrent = Rigidbody2D.velocity.magnitude;
         if (ManagerGame.PlayerIsPlaying == true) { Movement(); }
-        // If Player hit by Ball, Player stops moving.
-        else { Rigidbody2D.freezeRotation = false; Animator.Play("Idle"); }
+        else
+        {   // If Player hit by Ball, Player stops moving.
+            Rigidbody2D.freezeRotation = false;
+            Animator.Play("Idle");
+            SpriteRenderer.color = Color.red;
+        }
     }
 
     void Movement()

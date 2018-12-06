@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ManagerSpawn : MonoBehaviour {
 
-    ManagerGame ManagerGame;    // Getting ManagerGame.cs
+    ManagerGame ManagerGame;    // Getting the ManagerGame Script.
     public Text DifficultyUI;
     public enum SpawnState { Spawning, Waiting };
     public SpawnState State = SpawnState.Waiting;
@@ -27,8 +27,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         ManagerGame = GameObject.Find("ManagerGame").GetComponent<ManagerGame>();
         SpawnIndex = 0;
-        // Initalising SpawnLoop().
-        StartCoroutine(SpawnLoop());
+        StartCoroutine(SpawnLoop());    // Initalising SpawnLoop().
     }
 
     void Update()
@@ -52,7 +51,7 @@ public class ManagerSpawn : MonoBehaviour {
         State = SpawnState.Spawning;
         int RangeLowest;        // Choose random lowest number. 
         int RangeHighest = 0;   // Choose random highest number.
-        float RangeBetween = Random.Range(0, 100);  // Choose a random number inbetween highest and lowest.
+        float RangeBetween = Random.Range(0, 100);  // Choose a random number inbetween RangeHighest and RangeLowest.
 
         // player not being able to move while it's spawning
 
