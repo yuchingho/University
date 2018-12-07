@@ -602,6 +602,7 @@ MonoBehaviour:
   PlayerSpeed: 25
   PlayerSpeedCurrent: 0
   PlayerIsPlaying: 0
+  PlayerLives: 3
   ScoreUI: {fileID: 367967270}
   ScoreCurrent: 0
   UIHelp: {fileID: 1665990062}

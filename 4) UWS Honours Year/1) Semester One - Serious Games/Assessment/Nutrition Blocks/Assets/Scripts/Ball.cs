@@ -23,6 +23,7 @@ public class Ball : MonoBehaviour {
     public Sprite BlueDairy;    // #00aaff.
     public Sprite RedMeat;      // #ff1500.
     public Sprite PurpleBad;    // #aa00ff.
+
     // Ball sprite doesn't spin?
     void Start()
     {
@@ -31,7 +32,7 @@ public class Ball : MonoBehaviour {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         CircleCollider2D = GetComponent<CircleCollider2D>();
         PlayerObject = GameObject.Find("Player"); // For the Ball to be ontop of Player before launching.
-        Direction = Random.Range(0, 2) * 2 - 1;   // Direction can be left(1) or right(-1).
+        Direction = Random.Range(0, 2) * 2 - 1;   // Ball Launch Direction can be left(1) or right(-1).
         SpriteRenderer.sprite = WhiteDefault;
         BallWhite();
     }
@@ -64,6 +65,7 @@ public class Ball : MonoBehaviour {
             Rigidbody2D.drag = 1; Rigidbody2D.gravityScale = 2;
             if (collision.gameObject.tag == "wall") { CircleCollider2D.sharedMaterial = null; }
         }
+        else { Rigidbody2D.drag = 0; Rigidbody2D.gravityScale = 0; }
     }
 
     // Boolean values checklist.

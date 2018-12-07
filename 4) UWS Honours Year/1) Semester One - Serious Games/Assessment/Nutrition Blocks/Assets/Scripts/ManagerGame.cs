@@ -7,16 +7,16 @@ using UnityEngine.SceneManagement;
 public class ManagerGame : MonoBehaviour {
 
     public float BallSpeed;
-    public float BallSpeedCurrent;
+    public float BallSpeedCurrent;  // How to set Ball Speed Limit so ball doesn't slow down to unplayable?
     public bool BallLaunched;
-    // How to set Ball Speed Limit so ball doesn't slow down to unplayable?
     public float PlayerSpeed;
-    public float PlayerSpeedCurrent;    // if PlayerIsPlaying == false && PlayerSpeedCurrent ++ 0, respawn, for lives?
+    public float PlayerSpeedCurrent;    // if PlayerIsPlaying == false && PlayerSpeedCurrent ++ 0, respawn for lives
     public bool PlayerIsPlaying;
+    public int PlayerLives;
     public Text ScoreUI;
     public float ScoreCurrent;
     public GameObject UIHelp;
-    int Limit = 4000;   // Set to Easy Score for now.
+    int Limit = 4000;   // Set to random Score for now...
     public enum DifficultyState { Beginner, Easy, Medium, Hard };
     public DifficultyState Difficulty = DifficultyState.Beginner;
 
@@ -33,7 +33,7 @@ public class ManagerGame : MonoBehaviour {
         if (Input.GetKey(KeyCode.R)) { SceneManager.LoadScene("Game"); }
         if (Input.GetKey(KeyCode.Escape)) { Application.Quit(); }
 
-        if (BallLaunched == true)
+        if (BallLaunched == true && PlayerLives != 0)
         {
             //ScoreCurrent += Time.deltaTime; // n0 == to 0dp.
             ScoreUI.text = ScoreCurrent.ToString("n0");

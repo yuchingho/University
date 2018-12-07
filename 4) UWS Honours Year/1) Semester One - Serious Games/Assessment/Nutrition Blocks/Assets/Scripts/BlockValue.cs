@@ -14,16 +14,15 @@ public class BlockValue : MonoBehaviour {
     {
         ManagerGame = GameObject.Find("ManagerGame").GetComponent<ManagerGame>();
         BallScript = GameObject.Find("Ball").GetComponent<Ball>();
-        FoodType = BlockSpecs.FoodType.ToString();  // Displaying BlockSpec's enum.
-        PointValue = BlockSpecs.PointValue;         // Displaying BlockSpec's Value.
-
-        // Different values for different difficulties - carry on with it...
-        if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Easy) { PointValue = PointValue * 2; }
+        FoodType = BlockSpecs.FoodType.ToString();
+        PointValue = BlockSpecs.PointValue;
+        // PointValue doubles || triples depending on game difficulty.
+        if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Medium) { PointValue = PointValue * 2; }
+        if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Hard)   { PointValue = PointValue * 3; }
     }
 
-    // Adds PointValue to ScoreCurrent when Ball destroys Blocks. Also checks the Boolean values checklist.
     void OnCollisionEnter2D(Collision2D collision)
-    {
+    {   // Adds PointValue to ScoreCurrent when Ball destroys Blocks. Also checks the Boolean values checklist.
         if (collision.gameObject.name == "Ball")
         {
             // CheckWhite and FoodBlock Default.
