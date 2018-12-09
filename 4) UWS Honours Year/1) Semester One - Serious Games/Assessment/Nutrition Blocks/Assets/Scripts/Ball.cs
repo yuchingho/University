@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour {
     SpriteRenderer SpriteRenderer;
     GameObject PlayerObject;
     int Direction;
+    public PhysicsMaterial2D PhysicsMaterial;
     public float AngleX;
     public bool CheckDefault;
     public bool CheckFruit;
@@ -23,8 +24,7 @@ public class Ball : MonoBehaviour {
     public Sprite BlueDairy;    // #00aaff.
     public Sprite RedMeat;      // #ff1500.
     public Sprite PurpleBad;    // #aa00ff.
-
-    // Ball sprite doesn't spin?
+    
     void Start()
     {
         ManagerGame = GameObject.Find("ManagerGame").GetComponent<ManagerGame>();
@@ -44,12 +44,11 @@ public class Ball : MonoBehaviour {
         {   // Starting Ball-Y = -9.648623, so Ball is ontop of Player.
             transform.position = new Vector2(PlayerObject.transform.position.x, PlayerObject.transform.position.y + 3.351377f);
         }
-        if (Input.GetKey(KeyCode.Space) && ManagerGame.BallLaunched == false)
+        if (ManagerGame.BallLaunched == false && Input.GetKey(KeyCode.Space))
         {   // Launch Ball to start Score Timer.
             ManagerGame.BallLaunched = true;                    // Gravity of RigidBody == 0.
             Rigidbody2D.AddForce(new Vector2(AngleX * Direction, 5) * ManagerGame.BallSpeed);
         }
-
         if (Input.GetKey(KeyCode.Q)) { BallWhite(); }
         if (Input.GetKey(KeyCode.W)) { BallGreen(); }
         if (Input.GetKey(KeyCode.E)) { BallYellow(); }
@@ -60,12 +59,20 @@ public class Ball : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (ManagerGame.PlayerIsPlaying == false)
+        if (ManagerGame.PlayerIsPlaying == true)
+        {
+            Rigidbody2D.drag = 0;
+            Rigidbody2D.gravityScale = 0;
+            CircleCollider2D.sharedMaterial = PhysicsMaterial;
+            int newDir = Random.Range(0, 2) * 2 - 1; // In respawn, Ball direction can be new left or right.
+            Direction = newDir;
+        }
+        else
         {   // Reducing bounce when Ball hits Player.
-            Rigidbody2D.drag = 1; Rigidbody2D.gravityScale = 2;
+            Rigidbody2D.drag = 1;
+            Rigidbody2D.gravityScale = 2;
             if (collision.gameObject.tag == "wall") { CircleCollider2D.sharedMaterial = null; }
         }
-        else { Rigidbody2D.drag = 0; Rigidbody2D.gravityScale = 0; }
     }
 
     // Boolean values checklist.

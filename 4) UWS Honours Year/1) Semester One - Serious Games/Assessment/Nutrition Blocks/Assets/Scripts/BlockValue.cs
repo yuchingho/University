@@ -8,17 +8,13 @@ public class BlockValue : MonoBehaviour {
     Ball BallScript;                // Getting the BallScript Script.
     public BlockSpecs BlockSpecs;   // Getting the BlockSpecs Script. (Class - Scriptable Object)
     public string FoodType;         // Getting the BlockSpecs FoodType.
-    public int PointValue;          // Getting the BlockSpecs PointValue.
+    public int PointValue;          // Not from BlocksSpecs Script. Each Prefab has different PointValue.
 
     void Start()
     {
         ManagerGame = GameObject.Find("ManagerGame").GetComponent<ManagerGame>();
         BallScript = GameObject.Find("Ball").GetComponent<Ball>();
         FoodType = BlockSpecs.FoodType.ToString();
-        PointValue = BlockSpecs.PointValue;
-        // PointValue doubles || triples depending on game difficulty.
-        if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Medium) { PointValue = PointValue * 2; }
-        if (ManagerGame.Difficulty == ManagerGame.DifficultyState.Hard)   { PointValue = PointValue * 3; }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -32,22 +28,40 @@ public class BlockValue : MonoBehaviour {
                 Destroy(this.gameObject);
             }
 
-            // CheckWhite and FoodBlock Rest except for Bad.
-            if (BallScript.CheckDefault == true && BlockSpecs.FoodType != BlockSpecs.Food.Default)
-            {
-                ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue; // edit value for destroying a good block
-                Destroy(this.gameObject);
-            }
-
-            // CheckWhite and FoodBlock Bad.
-            if (BallScript.CheckDefault == true && BlockSpecs.FoodType == BlockSpecs.Food.Bad)
+            // CheckFruit and FoodBlock Fruit.
+            else if (BallScript.CheckFruit == true && BlockSpecs.FoodType == BlockSpecs.Food.Fruit)
             {
                 ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
                 Destroy(this.gameObject);
             }
 
-            // currently only got white
+            // Check and FoodBlock Grains.
+            else if (BallScript.CheckGrains == true && BlockSpecs.FoodType == BlockSpecs.Food.Grains)
+            {
+                ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
+                Destroy(this.gameObject);
+            }
 
+            // Check and FoodBlock Dairy.
+            else if (BallScript.CheckDairy == true && BlockSpecs.FoodType == BlockSpecs.Food.Dairy)
+            {
+                ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
+                Destroy(this.gameObject);
+            }
+
+            // Check and FoodBlock Meat.
+            else if (BallScript.CheckMeat == true && BlockSpecs.FoodType == BlockSpecs.Food.Meat)
+            {
+                ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
+                Destroy(this.gameObject);
+            }
+
+            // Check and FoodBlock Bad.
+            else if (BallScript.CheckBad == true && BlockSpecs.FoodType == BlockSpecs.Food.Bad)
+            {
+                ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
+                Destroy(this.gameObject);
+            }
         }
     }
 }

@@ -12,4 +12,3 @@ MonoBehaviour:
   m_Name: SpecsFruit
   m_EditorClassIdentifier: 
   FoodType: 1
-  PointValue: 0

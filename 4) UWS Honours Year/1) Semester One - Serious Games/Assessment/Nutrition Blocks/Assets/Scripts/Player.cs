@@ -8,6 +8,9 @@ public class Player : MonoBehaviour {
     Rigidbody2D Rigidbody2D;
     Animator Animator;
     SpriteRenderer SpriteRenderer;
+    public GameObject Heart1;
+    public GameObject Heart2;
+    public GameObject Heart3;
 
     void Start()
     {
@@ -19,16 +22,18 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-
         ManagerGame.PlayerSpeedCurrent = Rigidbody2D.velocity.magnitude;
+        // Add player fatness
+        // add ui which shows what was just destroyed. food name, type, calorie value
+
+
         if (ManagerGame.PlayerIsPlaying == true) { Movement(); }
         else
         {   // If Player hit by Ball...
             Rigidbody2D.freezeRotation = false; // Stops moving.
             Animator.Play("Idle");              // Freezes animation.
             SpriteRenderer.color = Color.red;   // Changes colour.
-            StartCoroutine(Flicker());
-            // Lives --
+            StartCoroutine(Flicker());          // Start respawing.
         }
     }
 
@@ -51,25 +56,32 @@ public class Player : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collision)
     {   // If Player hit by Ball, Player stops moving.
-        if (collision.gameObject.name == "Ball") { ManagerGame.PlayerIsPlaying = false; }
+        if (collision.gameObject.name == "Ball")
+        {
+            ManagerGame.PlayerIsPlaying = false;
+            if (ManagerGame.PlayerSpeedCurrent == 0) { ManagerGame.PlayerLives--;  }
+        }
     }
 
     IEnumerator Flicker()
-    {   // Flickers before disappearing, then respawning with reset values.
+    {
+        yield return new WaitForSeconds(0.5f);  // Wait 0.5sec before checking Player Velocity == 0.
         if (ManagerGame.PlayerSpeedCurrent == 0)
-        {
-            SpriteRenderer.color = Color.Lerp(Color.clear, Color.red, Mathf.PingPong(Time.time, 0.2f));
+        {   // Once Player hits the ground and has stopped moving, start flickering.
+            SpriteRenderer.color = Color.Lerp(Color.clear, Color.red, Mathf.PingPong(Time.time, 0.25f));
+            yield return new WaitForSeconds(2);
+            // After 2 seconds of flickering, respawn and reset values so in starting location.
+            transform.position = new Vector3(0, -12.93071f, 0);
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.localScale = new Vector3(1, 1, 1);
+            Rigidbody2D.freezeRotation = true;
+            ManagerGame.BallLaunched = false;
+            ManagerGame.BallSpeedCurrent = 0;
+            ManagerGame.PlayerIsPlaying = true;
+            SpriteRenderer.color = Color.white;
+            if (ManagerGame.PlayerLives == 2) { Destroy(Heart3); }
+            if (ManagerGame.PlayerLives == 1) { Destroy(Heart2); }
+            if (ManagerGame.PlayerLives == 0) { Destroy(Heart1); }
         }
-        yield return new WaitForSeconds(1);
-        transform.position = new Vector2(0, -12.93071f);
-        transform.eulerAngles = new Vector3(0, 0, 0);
-        transform.localScale = new Vector2(1, 1);
-        Rigidbody2D.freezeRotation = true;
-        ManagerGame.BallLaunched = false;
-        //ManagerGame.BallSpeedCurrent = 0;
-        ManagerGame.PlayerIsPlaying = true;
-        SpriteRenderer.color = Color.white;
-        // need to reassign bouncy material on ball in ball script
-        // https://answers.unity.com/questions/14242/how-to-change-physics-material-of-a-colider-in-run.html
     }
 }

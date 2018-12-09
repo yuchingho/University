@@ -6,6 +6,7 @@ TagManager:
   tags:
   - wall
   - block
+  - heart
   layers:
   - Default
   - TransparentFX

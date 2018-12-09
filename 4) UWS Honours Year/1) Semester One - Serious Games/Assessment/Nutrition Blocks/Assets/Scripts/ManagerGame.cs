@@ -10,13 +10,13 @@ public class ManagerGame : MonoBehaviour {
     public float BallSpeedCurrent;  // How to set Ball Speed Limit so ball doesn't slow down to unplayable?
     public bool BallLaunched;
     public float PlayerSpeed;
-    public float PlayerSpeedCurrent;    // if PlayerIsPlaying == false && PlayerSpeedCurrent ++ 0, respawn for lives
+    public float PlayerSpeedCurrent;
     public bool PlayerIsPlaying;
     public int PlayerLives;
     public Text ScoreUI;
     public float ScoreCurrent;
     public GameObject UIHelp;
-    int Limit = 4000;   // Set to random Score for now...
+    int Limit = 5000;
     public enum DifficultyState { Beginner, Easy, Medium, Hard };
     public DifficultyState Difficulty = DifficultyState.Beginner;
 
@@ -35,9 +35,11 @@ public class ManagerGame : MonoBehaviour {
 
         if (BallLaunched == true && PlayerLives != 0)
         {
-            //ScoreCurrent += Time.deltaTime; // n0 == to 0dp.
+            ScoreCurrent += Time.deltaTime; // n0 == to 0dp.
             ScoreUI.text = ScoreCurrent.ToString("n0");
         }
+        // Score stops when Player is respawning.
+        if (PlayerIsPlaying == false) { ScoreCurrent -= Time.deltaTime;  }
 
         if (ScoreCurrent <= Limit)
         {   // Fading the UIHelp image out in accordance to ScoreCurrent.
@@ -46,7 +48,9 @@ public class ManagerGame : MonoBehaviour {
             UIHelp.GetComponent<SpriteRenderer>().color = temp;         // Rewriting original alpha.
         }
 
-        // Setting Difficulty of game based on Current Score.
-        if (ScoreCurrent >= 1000 && ScoreCurrent <= 2000) { Difficulty = DifficultyState.Easy; }
+        // Setting Difficulty of Game based on Current Score.
+        if (ScoreCurrent >=  600 && ScoreCurrent <= 2000) { Difficulty = DifficultyState.Easy; }
+        if (ScoreCurrent >= 2000 && ScoreCurrent <= 4000) { Difficulty = DifficultyState.Medium; }
+        if (ScoreCurrent >= 4000)                         { Difficulty = DifficultyState.Hard; }
     }
 }
