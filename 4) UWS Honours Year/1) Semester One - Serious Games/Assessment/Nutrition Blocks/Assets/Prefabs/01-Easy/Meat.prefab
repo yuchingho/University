@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875ebf8814646f849b6c78410cd06812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointValue: 50
   BlockSpecs: {fileID: 11400000, guid: f1a26ba16d95be74683d6b0a2ed604b3, type: 2}
-  FoodType: 
+  BlockType: 
+  FoodName: '[ Red ]'
+  PointValue: 50

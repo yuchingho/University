@@ -39,7 +39,7 @@ public class ManagerGame : MonoBehaviour {
             ScoreUI.text = ScoreCurrent.ToString("n0");
         }
         // Score stops when Player is respawning.
-        if (PlayerIsPlaying == false) { ScoreCurrent -= Time.deltaTime;  }
+        if (PlayerIsPlaying == false) { ScoreCurrent -= Time.deltaTime;  PlayerLives = 3; }
 
         if (ScoreCurrent <= Limit)
         {   // Fading the UIHelp image out in accordance to ScoreCurrent.

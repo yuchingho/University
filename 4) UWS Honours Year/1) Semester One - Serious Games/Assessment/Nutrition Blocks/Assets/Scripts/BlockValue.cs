@@ -7,14 +7,15 @@ public class BlockValue : MonoBehaviour {
     ManagerGame ManagerGame;        // Getting the ManagerGame Script.
     Ball BallScript;                // Getting the BallScript Script.
     public BlockSpecs BlockSpecs;   // Getting the BlockSpecs Script. (Class - Scriptable Object)
-    public string FoodType;         // Getting the BlockSpecs FoodType.
+    public string BlockType;        // Getting the BlockSpecs FoodType.
+    public string FoodName;         // Not from BlocksSpecs Script. Each Prefab has different FoodName.
     public int PointValue;          // Not from BlocksSpecs Script. Each Prefab has different PointValue.
 
     void Start()
     {
         ManagerGame = GameObject.Find("ManagerGame").GetComponent<ManagerGame>();
         BallScript = GameObject.Find("Ball").GetComponent<Ball>();
-        FoodType = BlockSpecs.FoodType.ToString();
+        BlockType = BlockSpecs.FoodType.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D collision)

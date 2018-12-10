@@ -23,7 +23,7 @@ public class Player : MonoBehaviour {
     void Update()
     {
         ManagerGame.PlayerSpeedCurrent = Rigidbody2D.velocity.magnitude;
-        // Add player fatness
+        // Add player thinness
         // add ui which shows what was just destroyed. food name, type, calorie value
 
 
