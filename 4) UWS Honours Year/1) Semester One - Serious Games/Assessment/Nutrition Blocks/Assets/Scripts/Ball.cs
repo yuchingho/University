@@ -49,12 +49,12 @@ public class Ball : MonoBehaviour {
             ManagerGame.BallLaunched = true;                    // Gravity of RigidBody == 0.
             Rigidbody2D.AddForce(new Vector2(AngleX * Direction, 5) * ManagerGame.BallSpeed);
         }
-        if (Input.GetKey(KeyCode.Q)) { BallWhite(); }
-        if (Input.GetKey(KeyCode.W)) { BallGreen(); }
-        if (Input.GetKey(KeyCode.E)) { BallYellow(); }
-        if (Input.GetKey(KeyCode.Alpha1)) { BallBlue(); }
-        if (Input.GetKey(KeyCode.Alpha2)) { BallRed(); }
-        if (Input.GetKey(KeyCode.Alpha3)) { BallPurple(); }
+        if (Input.GetKey(KeyCode.A)) { BallWhite(); }
+        if (Input.GetKey(KeyCode.S)) { BallGreen(); }
+        if (Input.GetKey(KeyCode.D)) { BallYellow(); }
+        if (Input.GetKey(KeyCode.Q)) { BallBlue(); }
+        if (Input.GetKey(KeyCode.W)) { BallRed(); }
+        if (Input.GetKey(KeyCode.E)) { BallPurple(); }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

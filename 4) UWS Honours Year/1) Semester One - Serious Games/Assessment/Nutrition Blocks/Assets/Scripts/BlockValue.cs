@@ -47,7 +47,7 @@ public class BlockValue : MonoBehaviour {
             // CheckGrains and FoodBlock Grains.
             else if (BallScript.CheckGrains == true && BlockSpecs.FoodType == BlockSpecs.Food.Grains)
             {
-                ManagerGame.UIDeadType.text = "Type: " + BlockType.ToString();
+                ManagerGame.UIDeadType.text = "Type: Starch";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
                 else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString(); }
@@ -69,7 +69,7 @@ public class BlockValue : MonoBehaviour {
             // CheckMeat and FoodBlock Meat.
             else if (BallScript.CheckMeat == true && BlockSpecs.FoodType == BlockSpecs.Food.Meat)
             {
-                ManagerGame.UIDeadType.text = "Type: " + BlockType.ToString();
+                ManagerGame.UIDeadType.text = "Type: Proteins";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
                 else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString(); }

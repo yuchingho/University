@@ -657,163 +657,165 @@ MonoBehaviour:
       type: 2}
     SpawnChance: 6
   Medium:
-  - BlockName: test
+  - BlockName: White Default
+    BlockPrefab: {fileID: 1664550596499568, guid: 9c0e8fd06a88c944293079737827d3a8,
+      type: 2}
+    SpawnChance: 50
+  - BlockName: Fruits/Veg - Broccoli
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Fruits/Veg - Mushrooms
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Fruits/Veg - Onions
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Fruits/Veg - Apples
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Fruits/Veg - Bananas
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Starches - Bread
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Starches - Potatoes
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Starches - Rice
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Starches - Pasta
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Starches - Cereal
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Dairy - Milk
     BlockPrefab: {fileID: 0}
     SpawnChance: 0
-  - BlockName: 
+  - BlockName: Dairy - Soya
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Dairy - Cheese
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Dairy - Butter
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Dairy - Yoghurt
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Meat - Eggs
+    BlockPrefab: {fileID: 0}
+    SpawnChance: 2
+  - BlockName: Meat - Chicken
     BlockPrefab: {fileID: 0}
     SpawnChance: 0
-  - BlockName: 
+  - BlockName: Meat - Beef
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 2
+  - BlockName: Meat - Beans
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 2
+  - BlockName: Meat - Tuna
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 2
+  - BlockName: Junk - Chocolate
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 2
+  - BlockName: Junk - Muffins
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 2
+  - BlockName: Junk - Crisps
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 2
+  - BlockName: Junk - Candy
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 2
+  - BlockName: Junk - Soft Drinks
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
+    SpawnChance: 2
   Hard:
-  - BlockName: 
+  - BlockName: White Default
+    BlockPrefab: {fileID: 1664550596499568, guid: bf7f4ced7ff1c464c89dca580281cb2f,
+      type: 2}
+    SpawnChance: 25
+  - BlockName: Fruits/Veg - Broccoli
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Fruits/Veg - Mushrooms
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Fruits/Veg - Onions
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Fruits/Veg - Apples
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Fruits/Veg - Bananas
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Starches - Bread
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Starches - Potatoes
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Starches - Rice
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Starches - Pasta
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Starches - Cereal
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Dairy - Milk
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Dairy - Soya
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Dairy - Cheese
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Dairy - Butter
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Dairy - Yoghurt
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Meat - Eggs
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Meat - Chicken
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Meat - Beef
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Meat - Beans
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Meat - Tuna
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Junk - Chocolate
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Junk - Muffins
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Junk - Crisps
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Junk - Candy
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
+    SpawnChance: 3
+  - BlockName: Junk - Soft Drinks
     BlockPrefab: {fileID: 0}
-    SpawnChance: 0
-  - BlockName: 
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
+    SpawnChance: 3
 --- !u!114 &397111781
 MonoBehaviour:
   m_ObjectHideFlags: 0
