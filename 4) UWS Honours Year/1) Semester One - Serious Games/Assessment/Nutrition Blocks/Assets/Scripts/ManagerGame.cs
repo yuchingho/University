@@ -7,18 +7,22 @@ using UnityEngine.SceneManagement;
 public class ManagerGame : MonoBehaviour {
 
     public float BallSpeed;
-    public float BallSpeedCurrent;  // How to set Ball Speed Limit so ball doesn't slow down to unplayable?
+    public float BallSpeedCurrent;
     public bool BallLaunched;
     public float PlayerSpeed;
     public float PlayerSpeedCurrent;
     public bool PlayerIsPlaying;
     public int PlayerLives;
-    public Text ScoreUI;
+    public Text UIScore;
     public float ScoreCurrent;
-    public GameObject UIHelp;
+    public Image UIHelp;
     int Limit = 5000;
     public enum DifficultyState { Beginner, Easy, Medium, Hard };
     public DifficultyState Difficulty = DifficultyState.Beginner;
+    public Text UIDeadType;
+    public Text UIDeadName;
+    public Text UIDeadPoints;
+    [SerializeField] float TimeScale;
 
     void Start()
     {
@@ -29,24 +33,21 @@ public class ManagerGame : MonoBehaviour {
 	
 	void Update() 
     {
-        //Time.timeScale = 0.5f; // Slow-motion if needed.
+        Time.timeScale = TimeScale; // 0.5f == Slow-motion if needed.
+        // Fading the UIHelp image out in accordance to ScoreCurrent.    
+        Color temp = UIHelp.GetComponent<Image>().color;    // Getting alpha of UIHelp image.
+        temp.a = (Limit - ScoreCurrent) / Limit;            // Turning the alpha into a percentage.
+        UIHelp.GetComponent<Image>().color = temp;          // Rewriting original alpha.
         if (Input.GetKey(KeyCode.R)) { SceneManager.LoadScene("Game"); }
         if (Input.GetKey(KeyCode.Escape)) { Application.Quit(); }
 
         if (BallLaunched == true && PlayerLives != 0)
         {
-            ScoreCurrent += Time.deltaTime; // n0 == to 0dp.
-            ScoreUI.text = ScoreCurrent.ToString("n0");
+            ScoreCurrent += Time.deltaTime;   // "n0" == to zero decimal places.
+            UIScore.text = ScoreCurrent.ToString("n0");
         }
         // Score stops when Player is respawning.
-        if (PlayerIsPlaying == false) { ScoreCurrent -= Time.deltaTime;  PlayerLives = 3; }
-
-        if (ScoreCurrent <= Limit)
-        {   // Fading the UIHelp image out in accordance to ScoreCurrent.
-            Color temp = UIHelp.GetComponent<SpriteRenderer>().color;   // Getting alpha of UIHelp image.
-            temp.a = ((Limit - ScoreCurrent) / Limit) * 2;              // Turning the alpha into a percentage.
-            UIHelp.GetComponent<SpriteRenderer>().color = temp;         // Rewriting original alpha.
-        }
+        if (PlayerIsPlaying == false) { ScoreCurrent -= Time.deltaTime; }
 
         // Setting Difficulty of Game based on Current Score.
         if (ScoreCurrent >=  600 && ScoreCurrent <= 2000) { Difficulty = DifficultyState.Easy; }

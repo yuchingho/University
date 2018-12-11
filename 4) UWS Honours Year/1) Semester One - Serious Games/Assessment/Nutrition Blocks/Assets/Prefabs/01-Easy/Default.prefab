@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114551172875896408}
   - component: {fileID: 33296934449160488}
   - component: {fileID: 23036472380567520}
-  - component: {fileID: 60748131978670672}
+  - component: {fileID: 61965259704399554}
   m_Layer: 0
   m_Name: Default
   m_TagString: block
@@ -85,8 +85,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1664550596499568}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!60 &60748131978670672
-PolygonCollider2D:
+--- !u!61 &61965259704399554
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -107,32 +107,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.47501242, y: 0.5100167}
-      - {x: 0.24998897, y: 0.5301688}
-      - {x: 0.0002467162, y: 0.50193155}
-      - {x: -0.25002664, y: 0.52983844}
-      - {x: -0.47498637, y: 0.5099899}
-      - {x: -0.49999177, y: 0.5000048}
-      - {x: -0.50251526, y: 0.40007472}
-      - {x: -0.5074309, y: 0.19976038}
-      - {x: -0.50082445, y: -0.0006276481}
-      - {x: -0.50748134, y: -0.19993055}
-      - {x: -0.50248396, y: -0.399939}
-      - {x: -0.5000228, y: -0.5004107}
-      - {x: -0.47499344, y: -0.5099535}
-      - {x: -0.24995804, y: -0.5300418}
-      - {x: 0.00026777387, y: -0.50268507}
-      - {x: 0.2500291, y: -0.5298991}
-      - {x: 0.47504836, y: -0.51000166}
-      - {x: 0.5001542, y: -0.499794}
-      - {x: 0.50251263, y: -0.40005395}
-      - {x: 0.5075531, y: -0.2002087}
-      - {x: 0.50250965, y: 0.00042905356}
-      - {x: 0.5075519, y: 0.20010123}
-      - {x: 0.50250065, y: 0.3999907}
-      - {x: 0.5001235, y: 0.5000911}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &114551172875896408
 MonoBehaviour:
   m_ObjectHideFlags: 1

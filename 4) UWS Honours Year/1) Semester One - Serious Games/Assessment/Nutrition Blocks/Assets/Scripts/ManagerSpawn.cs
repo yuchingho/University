@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ManagerSpawn : MonoBehaviour {
 
     ManagerGame ManagerGame;    // Getting the ManagerGame Script.
-    public Text DifficultyUI;
+    public Text UIDifficulty;
     public Transform[] SpawnPoints;
     public int SpawnIndex;
 
@@ -41,7 +41,7 @@ public class ManagerSpawn : MonoBehaviour {
             SpawnIndex = 0;
             StartCoroutine(SpawnLoop());
         }
-        DifficultyUI.text = ManagerGame.Difficulty.ToString();
+        UIDifficulty.text = ManagerGame.Difficulty.ToString();
     }
 
     IEnumerator SpawnLoop()
