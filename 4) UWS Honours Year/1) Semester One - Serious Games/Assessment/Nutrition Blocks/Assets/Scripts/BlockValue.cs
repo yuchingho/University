@@ -39,7 +39,7 @@ public class BlockValue : MonoBehaviour {
                 ManagerGame.UIDeadType.text = "Type: Fruits / Veg";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
-                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString(); }
+                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString() + " for 100g"; }
                 ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
                 Destroy(this.gameObject);
             }
@@ -50,7 +50,7 @@ public class BlockValue : MonoBehaviour {
                 ManagerGame.UIDeadType.text = "Type: Starch";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
-                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString(); }
+                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString() + " for 100g"; }
                 ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
                 Destroy(this.gameObject);
             }
@@ -61,7 +61,7 @@ public class BlockValue : MonoBehaviour {
                 ManagerGame.UIDeadType.text = "Type: " + BlockType.ToString();
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
-                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString(); }
+                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString() + " for 100g"; }
                 ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
                 Destroy(this.gameObject);
             }
@@ -72,7 +72,7 @@ public class BlockValue : MonoBehaviour {
                 ManagerGame.UIDeadType.text = "Type: Proteins";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
-                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString(); }
+                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString() + " for 100g"; }
                 ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
                 Destroy(this.gameObject);
             }
@@ -83,7 +83,7 @@ public class BlockValue : MonoBehaviour {
                 ManagerGame.UIDeadType.text = "Type: Junk Food";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
-                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString(); }
+                else { ManagerGame.UIDeadPoints.text = "Calorie: " + PointValue.ToString() + " for 100g"; }
                 ManagerGame.ScoreCurrent = ManagerGame.ScoreCurrent + PointValue;
                 Destroy(this.gameObject);
             }

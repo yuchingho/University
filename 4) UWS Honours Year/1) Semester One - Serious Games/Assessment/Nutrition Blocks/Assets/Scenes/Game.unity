@@ -694,7 +694,7 @@ MonoBehaviour:
   - BlockName: Dairy - Milk
     BlockPrefab: {fileID: 0}
     SpawnChance: 0
-  - BlockName: Dairy - Soya
+  - BlockName: Dairy - Soy Milk
     BlockPrefab: {fileID: 0}
     SpawnChance: 2
   - BlockName: Dairy - Cheese
@@ -774,7 +774,7 @@ MonoBehaviour:
   - BlockName: Dairy - Milk
     BlockPrefab: {fileID: 0}
     SpawnChance: 3
-  - BlockName: Dairy - Soya
+  - BlockName: Dairy - Soy Milk
     BlockPrefab: {fileID: 0}
     SpawnChance: 3
   - BlockName: Dairy - Cheese
