@@ -16,7 +16,7 @@ public class ManagerGame : MonoBehaviour {
     public Text UIScore;
     public float ScoreCurrent;
     public Image UIHelp;
-    int Limit = 5000;
+    int Limit = 6000;
     public enum DifficultyState { Beginner, Easy, Medium, Hard };
     public DifficultyState Difficulty = DifficultyState.Beginner;
     public Text UIDeadType;
@@ -50,8 +50,8 @@ public class ManagerGame : MonoBehaviour {
         if (PlayerIsPlaying == false) { ScoreCurrent -= Time.deltaTime; }
 
         // Setting Difficulty of Game based on Current Score.
-        if (ScoreCurrent >=  600 && ScoreCurrent <= 2000) { Difficulty = DifficultyState.Easy; }
-        if (ScoreCurrent >= 2000 && ScoreCurrent <= 4000) { Difficulty = DifficultyState.Medium; }
+        if (ScoreCurrent >=  600 && ScoreCurrent <= 1999) { Difficulty = DifficultyState.Easy; }
+        if (ScoreCurrent >= 2000 && ScoreCurrent <= 3999) { Difficulty = DifficultyState.Medium; }
         if (ScoreCurrent >= 4000)                         { Difficulty = DifficultyState.Hard; }
     }
 }
