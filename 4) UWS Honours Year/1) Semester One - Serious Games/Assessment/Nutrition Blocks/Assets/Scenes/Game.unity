@@ -662,79 +662,104 @@ MonoBehaviour:
       type: 2}
     SpawnChance: 50
   - BlockName: Fruits/Veg - Broccoli
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1493571283841842, guid: 5fe19727933b5a04aac2625413dedaf1,
+      type: 2}
     SpawnChance: 2
   - BlockName: Fruits/Veg - Mushrooms
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1452895240143054, guid: a57a6fc61d89ce649a5859bf5a688505,
+      type: 2}
     SpawnChance: 2
   - BlockName: Fruits/Veg - Onions
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1920980093787014, guid: a60fb65bd5e957c408cbf677360e7f61,
+      type: 2}
     SpawnChance: 2
   - BlockName: Fruits/Veg - Apples
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1932943598027084, guid: 56ef6f5cbce20184bbf34e406c22ba52,
+      type: 2}
     SpawnChance: 2
   - BlockName: Fruits/Veg - Bananas
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1968842035577198, guid: 7ce813e377067ad4fa5f7fc154626ed7,
+      type: 2}
     SpawnChance: 2
   - BlockName: Starches - Bread
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1913344634552180, guid: a34a8a570bab04d4a9d53c6872160547,
+      type: 2}
     SpawnChance: 2
   - BlockName: Starches - Potatoes
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1983306176898118, guid: 1f78a3fadc5c1fa41816c64f565dc7dd,
+      type: 2}
     SpawnChance: 2
   - BlockName: Starches - Rice
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1810022793329484, guid: a897519272e394f40bde203f95ca7cec,
+      type: 2}
     SpawnChance: 2
   - BlockName: Starches - Pasta
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1410746566424462, guid: 93838af26b9c46448853e0633f1cd016,
+      type: 2}
     SpawnChance: 2
   - BlockName: Starches - Cereal
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1821399334193260, guid: 9943ee885278ace479181d776927ea43,
+      type: 2}
     SpawnChance: 2
   - BlockName: Dairy - Milk
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
+    BlockPrefab: {fileID: 1499467824915050, guid: 886c98b650f598549a3e78c364e95ffc,
+      type: 2}
+    SpawnChance: 2
   - BlockName: Dairy - Soy Milk
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1284984981956852, guid: d375cafb54d25a74f85d9c237b15335b,
+      type: 2}
     SpawnChance: 2
   - BlockName: Dairy - Cheese
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1634637937712102, guid: e19607b2bbc7e4c4ebaf6da11a0e675d,
+      type: 2}
     SpawnChance: 2
   - BlockName: Dairy - Butter
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1752138606831790, guid: 8d9839fc6e469d94d8d49d72b49d95a6,
+      type: 2}
     SpawnChance: 2
   - BlockName: Dairy - Yoghurt
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1636771813828340, guid: 594c6ca9beda596458d16c76e968811e,
+      type: 2}
     SpawnChance: 2
   - BlockName: Meat - Eggs
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1317623341962156, guid: 71e7ca28766326249b97aa8043194c3c,
+      type: 2}
     SpawnChance: 2
   - BlockName: Meat - Chicken
-    BlockPrefab: {fileID: 0}
-    SpawnChance: 0
+    BlockPrefab: {fileID: 1199994859064288, guid: 302ba68653abf5140b160490b01adce5,
+      type: 2}
+    SpawnChance: 2
   - BlockName: Meat - Beef
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1003434111862642, guid: f9e2c32b0cccefc40a4766c9babb2bb6,
+      type: 2}
     SpawnChance: 2
   - BlockName: Meat - Beans
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1110271109686212, guid: ed574f5343b595c4db5648e2620e20c1,
+      type: 2}
     SpawnChance: 2
   - BlockName: Meat - Tuna
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1230567898788840, guid: 651d5c5eb2cc10e4db887b67903de06f,
+      type: 2}
     SpawnChance: 2
   - BlockName: Junk - Chocolate
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1166003974004456, guid: d86861eb059cadf4185b11a74af0e830,
+      type: 2}
     SpawnChance: 2
   - BlockName: Junk - Muffins
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1980873946069920, guid: 54666ca7f3aba654db2354d656d9558f,
+      type: 2}
     SpawnChance: 2
   - BlockName: Junk - Crisps
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1264914105910546, guid: 26305042c6637c044af8a6680c379c5e,
+      type: 2}
     SpawnChance: 2
   - BlockName: Junk - Candy
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1402963771623450, guid: ba0a3994e7b116e409e2ac8cda4458de,
+      type: 2}
     SpawnChance: 2
   - BlockName: Junk - Soft Drinks
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1244155274155394, guid: 80503145b6f836d45a8be00989847efd,
+      type: 2}
     SpawnChance: 2
   Hard:
   - BlockName: White Default
@@ -742,79 +767,104 @@ MonoBehaviour:
       type: 2}
     SpawnChance: 25
   - BlockName: Fruits/Veg - Broccoli
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1472286205389350, guid: 3a5a4cc0ed4afcc42a3f16b23c117b73,
+      type: 2}
     SpawnChance: 3
   - BlockName: Fruits/Veg - Mushrooms
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1524834849811788, guid: 47edb15d82d4bfd4ab6b599e0e4c0297,
+      type: 2}
     SpawnChance: 3
   - BlockName: Fruits/Veg - Onions
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1753984546674752, guid: 0e892224ca2af714bbffa0a4cc5f7b29,
+      type: 2}
     SpawnChance: 3
   - BlockName: Fruits/Veg - Apples
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1895590262802710, guid: 0e6b3ed045f7f1245a4f017d4cb47779,
+      type: 2}
     SpawnChance: 3
   - BlockName: Fruits/Veg - Bananas
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1431055930165032, guid: fae54583139f6db4081efd487cb37775,
+      type: 2}
     SpawnChance: 3
   - BlockName: Starches - Bread
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1799133151853648, guid: 09dc59d8f78fbcb45a34e47a3cd009f2,
+      type: 2}
     SpawnChance: 3
   - BlockName: Starches - Potatoes
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1131825874675862, guid: 3b877582e94880b4bb1db7073844ba4c,
+      type: 2}
     SpawnChance: 3
   - BlockName: Starches - Rice
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1604600969070656, guid: 0e9f36c417d6ee54cb2d3865e12311c7,
+      type: 2}
     SpawnChance: 3
   - BlockName: Starches - Pasta
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1778723503431630, guid: 0c3e6ad91c8581240a66ab82a60e62bc,
+      type: 2}
     SpawnChance: 3
   - BlockName: Starches - Cereal
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1491285202500882, guid: 6ee040fcb584f26418ffd497424a47cb,
+      type: 2}
     SpawnChance: 3
   - BlockName: Dairy - Milk
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1166729075131416, guid: b2c4badf10c0d394fa979a97da638de5,
+      type: 2}
     SpawnChance: 3
   - BlockName: Dairy - Soy Milk
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1760317804714070, guid: a2e15fb9cf3f34f47915049277cd99bf,
+      type: 2}
     SpawnChance: 3
   - BlockName: Dairy - Cheese
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1991758012746256, guid: fb7924192a145444596afff3d49f0100,
+      type: 2}
     SpawnChance: 3
   - BlockName: Dairy - Butter
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1199234321742262, guid: 15bf68312fa0c3a459ad527fc81d739a,
+      type: 2}
     SpawnChance: 3
   - BlockName: Dairy - Yoghurt
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1242077290153564, guid: 138ead799a3414b44bbaa01303fedc93,
+      type: 2}
     SpawnChance: 3
   - BlockName: Meat - Eggs
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1637587853641996, guid: bcff24be719727b47a66452195120100,
+      type: 2}
     SpawnChance: 3
   - BlockName: Meat - Chicken
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1625229710602800, guid: 686bc08ac55dd4f44bfd591edc6494ba,
+      type: 2}
     SpawnChance: 3
   - BlockName: Meat - Beef
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1533309741057454, guid: 82d914f6ad8d40047b0c19f1810ff124,
+      type: 2}
     SpawnChance: 3
   - BlockName: Meat - Beans
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1392286154794288, guid: e7173099c99207e42926aea369263c0a,
+      type: 2}
     SpawnChance: 3
   - BlockName: Meat - Tuna
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1807472958744244, guid: dd25b09384a70bd4b8e03f980c10c60f,
+      type: 2}
     SpawnChance: 3
   - BlockName: Junk - Chocolate
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1466264085276010, guid: bc50def224371444ebf69ac01b1ba26f,
+      type: 2}
     SpawnChance: 3
   - BlockName: Junk - Muffins
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1650643899158386, guid: adb63e280b1b5b045915f237d961b105,
+      type: 2}
     SpawnChance: 3
   - BlockName: Junk - Crisps
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1895243316296930, guid: b10576ee61d331a42913ad7ca68be977,
+      type: 2}
     SpawnChance: 3
   - BlockName: Junk - Candy
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1072845444417828, guid: 9412a538cfe6a7d4ea78718b3cfd3a39,
+      type: 2}
     SpawnChance: 3
   - BlockName: Junk - Soft Drinks
-    BlockPrefab: {fileID: 0}
+    BlockPrefab: {fileID: 1388366549598508, guid: 1c3219922860cca458483474e3c3c1db,
+      type: 2}
     SpawnChance: 3
 --- !u!114 &397111781
 MonoBehaviour:
