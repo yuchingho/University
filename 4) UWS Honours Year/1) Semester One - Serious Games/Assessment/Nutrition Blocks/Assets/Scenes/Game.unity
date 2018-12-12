@@ -877,13 +877,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167d9fcafb763184ba9f4f9d92e37cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BallLaunched: 0
   BallSpeed: 225
   BallSpeedCurrent: 0
-  BallLaunched: 0
-  PlayerSpeed: 25
-  PlayerSpeedCurrent: 0
   PlayerIsPlaying: 0
   PlayerLives: 3
+  PlayerWeight: 100
+  PlayerSpeed: 25
+  PlayerSpeedCurrent: 0
   UIScore: {fileID: 367967270}
   ScoreCurrent: 0
   UIHelp: {fileID: 1849257961}
@@ -1653,6 +1654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe2a536dfa7c644db4ee9f1f930d2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Weight: {fileID: 1103459508}
   Heart1: {fileID: 503958688}
   Heart2: {fileID: 989865269}
   Heart3: {fileID: 498515509}
@@ -2045,7 +2047,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1103459508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: -1}
+  m_LocalPosition: {x: 0, y: 0.2, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 936158672}

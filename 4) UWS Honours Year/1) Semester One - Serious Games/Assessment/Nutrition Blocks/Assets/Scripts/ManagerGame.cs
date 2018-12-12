@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class ManagerGame : MonoBehaviour {
 
+    public bool BallLaunched;
     public float BallSpeed;
     public float BallSpeedCurrent;
-    public bool BallLaunched;
-    public float PlayerSpeed;
-    public float PlayerSpeedCurrent;
     public bool PlayerIsPlaying;
     public int PlayerLives;
+    public float PlayerWeight;
+    public float PlayerSpeed;
+    public float PlayerFallVelocity;
     public Text UIScore;
     public float ScoreCurrent;
     public Image UIHelp;
@@ -29,17 +30,22 @@ public class ManagerGame : MonoBehaviour {
         BallLaunched = false;
         PlayerIsPlaying = true;
         ScoreCurrent = 0;
-	}
+    }
+
+    //if (Input.GetKey(KeyCode.R)) { SceneManager.LoadScene("Game"); }
+    //if (Input.GetKey(KeyCode.Escape)) { Application.Quit(); }
+    // To pause, just make TimeScale == 0 and PlayerMoving == false.
+    // Make new scene for start menu.
 	
 	void Update() 
     {
-        Time.timeScale = TimeScale; // 0.5f == Slow-motion if needed.
         // Fading the UIHelp image out in accordance to ScoreCurrent.    
         Color temp = UIHelp.GetComponent<Image>().color;    // Getting alpha of UIHelp image.
         temp.a = (Limit - ScoreCurrent) / Limit;            // Turning the alpha into a percentage.
         UIHelp.GetComponent<Image>().color = temp;          // Rewriting original alpha.
-        if (Input.GetKey(KeyCode.R)) { SceneManager.LoadScene("Game"); }
-        if (Input.GetKey(KeyCode.Escape)) { Application.Quit(); }
+
+        // As PlayerWeight drops, Speed slows down.
+        PlayerWeight -= Time.deltaTime * 20; // x4 PlayerWeight drops to '0' every 25 seconds.
 
         if (BallLaunched == true && PlayerLives != 0)
         {

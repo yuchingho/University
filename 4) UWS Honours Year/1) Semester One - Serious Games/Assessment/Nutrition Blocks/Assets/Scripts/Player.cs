@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     Rigidbody2D Rigidbody2D;
     Animator Animator;
     SpriteRenderer SpriteRenderer;
+    public GameObject Weight;
     public GameObject Heart1;
     public GameObject Heart2;
     public GameObject Heart3;
@@ -22,14 +23,14 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        ManagerGame.PlayerSpeedCurrent = Rigidbody2D.velocity.magnitude;
-        // Add player thinness
-        // add ui which shows what was just destroyed. food name, type, calorie value
+        ManagerGame.PlayerFallVelocity = Rigidbody2D.velocity.magnitude;
+        Weight.transform.localScale = new Vector2((ManagerGame.PlayerWeight/10), 2);   // PlayerWeight == 100.
 
+        if (ManagerGame.PlayerIsPlaying == true) { Movement(); SpriteRenderer.color = Color.white; }
+        if (ManagerGame.PlayerIsPlaying == false || ManagerGame.PlayerWeight <= 0)
+        {   // If Player hit by Ball or Weight drops to '0'...
+            //ManagerGame.PlayerWeight = 100;
 
-        if (ManagerGame.PlayerIsPlaying == true) { Movement(); }
-        else
-        {   // If Player hit by Ball...
             Rigidbody2D.freezeRotation = false; // Stops moving.
             Animator.Play("Idle");              // Freezes animation.
             SpriteRenderer.color = Color.red;   // Changes colour.
@@ -59,14 +60,14 @@ public class Player : MonoBehaviour {
         if (collision.gameObject.name == "Ball")
         {
             ManagerGame.PlayerIsPlaying = false;
-            if (ManagerGame.PlayerSpeedCurrent == 0) { ManagerGame.PlayerLives--;  }
+            if (ManagerGame.PlayerFallVelocity == 0) { ManagerGame.PlayerLives--;  }
         }
     }
 
     IEnumerator Flicker()
     {
         yield return new WaitForSeconds(0.5f);  // Wait 0.5sec before checking Player Velocity == 0.
-        if (ManagerGame.PlayerSpeedCurrent == 0)
+        if (ManagerGame.PlayerFallVelocity == 0)
         {   // Once Player hits the ground and has stopped moving, start flickering.
             SpriteRenderer.color = Color.Lerp(Color.clear, Color.red, Mathf.PingPong(Time.time, 0.25f));
             yield return new WaitForSeconds(2);
