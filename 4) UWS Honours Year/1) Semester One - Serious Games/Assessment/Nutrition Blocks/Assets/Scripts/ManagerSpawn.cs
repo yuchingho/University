@@ -54,7 +54,7 @@ public class ManagerSpawn : MonoBehaviour {
         int RangeLowest;        // Choose random lowest number. 
         int RangeHighest = 0;   // Choose random highest number.
         float RangeBetween = Random.Range(0, 100);  // Choose a random number inbetween RangeHighest and RangeLowest.
-
+        // For each Difficulty, will spawn the according Array. All cases are copy and paste.
         if (SpawnIndex <= SpawnPoints.Length)
         {
             switch (ManagerGame.Difficulty)
