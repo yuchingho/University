@@ -83,8 +83,7 @@ public class Player : MonoBehaviour {
                 Destroy(GameObject.Find("Ball"));
             }
             else
-            {
-                // After 2 seconds of flickering, respawn and reset values so in starting location.
+            {   // After 2 seconds of flickering, respawn and reset values so in starting location.
                 transform.position = new Vector3(0, -12.93071f, 0);
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.localScale = new Vector3(1, 1, 1);

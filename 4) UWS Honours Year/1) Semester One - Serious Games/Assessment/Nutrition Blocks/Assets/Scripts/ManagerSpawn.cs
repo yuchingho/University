@@ -60,7 +60,6 @@ public class ManagerSpawn : MonoBehaviour {
             switch (ManagerGame.Difficulty)
             {
                 case ManagerGame.DifficultyState.Beginner:
-                    ManagerGame.BallSpeed = 100;
                     for (int i = 0; i < Beginner.Length; i++)
                     {
                         RangeLowest = RangeHighest;
@@ -75,7 +74,6 @@ public class ManagerSpawn : MonoBehaviour {
                     break;
 
                 case ManagerGame.DifficultyState.Easy:
-                    ManagerGame.BallSpeed = 120;
                     for (int i = 0; i < Easy.Length; i++)
                     {
                         RangeLowest = RangeHighest;
@@ -90,7 +88,6 @@ public class ManagerSpawn : MonoBehaviour {
                     break;
 
                 case ManagerGame.DifficultyState.Medium:
-                    ManagerGame.BallSpeed = 140;
                     for (int i = 0; i < Medium.Length; i++)
                     {
                         RangeLowest = RangeHighest;
@@ -105,7 +102,6 @@ public class ManagerSpawn : MonoBehaviour {
                     break;
 
                 case ManagerGame.DifficultyState.Hard:
-                    ManagerGame.BallSpeed = 160;
                     for (int i = 0; i < Hard.Length; i++)
                     {
                         RangeLowest = RangeHighest;

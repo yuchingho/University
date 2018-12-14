@@ -80,14 +80,15 @@ public class ManagerGame : MonoBehaviour {
             if (PlayerIsPlaying == true)
             {
                 PlayerWeight -= Time.deltaTime * 4;      // PlayerWeight drops to '0' every 25 seconds,
-                PlayerSpeed = 25 * (PlayerWeight / 100); // PlayerSpeed also slows down.
+                PlayerSpeed = 25 * (PlayerWeight / 100);    // PlayerSpeed also slows down.
+                if (PlayerSpeed >= 25) { PlayerSpeed = 25; }
                 UIWeight.text = "KG:\n" + PlayerWeight.ToString("n0");
                 if (PlayerWeight >= 1 && PlayerWeight <= 30)    // Will start flashing
                 { UIWeight.color = Color.Lerp(Color.clear, Color.red, Mathf.PingPong(Time.time, 0.25f)); }
             } 
         }
 
-        // If PlayerWeight drops below 
+        // If PlayerWeight drops below 0.
         if (PlayerWeight <= 0 && MethodDone == false)
         {
             PlayerIsPlaying = false;

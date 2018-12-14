@@ -413,7 +413,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'KG:
 
-'
+    100'
 --- !u!222 &112266403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BallLaunched: 0
-  BallSpeed: 225
+  BallSpeed: 170
   BallSpeedCurrent: 0
   PlayerIsPlaying: 0
   PlayerLives: 3
