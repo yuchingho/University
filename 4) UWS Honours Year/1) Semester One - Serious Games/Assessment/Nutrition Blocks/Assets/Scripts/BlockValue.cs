@@ -23,7 +23,7 @@ public class BlockValue : MonoBehaviour {
     {   // Adds PointValue to ScoreCurrent when Ball destroys Blocks. Also checks the Boolean values checklist.
         if (collision.gameObject.name == "Ball")
         {   // Whenever destroy a Block, add to PlayerWeight.
-            ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 10;
+            ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 20;
             // CheckWhite and FoodBlock Default.
             if (BallScript.CheckDefault == true && BlockSpecs.FoodType == BlockSpecs.Food.Default)
             {

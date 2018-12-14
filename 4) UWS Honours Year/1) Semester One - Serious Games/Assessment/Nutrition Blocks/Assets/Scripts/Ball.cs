@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour {
     Rigidbody2D Rigidbody2D;
     CircleCollider2D CircleCollider2D;
     SpriteRenderer SpriteRenderer;
+    AudioSource AudioSource;
     GameObject PlayerObject;
     int Direction;
     public PhysicsMaterial2D PhysicsMaterial;
@@ -24,6 +25,7 @@ public class Ball : MonoBehaviour {
     public Sprite BlueDairy;    // #00aaff.
     public Sprite RedMeat;      // #ff1500.
     public Sprite PurpleBad;    // #aa00ff.
+    public AudioClip BlockHit;
     
     void Start()
     {
@@ -31,6 +33,7 @@ public class Ball : MonoBehaviour {
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         CircleCollider2D = GetComponent<CircleCollider2D>();
+        AudioSource = GetComponent<AudioSource>();
         PlayerObject = GameObject.Find("Player"); // For the Ball to be ontop of Player before launching.
         Direction = Random.Range(0, 2) * 2 - 1;   // Ball Launch Direction can be left(1) or right(-1).
         SpriteRenderer.sprite = WhiteDefault;
@@ -59,6 +62,7 @@ public class Ball : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        AudioSource.PlayOneShot(BlockHit, 0.2f);
         if (ManagerGame.PlayerIsPlaying == true)
         {
             Rigidbody2D.drag = 0;

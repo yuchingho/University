@@ -8,10 +8,12 @@ public class Player : MonoBehaviour {
     Rigidbody2D Rigidbody2D;
     Animator Animator;
     SpriteRenderer SpriteRenderer;
+    AudioSource AudioSource;
     public GameObject Weight;
     public GameObject Heart1;
     public GameObject Heart2;
     public GameObject Heart3;
+    public AudioClip LoseLifeClip;
 
     void Start()
     {
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        AudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -60,7 +63,10 @@ public class Player : MonoBehaviour {
             ManagerGame.PlayerIsPlaying = false;
             ManagerGame.HitByBall = true;
             if (ManagerGame.PlayerFallVelocity == 0 && ManagerGame.MethodDone == false)
-            { ManagerGame.PlayerLives--;  }
+            {
+                ManagerGame.PlayerLives--;
+                AudioSource.PlayOneShot(LoseLifeClip, 0.5f);
+            }
         }
     }
 

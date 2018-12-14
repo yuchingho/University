@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ManagerGame : MonoBehaviour {
 
+    AudioSource AudioSource;
     public bool BallLaunched;
     public float BallSpeed;
     public float BallSpeedCurrent;
@@ -29,9 +30,13 @@ public class ManagerGame : MonoBehaviour {
     public int TimeScale;
     public bool PauseActive;
     public GameObject PauseBG;
+    public AudioClip LoseLifeClip;
+    public AudioClip BGMusic;
 
     void Start()
     {
+        AudioSource = GetComponent<AudioSource>();
+        AudioSource.Play();
         BallLaunched = false;
         PlayerIsPlaying = true;
         ScoreCurrent = 0;
@@ -62,7 +67,6 @@ public class ManagerGame : MonoBehaviour {
         if (PauseActive == true && Input.GetKey(KeyCode.R))     { SceneManager.LoadScene("Game"); }
         if (PauseActive == true && Input.GetKey(KeyCode.Space)) { SceneManager.LoadScene("Menu"); }
 
-
         // Fading the UIHelp image out in accordance to ScoreCurrent.    
         Color temp = UIHelp.GetComponent<Image>().color;    // Getting alpha of UIHelp image.
         temp.a = (Limit - ScoreCurrent) / Limit;            // Turning the alpha into a percentage.
@@ -79,7 +83,7 @@ public class ManagerGame : MonoBehaviour {
                 PlayerSpeed = 25 * (PlayerWeight / 100); // PlayerSpeed also slows down.
                 UIWeight.text = "KG:\n" + PlayerWeight.ToString("n0");
                 if (PlayerWeight >= 1 && PlayerWeight <= 30)    // Will start flashing
-                { UIWeight.color = Color.Lerp(Color.black, Color.red, Mathf.PingPong(Time.time, 0.25f)); }
+                { UIWeight.color = Color.Lerp(Color.clear, Color.red, Mathf.PingPong(Time.time, 0.25f)); }
             } 
         }
 
@@ -103,5 +107,5 @@ public class ManagerGame : MonoBehaviour {
     // Taking away a PlayerLife by passing through method once.
     // It works, but messy code with randoom boooleans.
     // Make better next time.
-    void LoseLife() { PlayerLives--; MethodDone = true; }
+    void LoseLife() { PlayerLives--; AudioSource.PlayOneShot(LoseLifeClip, 1); MethodDone = true; }
 }
