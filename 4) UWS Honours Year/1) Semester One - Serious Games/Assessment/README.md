@@ -2,7 +2,7 @@ Nutrition Blocks is a Serious Game inspired by “Breakout” developed to teach
 
 [Portfolio](https://yuchingho.com/)\
 [Play on Itch](https://yuchingho.itch.io/nutrition-blocks)\
-[YouTube]()
+[YouTube](https://youtu.be/Yodx6JlPS4Y)
 
 ## Assessment
 - Documents contains the processes went through to create this game
