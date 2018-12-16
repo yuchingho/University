@@ -37,7 +37,6 @@ public class ManagerSpawn : MonoBehaviour {
         ActiveBlocks = GameObject.FindGameObjectsWithTag("block");
         if (ActiveBlocks.Length <= 0)
         {   // If all Blocks destroyed, reset SpawnIndex so SpawnLoop() can run again.
-            ManagerGame.PlayerIsPlaying = false;
             SpawnIndex = 0;
             StartCoroutine(SpawnLoop());
         }

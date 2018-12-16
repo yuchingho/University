@@ -26,7 +26,7 @@ public class BlockValue : MonoBehaviour {
             // CheckWhite and FoodBlock Default.
             if (BallScript.CheckDefault == true && BlockSpecs.FoodType == BlockSpecs.Food.Default)
             {
-                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 20;   // Whenever destroy a Block, add to PlayerWeight.
+                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 30;   // Whenever destroy a Block, add to PlayerWeight.
                 ManagerGame.UIDeadType.text = "Type: [ Null ]";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString();
@@ -37,7 +37,7 @@ public class BlockValue : MonoBehaviour {
             // CheckFruit and FoodBlock Fruit.
             else if (BallScript.CheckFruit == true && BlockSpecs.FoodType == BlockSpecs.Food.Fruit)
             {
-                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 20;   // Whenever destroy a Block, add to PlayerWeight.
+                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 30;   // Whenever destroy a Block, add to PlayerWeight.
                 ManagerGame.UIDeadType.text = "Type: Fruits / Veg";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
@@ -49,7 +49,7 @@ public class BlockValue : MonoBehaviour {
             // CheckGrains and FoodBlock Grains.
             else if (BallScript.CheckGrains == true && BlockSpecs.FoodType == BlockSpecs.Food.Grains)
             {
-                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 20;   // Whenever destroy a Block, add to PlayerWeight.
+                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 30;   // Whenever destroy a Block, add to PlayerWeight.
                 ManagerGame.UIDeadType.text = "Type: Starch";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
@@ -61,7 +61,7 @@ public class BlockValue : MonoBehaviour {
             // CheckDairy and FoodBlock Dairy.
             else if (BallScript.CheckDairy == true && BlockSpecs.FoodType == BlockSpecs.Food.Dairy)
             {
-                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 20;   // Whenever destroy a Block, add to PlayerWeight.
+                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 30;   // Whenever destroy a Block, add to PlayerWeight.
                 ManagerGame.UIDeadType.text = "Type: " + BlockType.ToString();
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
@@ -73,7 +73,7 @@ public class BlockValue : MonoBehaviour {
             // CheckMeat and FoodBlock Meat.
             else if (BallScript.CheckMeat == true && BlockSpecs.FoodType == BlockSpecs.Food.Meat)
             {
-                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 20;   // Whenever destroy a Block, add to PlayerWeight.
+                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 30;   // Whenever destroy a Block, add to PlayerWeight.
                 ManagerGame.UIDeadType.text = "Type: Proteins";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }
@@ -85,7 +85,7 @@ public class BlockValue : MonoBehaviour {
             // CheckBad and FoodBlock Bad.
             else if (BallScript.CheckBad == true && BlockSpecs.FoodType == BlockSpecs.Food.Bad)
             {
-                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 20;   // Whenever destroy a Block, add to PlayerWeight.
+                ManagerGame.PlayerWeight = ManagerGame.PlayerWeight + 30;   // Whenever destroy a Block, add to PlayerWeight.
                 ManagerGame.UIDeadType.text = "Type: Junk Food";
                 ManagerGame.UIDeadName.text = FoodName.ToString();
                 if (ManagerGame.ScoreCurrent <= 2000) { ManagerGame.UIDeadPoints.text = "Value: " + PointValue.ToString(); }

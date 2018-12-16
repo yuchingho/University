@@ -27,7 +27,8 @@ public class Player : MonoBehaviour {
     void Update()
     {
         ManagerGame.PlayerFallVelocity = Rigidbody2D.velocity.magnitude;
-        Weight.transform.localScale = new Vector2((ManagerGame.PlayerWeight/10), 2);   // PlayerWeight == 100.
+        if (ManagerGame.PlayerWeight >= 100) { Weight.transform.localScale = new Vector2(10, 2); }
+        else { Weight.transform.localScale = new Vector2((ManagerGame.PlayerWeight / 10), 2); }  // PlayerWeight == 100.
 
         if (ManagerGame.PlayerIsPlaying == true) { Movement(); SpriteRenderer.color = Color.white; }
         if (ManagerGame.PlayerIsPlaying == false && ManagerGame.HitByBall == true)
