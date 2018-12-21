@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Clean Title Transitions/Demo.unity
+  isLoaded: 1
+  isActive: 1
