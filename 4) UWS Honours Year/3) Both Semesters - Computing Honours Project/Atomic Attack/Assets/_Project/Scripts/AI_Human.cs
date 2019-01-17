@@ -9,6 +9,7 @@ public class AI_Human : MonoBehaviour {
     [SerializeField] Transform Target;
     Transform EndTarget;
     [SerializeField] protected float MovementSpeed;
+    float MovementSpeedInitial;
     [SerializeField] protected float Direction;
     [SerializeField] protected bool RunAway;
     [SerializeField, Range(1, 3)] float RunAwayTimer = 3;
@@ -35,6 +36,7 @@ public class AI_Human : MonoBehaviour {
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        MovementSpeedInitial = MovementSpeed;
 
         if (this.gameObject.CompareTag("Enemy"))
         {   // If GameObjectTag == Enemy, will target Friend.
@@ -151,6 +153,11 @@ public class AI_Human : MonoBehaviour {
         {
             MovementSpeed = 0;
             Animator.Play("Attack");
+        }
+        else
+        {
+            MovementSpeed = MovementSpeedInitial;
+            Animator.Play("Run");
         }
 
     }
