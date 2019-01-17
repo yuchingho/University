@@ -2400,7 +2400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  MovementSpeed: 1.5
+  MovementSpeed: 1.2
   Direction: 0
   RunAway: 0
   RunAwayTimer: 3
@@ -2411,8 +2411,8 @@ MonoBehaviour:
   CostValue: 0
   CounterValue: 1
   ScoreValue: 0
-  LookRadius: 4
-  AttackRadius: 1
+  LookRadius: 3
+  AttackRadius: 1.4
   AttackDamage: 0
   AttackSpeed: 0
   SwordCooldown: 0
@@ -2424,7 +2424,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1899439177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.47, y: -1.45, z: 0}
+  m_LocalPosition: {x: 0.55, y: -1.45, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2582,8 +2582,8 @@ MonoBehaviour:
   CostValue: 0
   CounterValue: 1
   ScoreValue: 0
-  LookRadius: 6
-  AttackRadius: 6
+  LookRadius: 5
+  AttackRadius: 5
   AttackDamage: 0
   AttackSpeed: 0
   AttackCooldown: 0
@@ -2860,7 +2860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  MovementSpeed: 1.5
+  MovementSpeed: 1.2
   Direction: 0
   RunAway: 0
   RunAwayTimer: 3
@@ -2871,8 +2871,8 @@ MonoBehaviour:
   CostValue: 0
   CounterValue: 1
   ScoreValue: 0
-  LookRadius: 4
-  AttackRadius: 1
+  LookRadius: 3
+  AttackRadius: 1.4
   AttackDamage: 0
   AttackSpeed: 0
   SwordCooldown: 0

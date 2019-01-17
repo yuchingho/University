@@ -6,8 +6,8 @@ public class ManagerGame : MonoBehaviour {
 
     public float TimePlayed;
     public float ScoreCurrent;
-    public float CounterEnemiesKilled;
-    public float CounterFriendsKilled; // Collateral Damage
+    public int CounterEnemiesKilled;
+    public int CounterFriendsKilled; // Collateral Damage
 
     void Start()
     {

@@ -29,22 +29,24 @@ public class AI_Human : MonoBehaviour {
     [SerializeField] protected float AttackRadius;
 
     Rigidbody2D Rigidbody2D;
+    Animator Animator;
 
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
 
         if (this.gameObject.CompareTag("Enemy"))
         {   // If GameObjectTag == Enemy, will target Friend.
             SpawnPoint = GameObject.Find("SpawnPoint Enemy").transform;
             EndTarget = GameObject.Find("SpawnPoint Friend").transform;
-            InvokeRepeating("UpdateTargetFriend", 0f, 0.5f);
+            InvokeRepeating("UpdateTargetFriend", 0f, 0.25f);
         }
         if (this.gameObject.CompareTag("Friend"))
         {   // If GameObjectTag == Friend, will target Enemy.
             SpawnPoint = GameObject.Find("SpawnPoint Friend").transform;
             EndTarget = GameObject.Find("SpawnPoint Enemy").transform;
-            InvokeRepeating("UpdateTargetEnemy", 0f, 0.5f);
+            InvokeRepeating("UpdateTargetEnemy", 0f, 0.25f);
         }
     }
 
@@ -71,8 +73,18 @@ public class AI_Human : MonoBehaviour {
         }
         try
         {   // Updating Target to Nearest Enemy.
-            if (NearestEnemy != null && ShortestDistance <= LookRadius) { Target = NearestEnemy.transform; LookAtTarget(); }
-            else { Target = EndTarget; LookAtTarget(); }
+            if (NearestEnemy != null && ShortestDistance <= LookRadius)
+            {
+                Target = NearestEnemy.transform;
+                LookAtTarget();
+                WithinAttackRange();
+            }
+            else
+            {
+                Target = EndTarget;
+                LookAtTarget();
+                WithinAttackRange();
+            }
         }
         catch (System.NullReferenceException) { };
     }
@@ -94,8 +106,17 @@ public class AI_Human : MonoBehaviour {
         }
         try
         {   // Updating Target to Nearest Enemy.
-            if (NearestEnemy != null && ShortestDistance <= LookRadius) { Target = NearestEnemy.transform; LookAtTarget(); }
-            else { Target = EndTarget; LookAtTarget(); }
+            if (NearestEnemy != null && ShortestDistance <= LookRadius)
+            {
+                Target = NearestEnemy.transform;
+                LookAtTarget();
+                WithinAttackRange();
+            }
+            else {
+                Target = EndTarget;
+                LookAtTarget();
+                WithinAttackRange();
+            }
         }
         catch (System.NullReferenceException) { };
     }
@@ -115,6 +136,8 @@ public class AI_Human : MonoBehaviour {
         //}
     }
 
+    // When velocity = 0, can't start moving again. fix...
+
     protected virtual void Movement()
     {
         Rigidbody2D.velocity = new Vector2(MovementSpeed * -Direction, 0);
@@ -123,13 +146,12 @@ public class AI_Human : MonoBehaviour {
 
     protected virtual void WithinAttackRange()
     {
-        // Fix = 
-        // AttackRadius stop not working
-        // When velocity = 0, can't start moving again. fix...
-        // How to make sure they don't collide into each other?
-        float TargetPosX = Target.position.x - (transform.position.x + AttackRadius);
-        float TargetPosY = Target.position.y - transform.position.y;
-        Vector2 Position = new Vector2(TargetPosX, TargetPosY);
+        float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
+        if (AttackRange <= AttackRadius)
+        {
+            MovementSpeed = 0;
+            Animator.Play("Attack");
+        }
 
     }
 

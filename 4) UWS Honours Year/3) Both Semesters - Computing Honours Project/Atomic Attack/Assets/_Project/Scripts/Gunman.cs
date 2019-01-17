@@ -16,8 +16,8 @@ public class Gunman : AI_Human {
     void Reset()
     {
         MovementSpeed = 1f;
-        LookRadius = 6f;   // Swordsman = 4f. Gunman = 6f.
-        AttackRadius = 6f; // Swordsman = 1f. Gunman = 6f
+        LookRadius = 5f;
+        AttackRadius = LookRadius;
     }
 
     /*
