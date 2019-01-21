@@ -62,10 +62,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Project\Scripts\AI_Human.cs" />
-    <Compile Include="Assets\_Project\Scripts\Gunman.cs" />
+    <Compile Include="Assets\_Project\Scripts\Enemy.cs" />
+    <Compile Include="Assets\_Project\Scripts\Enemy\E_Gunman.cs" />
+    <Compile Include="Assets\_Project\Scripts\Enemy\E_Swordsman.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F_Gunman.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F_Swordsman.cs" />
     <Compile Include="Assets\_Project\Scripts\ManagerGame.cs" />
+    <Compile Include="Assets\_Project\Scripts\MouseGrabbed.cs" />
     <Compile Include="Assets\_Project\Scripts\SpawnOnCastle.cs" />
-    <Compile Include="Assets\_Project\Scripts\Swordsman.cs" />
     <Compile Include="Assets\smh.cs" />
     <None Include="Assets\_Project\Images\Credit Links.txt" />
     <Reference Include="UnityEditor.StandardEvents">

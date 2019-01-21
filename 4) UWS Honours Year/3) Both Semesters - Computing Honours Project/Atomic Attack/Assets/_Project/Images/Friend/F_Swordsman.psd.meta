@@ -401,11 +401,11 @@ TextureImporter:
         serializedVersion: 2
         x: 86
         y: 66
-        width: 45
+        width: 46
         height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 5, w: 0}
+      border: {x: 0, y: 0, z: 6, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0

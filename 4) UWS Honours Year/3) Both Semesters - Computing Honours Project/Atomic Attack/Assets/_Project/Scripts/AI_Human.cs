@@ -2,54 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AI_Human : MonoBehaviour {
+public abstract class AI_Human : MonoBehaviour {
+    // Parent Class for Inheritance.
+    [Space(-10), Header("[ Parent: AI_Human ] Cost")]
+    [SerializeField] protected float CostValue;
+    [SerializeField] protected float ScoreValue;
+    protected float CounterValue = 1;
 
-    [Space(-10), Header("[ Parent: Human ] Movement")]
-    Transform SpawnPoint;
-    [SerializeField] Transform Target;
-    Transform EndTarget;
-    [SerializeField] protected float MovementSpeed;
-    float MovementSpeedInitial;
-    [SerializeField] protected float Direction;
+    [Space(10), Header("[ Parent: AI_Human ] Health")]
+    public float CurrentHealth;
+    [SerializeField] protected float DamageSustained;
+    protected float StartHealth;
+    [SerializeField] protected Transform Target;
+    [SerializeField] protected float TargetHealth;
+
+    [Space(10), Header("[ Parent: AI_Human ] Movement")]
     [SerializeField] protected bool RunAway;
+    protected Transform SpawnPoint;
+    protected Transform EndTarget;
+    protected float MovementDirection;
+    protected float MovementSpeedInitial;
+    [SerializeField] protected float MovementSpeed;
     [SerializeField, Range(1, 3)] float RunAwayTimer = 3;
     [SerializeField] protected float VelocityCurrent;
     [SerializeField] protected bool Grounded;
 
-    [Space(10), Header("[ Parent: Human ] Health")]
-    [SerializeField] protected float HealthMax;
-    [SerializeField] protected float HealthCurrent;
-
-    [Space(10), Header("[ Parent: Human ] Cost")]
-    [SerializeField] protected float CostValue;
-    [SerializeField] protected float CounterValue = 1;
-    [SerializeField] protected float ScoreValue;
-
-    [Space(20)]
+    [Space(10), Header("[ Parent: AI_Human ] Damage")]
+    [SerializeField] protected int AttackDamage;
     [SerializeField] protected float LookRadius;
     [SerializeField] protected float AttackRadius;
+    [SerializeField] protected float AttackRate;
+    [SerializeField] protected float NextAttackTime;
+    [SerializeField] protected GameObject TargetImpactEffect;
 
     Rigidbody2D Rigidbody2D;
     Animator Animator;
 
-    void Start()
+    protected virtual void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         MovementSpeedInitial = MovementSpeed;
-
-        if (this.gameObject.CompareTag("Enemy"))
-        {   // If GameObjectTag == Enemy, will target Friend.
-            SpawnPoint = GameObject.Find("SpawnPoint Enemy").transform;
-            EndTarget = GameObject.Find("SpawnPoint Friend").transform;
-            InvokeRepeating("UpdateTargetFriend", 0f, 0.25f);
-        }
-        if (this.gameObject.CompareTag("Friend"))
-        {   // If GameObjectTag == Friend, will target Enemy.
-            SpawnPoint = GameObject.Find("SpawnPoint Friend").transform;
-            EndTarget = GameObject.Find("SpawnPoint Enemy").transform;
-            InvokeRepeating("UpdateTargetEnemy", 0f, 0.25f);
-        }
+        // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget...() every 0.25f.
+        // If UpdateTarget...() has a Target, will go to LookatEnemy().
+        NextAttackTime = 0;
     }
 
     void Update()
@@ -58,113 +54,60 @@ public class AI_Human : MonoBehaviour {
         if (Grounded == true) { Movement(); }
     }
 
-    // Prioritise Barrels...
-    protected virtual void UpdateTargetEnemy()
-    {   // If GameObjectTag == Enemy, will target Friend.
-        GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        float ShortestDistance = Mathf.Infinity;
-        GameObject NearestEnemy = null;
-        foreach (GameObject NewEnemy in Enemies)
-        {   // ForEach algorithm to calculate Nearest Enemy.
-            float DistanceToEnemy = Vector2.Distance(transform.position, NewEnemy.transform.position);
-            if (DistanceToEnemy < ShortestDistance)
-            {
-                ShortestDistance = DistanceToEnemy;
-                NearestEnemy = NewEnemy;
-            }
-        }
-        try
-        {   // Updating Target to Nearest Enemy.
-            if (NearestEnemy != null && ShortestDistance <= LookRadius)
-            {
-                Target = NearestEnemy.transform;
-                LookAtTarget();
-                WithinAttackRange();
-            }
-            else
-            {
-                Target = EndTarget;
-                LookAtTarget();
-                WithinAttackRange();
-            }
-        }
-        catch (System.NullReferenceException) { };
-    }
-
-    // Prioritise Barrels...
-    protected virtual void UpdateTargetFriend()
-    {   // If GameObjectTag == Friend, will target Enemy.
-        GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Friend");
-        float ShortestDistance = Mathf.Infinity;
-        GameObject NearestEnemy = null;
-        foreach (GameObject NewEnemy in Enemies)
-        {   // ForEach algorithm to calculate Nearest Enemy.
-            float DistanceToEnemy = Vector2.Distance(transform.position, NewEnemy.transform.position);
-            if (DistanceToEnemy < ShortestDistance)
-            {
-                ShortestDistance = DistanceToEnemy;
-                NearestEnemy = NewEnemy;
-            }
-        }
-        try
-        {   // Updating Target to Nearest Enemy.
-            if (NearestEnemy != null && ShortestDistance <= LookRadius)
-            {
-                Target = NearestEnemy.transform;
-                LookAtTarget();
-                WithinAttackRange();
-            }
-            else {
-                Target = EndTarget;
-                LookAtTarget();
-                WithinAttackRange();
-            }
-        }
-        catch (System.NullReferenceException) { };
-    }
-
     protected virtual void LookAtTarget()
     {
         // Getting AI_Human Script of Target, and checking if its "Grounded" is true.
-        // ------ Not working, fix.
+        // --------------------------------------------------------------------------- Not working, fix.
         //AI_Human AI_Human = Target.GetComponent<AI_Human>();
         //if (AI_Human.Grounded == true)
         //{   // Sprites flipping to look at its Target.
         Vector3 dir = Target.position - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        if (angle <= 160) { Direction = -1; }
-        if (angle >= 170) { Direction =  1; angle -= 180; }
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (Angle <= 160) { MovementDirection = -1; }
+        if (Angle >= 170) { MovementDirection =  1; Angle -= 180; }
+        transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
         //}
     }
 
     // When velocity = 0, can't start moving again. fix...
-
     protected virtual void Movement()
     {
-        Rigidbody2D.velocity = new Vector2(MovementSpeed * -Direction, 0);
-        transform.localScale = new Vector2(0.3f * Direction, 0.3f);
-    }
+        Rigidbody2D.velocity = new Vector2(MovementSpeed * -MovementDirection, 0);
+        transform.localScale = new Vector2(0.3f * MovementDirection, 0.3f);
 
-    protected virtual void WithinAttackRange()
-    {
+        // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
         float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
         if (AttackRange <= AttackRadius)
-        {
+        {   // If inside AttackRadius, will start damaging enemy!
             MovementSpeed = 0;
-            Animator.Play("Attack");
+            PlayAnimationAttack();
         }
         else
         {
             MovementSpeed = MovementSpeedInitial;
             Animator.Play("Run");
         }
-
     }
+
+    protected virtual void PlayAnimationAttack()
+    {
+        if (Time.time > NextAttackTime)
+        {
+            // Animator.Play(state, layer, normalizedTime);
+            // Need the other 2 overloads, otherwise won't repeat every AttackRate.
+            // Playing Animation will make DamageArea active, triggering Damage to be taken.
+            Animator.Play("Attack", -1, 0f);
+            NextAttackTime = Time.time + AttackRate;
+        }
+    }
+
+    // Same as "virtual void", but has to be called in Child classes.
+    // Since added "abstract void" here, have to add "abstract" at start of class.
+    protected abstract void DamageTaken();
 
     protected virtual void Death()
     {
-
+        Animator.Play("Die");
     }
 
     // Method to add to score
@@ -176,20 +119,5 @@ public class AI_Human : MonoBehaviour {
         else { Grounded = false; }
     }
 
-    void OnDrawGizmos()
-    {
-        if (this.gameObject.CompareTag("Enemy"))
-        {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(transform.position, AttackRadius);
-            Gizmos.DrawWireSphere(transform.position, LookRadius);
-        }
-
-        if (this.gameObject.CompareTag("Friend"))
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, AttackRadius);
-            Gizmos.DrawWireSphere(transform.position, LookRadius);
-        }
-    }
+    protected abstract void OnDrawGizmos();
 }
