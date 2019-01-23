@@ -5,16 +5,9 @@ using UnityEngine;
 public abstract class AI_Human : MonoBehaviour {
     // Parent Class for Inheritance.
     [Space(-10), Header("[ Parent: AI_Human ] Cost")]
-    [SerializeField] protected float CostValue;
-    [SerializeField] protected float ScoreValue;
-    protected float CounterValue = 1;
-
-    [Space(10), Header("[ Parent: AI_Human ] Health")]
-    public float CurrentHealth;
-    [SerializeField] protected float DamageSustained;
-    protected float StartHealth;
-    [SerializeField] protected Transform Target;
-    [SerializeField] protected float TargetHealth;
+    [SerializeField] protected int CostValue;
+    [SerializeField] protected int ScoreValue;
+    protected int CounterValue = 1;
 
     [Space(10), Header("[ Parent: AI_Human ] Movement")]
     [SerializeField] protected bool RunAway;
@@ -23,7 +16,7 @@ public abstract class AI_Human : MonoBehaviour {
     protected float MovementDirection;
     protected float MovementSpeedInitial;
     [SerializeField] protected float MovementSpeed;
-    [SerializeField, Range(1, 3)] float RunAwayTimer = 3;
+    [SerializeField, Range(1, 3)] protected float RunAwayTimer;
     [SerializeField] protected float VelocityCurrent;
     [SerializeField] protected bool Grounded;
 
@@ -32,7 +25,9 @@ public abstract class AI_Human : MonoBehaviour {
     [SerializeField] protected float LookRadius;
     [SerializeField] protected float AttackRadius;
     [SerializeField] protected float AttackRate;
-    [SerializeField] protected float NextAttackTime;
+    protected float NextAttackTime;
+    public Transform Target;
+    public float TargetHealth;
     [SerializeField] protected GameObject TargetImpactEffect;
 
     Rigidbody2D Rigidbody2D;
@@ -48,7 +43,7 @@ public abstract class AI_Human : MonoBehaviour {
         NextAttackTime = 0;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         VelocityCurrent = Rigidbody2D.velocity.magnitude;
         if (Grounded == true) { Movement(); }
@@ -56,22 +51,16 @@ public abstract class AI_Human : MonoBehaviour {
 
     protected virtual void LookAtTarget()
     {
-        // Getting AI_Human Script of Target, and checking if its "Grounded" is true.
-        // --------------------------------------------------------------------------- Not working, fix.
-        //AI_Human AI_Human = Target.GetComponent<AI_Human>();
-        //if (AI_Human.Grounded == true)
-        //{   // Sprites flipping to look at its Target.
+        // Sprites flipping to look at its Target.
         Vector3 dir = Target.position - transform.position;
         float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         if (Angle <= 160) { MovementDirection = -1; }
         if (Angle >= 170) { MovementDirection =  1; Angle -= 180; }
         transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
-        //}
     }
-
-    // When velocity = 0, can't start moving again. fix...
+    
     protected virtual void Movement()
-    {
+    {   // When velocity = 0, can't start moving again. fix???
         Rigidbody2D.velocity = new Vector2(MovementSpeed * -MovementDirection, 0);
         transform.localScale = new Vector2(0.3f * MovementDirection, 0.3f);
 
@@ -101,14 +90,11 @@ public abstract class AI_Human : MonoBehaviour {
         }
     }
 
-    // Same as "virtual void", but has to be called in Child classes.
-    // Since added "abstract void" here, have to add "abstract" at start of class.
-    protected abstract void DamageTaken();
-
-    protected virtual void Death()
+    protected virtual void PlayAnimationDeath()
     {
         Animator.Play("Die");
     }
+
 
     // Method to add to score
     // Add collateral damage
@@ -116,8 +102,10 @@ public abstract class AI_Human : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground") { Grounded = true; }
-        else { Grounded = false; }
+        // not detecting when the sprite has left the ground... else function doesn't work
     }
 
+    // Same as "virtual void", but has to be called in Child classes.
+    // Since added "abstract void" here, have to add "abstract" at start of class.
     protected abstract void OnDrawGizmos();
 }

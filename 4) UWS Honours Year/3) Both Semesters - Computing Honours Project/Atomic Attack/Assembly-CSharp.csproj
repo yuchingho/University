@@ -68,6 +68,7 @@
     <Compile Include="Assets\_Project\Scripts\Friend.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F_Gunman.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F_Swordsman.cs" />
+    <Compile Include="Assets\_Project\Scripts\HealthSystem.cs" />
     <Compile Include="Assets\_Project\Scripts\ManagerGame.cs" />
     <Compile Include="Assets\_Project\Scripts\MouseGrabbed.cs" />
     <Compile Include="Assets\_Project\Scripts\SpawnOnCastle.cs" />

@@ -13,17 +13,20 @@ public class E_Swordsman : Enemy {
     {
         CostValue = 0;
         ScoreValue = 2000;
-        StartHealth = 100;
-        CurrentHealth = StartHealth;
         MovementSpeed = 1.2f;
+        RunAwayTimer = 3f;
         AttackDamage = 1;
-        LookRadius = 3f;
+        LookRadius = 3.5f;
         AttackRadius = 1.3f;
-        AttackRate = 2f;
+        AttackRate = 1f;
     }
 
-    protected override void DamageTaken()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        throw new System.NotImplementedException();
+        if (collision.gameObject.tag == "Friend")
+        {   // When E_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
+            // Will damage Target's Health with the value of E_Swordsman's AttackDamage.
+            //collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
+        }
     }
 }

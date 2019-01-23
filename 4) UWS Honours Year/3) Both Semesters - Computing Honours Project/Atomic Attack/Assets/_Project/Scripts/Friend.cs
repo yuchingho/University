@@ -32,7 +32,7 @@ public class Friend : AI_Human {
             if (NearestEnemy != null && ShortestDistance <= LookRadius)
             {   // Updating Target to Nearest Enemy, and getting Target's Health.
                 Target = NearestEnemy.transform;
-                TargetHealth = NearestEnemy.GetComponent<AI_Human>().CurrentHealth;
+                TargetHealth = NearestEnemy.GetComponent<HealthSystem>().Health;
                 LookAtTarget();
             }
             else
@@ -44,10 +44,9 @@ public class Friend : AI_Human {
         catch (System.NullReferenceException) { };
     }
 
-    protected override void DamageTaken() { }
     protected override void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.clear;
         Gizmos.DrawWireSphere(transform.position, AttackRadius);
         Gizmos.DrawWireSphere(transform.position, LookRadius);
     }

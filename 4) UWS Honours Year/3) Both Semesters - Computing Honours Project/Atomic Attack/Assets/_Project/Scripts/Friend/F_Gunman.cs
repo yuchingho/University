@@ -12,21 +12,16 @@ public class F_Gunman : Friend {
 
 
 
+
     void Reset()
     {
         CostValue = 0;
         ScoreValue = 2000;
-        StartHealth = 114;
-        CurrentHealth = StartHealth;
         MovementSpeed = 1f;
+        RunAwayTimer = 3f;
         AttackDamage = 1;
         LookRadius = 5f;
         AttackRadius = LookRadius;
-        AttackRate = 3f;
-    }
-
-    protected override void DamageTaken()
-    {
-        throw new System.NotImplementedException();
+        AttackRate = 0.75f;
     }
 }

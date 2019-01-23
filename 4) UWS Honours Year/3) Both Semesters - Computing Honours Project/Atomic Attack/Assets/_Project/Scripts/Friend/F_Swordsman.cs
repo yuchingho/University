@@ -13,26 +13,25 @@ public class F_Swordsman : Friend {
     {
         CostValue = 0;
         ScoreValue = 2000;
-        StartHealth = 100;
-        CurrentHealth = StartHealth;
         MovementSpeed = 4f; //1.2
+        RunAwayTimer = 3f;
         AttackDamage = 1;
-        LookRadius = 3f;
+        LookRadius = 3.5f;
         AttackRadius = 1.3f;
-        AttackRate = 2f;
-    }
-
-    protected override void DamageTaken()
-    {
-        throw new System.NotImplementedException();
+        AttackRate = 1f;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {   // When F_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
-            TargetHealth -= AttackDamage;
-            Debug.Log("Swordslashed " + Target.name + ", HP = " + TargetHealth + ", " + Time.time.ToString("n0"));
+            // Will damage Target's Health with the value of F_Swordsman's AttackDamage.
+            collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
+
+
+
+            // If there's one f_swordsman vs one e_gunman, health system works.
+            // If there's one f_swordsman vs one e_swordsman, get null reference exception after one hit???
         }
     }
 }
