@@ -12,7 +12,6 @@ public abstract class AI_Human : MonoBehaviour {
     [Space(10), Header("[ Parent: AI_Human ] Movement")]
     [SerializeField] protected bool RunAway;
     protected Transform SpawnPoint;
-    protected Transform EndTarget;
     protected float MovementDirection;
     protected float MovementSpeedInitial;
     [SerializeField] protected float MovementSpeed;
@@ -26,15 +25,20 @@ public abstract class AI_Human : MonoBehaviour {
     [SerializeField] protected float AttackRadius;
     [SerializeField] protected float AttackRate;
     protected float NextAttackTime;
+
+    [Space(10), Header("[ Parent: AI_Human ] Target")]
+    public Transform FinalTarget;
     public Transform Target;
-    public float TargetHealth;
+    [SerializeField] protected float TargetHealth;
     [SerializeField] protected GameObject TargetImpactEffect;
 
+    protected HealthSystem HealthSystem;
     Rigidbody2D Rigidbody2D;
     Animator Animator;
 
     protected virtual void Start()
     {
+        HealthSystem = GetComponent<HealthSystem>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         MovementSpeedInitial = MovementSpeed;
@@ -45,8 +49,12 @@ public abstract class AI_Human : MonoBehaviour {
 
     protected virtual void Update()
     {
-        VelocityCurrent = Rigidbody2D.velocity.magnitude;
-        if (Grounded == true) { Movement(); }
+        if (HealthSystem.Deceased == false)
+        {
+            VelocityCurrent = Rigidbody2D.velocity.magnitude;
+            if (Grounded == true) { Movement(); }
+        }
+        else { PlayAnimationDeath(); }
     }
 
     protected virtual void LookAtTarget()
@@ -85,7 +93,7 @@ public abstract class AI_Human : MonoBehaviour {
             // Animator.Play(state, layer, normalizedTime);
             // Need the other 2 overloads, otherwise won't repeat every AttackRate.
             // Playing Animation will make DamageArea active, triggering Damage to be taken.
-            Animator.Play("Attack", -1, 0f);
+            Animator.Play("Attack", -1, 0);
             NextAttackTime = Time.time + AttackRate;
         }
     }
@@ -93,15 +101,16 @@ public abstract class AI_Human : MonoBehaviour {
     protected virtual void PlayAnimationDeath()
     {
         Animator.Play("Die");
+        Destroy(this.gameObject, 1f);
     }
-
 
     // Method to add to score
     // Add collateral damage
+    // ignore same tag collisions.
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground") { Grounded = true; }
+        if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
         // not detecting when the sprite has left the ground... else function doesn't work
     }
 

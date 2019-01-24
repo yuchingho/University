@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class F_Gunman : Friend {
+public class F_Gunman : AI_Friend {
     // Child Class F_Gunman inheriting from Friend.
     [Space(10), Header("[^ Child: Friend ]")]
     [Space(10), Header("[^ Child: Gunman ] Attack")]
@@ -14,14 +14,14 @@ public class F_Gunman : Friend {
 
 
     void Reset()
-    {
+    {   // Health = 6;
         CostValue = 0;
-        ScoreValue = 2000;
+        ScoreValue = 0;
         MovementSpeed = 1f;
         RunAwayTimer = 3f;
-        AttackDamage = 1;
-        LookRadius = 5f;
-        AttackRadius = LookRadius;
+        AttackDamage = 3;
+        LookRadius = 4f;
+        AttackRadius = 4f;
         AttackRate = 0.75f;
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E_Gunman : Enemy {
+public class E_Gunman : AI_Enemy {
     // Child Class E_Gunman inheriting from Enemy.
     [Space(10), Header("[^ Child: Enemy ]")]
     [Space(10), Header("[^ Child: Gunman ] Attack")]
@@ -14,14 +14,14 @@ public class E_Gunman : Enemy {
     [SerializeField] bool OnCastle;
 
     void Reset()
-    {
+    {   // Health = 6;
         CostValue = 0;
-        ScoreValue = 2000;
+        ScoreValue = 2;
         MovementSpeed = 1f;
         RunAwayTimer = 3f;
-        AttackDamage = 1;
-        LookRadius = 3.5f;
-        AttackRadius = 3.5f;
+        AttackDamage = 3;
+        LookRadius = 4f;
+        AttackRadius = 4f;
         AttackRate = 0.75f;
     }
 
@@ -29,6 +29,13 @@ public class E_Gunman : Enemy {
     {
         base.Update();  // If not on Castle, run as normal. If so, range = 10f.
         if (OnCastle == true) { MovementSpeed = 0f; LookRadius = 10f; AttackRadius = 10f; }
+    }
+
+    protected override void PlayAnimationAttack()
+    {
+        base.PlayAnimationAttack(); // Instantiating Bullet prefab.
+        Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
+
     }
 
     protected override void LookAtTarget()

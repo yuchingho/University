@@ -5,15 +5,11 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour {
 
     public float Health;
-    // Use animator? play Die animation
-    // coroutine and then destroy gameObject
+    public bool Deceased = false;
 
     public void DamageTaken(float Damage)
     {
         Health -= Damage;
-        if (Health <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+        if (Health <= 0) { Deceased = true; }
     }
 }
