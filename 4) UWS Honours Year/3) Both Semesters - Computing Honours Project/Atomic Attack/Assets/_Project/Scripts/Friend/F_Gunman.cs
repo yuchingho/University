@@ -8,7 +8,6 @@ public class F_Gunman : AI_Friend {
     [Space(10), Header("[^ Child: Gunman ] Attack")]
     [SerializeField] GameObject Projectile;
     [SerializeField] Transform FireLocation;
-    [SerializeField] GameObject MuzzleFlashEffect;
 
 
 

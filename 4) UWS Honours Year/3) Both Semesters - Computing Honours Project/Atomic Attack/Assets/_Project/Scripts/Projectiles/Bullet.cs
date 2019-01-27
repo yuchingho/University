@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour {
     public int Damage;
     protected HealthSystem HealthSystem;
     protected Transform Target;
+    [SerializeField] GameObject Explosion;
 
     public void Seek (Transform target)
     {
@@ -36,8 +37,8 @@ public class Bullet : MonoBehaviour {
     protected virtual void HitTarget()
     {
         Target.GetComponent<HealthSystem>().DamageTaken(Damage);
+        Instantiate(Explosion, transform.position, transform.rotation);
         Destroy(gameObject);
-
         // Don't need to differentiate with tags because already using Target.
         // Bullet will go only towards Target, through any other objects.
     }

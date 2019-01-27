@@ -10,7 +10,6 @@ public class E_Gunman : AI_Enemy {
     [SerializeField] bool Stunned;
     [SerializeField] bool Blinded;
     [SerializeField] Transform FireLocation;
-    [SerializeField] GameObject MuzzleFlashEffect;
     [SerializeField] bool OnCastle;
 
     void Reset()

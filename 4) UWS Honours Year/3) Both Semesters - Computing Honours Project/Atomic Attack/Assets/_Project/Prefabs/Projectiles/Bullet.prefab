@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212554363990105578}
   - component: {fileID: 114631291237176446}
   m_Layer: 0
-  m_Name: E_Bullet
+  m_Name: Bullet
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 15
   Damage: 2
+  Explosion: {fileID: 1854532116624764, guid: e4c46523e512bf24cb40efb5e63fd047, type: 2}
 --- !u!212 &212554363990105578
 SpriteRenderer:
   m_ObjectHideFlags: 1
