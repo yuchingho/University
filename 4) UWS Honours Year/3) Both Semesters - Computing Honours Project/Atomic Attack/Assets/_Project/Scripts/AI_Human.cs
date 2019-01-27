@@ -102,16 +102,19 @@ public abstract class AI_Human : MonoBehaviour {
     {
         Animator.Play("Die");
         Destroy(this.gameObject, 1f);
+        return;
+        // Add to score or collateral damage score
     }
-
-    // Method to add to score
-    // Add collateral damage
-    // ignore same tag collisions.
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
         // not detecting when the sprite has left the ground... else function doesn't work
+
+        // Added two new Layers - "Enemy" and "Friend".
+        // Enemies and Friends can overlap because
+        // the two layers colliding each other have been disabled.
+        // Edit > Project Settings > Physics 2D.
     }
 
     // Same as "virtual void", but has to be called in Child classes.

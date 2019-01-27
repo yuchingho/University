@@ -28,14 +28,31 @@ public class E_Gunman : AI_Enemy {
     protected override void Update()
     {
         base.Update();  // If not on Castle, run as normal. If so, range = 10f.
-        if (OnCastle == true) { MovementSpeed = 0f; LookRadius = 10f; AttackRadius = 10f; }
+        if (OnCastle == true)
+        {
+            MovementSpeed = 0f;
+            LookRadius = 10f;
+            AttackRadius = 10f;
+        }
     }
 
     protected override void PlayAnimationAttack()
     {
-        base.PlayAnimationAttack(); // Instantiating Bullet prefab.
-        Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
+        if (Time.time > NextAttackTime)
+        {
+            base.PlayAnimationAttack();
+            Shoot();
+        }
+    }
 
+    protected virtual void Shoot()
+    {   // Instantiating Bullet prefab.
+        GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
+        Bullet bullet = Bullet.GetComponent<Bullet>();
+        // If eBullet != null, use E_Bullet's script Seek method.
+        if (bullet != null) { bullet.Seek(Target); }
+        // Add Bullet's Damage on the script prefab. 
+        // AttackDamage value here is just reference.
     }
 
     protected override void LookAtTarget()

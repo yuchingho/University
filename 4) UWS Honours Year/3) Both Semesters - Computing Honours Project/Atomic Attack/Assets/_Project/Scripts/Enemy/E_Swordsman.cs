@@ -30,7 +30,7 @@ public class E_Swordsman : AI_Enemy {
                 collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
 
                 // If there's one f_swordsman vs one e_gunman, health system works.
-                // If there's one f_swordsman vs one e_swordsman, get null reference exception after one hit???
+                // If there's one f_swordsman vs one e_swordsman, get null reference exception after one hit?
             }
         }
         catch (System.NullReferenceException) { };

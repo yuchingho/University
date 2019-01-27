@@ -24,4 +24,23 @@ public class F_Gunman : AI_Friend {
         AttackRadius = 4f;
         AttackRate = 0.75f;
     }
+
+    protected override void PlayAnimationAttack()
+    {
+        if (Time.time > NextAttackTime)
+        {
+            base.PlayAnimationAttack();
+            Shoot();
+        }
+    }
+
+    protected virtual void Shoot()
+    {   // Instantiating Bullet prefab.
+        GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
+        Bullet bullet = Bullet.GetComponent<Bullet>();
+        // If eBullet != null, use E_Bullet's script Seek method.
+        if (bullet != null) { bullet.Seek(Target); }
+        // Add Bullet's Damage on the script prefab. 
+        // AttackDamage value here is just reference.
+    }
 }

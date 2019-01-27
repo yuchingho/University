@@ -22,17 +22,13 @@ public class F_Swordsman : AI_Friend {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        try
-        {
-            if (collision.gameObject.tag == "Enemy")
-            {   // When F_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
-                // Will damage Target's Health with F_Swordsman's AttackDamage.
-                collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
+        if (collision.gameObject.tag == "Enemy")
+        {   // When F_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
+            // Will damage Target's Health with F_Swordsman's AttackDamage.
+            collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
 
-                // If there's one f_swordsman vs one e_gunman, health system works.
-                // If there's one f_swordsman vs one e_swordsman, get null reference exception after one hit???
-            }
+            // If there's one f_swordsman vs one e_gunman, health system works.
+            // If there's one f_swordsman vs one e_swordsman, get null reference exception after one hit?
         }
-        catch (System.NullReferenceException) { };
     }
 }
