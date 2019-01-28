@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// If stuff land on castle, stuff start glitching out? Remove castle? Or something else?
 public abstract class AI_Human : MonoBehaviour {
     // Parent Class for Inheritance.
     [Space(-10), Header("[ Parent: AI_Human ] Cost")]

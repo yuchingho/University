@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class F_Gunman : AI_Friend {
     // Child Class F_Gunman inheriting from Friend.
-    [Space(10), Header("[^ Child: Friend ]")]
-    [Space(10), Header("[^ Child: Gunman ] Attack")]
-    [SerializeField] GameObject Projectile;
-    [SerializeField] Transform FireLocation;
+    [Space( 10), Header("[^ Child: AI_Friend ]")]
+    [Space(-10), Header("[^ Child:   F_Gunman ]")]
+    [SerializeField] protected GameObject Projectile;
+    [SerializeField] protected Transform FireLocation;
 
 
 
@@ -37,9 +37,7 @@ public class F_Gunman : AI_Friend {
     {   // Instantiating Bullet prefab.
         GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
         Bullet bullet = Bullet.GetComponent<Bullet>();
-        // If eBullet != null, use E_Bullet's script Seek method.
-        if (bullet != null) { bullet.Seek(Target); }
-        // Add Bullet's Damage on the script prefab. 
-        // AttackDamage value here is just reference.
+        if (bullet != null) { bullet.Seek(Target); } // Using Bullet's script Seek method.
+        // Add Bullet's Damage on the prefab. AttackDamage value here is just reference.
     }
 }

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class E_Swordsman : AI_Enemy {
     // Child Class E_Swordsman inheriting from Enemy.
-    [Space(10), Header("[^ Child: Enemy ]")]
-    [Space(10), Header("[^ Child: Swordsman ] Attack")]
+    [Space( 10), Header("[^ Child: AI_Enemy ]")]
+    [Space(-10), Header("[^ Child:   E_Swordsman ]")]
     [SerializeField] bool Stunned;
+    [SerializeField] bool Blinded;
 
     void Reset()
     {   // Health = 6;

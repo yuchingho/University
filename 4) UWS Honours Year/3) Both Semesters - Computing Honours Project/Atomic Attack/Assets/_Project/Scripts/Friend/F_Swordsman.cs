@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class F_Swordsman : AI_Friend {
     // Child Class F_Swordsman inheriting from Friend.
+    [Space(10), Header("[^ Child: AI_Friend ]")]
+    [Space(-10), Header("[^ Child:   F_Swordsman ]")]
+    public bool Boron;        // Add MovementSpeed for when activated.
+    public bool Aluminium;    // Add AttackDamage and AttackRate for when activated.
 
-    
-    
-    
+
+
+
     void Reset()
     {   // Health = 6;
         CostValue = 0;

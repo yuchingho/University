@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class E_Gunman : AI_Enemy {
     // Child Class E_Gunman inheriting from Enemy.
-    [Space(10), Header("[^ Child: Enemy ]")]
-    [Space(10), Header("[^ Child: Gunman ] Attack")]
+    [Space( 10), Header("[^ Child: AI_Enemy ]")]
+    [Space(-10), Header("[^ Child:   E_Gunman ]")]
     [SerializeField] GameObject Projectile;
+    [SerializeField] Transform FireLocation;
     [SerializeField] bool Stunned;
     [SerializeField] bool Blinded;
-    [SerializeField] Transform FireLocation;
     [SerializeField] bool OnCastle;
 
     void Reset()
@@ -48,10 +48,8 @@ public class E_Gunman : AI_Enemy {
     {   // Instantiating Bullet prefab.
         GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
         Bullet bullet = Bullet.GetComponent<Bullet>();
-        // If eBullet != null, use E_Bullet's script Seek method.
-        if (bullet != null) { bullet.Seek(Target); }
-        // Add Bullet's Damage on the script prefab. 
-        // AttackDamage value here is just reference.
+        if (bullet != null) { bullet.Seek(Target); } // Using Bullet's script Seek method.
+        // Add Bullet's Damage on the prefab. AttackDamage value here is just reference.
     }
 
     protected override void LookAtTarget()
