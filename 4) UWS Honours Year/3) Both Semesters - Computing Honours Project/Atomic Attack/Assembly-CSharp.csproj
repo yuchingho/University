@@ -68,12 +68,15 @@
     <Compile Include="Assets\_Project\Scripts\Friend\AI_Friend.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F_Gunman.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F_Swordsman.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\F1_Hydrogen.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F01_Hydrogen.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F02_Helium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F03_Lithium.cs" />
     <Compile Include="Assets\_Project\Scripts\HealthSystem.cs" />
     <Compile Include="Assets\_Project\Scripts\ManagerGame.cs" />
     <Compile Include="Assets\_Project\Scripts\MouseGrabbed.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\Bullet.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\Grenade.cs" />
+    <Compile Include="Assets\_Project\Scripts\Projectiles\RemoveEffect.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\RemoveExplosions.cs" />
     <None Include="Assets\_Project\Images\Credit Links.txt" />
     <Reference Include="UnityEditor.StandardEvents">

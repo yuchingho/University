@@ -1,50 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// If stuff land on castle, stuff start glitching out? Remove castle? Or something else?
-public abstract class AI_Human : MonoBehaviour {
-    // Parent Class for Inheritance.
-    [Space(-10), Header("[ Parent: AI_Human ] Cost")]
-    [SerializeField] protected int CostValue;
-    [SerializeField] protected int ScoreValue;
-    protected int CounterValue = 1;
 
-    [Space(10), Header("[ Parent: AI_Human ] Movement")]
-    [SerializeField] protected bool RunAway;
-    protected Transform SpawnPoint;
+public abstract class AI_Human : MonoBehaviour {
+
+    // Parent Class for Inheritance.
+    Rigidbody2D Rigidbody2D;
+    protected HealthSystem HealthSystem;
+
+    [Space(-10), Header("[ Parent: AI_Human ] Movement")]
+    public int CostValue;
+    public int ScoreValue;
+
+    [Space( 10), Header("[ Parent: AI_Human ] Movement")]
+    [SerializeField] protected float MovementSpeed;
     protected float MovementDirection;
     protected float MovementSpeedInitial;
-    [SerializeField] protected float MovementSpeed;
-    [SerializeField, Range(1, 3)] protected float RunAwayTimer;
     [SerializeField] protected float VelocityCurrent;
     [SerializeField] protected bool Grounded;
+    [SerializeField] protected bool RunAway;
+    protected Transform SpawnPoint;
 
-    [Space(10), Header("[ Parent: AI_Human ] Damage")]
-    [SerializeField] protected int AttackDamage;
-    [SerializeField] protected float LookRadius;
-    [SerializeField] protected float AttackRadius;
-    [SerializeField] protected float AttackRate;
-    protected float NextAttackTime;
-
-    [Space(10), Header("[ Parent: AI_Human ] Target")]
-    public Transform FinalTarget;
+    [Space( 10), Header("[ Parent: AI_Human ] Target")]
     public Transform Target;
     [SerializeField] protected float TargetHealth;
-    [SerializeField] protected GameObject TargetImpactEffect;
+    public Transform FinalTarget;
 
-    protected HealthSystem HealthSystem;
-    Rigidbody2D Rigidbody2D;
-    Animator Animator;
+    [Space( 10), Header("---------- Stats ----------")]
+    [SerializeField] protected float LookRadius;
+    [SerializeField] protected float AttackRadius;
 
     protected virtual void Start()
     {
         HealthSystem = GetComponent<HealthSystem>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
-        Animator = GetComponent<Animator>();
         MovementSpeedInitial = MovementSpeed;
-        // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget...() every 0.25f.
-        // If UpdateTarget...() has a Target, will go to LookatEnemy().
-        NextAttackTime = 0;
+        // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
+        // If UpdateTarget() has a Target, will go to LookatTarget().
     }
 
     protected virtual void Update()
@@ -58,8 +50,7 @@ public abstract class AI_Human : MonoBehaviour {
     }
 
     protected virtual void LookAtTarget()
-    {
-        // Sprites flipping to look at its Target.
+    {   // Sprites flipping to look at its Target.
         Vector3 dir = Target.position - transform.position;
         float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         if (Angle <= 160) { MovementDirection = -1; }
@@ -71,53 +62,18 @@ public abstract class AI_Human : MonoBehaviour {
     {   // When velocity = 0, can't start moving again. fix???
         Rigidbody2D.velocity = new Vector2(MovementSpeed * -MovementDirection, 0);
         transform.localScale = new Vector2(0.3f * MovementDirection, 0.3f);
-
-        // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
-        float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
-        if (AttackRange <= AttackRadius)
-        {   // If inside AttackRadius, will start damaging enemy!
-            MovementSpeed = 0;
-            PlayAnimationAttack();
-        }
-        else
-        {
-            MovementSpeed = MovementSpeedInitial;
-            Animator.Play("Run");
-        }
     }
 
-    protected virtual void PlayAnimationAttack()
-    {
-        if (Time.time > NextAttackTime)
-        {
-            // Animator.Play(state, layer, normalizedTime);
-            // Need the other 2 overloads, otherwise won't repeat every AttackRate.
-            // Playing Animation will make DamageArea active, triggering Damage to be taken.
-            Animator.Play("Attack", -1, 0);
-            NextAttackTime = Time.time + AttackRate;
-        }
-    }
-
-    protected virtual void PlayAnimationDeath()
-    {
-        Animator.Play("Die");
-        Destroy(this.gameObject, 1f);
-        return;
-        // Add to score or collateral damage score
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
-        // not detecting when the sprite has left the ground... else function doesn't work
-
-        // Added two new Layers - "Enemy" and "Friend".
-        // Enemies and Friends can overlap because
-        // the two layers colliding each other have been disabled.
-        // Edit > Project Settings > Physics 2D.
-    }
+    // Animator.Play(state, layer, normalizedTime);
+    // Need the other 2 overloads, otherwise won't repeat every AttackRate.
+    protected abstract void PlayAnimationAttack();
+    protected abstract void PlayAnimationDeath();
 
     // Same as "virtual void", but has to be called in Child classes.
     // Since added "abstract void" here, have to add "abstract" at start of class.
     protected abstract void OnDrawGizmos();
+
+    // Added two new Layers - "Enemy" and "Friend".
+    // Enemies and Friends can overlap because the two layers colliding each other have been disabled.
+    // Edit > Project Settings > Physics 2D.
 }

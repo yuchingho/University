@@ -122,9 +122,9 @@ GameObject:
   m_Component:
   - component: {fileID: 18548673}
   m_Layer: 9
-  m_Name: F1_ThrowPoint
+  m_Name: F01_ThrowPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -165,10 +165,9 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 133400066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.332, y: -1.45, z: 0}
+  m_LocalPosition: {x: 7.15, y: -1.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2061296406}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -511,25 +510,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CostValue: 0
-  ScoreValue: 2
-  RunAway: 0
+  ScoreValue: 0
   MovementSpeed: 1
-  RunAwayTimer: 3
   VelocityCurrent: 0
   Grounded: 0
-  AttackDamage: 3
+  RunAway: 0
+  Target: {fileID: 0}
+  TargetHealth: 0
+  FinalTarget: {fileID: 0}
   LookRadius: 4
   AttackRadius: 4
   AttackRate: 0.75
-  FinalTarget: {fileID: 0}
-  Target: {fileID: 0}
-  TargetHealth: 0
-  TargetImpactEffect: {fileID: 0}
-  Projectile: {fileID: 1574258756806926, guid: 0f6b8ae62c4abbf42b1bf274ca991f34, type: 2}
-  FireLocation: {fileID: 1994818427}
   Stunned: 0
   Blinded: 0
+  Burned: 0
   OnCastle: 0
+  Projectile: {fileID: 1574258756806926, guid: 0f6b8ae62c4abbf42b1bf274ca991f34, type: 2}
+  FireLocation: {fileID: 1994818427}
 --- !u!4 &330684817
 Transform:
   m_ObjectHideFlags: 0
@@ -537,12 +534,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 330684811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.16, y: 2.81, z: 0}
+  m_LocalPosition: {x: 5.5, y: -1.45, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 1994818427}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330684818
 MonoBehaviour:
@@ -1501,7 +1498,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &697928937
 GameObject:
@@ -1526,7 +1523,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 697928937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.7, y: -1.45, z: 0}
+  m_LocalPosition: {x: 9.42, y: -1.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2036792237}
@@ -1579,7 +1576,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 855311301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.5, y: -1.45, z: 0}
+  m_LocalPosition: {x: 8, y: -1.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1668,7 +1665,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1859210161
 GameObject:
@@ -1848,22 +1845,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CostValue: 0
-  ScoreValue: 1
-  RunAway: 0
+  ScoreValue: 0
   MovementSpeed: 1.2
-  RunAwayTimer: 3
   VelocityCurrent: 0
   Grounded: 0
-  AttackDamage: 1
-  LookRadius: 3
-  AttackRadius: 1.3
-  AttackRate: 1
-  FinalTarget: {fileID: 0}
+  RunAway: 0
   Target: {fileID: 0}
   TargetHealth: 0
-  TargetImpactEffect: {fileID: 0}
+  FinalTarget: {fileID: 0}
+  LookRadius: 3
+  AttackRadius: 0.85
+  AttackRate: 1
+  AttackDamage: 1
   Stunned: 0
   Blinded: 0
+  Burned: 0
 --- !u!4 &1899439182
 Transform:
   m_ObjectHideFlags: 0
@@ -1871,12 +1867,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1899439177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.92, y: 3.08, z: 0}
+  m_LocalPosition: {x: 1.66, y: -1.45, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 581727372}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1899439183
 Animator:
@@ -1920,7 +1916,7 @@ GameObject:
   m_Layer: 8
   m_Name: EG_GunPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1978,9 +1974,9 @@ GameObject:
   - component: {fileID: 2061296406}
   - component: {fileID: 2061296405}
   - component: {fileID: 2061296407}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Castle
-  m_TagString: Castle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2020,12 +2016,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 943c5fe5aee93b84d943d5ec7af8cc09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b8fef28b9bd81c4eb7fc86624e9e42b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.43, y: 0.99}
+  m_Size: {x: 1.08, y: 4.09}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2038,14 +2034,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2061296404}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1680002, y: 1.5200001, z: 0}
-  m_LocalScale: {x: 4, y: 7, z: 1}
+  m_LocalPosition: {x: 7.836, y: 1.53, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 133400067}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2061296407
-BoxCollider2D:
+--- !u!60 &2061296407
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2060,15 +2056,18 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.34, y: 0.59}
-    newSize: {x: 1.43, y: 0.99}
+    oldSize: {x: 1.06, y: 3.52}
+    newSize: {x: 1.08, y: 4.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.34, y: 0.59}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.53, y: 1.29}
+      - {x: -0.53, y: -1.76}
+      - {x: 0.53, y: -1.76}
+      - {x: 0.75018, y: 2.519733}
 --- !u!1 &2074922149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2167,7 @@ Transform:
   m_Children:
   - {fileID: 179185572}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2074922153
 BoxCollider2D:
@@ -2208,19 +2207,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CostValue: 0
   ScoreValue: 0
-  RunAway: 0
   MovementSpeed: 1.2
-  RunAwayTimer: 3
   VelocityCurrent: 0
   Grounded: 0
-  AttackDamage: 1
-  LookRadius: 3
-  AttackRadius: 1.3
-  AttackRate: 1
-  FinalTarget: {fileID: 0}
+  RunAway: 0
   Target: {fileID: 0}
   TargetHealth: 0
-  TargetImpactEffect: {fileID: 0}
+  FinalTarget: {fileID: 0}
+  LookRadius: 3
+  AttackRadius: 0.85
+  AttackRate: 1
+  AttackDamage: 1
   Boron: 0
   Aluminium: 0
 --- !u!95 &2074922155
@@ -2269,7 +2266,7 @@ GameObject:
   - component: {fileID: 2109663544}
   - component: {fileID: 2109663543}
   m_Layer: 9
-  m_Name: F1_Hydrogen
+  m_Name: F01_Hydrogen
   m_TagString: Friend
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2397,19 +2394,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CostValue: 0
   ScoreValue: 0
-  RunAway: 0
   MovementSpeed: 1
-  RunAwayTimer: 3
   VelocityCurrent: 0
   Grounded: 0
-  AttackDamage: 3
+  RunAway: 0
+  Target: {fileID: 0}
+  TargetHealth: 0
+  FinalTarget: {fileID: 0}
   LookRadius: 3
   AttackRadius: 3
   AttackRate: 2
-  FinalTarget: {fileID: 0}
-  Target: {fileID: 0}
-  TargetHealth: 0
-  TargetImpactEffect: {fileID: 0}
   Projectile: {fileID: 1801079812914224, guid: 0fa186b2c473eaf41abde5482de701e9, type: 2}
   FireLocation: {fileID: 18548673}
 --- !u!114 &2109663548
@@ -2437,5 +2431,5 @@ Transform:
   m_Children:
   - {fileID: 18548673}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

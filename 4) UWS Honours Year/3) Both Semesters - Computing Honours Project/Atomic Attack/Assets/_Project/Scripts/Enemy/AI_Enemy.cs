@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class AI_Enemy : AI_Human {
 
+    // Child Class AI_Enemy inheriting from Parent AI_Human.
     protected override void Start()
     {   // If GameObjectTag == Enemy, will target Friend.
         base.Start();
         SpawnPoint = GameObject.Find("SpawnPoint Enemy").transform;
         FinalTarget = GameObject.Find("SpawnPoint Friend").transform;
-        if (HealthSystem.Deceased == false) { InvokeRepeating("UpdateTargetFriend", 0f, 0.25f); }
+        if (HealthSystem.Deceased == false)
+        {
+            InvokeRepeating("UpdateTargetFriend", 0f, 0.25f);
+        }
         else { PlayAnimationDeath(); }
     }
 
@@ -45,6 +49,8 @@ public class AI_Enemy : AI_Human {
         catch (System.NullReferenceException) { };
     }
 
+    protected override void PlayAnimationAttack() { throw new System.NotImplementedException(); }
+    protected override void PlayAnimationDeath () { throw new System.NotImplementedException(); }
     protected override void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;

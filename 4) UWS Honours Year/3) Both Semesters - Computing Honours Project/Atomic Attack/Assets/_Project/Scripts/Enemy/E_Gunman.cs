@@ -3,25 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class E_Gunman : AI_Enemy {
-    // Child Class E_Gunman inheriting from Enemy.
+
+    // Child Class E_Gunman inheriting from AI_Enemy.
+    Animator Animator;
+
     [Space( 10), Header("[^ Child: AI_Enemy ]")]
-    [Space(-10), Header("[^ Child:   E_Gunman ]")]
+    [Space(-10), Header("[^ Child:   E_Gunman ] Damage")]
+    [SerializeField] protected float AttackRate = 0.75f;
+    protected float NextAttackTime = 0;
+
+    [Space( 10), Header("[^ Child:   E_Gunman ] Affected By")]
+    public bool Stunned;
+    public bool Blinded;
+    public bool Burned;
+    public bool OnCastle;
+
+    [Space( 10), Header("[^ Child:   E_Gunman ] Weapon")]
+    [Space(-10), Header("3.0f = Projectile Damage")]
     [SerializeField] GameObject Projectile;
     [SerializeField] Transform FireLocation;
-    [SerializeField] bool Stunned;
-    [SerializeField] bool Blinded;
-    [SerializeField] bool OnCastle;
+
 
     void Reset()
-    {   // Health = 6;
-        CostValue = 0;
-        ScoreValue = 2;
+    {
         MovementSpeed = 1f;
-        RunAwayTimer = 3f;
-        AttackDamage = 3;
         LookRadius = 4f;
-        AttackRadius = 4f;
-        AttackRate = 0.75f;
+        AttackRadius = LookRadius;
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        Animator = GetComponent<Animator>();
     }
 
     protected override void Update()
@@ -35,23 +48,6 @@ public class E_Gunman : AI_Enemy {
         }
     }
 
-    protected override void PlayAnimationAttack()
-    {
-        if (Time.time > NextAttackTime)
-        {
-            base.PlayAnimationAttack();
-            Shoot();
-        }
-    }
-
-    protected virtual void Shoot()
-    {   // Instantiating Bullet prefab.
-        GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
-        Bullet bullet = Bullet.GetComponent<Bullet>();
-        if (bullet != null) { bullet.Seek(Target); } // Using Bullet's script Seek method.
-        // Add Bullet's Damage on the prefab. AttackDamage value here is just reference.
-    }
-
     protected override void LookAtTarget()
     {
         if (OnCastle == false) { base.LookAtTarget(); }
@@ -60,9 +56,52 @@ public class E_Gunman : AI_Enemy {
             Vector3 dir = Target.position - transform.position;
             float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
             if (Angle <= 160) { MovementDirection = -1; }
-            if (Angle >= 170) { MovementDirection =  1; Angle -= 180; }
+            if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
             transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
         }
+    }
+
+    protected override void Movement()
+    {
+        base.Movement();
+        // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
+        float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
+        if (AttackRange <= AttackRadius)
+        {   // If inside AttackRadius, will start damaging enemy!
+            MovementSpeed = 0;
+            PlayAnimationAttack();
+        }
+        else
+        {
+            MovementSpeed = MovementSpeedInitial;
+            Animator.Play("Run");
+        }
+    }
+
+    protected override void PlayAnimationAttack()
+    {
+        if (Time.time > NextAttackTime)
+        {
+            Animator.Play("Attack", -1, 0);
+            NextAttackTime = Time.time + AttackRate;
+            Shoot();
+        }
+    }
+
+    protected override void PlayAnimationDeath()
+    {
+        Animator.Play("Die");
+        Destroy(gameObject, 1f);
+        return;
+        // Add to score or collateral damage score
+    }
+
+    protected virtual void Shoot()
+    {   // Instantiating Bullet prefab.
+        GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
+        Bullet bullet = Bullet.GetComponent<Bullet>();
+        if (bullet != null) { bullet.Seek(Target); } // Using Bullet's script Seek method.
+        // Add Bullet's Damage on the prefab. AttackDamage value here is just reference.
     }
 
     void OnCollisionEnter2D(Collision2D collision)

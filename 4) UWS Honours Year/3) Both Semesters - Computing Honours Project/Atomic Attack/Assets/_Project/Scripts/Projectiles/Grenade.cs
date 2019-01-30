@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour {
 
-    [SerializeField] GameObject Explosion;
-    public float Speed;
-    public float Damage;
-    public float ExplosionRadius;
-    [SerializeField] float ThrowAngle;
-    float Rand;
-
     HealthSystem HealthSystem;
     Rigidbody2D Rigidbody2D;
+
+    public float Speed;
+    public float Damage;
+    [SerializeField] GameObject Explosion;
+    public float ExplosionRadius;
+    [SerializeField] float ThrowAngle;
+    public bool Magnify; // if grenade in magnified area, will cause lil guys to fly away.
+
+    float Rand;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class Grenade : MonoBehaviour {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Rigidbody2D.AddForce(transform.up * ThrowAngle);
         Rigidbody2D.AddForce(transform.right * ThrowAngle);
+        Magnify = false;
     }
 
     // Whenever Grenade is thrown, will spin along the Z axis.
