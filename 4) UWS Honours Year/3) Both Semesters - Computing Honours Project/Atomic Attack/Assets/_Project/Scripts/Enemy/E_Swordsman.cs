@@ -8,15 +8,16 @@ public class E_Swordsman : AI_Enemy {
     Animator Animator;
 
     [Space( 10), Header("[^ Child: AI_Enemy ]")]
-    [Space(-10), Header("[^ Child:   E_Swordsman ] Damage")]
+    [Space(-10), Header("[^ Child:   E_Swordsman ]")]
     [SerializeField] protected float AttackRate = 1f;
     protected float NextAttackTime = 0;
+    #pragma warning disable
     [SerializeField] protected int AttackDamage = 1;
 
-    [Space( 10), Header("[^ Child:   E_Swordsman ] Affected By")]
+    [Space(10), Header("[^ Child:   E_Swordsman ] Affected By")]
+    public bool GrabbedByMouse;
     public bool Stunned;
     public bool Blinded;
-    public bool Burned;
 
     void Reset()
     {

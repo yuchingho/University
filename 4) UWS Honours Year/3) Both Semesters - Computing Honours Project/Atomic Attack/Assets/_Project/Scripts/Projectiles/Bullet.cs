@@ -7,8 +7,8 @@ public class Bullet : MonoBehaviour {
     protected HealthSystem HealthSystem;
     protected Transform Target;
 
-    public float Speed;
     public int Damage;
+    public float Speed;
     [SerializeField] GameObject Explosion;
 
     public void Seek (Transform target)

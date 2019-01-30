@@ -8,21 +8,21 @@ public class E_Gunman : AI_Enemy {
     Animator Animator;
 
     [Space( 10), Header("[^ Child: AI_Enemy ]")]
-    [Space(-10), Header("[^ Child:   E_Gunman ] Damage")]
+    [Space(-10), Header("[^ Child:   E_Gunman ]")]
     [SerializeField] protected float AttackRate = 0.75f;
     protected float NextAttackTime = 0;
+    #pragma warning disable
+    [SerializeField] string AttackDamage = "2 (Read Only)";
 
-    [Space( 10), Header("[^ Child:   E_Gunman ] Affected By")]
+    [Space(10), Header("[^ Child:   E_Gunman ] Weapon")]
+    [SerializeField] protected GameObject Projectile;
+    [SerializeField] protected Transform FireLocation;
+
+    [Space(10), Header("[^ Child:   E_Gunman ] Affected By")]
+    public bool GrabbedByMouse;
     public bool Stunned;
     public bool Blinded;
-    public bool Burned;
     public bool OnCastle;
-
-    [Space( 10), Header("[^ Child:   E_Gunman ] Weapon")]
-    [Space(-10), Header("3.0f = Projectile Damage")]
-    [SerializeField] GameObject Projectile;
-    [SerializeField] Transform FireLocation;
-
 
     void Reset()
     {
@@ -96,12 +96,27 @@ public class E_Gunman : AI_Enemy {
         // Add to score or collateral damage score
     }
 
-    protected virtual void Shoot()
+    void Shoot()
     {   // Instantiating Bullet prefab.
         GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
         Bullet bullet = Bullet.GetComponent<Bullet>();
         if (bullet != null) { bullet.Seek(Target); } // Using Bullet's script Seek method.
         // Add Bullet's Damage on the prefab. AttackDamage value here is just reference.
+    }
+
+    void OnMouseDown()
+    {
+        // when tapped, stop moving/attacking, play die animation, then get up.
+        // coroutine?
+    }
+
+    void OnMouseDrag()
+    {
+        //Destroy(this.gameObject);
+        //Animator.Play("Die");
+        //Animator.enabled = false;
+
+        // when dragged, stop moving/attacking, don't play die animation, and can be dragged about and in air
     }
 
     void OnCollisionEnter2D(Collision2D collision)

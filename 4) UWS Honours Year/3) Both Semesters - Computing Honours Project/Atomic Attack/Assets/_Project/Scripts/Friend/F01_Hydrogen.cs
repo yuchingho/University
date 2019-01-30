@@ -5,10 +5,9 @@ using UnityEngine;
 public class F01_Hydrogen : F_Gunman {
 
     // Child Class F01_Hydrogen inheriting from F_Gunman.
-    //[Space( 10), Header("[^ Child: F01_Hydrogen ] Damage")]
-    //string Notes2 = "MovementSpeed = 1f \nHealth = 6f \nAttackDamage = 3f";
-    //[Space(-10), Header("1.2f = MovementSpeed")]
-    //[Space(-10), Header("6.0f = Health")]
+    [Space( 10), Header("[^ Child: F01_Hydrogen ] Damage")]
+    #pragma warning disable
+    [SerializeField] string Effect = "AoE Damage";
 
     void Reset()
     {

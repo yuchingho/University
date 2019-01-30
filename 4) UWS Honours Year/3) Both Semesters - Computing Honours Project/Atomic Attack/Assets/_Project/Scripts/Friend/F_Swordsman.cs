@@ -8,9 +8,10 @@ public class F_Swordsman : AI_Friend {
     Animator Animator;
 
     [Space( 10), Header("[^ Child: AI_Friend ]")]
-    [Space(-10), Header("[^ Child:   F_Swordsman ] Damage")]
+    [Space(-10), Header("[^ Child:   F_Swordsman ]")]
     [SerializeField] protected float AttackRate = 1f;
     protected float NextAttackTime = 0;
+    #pragma warning disable
     [SerializeField] protected int AttackDamage = 1;
 
     [Space( 10), Header("[^ Child:   F_Swordsman ] Steriods")]

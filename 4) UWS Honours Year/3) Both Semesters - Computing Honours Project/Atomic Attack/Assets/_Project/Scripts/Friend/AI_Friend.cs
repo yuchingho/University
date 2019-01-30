@@ -8,16 +8,11 @@ public class AI_Friend : AI_Human {
     protected override void Start()
     {   // If GameObjectTag == Friend, will target Enemy.
         base.Start();
-        SpawnPoint = GameObject.Find("SpawnPoint Friend").transform;
+        //SpawnPoint = GameObject.Find("SpawnPoint Friend").transform;
         FinalTarget = GameObject.Find("Castle Health").transform;
-        if (HealthSystem.Deceased == false)
-        {
-            InvokeRepeating("UpdateTargetEnemy", 0f, 0.25f);
-        }
-        else { PlayAnimationDeath(); }
+        InvokeRepeating("UpdateTargetEnemy", 0f, 0.25f);
     }
 
-    // Prioritise Barrels...
     protected virtual void UpdateTargetEnemy()
     {   // If GameObjectTag == Friend, will target Enemy.
         GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Enemy");

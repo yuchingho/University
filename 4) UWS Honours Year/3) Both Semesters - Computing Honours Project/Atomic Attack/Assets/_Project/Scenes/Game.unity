@@ -521,12 +521,13 @@ MonoBehaviour:
   LookRadius: 4
   AttackRadius: 4
   AttackRate: 0.75
-  Stunned: 0
-  Blinded: 0
-  Burned: 0
-  OnCastle: 0
+  AttackDamage: 2 (Read Only)
   Projectile: {fileID: 1574258756806926, guid: 0f6b8ae62c4abbf42b1bf274ca991f34, type: 2}
   FireLocation: {fileID: 1994818427}
+  GrabbedByMouse: 0
+  Stunned: 0
+  Blinded: 0
+  OnCastle: 0
 --- !u!4 &330684817
 Transform:
   m_ObjectHideFlags: 0
@@ -539,7 +540,7 @@ Transform:
   m_Children:
   - {fileID: 1994818427}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330684818
 MonoBehaviour:
@@ -1741,7 +1742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1899439178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1857,9 +1858,9 @@ MonoBehaviour:
   AttackRadius: 0.85
   AttackRate: 1
   AttackDamage: 1
+  GrabbedByMouse: 0
   Stunned: 0
   Blinded: 0
-  Burned: 0
 --- !u!4 &1899439182
 Transform:
   m_ObjectHideFlags: 0
@@ -1872,7 +1873,7 @@ Transform:
   m_Children:
   - {fileID: 581727372}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1899439183
 Animator:
@@ -2064,10 +2065,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.53, y: 1.29}
+    - - {x: -0.5292125, y: 1.2803231}
       - {x: -0.53, y: -1.76}
       - {x: 0.53, y: -1.76}
-      - {x: 0.75018, y: 2.519733}
+      - {x: 0.53, y: 1.76}
 --- !u!1 &2074922149
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,7 +2168,7 @@ Transform:
   m_Children:
   - {fileID: 179185572}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2074922153
 BoxCollider2D:
@@ -2249,7 +2250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4841d6fb8b6845439f9515b7a495f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 7
   Deceased: 0
 --- !u!1 &2109663542
 GameObject:
@@ -2271,7 +2272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2109663543
 Animator:
   serializedVersion: 3
@@ -2404,8 +2405,10 @@ MonoBehaviour:
   LookRadius: 3
   AttackRadius: 3
   AttackRate: 2
+  AttackDamage: 2 (Read Only)
   Projectile: {fileID: 1801079812914224, guid: 0fa186b2c473eaf41abde5482de701e9, type: 2}
   FireLocation: {fileID: 18548673}
+  Effect: AoE Damage
 --- !u!114 &2109663548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2431,5 +2434,5 @@ Transform:
   m_Children:
   - {fileID: 18548673}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

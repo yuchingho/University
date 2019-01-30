@@ -19,14 +19,14 @@ public abstract class AI_Human : MonoBehaviour {
     [SerializeField] protected float VelocityCurrent;
     [SerializeField] protected bool Grounded;
     [SerializeField] protected bool RunAway;
-    protected Transform SpawnPoint;
+    //protected Transform SpawnPoint;
 
     [Space( 10), Header("[ Parent: AI_Human ] Target")]
     public Transform Target;
     [SerializeField] protected float TargetHealth;
     public Transform FinalTarget;
 
-    [Space( 10), Header("---------- Stats ----------")]
+    [Space( 10), Header("----------------- Stats -----------------")]
     [SerializeField] protected float LookRadius;
     [SerializeField] protected float AttackRadius;
 

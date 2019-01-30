@@ -8,12 +8,13 @@ public class F_Gunman : AI_Friend {
     Animator Animator;
 
     [Space( 10), Header("[^ Child: AI_Friend ]")]
-    [Space(-10), Header("[^ Child:   F_Gunman ] Damage")]
+    [Space(-10), Header("[^ Child:   F_Gunman ]")]
     [SerializeField] protected float AttackRate = 0.75f;
     protected float NextAttackTime = 0;
+    #pragma warning disable
+    [SerializeField] string AttackDamage = "2 (Read Only)";
 
-    [Space( 10), Header("[^ Child:   F_Gunman ] Weapon")]
-    [Space(-10), Header("3.0f = Projectile Damage")]
+    [Space(10), Header("[^ Child:   F_Gunman ] Weapon")]
     [SerializeField] protected GameObject Projectile;
     [SerializeField] protected Transform FireLocation;
 

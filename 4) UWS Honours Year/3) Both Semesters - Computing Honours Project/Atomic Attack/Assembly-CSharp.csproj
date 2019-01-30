@@ -73,7 +73,6 @@
     <Compile Include="Assets\_Project\Scripts\Friend\F03_Lithium.cs" />
     <Compile Include="Assets\_Project\Scripts\HealthSystem.cs" />
     <Compile Include="Assets\_Project\Scripts\ManagerGame.cs" />
-    <Compile Include="Assets\_Project\Scripts\MouseGrabbed.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\Bullet.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\Grenade.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\RemoveEffect.cs" />

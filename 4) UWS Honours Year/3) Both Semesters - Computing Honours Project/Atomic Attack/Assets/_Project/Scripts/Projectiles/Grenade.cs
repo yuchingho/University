@@ -7,8 +7,8 @@ public class Grenade : MonoBehaviour {
     HealthSystem HealthSystem;
     Rigidbody2D Rigidbody2D;
 
+    public int Damage;
     public float Speed;
-    public float Damage;
     [SerializeField] GameObject Explosion;
     public float ExplosionRadius;
     [SerializeField] float ThrowAngle;
