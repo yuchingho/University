@@ -10,6 +10,9 @@ public class HealthSystem : MonoBehaviour {
     public void DamageTaken(float Damage)
     {
         Health -= Damage;
-        if (Health <= 0) { Deceased = true; }
+        if (Health <= 0)
+        {
+            Deceased = true;
+        }
     }
 }

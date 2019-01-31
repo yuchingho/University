@@ -8,7 +8,6 @@ public class AI_Friend : AI_Human {
     protected override void Start()
     {   // If GameObjectTag == Friend, will target Enemy.
         base.Start();
-        //SpawnPoint = GameObject.Find("SpawnPoint Friend").transform;
         FinalTarget = GameObject.Find("Castle Health").transform;
         InvokeRepeating("UpdateTargetEnemy", 0f, 0.25f);
     }
@@ -27,21 +26,17 @@ public class AI_Friend : AI_Human {
                 NearestEnemy = NewEnemy;
             }
         }
-        try
-        {
-            if (NearestEnemy != null && ShortestDistance <= LookRadius)
-            {   // Updating Target to Nearest Enemy, and getting Target's Health.
-                Target = NearestEnemy.transform;
-                TargetHealth = NearestEnemy.GetComponent<HealthSystem>().Health;
-                LookAtTarget(); // Will keep on looking even if target is "dead"
-            }
-            else
-            {   // If no more Enemies, look towards Castle.
-                Target = FinalTarget;
-                LookAtTarget();
-            }
+        if (NearestEnemy != null && ShortestDistance <= LookRadius)
+        {   // Updating Target to Nearest Enemy, and getting Target's Health.
+            Target = NearestEnemy.transform;
+            TargetHealth = NearestEnemy.GetComponent<HealthSystem>().Health;
+            LookAtTarget();
         }
-        catch (System.NullReferenceException) { };
+        else
+        {   // If no more Enemies, look towards Castle.
+            Target = FinalTarget;
+            LookAtTarget();
+        }
     }
 
     protected override void PlayAnimationAttack() { throw new System.NotImplementedException(); }

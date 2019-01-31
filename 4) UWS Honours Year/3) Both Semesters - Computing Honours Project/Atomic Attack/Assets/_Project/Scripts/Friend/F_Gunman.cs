@@ -12,7 +12,7 @@ public class F_Gunman : AI_Friend {
     [SerializeField] protected float AttackRate = 0.75f;
     protected float NextAttackTime = 0;
     #pragma warning disable
-    [SerializeField] string AttackDamage = "2 (Read Only)";
+    [SerializeField] string AttackDamage = "2 [RO] Add to Prefab";
 
     [Space(10), Header("[^ Child:   F_Gunman ] Weapon")]
     [SerializeField] protected GameObject Projectile;

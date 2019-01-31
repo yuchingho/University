@@ -19,7 +19,6 @@ public abstract class AI_Human : MonoBehaviour {
     [SerializeField] protected float VelocityCurrent;
     [SerializeField] protected bool Grounded;
     [SerializeField] protected bool RunAway;
-    //protected Transform SpawnPoint;
 
     [Space( 10), Header("[ Parent: AI_Human ] Target")]
     public Transform Target;
@@ -35,19 +34,11 @@ public abstract class AI_Human : MonoBehaviour {
         HealthSystem = GetComponent<HealthSystem>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         MovementSpeedInitial = MovementSpeed;
-        // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
-        // If UpdateTarget() has a Target, will go to LookatTarget().
     }
 
-    protected virtual void Update()
-    {
-        if (HealthSystem.Deceased == false)
-        {
-            VelocityCurrent = Rigidbody2D.velocity.magnitude;
-            if (Grounded == true) { Movement(); }
-        }
-        else { PlayAnimationDeath(); }
-    }
+    // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
+    // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
+    protected virtual void Update() { Movement(); }
 
     protected virtual void LookAtTarget()
     {   // Sprites flipping to look at its Target.
@@ -62,6 +53,7 @@ public abstract class AI_Human : MonoBehaviour {
     {   // When velocity = 0, can't start moving again. fix???
         Rigidbody2D.velocity = new Vector2(MovementSpeed * -MovementDirection, 0);
         transform.localScale = new Vector2(0.3f * MovementDirection, 0.3f);
+        VelocityCurrent = Rigidbody2D.velocity.magnitude;
     }
 
     // Animator.Play(state, layer, normalizedTime);
@@ -74,6 +66,7 @@ public abstract class AI_Human : MonoBehaviour {
     protected abstract void OnDrawGizmos();
 
     // Added two new Layers - "Enemy" and "Friend".
-    // Enemies and Friends can overlap because the two layers colliding each other have been disabled.
+    // Enemies and Friends can overlap.
+    // The two layers colliding have been disabled.
     // Edit > Project Settings > Physics 2D.
 }

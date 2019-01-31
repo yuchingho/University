@@ -12,7 +12,7 @@ public class E_Gunman : AI_Enemy {
     [SerializeField] protected float AttackRate = 0.75f;
     protected float NextAttackTime = 0;
     #pragma warning disable
-    [SerializeField] string AttackDamage = "2 (Read Only)";
+    [SerializeField] string AttackDamage = "2 [RO] Add to Prefab";
 
     [Space(10), Header("[^ Child:   E_Gunman ] Weapon")]
     [SerializeField] protected GameObject Projectile;
@@ -35,13 +35,10 @@ public class E_Gunman : AI_Enemy {
     {
         base.Start();
         Animator = GetComponent<Animator>();
-    }
 
-    protected override void Update()
-    {
-        base.Update();  // If not on Castle, run as normal. If so, range = 10f.
+        // -------
         if (OnCastle == true)
-        {
+        {   // If not on Castle, run as normal. If so, range = 10f.
             MovementSpeed = 0f;
             LookRadius = 10f;
             AttackRadius = 10f;
@@ -50,8 +47,7 @@ public class E_Gunman : AI_Enemy {
 
     protected override void LookAtTarget()
     {
-        if (OnCastle == false) { base.LookAtTarget(); }
-        else
+        if (OnCastle == true)
         {   // When on Castle, different Angle algorithm so will face Target correctly.
             Vector3 dir = Target.position - transform.position;
             float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
@@ -59,23 +55,29 @@ public class E_Gunman : AI_Enemy {
             if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
             transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
         }
+        else { base.LookAtTarget(); }
     }
 
     protected override void Movement()
     {
-        base.Movement();
-        // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
-        float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
-        if (AttackRange <= AttackRadius)
-        {   // If inside AttackRadius, will start damaging enemy!
-            MovementSpeed = 0;
-            PlayAnimationAttack();
-        }
-        else
+        if (Grounded == true && GrabbedByMouse == false)
         {
-            MovementSpeed = MovementSpeedInitial;
-            Animator.Play("Run");
+            base.Movement();
+            // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
+            float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
+            if (AttackRange <= AttackRadius)
+            {   // If inside AttackRadius, will start damaging enemy!
+                MovementSpeed = 0;
+                PlayAnimationAttack();
+            }
+            else
+            {
+                MovementSpeed = MovementSpeedInitial;
+                Animator.Play("Run");
+            }
         }
+        // For when chucked in air, only start coroutine after enemy has hit the ground.
+        else if (Grounded == true && GrabbedByMouse == true) { StartCoroutine(HitTheGround()); }
     }
 
     protected override void PlayAnimationAttack()
@@ -106,23 +108,48 @@ public class E_Gunman : AI_Enemy {
 
     void OnMouseDown()
     {
-        // when tapped, stop moving/attacking, play die animation, then get up.
-        // coroutine?
+        GrabbedByMouse = true;
+        MovementSpeed = 0;
     }
 
     void OnMouseDrag()
     {
-        //Destroy(this.gameObject);
-        //Animator.Play("Die");
-        //Animator.enabled = false;
+        if (Input.mousePosition.y >= 130)
+        {
+            GrabbedByMouse = true;
+            Grounded = false;
+            gameObject.layer = 10;  //Mouse Layer
+            Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
+            transform.position = Camera.main.ScreenToWorldPoint(newPosition);
 
-        // when dragged, stop moving/attacking, don't play die animation, and can be dragged about and in air
+            // need to add force so "throws" like a ball.
+        }
+    }
+
+    void OnMouseUp()
+    {   // Health System here because will double-register otherwise.
+        GetComponent<HealthSystem>().DamageTaken(1);
+        gameObject.layer = 8;     //Enemy Layer
+    }
+
+    IEnumerator HitTheGround()
+    {
+        Animator.Play("Die");
+        yield return new WaitForSeconds(1f);
+        GrabbedByMouse = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground") { Grounded = true; }
-        //Destroy(GetComponent<SpawnOnCastle>());
-        else if (collision.gameObject.tag == "Castle") { OnCastle = true; }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Castle")
+        {
+            OnCastle = true;
+            gameObject.layer = 11;     //Castle Layer
+        }
     }
 }
