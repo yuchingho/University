@@ -15,7 +15,6 @@ public class E_Swordsman : AI_Enemy {
     [SerializeField] protected int AttackDamage = 1;
 
     [Space(10), Header("[^ Child:   E_Swordsman ] Affected By")]
-    public bool GrabbedByMouse;
     public bool Stunned;
     public bool Blinded;
 

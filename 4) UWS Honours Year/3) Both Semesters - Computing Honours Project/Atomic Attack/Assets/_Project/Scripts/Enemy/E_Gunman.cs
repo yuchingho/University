@@ -19,7 +19,6 @@ public class E_Gunman : AI_Enemy {
     [SerializeField] protected Transform FireLocation;
 
     [Space(10), Header("[^ Child:   E_Gunman ] Affected By")]
-    public bool GrabbedByMouse;
     public bool Stunned;
     public bool Blinded;
     public bool OnCastle;
@@ -35,14 +34,6 @@ public class E_Gunman : AI_Enemy {
     {
         base.Start();
         Animator = GetComponent<Animator>();
-
-        // -------
-        if (OnCastle == true)
-        {   // If not on Castle, run as normal. If so, range = 10f.
-            MovementSpeed = 0f;
-            LookRadius = 10f;
-            AttackRadius = 10f;
-        }
     }
 
     protected override void LookAtTarget()
@@ -56,6 +47,19 @@ public class E_Gunman : AI_Enemy {
             transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
         }
         else { base.LookAtTarget(); }
+    }
+
+    protected override void Update()
+    {
+        if (OnCastle == true)
+        {
+            MovementSpeed = 0;
+            base.Update();
+        }
+        else
+        {
+            base.Update();
+        }
     }
 
     protected override void Movement()
@@ -118,18 +122,19 @@ public class E_Gunman : AI_Enemy {
         {
             GrabbedByMouse = true;
             Grounded = false;
-            gameObject.layer = 10;  //Mouse Layer
+            gameObject.layer = 10;  // Mouse Layer.
             Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
             transform.position = Camera.main.ScreenToWorldPoint(newPosition);
 
             // need to add force so "throws" like a ball.
+            // add fall damage
         }
     }
 
     void OnMouseUp()
     {   // Health System here because will double-register otherwise.
         GetComponent<HealthSystem>().DamageTaken(1);
-        gameObject.layer = 8;     //Enemy Layer
+        gameObject.layer = 8;     // Enemy Layer.
     }
 
     IEnumerator HitTheGround()
@@ -141,15 +146,20 @@ public class E_Gunman : AI_Enemy {
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground") { Grounded = true; }
-    }
+        if (collision.gameObject.tag == "Ground")
+        {
+            OnCastle = false;
+            Grounded = true;
+            LookRadius = 4f;
+            AttackRadius = 4f;
+        }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Castle")
+        else if (collision.gameObject.tag == "Castle")
         {
             OnCastle = true;
-            gameObject.layer = 11;     //Castle Layer
+            Grounded = true;
+            LookRadius = 10f;
+            AttackRadius = 10f;
         }
     }
 }

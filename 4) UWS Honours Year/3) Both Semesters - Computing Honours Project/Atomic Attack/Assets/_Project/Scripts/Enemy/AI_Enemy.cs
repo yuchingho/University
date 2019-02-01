@@ -8,7 +8,7 @@ public class AI_Enemy : AI_Human {
     protected override void Start()
     {   // If GameObjectTag == Enemy, will target Friend.
         base.Start();
-        FinalTarget = GameObject.Find("SpawnPoint Friend").transform;
+        FinalTarget = GameObject.Find("Enemy End").transform;
         InvokeRepeating("UpdateTargetFriend", 0f, 0.25f);
     }
 

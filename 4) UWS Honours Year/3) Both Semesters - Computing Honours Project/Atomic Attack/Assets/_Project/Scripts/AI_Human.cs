@@ -16,8 +16,8 @@ public abstract class AI_Human : MonoBehaviour {
     [SerializeField] protected float MovementSpeed;
     protected float MovementDirection;
     protected float MovementSpeedInitial;
-    [SerializeField] protected float VelocityCurrent;
     [SerializeField] protected bool Grounded;
+    public bool GrabbedByMouse;
     [SerializeField] protected bool RunAway;
 
     [Space( 10), Header("[ Parent: AI_Human ] Target")]
@@ -38,7 +38,14 @@ public abstract class AI_Human : MonoBehaviour {
 
     // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
     // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
-    protected virtual void Update() { Movement(); }
+    protected virtual void Update()
+    {
+        if (HealthSystem.Deceased == true)
+        {
+            PlayAnimationDeath();
+        }
+        else { Movement(); }
+    }
 
     protected virtual void LookAtTarget()
     {   // Sprites flipping to look at its Target.
@@ -53,7 +60,10 @@ public abstract class AI_Human : MonoBehaviour {
     {   // When velocity = 0, can't start moving again. fix???
         Rigidbody2D.velocity = new Vector2(MovementSpeed * -MovementDirection, 0);
         transform.localScale = new Vector2(0.3f * MovementDirection, 0.3f);
-        VelocityCurrent = Rigidbody2D.velocity.magnitude;
+        if (HealthSystem.Deceased == true)
+        {
+            PlayAnimationDeath();
+        }
     }
 
     // Animator.Play(state, layer, normalizedTime);
