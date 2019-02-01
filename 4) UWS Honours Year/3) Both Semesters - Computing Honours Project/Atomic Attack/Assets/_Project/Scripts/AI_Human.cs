@@ -40,11 +40,15 @@ public abstract class AI_Human : MonoBehaviour {
     // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
     protected virtual void Update()
     {
-        if (HealthSystem.Deceased == true)
+        try
         {
-            PlayAnimationDeath();
+            if (HealthSystem.Deceased == true)
+            {
+                PlayAnimationDeath();
+            }
+            else { Movement(); }
         }
-        else { Movement(); }
+        catch (System.NullReferenceException) { };
     }
 
     protected virtual void LookAtTarget()

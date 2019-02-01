@@ -23,6 +23,8 @@ public class E_Gunman : AI_Enemy {
     public bool Blinded;
     public bool OnCastle;
 
+    Vector3 PreviousGrabbedPosition;
+
     void Reset()
     {
         MovementSpeed = 1f;
@@ -123,11 +125,11 @@ public class E_Gunman : AI_Enemy {
             GrabbedByMouse = true;
             Grounded = false;
             gameObject.layer = 10;  // Mouse Layer.
+            // Calculating the ThrowVelocity.
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+            PreviousGrabbedPosition = transform.position; 
             Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
             transform.position = Camera.main.ScreenToWorldPoint(newPosition);
-
-            // need to add force so "throws" like a ball.
-            // add fall damage
         }
     }
 
@@ -135,6 +137,14 @@ public class E_Gunman : AI_Enemy {
     {   // Health System here because will double-register otherwise.
         GetComponent<HealthSystem>().DamageTaken(1);
         gameObject.layer = 8;     // Enemy Layer.
+        // Calculating the ThrowVelocity.
+        Vector3 ThrowVector = transform.position - PreviousGrabbedPosition;
+        float ThrowSpeed = ThrowVector.magnitude / Time.deltaTime;
+        Vector3 ThrowVelocity = ThrowSpeed * ThrowVector.normalized;
+        gameObject.GetComponent<Rigidbody2D>().velocity = ThrowVelocity;
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+
+        // add fall damage
     }
 
     IEnumerator HitTheGround()
