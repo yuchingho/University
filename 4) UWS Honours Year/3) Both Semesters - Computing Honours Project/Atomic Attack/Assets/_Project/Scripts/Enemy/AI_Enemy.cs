@@ -14,22 +14,22 @@ public class AI_Enemy : AI_Human {
 
     protected virtual void UpdateTargetFriend()
     {   // If GameObjectTag == Enemy, will target Friend.
-        GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Friend");
-        float ShortestDistance = Mathf.Infinity;
-        GameObject NearestEnemy = null;
-        foreach (GameObject NewEnemy in Enemies)
+        GameObject[] Friends = GameObject.FindGameObjectsWithTag("Friend");
+        float ShortestDistanceF = Mathf.Infinity;
+        GameObject NearestFriend = null;
+        foreach (GameObject NewFriend in Friends)
         {   // ForEach algorithm to calculate Nearest Enemy.
-            float DistanceToEnemy = Vector2.Distance(transform.position, NewEnemy.transform.position);
-            if (DistanceToEnemy < ShortestDistance)
+            float DistanceToFriend = Vector2.Distance(transform.position, NewFriend.transform.position);
+            if (DistanceToFriend < ShortestDistanceF)
             {
-                ShortestDistance = DistanceToEnemy;
-                NearestEnemy = NewEnemy;
+                ShortestDistanceF = DistanceToFriend;
+                NearestFriend = NewFriend;
             }
         }
-        if (NearestEnemy != null && ShortestDistance <= LookRadius)
+        if (NearestFriend != null && ShortestDistanceF <= LookRadius)
         {   // Updating Target to Nearest Enemy, and getting Target's Health.
-            Target = NearestEnemy.transform;
-            TargetHealth = NearestEnemy.GetComponent<HealthSystem>().Health;
+            Target = NearestFriend.transform;
+            TargetHealth = NearestFriend.GetComponent<HealthSystem>().Health;
             LookAtTarget();
         }
         else

@@ -82,4 +82,25 @@ public class F_Swordsman : AI_Friend {
             // If there's one f_swordsman vs one e_swordsman, get null reference exception after one hit?
         }
     }
+
+
+    /*
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "CastleTrigger")
+        {
+            //Debug.Log("boundary");
+            this.gameObject.layer = 12;     // Boundary Layer.
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "CastleTrigger")
+        {
+            //Debug.Log("enemy");
+
+            this.gameObject.layer = 8;     // Enemy Layer.
+        }
+    }*/
 }

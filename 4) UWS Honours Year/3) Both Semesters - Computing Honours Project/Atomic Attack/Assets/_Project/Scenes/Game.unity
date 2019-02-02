@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 18548673}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: F01_ThrowPoint
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 133400067}
   - component: {fileID: 133400069}
   - component: {fileID: 133400068}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Castle Health
   m_TagString: Enemy
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -165,7 +165,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 133400066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.23, y: -1.45, z: 0}
+  m_LocalPosition: {x: 7.23, y: -1.45, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -180,7 +180,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 179185572}
   - component: {fileID: 179185573}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: FS_DamageArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2061296406}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &246065175
 EdgeCollider2D:
@@ -434,7 +434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &330684812
 Animator:
   serializedVersion: 3
@@ -580,7 +580,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 330684811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.98, y: 4.49, z: 0}
+  m_LocalPosition: {x: 7.98, y: -1.45, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 1994818427}
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4841d6fb8b6845439f9515b7a495f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 6
+  Health: 600
   Deceased: 0
 --- !u!1 &393917650
 GameObject:
@@ -609,7 +609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393917651}
   - component: {fileID: 393917652}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Barrier Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,7 +1473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581727372}
   - component: {fileID: 581727373}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ES_DamageArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1555,7 +1555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697928938}
   - component: {fileID: 697928939}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Barrier Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1587,7 +1587,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13957453, y: 15.475499}
+  m_Offset: {x: 0.13957453, y: 15.369552}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1598,7 +1598,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.279149, y: 31.950998}
+  m_Size: {x: 1.279149, y: 32.162895}
   m_EdgeRadius: 0
 --- !u!1 &802226366
 GameObject:
@@ -1627,7 +1627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2061296406}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &802226368
 EdgeCollider2D:
@@ -1822,7 +1822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1859210162}
   - component: {fileID: 1859210163}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Barrier Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1854,7 +1854,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13957453, y: 15.472492}
+  m_Offset: {x: 0.13957453, y: 15.376028}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1865,7 +1865,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.279149, y: 31.944984}
+  m_Size: {x: 1.279149, y: 32.137913}
   m_EdgeRadius: 0
 --- !u!1 &1899439177
 GameObject:
@@ -1887,7 +1887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1899439178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2058,7 +2058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994818427}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: EG_GunPoint
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -2078,6 +2078,60 @@ Transform:
   m_Father: {fileID: 330684817}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2019753070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019753071}
+  - component: {fileID: 2019753072}
+  m_Layer: 12
+  m_Name: Wall
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2019753071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2019753070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2061296406}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2019753072
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2019753070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.41031384, y: 0.20700955}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.17937231, y: 2.0935893}
+  m_EdgeRadius: 0
 --- !u!1 &2036792236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,7 +2140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036792237}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Barriers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2147,7 +2201,7 @@ GameObject:
   - component: {fileID: 2061296406}
   - component: {fileID: 2061296405}
   - component: {fileID: 2061296407}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Castle
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2210,6 +2264,7 @@ Transform:
   m_LocalPosition: {x: 7.916, y: 1.53, z: 1}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
+  - {fileID: 2019753071}
   - {fileID: 802226367}
   - {fileID: 246065174}
   - {fileID: 2127877965}
@@ -2231,7 +2286,6 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.5295291, y: -0.83865803}
   - {x: -0.53059673, y: 1.2829412}
   - {x: 0.65186477, y: 1.8567041}
 --- !u!1 &2074922149
@@ -2415,7 +2469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4841d6fb8b6845439f9515b7a495f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 7
+  Health: 900
   Deceased: 0
 --- !u!1 &2109663542
 GameObject:
@@ -2437,7 +2491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2109663543
 Animator:
   serializedVersion: 3
@@ -2628,7 +2682,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2061296406}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &2127877966
 EdgeCollider2D:

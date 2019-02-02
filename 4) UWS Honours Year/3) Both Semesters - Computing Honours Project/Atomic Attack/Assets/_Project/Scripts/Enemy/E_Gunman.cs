@@ -141,7 +141,7 @@ public class E_Gunman : AI_Enemy {
         Vector3 ThrowVector = transform.position - PreviousGrabbedPosition;
         float ThrowSpeed = ThrowVector.magnitude / Time.deltaTime;
         Vector3 ThrowVelocity = ThrowSpeed * ThrowVector.normalized;
-        gameObject.GetComponent<Rigidbody2D>().velocity = ThrowVelocity;
+        gameObject.GetComponent<Rigidbody2D>().velocity = ThrowVelocity/5;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
 
         // add fall damage
