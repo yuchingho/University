@@ -41,6 +41,8 @@ public class E_Swordsman : AI_Enemy {
 
             // If there's one f_swordsman vs one e_gunman, health system works.
             // If there's one f_swordsman vs one e_swordsman, get null reference exception after one hit?
+            // Why the fuck are you bugging out when being shot at?
+            // Why the fuck are you bugging out when chucked in air?
         }
     }
 }

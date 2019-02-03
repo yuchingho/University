@@ -21,12 +21,12 @@ public class F_Gunman : AI_Friend {
         AttackRadius = LookRadius;
     }
 
-    protected virtual void Shoot()
+    protected override void Shoot()
     {   // Instantiating Bullet prefab.
         GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
         Bullet bullet = Bullet.GetComponent<Bullet>();
-        if (bullet != null) { bullet.Seek(Target); } // Using Bullet's script Seek method.
-        // Add Bullet's Damage on the prefab. AttackDamage value here is just reference.
+        // Using Bullet's script Seek method.
+        if (bullet != null) { bullet.Seek(Target); } 
     }
 
     void OnCollisionEnter2D(Collision2D collision)

@@ -105,10 +105,8 @@ public class AI_Enemy : AI_Human {
         Vector3 ThrowVelocity = ThrowSpeed * ThrowVector.normalized;
         gameObject.GetComponent<Rigidbody2D>().velocity = ThrowVelocity / 5;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-
-        // add fall damage
-        //GetComponent<HealthSystem>().DamageTaken(1);
-
+        // Adding fall damage.
+        GetComponent<HealthSystem>().DamageTaken(ThrowVelocity.y);
     }
 
     protected virtual IEnumerator HitTheGround()

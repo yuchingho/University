@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Grenade : _Explode {
 
-    HealthSystem HealthSystem;
     Rigidbody2D Rigidbody2D;
+    protected HealthSystem HealthSystem;
 
     [SerializeField] float Speed;
     [SerializeField] GameObject Explosion;

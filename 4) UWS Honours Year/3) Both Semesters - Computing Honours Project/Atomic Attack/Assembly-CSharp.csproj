@@ -70,7 +70,7 @@
     <Compile Include="Assets\_Project\Scripts\Friend\F_Swordsman.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F01_Hydrogen.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F02_Helium.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\F03_Li_11_Na.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F03_Lithium.cs" />
     <Compile Include="Assets\_Project\Scripts\HealthSystem.cs" />
     <Compile Include="Assets\_Project\Scripts\ManagerGame.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\_Explode.cs" />

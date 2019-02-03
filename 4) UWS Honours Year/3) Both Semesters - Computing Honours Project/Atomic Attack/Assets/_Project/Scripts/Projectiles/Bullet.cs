@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-    protected HealthSystem HealthSystem;
     protected Transform Target;
+    protected HealthSystem HealthSystem;
 
-    public int Damage;
-    public float Speed;
+    [Space( 18)] public int Damage;
+    [SerializeField] float Speed;
     [SerializeField] GameObject Explosion;
 
     public void Seek (Transform target)
