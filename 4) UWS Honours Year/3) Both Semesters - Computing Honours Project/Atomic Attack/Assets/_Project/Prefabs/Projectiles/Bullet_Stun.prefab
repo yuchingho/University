@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4842950690893050}
-  - component: {fileID: 114716621034392504}
+  - component: {fileID: 114995437437027566}
   - component: {fileID: 212761615438738664}
   m_Layer: 0
   m_Name: Bullet_Stun
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114716621034392504
+--- !u!114 &114995437437027566
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,12 +49,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1026850884208290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c76b5c0d87b47034db877b33fae5354c, type: 3}
+  m_Script: {fileID: 11500000, guid: 03b8a8f68328a9248b83215d23d26575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 2
   Speed: 15
   Explosion: {fileID: 1854532116624764, guid: e4c46523e512bf24cb40efb5e63fd047, type: 2}
+  Effect: {fileID: 0}
 --- !u!212 &212761615438738664
 SpriteRenderer:
   m_ObjectHideFlags: 1
