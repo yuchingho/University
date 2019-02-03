@@ -28,7 +28,7 @@ public class F01_Hydrogen : F_Gunman {
 
     protected override void Shoot() { }
     IEnumerator ThrowGrenade()
-    {   // Instantiating Grenade prefab.
+    {   // Instantiating Grenade prefab with delay so inline with Throw Animation.
         yield return new WaitForSeconds(0.35f);
         Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
         // Add Grenade's Damage on the prefab. AttackDamage value here is just reference.

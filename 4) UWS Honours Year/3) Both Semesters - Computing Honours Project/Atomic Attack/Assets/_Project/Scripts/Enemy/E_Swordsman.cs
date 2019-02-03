@@ -5,70 +5,31 @@ using UnityEngine;
 public class E_Swordsman : AI_Enemy {
 
     // Child Class E_Swordsman inheriting from AI_Enemy.
-    Animator Animator;
-
-    [Space( 10), Header("[^ Child: AI_Enemy ]")]
-    [Space(-10), Header("[^ Child:   E_Swordsman ]")]
-    [SerializeField] protected float AttackRate = 1f;
-    protected float NextAttackTime = 0;
+    [Space( 10), Header("[^ Child:   E_Swordsman ] Swing")]
     #pragma warning disable
     [SerializeField] protected int AttackDamage = 1;
 
-    [Space(10), Header("[^ Child:   E_Swordsman ] Affected By")]
-    public bool Stunned;
-    public bool Blinded;
+
+
+
 
     void Reset()
     {
         MovementSpeed = 1.2f;
+        AttackRate = 1f;
         LookRadius = 3f;
         AttackRadius = 0.85f;
     }
 
-    protected override void Start()
-    {
-        base.Start();
-        Animator = GetComponent<Animator>();
-    }
-
-    protected override void Movement()
-    {
-        base.Movement();
-        // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
-        float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
-        if (AttackRange <= AttackRadius)
-        {   // If inside AttackRadius, will start damaging enemy!
-            MovementSpeed = 0;
-            PlayAnimationAttack();
-        }
-        else
-        {
-            MovementSpeed = MovementSpeedInitial;
-            Animator.Play("Run");
-        }
-    }
-
-    protected override void PlayAnimationAttack()
-    {
-        if (Time.time > NextAttackTime)
-        {   // Playing Animation will make DamageArea active, triggering Damage to be taken.
-            Animator.Play("Attack", -1, 0);
-            NextAttackTime = Time.time + AttackRate;
-        }
-    }
-
-    protected override void PlayAnimationDeath()
-    {
-        Animator.Play("Die");
-        Destroy(gameObject, 1f);
-        return;
-        // Add to score or collateral damage score
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
-        // not detecting when the sprite has left the ground... else function doesn't work
+    {   // Switching layers so can walk out of Castle if chucked on it.
+        if (collision.gameObject.tag == "Ground") { OnCastle = false; Grounded = true; gameObject.layer = 8; }
+        if (collision.gameObject.tag == "Castle") { OnCastle = true;  Grounded = true; gameObject.layer = 12; }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {   // As lil guy walks off Castle Platform, switching layers.
+        if (collision.gameObject.tag == "Castle") { OnCastle = false;  Grounded = false; gameObject.layer = 8; }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

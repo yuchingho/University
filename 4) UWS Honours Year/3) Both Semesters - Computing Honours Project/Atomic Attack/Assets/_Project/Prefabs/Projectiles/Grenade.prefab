@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4879260560498148}
-  - component: {fileID: 212972339083259542}
   - component: {fileID: 114671462704627878}
+  - component: {fileID: 212972339083259542}
   - component: {fileID: 50308692935428178}
   - component: {fileID: 58491440490342798}
   m_Layer: 8
@@ -89,12 +89,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094ccd965cb447b4f9afaf9e4dc4d16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Magnify: 0
   Damage: 3
   Speed: 6
   Explosion: {fileID: 1854532116624764, guid: e4c46523e512bf24cb40efb5e63fd047, type: 2}
   ExplosionRadius: 0
   ThrowAngle: 150
-  Magnify: 0
 --- !u!212 &212972339083259542
 SpriteRenderer:
   m_ObjectHideFlags: 1

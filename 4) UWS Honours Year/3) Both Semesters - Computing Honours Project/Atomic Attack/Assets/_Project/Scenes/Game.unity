@@ -559,20 +559,23 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1
   Grounded: 0
-  GrabbedByMouse: 0
+  Suffocate: 0
   RunAway: 0
+  Poisoned: 0
+  Burned: 0
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
   LookRadius: 4
   AttackRadius: 4
   AttackRate: 0.75
+  Stunned: 0
+  Blinded: 0
+  GrabbedByMouse: 0
+  OnCastle: 0
   AttackDamage: 2 [RO] Add to Prefab
   Projectile: {fileID: 1574258756806926, guid: 0f6b8ae62c4abbf42b1bf274ca991f34, type: 2}
   FireLocation: {fileID: 1994818427}
-  Stunned: 0
-  Blinded: 0
-  OnCastle: 0
 --- !u!4 &330684817
 Transform:
   m_ObjectHideFlags: 0
@@ -1583,7 +1586,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 697928937}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f5884168bbf09ac4c92eab4193ad07e8, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1850,7 +1853,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1859210161}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f5884168bbf09ac4c92eab4193ad07e8, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1994,17 +1997,21 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1.2
   Grounded: 0
-  GrabbedByMouse: 0
+  Suffocate: 0
   RunAway: 0
+  Poisoned: 0
+  Burned: 0
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
   LookRadius: 3
   AttackRadius: 0.85
   AttackRate: 1
-  AttackDamage: 1
   Stunned: 0
   Blinded: 0
+  GrabbedByMouse: 0
+  OnCastle: 0
+  AttackDamage: 1
 --- !u!4 &1899439182
 Transform:
   m_ObjectHideFlags: 0
@@ -2115,7 +2122,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2019753070}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f5884168bbf09ac4c92eab4193ad07e8, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2279,7 +2286,7 @@ EdgeCollider2D:
   m_GameObject: {fileID: 2061296404}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f5884168bbf09ac4c92eab4193ad07e8, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2308,7 +2315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &2074922150
 Rigidbody2D:
   serializedVersion: 4
@@ -2429,8 +2436,10 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1.2
   Grounded: 0
-  GrabbedByMouse: 0
+  Suffocate: 0
   RunAway: 0
+  Poisoned: 0
+  Burned: 0
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
@@ -2616,8 +2625,10 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1
   Grounded: 0
-  GrabbedByMouse: 0
+  Suffocate: 0
   RunAway: 0
+  Poisoned: 0
+  Burned: 0
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}

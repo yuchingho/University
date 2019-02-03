@@ -70,14 +70,15 @@
     <Compile Include="Assets\_Project\Scripts\Friend\F_Swordsman.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F01_Hydrogen.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F02_Helium.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\F03_Lithium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F03_Li_11_Na.cs" />
     <Compile Include="Assets\_Project\Scripts\HealthSystem.cs" />
     <Compile Include="Assets\_Project\Scripts\ManagerGame.cs" />
+    <Compile Include="Assets\_Project\Scripts\Projectiles\_Explode.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\Bullet.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\Grenade.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\RemoveEffect.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\RemoveExplosions.cs" />
-    <None Include="Assets\_Project\Images\Credit Links.txt" />
+    <None Include="Assets\Credit Links.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/A/GitHub/University/4) UWS Honours Year/3) Both Semesters - Computing Honours Project/Atomic Attack/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

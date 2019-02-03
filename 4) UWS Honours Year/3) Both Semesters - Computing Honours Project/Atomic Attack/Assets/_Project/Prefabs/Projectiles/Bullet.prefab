@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4697458496573842}
-  - component: {fileID: 212554363990105578}
   - component: {fileID: 114631291237176446}
+  - component: {fileID: 212554363990105578}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76b5c0d87b47034db877b33fae5354c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 15
   Damage: 2
+  Speed: 15
   Explosion: {fileID: 1854532116624764, guid: e4c46523e512bf24cb40efb5e63fd047, type: 2}
 --- !u!212 &212554363990105578
 SpriteRenderer:
