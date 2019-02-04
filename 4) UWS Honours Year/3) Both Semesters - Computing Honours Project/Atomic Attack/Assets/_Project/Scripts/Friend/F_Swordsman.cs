@@ -5,7 +5,7 @@ using UnityEngine;
 public class F_Swordsman : AI_Friend {
     [Space( 10), Header("[^ Child: AI_Friend ]")]
     // Child Class F_Swordsman inheriting from AI_Friend.
-    [Space(-10), Header("[^ Child:   F_Swordsman ] Swing")]
+    [Space(-10), Header("[^ Child:   F_Swordsman ]")]
     #pragma warning disable
     [SerializeField] protected int AttackDamage = 1;
 

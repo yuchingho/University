@@ -5,7 +5,7 @@ using UnityEngine;
 public class E_Gunman : AI_Enemy {
 
     // Child Class E_Gunman inheriting from AI_Enemy.
-    [Space( 10), Header("[^ Child:   E_Gunman ] Weapon")]
+    [Space( 10), Header("[^ Child:   E_Gunman ]")]
     #pragma warning disable
     [SerializeField] string AttackDamage = "2 [RO] Add to Prefab";
     [SerializeField] protected GameObject Projectile;

@@ -71,6 +71,9 @@
     <Compile Include="Assets\_Project\Scripts\Friend\F01_Hydrogen.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F02_Helium.cs" />
     <Compile Include="Assets\_Project\Scripts\Friend\F03_Lithium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F04_Beryllium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F11_Sodium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Friend\F12_Magnesium.cs" />
     <Compile Include="Assets\_Project\Scripts\HealthSystem.cs" />
     <Compile Include="Assets\_Project\Scripts\ManagerGame.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\_Bullet.cs" />

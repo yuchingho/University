@@ -9,5 +9,12 @@ public class F03_Lithium : F_Gunman {
     #pragma warning disable
     [SerializeField] string Effect = "Stun";
 
-    // if stunned, animation.enabled=false;
+    void Reset()
+    {
+        MovementSpeed = 1f;
+        AttackRate = 0.75f;
+        LookRadius = 4f;
+        AttackRadius = LookRadius;
+        // if stunned, animation.enabled=false;
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class E_Swordsman : AI_Enemy {
 
     // Child Class E_Swordsman inheriting from AI_Enemy.
-    [Space( 10), Header("[^ Child:   E_Swordsman ] Swing")]
+    [Space( 10), Header("[^ Child:   E_Swordsman ]")]
     #pragma warning disable
     [SerializeField] protected int AttackDamage = 1;
 
@@ -39,10 +39,13 @@ public class E_Swordsman : AI_Enemy {
             // Will damage Target's Health with E_Swordsman's AttackDamage.
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
 
-            // If there's one f_swordsman vs one e_gunman, health system works.
-            // If there's one f_swordsman vs one e_swordsman, get null reference exception after one hit?
-            // Why the fuck are you bugging out when being shot at?
-            // Why the fuck are you bugging out when chucked in air?
+            // Bugs
+            // Doesn't damage f_swordsman   (because same sprite size?)
+            // Doesn't damage hydrogen      (because same sprite size?)
+
+            // Damages f_gunman fine.
+            // Damages lithium, but runs in wrong direction when shot at
+            // After being chucked in air, runs in wrong direction
         }
     }
 }

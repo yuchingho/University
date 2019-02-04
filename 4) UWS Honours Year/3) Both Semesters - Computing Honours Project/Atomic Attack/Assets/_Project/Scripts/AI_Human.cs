@@ -18,12 +18,15 @@ public abstract class AI_Human : MonoBehaviour {
     protected float MovementSpeedInitial;
     protected int MovementDirection;
     public bool Grounded;
-    public bool Suffocate;  // For 07_Nitrogen + 15_Phosphorus. (DoT)
     public bool RunAway;    // For 16_Sulphur as a deterent, so can't get close. If doesn't work, switch to Poison.
+    public bool Suffocate;  // For 07_Nitrogen + 15_Phosphorus. (DoT)
     public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT)
     public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT)
+    [SerializeField] protected GameObject EffectSuffocate;
+    [SerializeField] protected GameObject EffectPoisoned;
+    [SerializeField] protected GameObject EffectBurned;
 
-    [Space( 10), Header("[ Parent: AI_Human ] Target")]
+    [Space( 10), Header("---- Target ----")]
     public Transform Target;
     [SerializeField] protected float TargetHealth;
     public Transform FinalTarget;
@@ -40,34 +43,6 @@ public abstract class AI_Human : MonoBehaviour {
         Animator = GetComponent<Animator>();
         HealthSystem = GetComponent<HealthSystem>();
         MovementSpeedInitial = MovementSpeed;
-    }
-
-    // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
-    // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
-    protected virtual void Update()
-    {
-        try
-        {
-            if (HealthSystem.Deceased == true && Grounded == true)
-            {
-                PlayAnimationDeath();
-            }
-            else { Movement(); }
-        }
-        catch (System.NullReferenceException) { };
-    }
-
-    protected virtual void LookAtTarget()
-    {   // Sprites flipping to look at its Target.
-        try
-        {
-            Vector3 dir = Target.position - transform.position;
-            float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            if (Angle <= 160) { MovementDirection = -1; }
-            if (Angle >= 170) { MovementDirection =  1; Angle -= 180; }
-            transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
-        }
-        catch (System.NullReferenceException) { };
     }
 
     protected virtual void Movement()
@@ -105,7 +80,6 @@ public abstract class AI_Human : MonoBehaviour {
         }
     }
 
-    protected virtual void Shoot() { }
     protected virtual void PlayAnimationDeath()
     {
         Animator.Play("Die");
@@ -122,4 +96,24 @@ public abstract class AI_Human : MonoBehaviour {
     // Same as "virtual void", but has to be called in Child classes.
     // Since added "abstract void" here, have to add "abstract" at start of class.
     protected abstract void OnDrawGizmos();
+
+    protected virtual void Shoot() { }
+
+    protected virtual void StatusSuffocate()
+    {
+        if (Suffocate == true) { EffectSuffocate.SetActive(true); }
+        else { EffectSuffocate.SetActive(false); }
+    }
+
+    protected virtual void StatusPoisoned()
+    {
+        if (Poisoned == true) { EffectPoisoned.SetActive(true); }
+        else { EffectPoisoned.SetActive(false); }
+    }
+
+    protected virtual void StatusBurned()
+    {
+        if (Burned == true) { EffectBurned.SetActive(true); }
+        else { EffectBurned.SetActive(false); }
+    }
 }

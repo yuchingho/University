@@ -4,20 +4,45 @@ using UnityEngine;
 
 public class AI_Enemy : AI_Human {
 
-    // Child Class AI_Enemy inheriting from Parent AI_Human.
-    [Space( 10), Header("[^ Child: AI_Enemy ] Affected By")]
+    // Child Class AI_Friend inheriting from AI_Human.
+    [Space( 10), Header("[^ Child: AI_Enemy ]")]
+    public int EnemyCounter = 1;
     public bool Stunned;
     public bool Blinded;
     protected Vector3 PreviousGrabbedPosition;
     [SerializeField] protected bool GrabbedByMouse;
     [SerializeField] protected bool OnCastle;
-
+    [SerializeField] protected GameObject EffectStunned;
+    [SerializeField] protected GameObject EffectBlinded;
 
     protected override void Start()
     {   // If GameObjectTag == Enemy, will target Friend.
         base.Start();
         FinalTarget = GameObject.Find("Enemy End").transform;
         InvokeRepeating("UpdateTargetFriend", 0f, 0.25f);
+    }
+
+    // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
+    // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
+    protected virtual void Update()
+    {
+        try
+        {
+            if (HealthSystem.Deceased == true && Grounded == true)
+            {
+                PlayAnimationDeath();
+            }
+            else
+            {
+                Movement();
+                StatusSuffocate();
+                StatusPoisoned();
+                StatusBurned();
+                StatusStunned();
+                StatusBlinded();
+            }
+        }
+        catch (System.NullReferenceException) { };
     }
 
     protected virtual void UpdateTargetFriend()
@@ -46,26 +71,36 @@ public class AI_Enemy : AI_Human {
             LookAtTarget();
         }
     }
+    
+    protected virtual void LookAtTarget()
+    {   // Sprites flipping to look at its Target.
+        try
+        {
+            if (OnCastle == true)
+            {   // When on Castle, different Angle algorithm so will face Target correctly.
+                Vector3 dir = Target.position - transform.position;
+                float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
+                if (Angle <= 160) { MovementDirection = -1; }
+                if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
+                transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
+            }
+            else
+            {
+                Vector3 dir = Target.position - transform.position;
+                float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                if (Angle <= 160) { MovementDirection = -1; }
+                if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
+                transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
+            }
+        }
+        catch (System.NullReferenceException) { };
+    }
 
     protected override void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, AttackRadius);
         Gizmos.DrawWireSphere(transform.position, LookRadius);
-    }
-
-    /* -------------------------------------------------------------------------------------- */
-    protected override void LookAtTarget()
-    {
-        if (OnCastle == true)
-        {   // When on Castle, different Angle algorithm so will face Target correctly.
-            Vector3 dir = Target.position - transform.position;
-            float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
-            if (Angle <= 160) { MovementDirection = -1; }
-            if (Angle >= 170) { MovementDirection =  1; Angle -= 180; }
-            transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
-        }
-        else { base.LookAtTarget(); }
     }
 
     protected override void Movement()
@@ -114,5 +149,17 @@ public class AI_Enemy : AI_Human {
         gameObject.GetComponent<Animator>().Play("Die");
         yield return new WaitForSeconds(1f);
         GrabbedByMouse = false;
+    }
+
+    protected virtual void StatusStunned()
+    {
+        if (Stunned == true) { EffectStunned.SetActive(true); }
+        else { EffectStunned.SetActive(false); }
+    }
+
+    protected virtual void StatusBlinded()
+    {
+        if (Blinded == true) { EffectBlinded.SetActive(true); }
+        else { EffectBlinded.SetActive(false); }
     }
 }
