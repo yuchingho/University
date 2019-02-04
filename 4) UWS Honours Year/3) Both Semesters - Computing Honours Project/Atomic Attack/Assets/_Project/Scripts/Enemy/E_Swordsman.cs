@@ -34,10 +34,12 @@ public class E_Swordsman : AI_Enemy {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
+        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Friend")
         {   // When E_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
             // Will damage Target's Health with E_Swordsman's AttackDamage.
-            collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
+            //Debug.Log("enemy attack");
 
             // Bugs
             // Doesn't damage f_swordsman   (because same sprite size?)

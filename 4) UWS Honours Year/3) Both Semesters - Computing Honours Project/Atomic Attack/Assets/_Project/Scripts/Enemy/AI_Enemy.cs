@@ -26,23 +26,19 @@ public class AI_Enemy : AI_Human {
     // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
     protected virtual void Update()
     {
-        try
+        if (HealthSystem.Deceased == true && Grounded == true)
         {
-            if (HealthSystem.Deceased == true && Grounded == true)
-            {
-                PlayAnimationDeath();
-            }
-            else
-            {
-                Movement();
-                StatusSuffocate();
-                StatusPoisoned();
-                StatusBurned();
-                StatusStunned();
-                StatusBlinded();
-            }
+            PlayAnimationDeath();
         }
-        catch (System.NullReferenceException) { };
+        else
+        {
+            Movement();
+            StatusSuffocate();
+            StatusPoisoned();
+            StatusBurned();
+            StatusStunned();
+            StatusBlinded();
+        }
     }
 
     protected virtual void UpdateTargetFriend()
@@ -72,28 +68,20 @@ public class AI_Enemy : AI_Human {
         }
     }
     
-    protected virtual void LookAtTarget()
+    protected override void LookAtTarget()
     {   // Sprites flipping to look at its Target.
-        try
-        {
-            if (OnCastle == true)
-            {   // When on Castle, different Angle algorithm so will face Target correctly.
-                Vector3 dir = Target.position - transform.position;
-                float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
-                if (Angle <= 160) { MovementDirection = -1; }
-                if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
-                transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
-            }
-            else
-            {
-                Vector3 dir = Target.position - transform.position;
-                float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                if (Angle <= 160) { MovementDirection = -1; }
-                if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
-                transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
-            }
+        if (OnCastle == true)
+        {   // When on Castle, different Angle algorithm so will face Target correctly.
+            Vector3 dir = Target.position - transform.position;
+            float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
+            if (Angle <= 160) { MovementDirection = -1; }
+            if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
+            transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
         }
-        catch (System.NullReferenceException) { };
+        else
+        {
+            base.LookAtTarget();
+        }
     }
 
     protected override void OnDrawGizmos()

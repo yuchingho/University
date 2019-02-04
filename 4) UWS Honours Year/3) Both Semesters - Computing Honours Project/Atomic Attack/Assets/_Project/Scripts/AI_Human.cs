@@ -45,14 +45,25 @@ public abstract class AI_Human : MonoBehaviour {
         MovementSpeedInitial = MovementSpeed;
     }
 
+    protected virtual void LookAtTarget()
+    {   // Sprites flipping to look at its Target.
+        if (Target != null)
+        {
+            Vector3 dir = Target.position - transform.position;
+            float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            if (Angle <= 160) { MovementDirection = -1; }
+            if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
+            transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
+        }
+    }
+
     protected virtual void Movement()
     {   // When velocity = 0, can't start moving again. fix???
-        try
-        {
-            Rigidbody2D.velocity = new Vector2(MovementSpeed * -MovementDirection, 0);
-            transform.localScale = new Vector2(0.3f * MovementDirection, 0.3f);
+        Rigidbody2D.velocity = new Vector2(MovementSpeed * -MovementDirection, 0);
+        transform.localScale = new Vector2(0.3f * MovementDirection, 0.3f);
 
-            // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
+        if (Target != null)
+        {   // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
             float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
             if (AttackRange <= AttackRadius)
             {   // If inside AttackRadius, will start damaging enemy!
@@ -65,7 +76,6 @@ public abstract class AI_Human : MonoBehaviour {
                 Animator.Play("Run");
             }
         }
-        catch (System.NullReferenceException) { };
     }
 
     protected virtual void PlayAnimationAttack()

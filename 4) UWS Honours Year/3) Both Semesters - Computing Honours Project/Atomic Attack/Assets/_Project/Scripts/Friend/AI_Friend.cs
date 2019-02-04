@@ -26,21 +26,17 @@ public class AI_Friend : AI_Human {
     // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
     protected virtual void Update()
     {
-        try
+        if (HealthSystem.Deceased == true && Grounded == true)
         {
-            if (HealthSystem.Deceased == true && Grounded == true)
-            {
-                PlayAnimationDeath();
-            }
-            else
-            {
-                Movement();
-                StatusSuffocate();
-                StatusPoisoned();
-                StatusBurned();
-            }
+            PlayAnimationDeath();
         }
-        catch (System.NullReferenceException) { };
+        else
+        {
+            Movement();
+            StatusSuffocate();
+            StatusPoisoned();
+            StatusBurned();
+        }
     }
 
     protected virtual void UpdateTargetEnemy()
@@ -68,19 +64,6 @@ public class AI_Friend : AI_Human {
             Target = FinalTarget;
             LookAtTarget();
         }
-    }
-
-    protected virtual void LookAtTarget()
-    {   // Sprites flipping to look at its Target.
-        try
-        {
-            Vector3 dir = Target.position - transform.position;
-            float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            if (Angle <= 160) { MovementDirection = -1; }
-            if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
-            transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
-        }
-        catch (System.NullReferenceException) { };
     }
 
     protected override void OnDrawGizmos()
