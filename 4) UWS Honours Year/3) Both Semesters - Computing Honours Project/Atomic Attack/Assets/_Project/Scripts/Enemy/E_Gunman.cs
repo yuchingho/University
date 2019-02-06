@@ -23,15 +23,8 @@ public class E_Gunman : AI_Enemy {
 
     protected override void Update()
     {
-        if (OnCastle == true)
-        {
-            MovementSpeed = 0;
-            base.Update();
-        }
-        else
-        {
-            base.Update();
-        }
+        if (OnCastle == true) { MovementSpeed = 0; base.Update(); }
+        else { base.Update(); }
     }
     
     protected override void Shoot()

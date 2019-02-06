@@ -77,11 +77,8 @@ public class AI_Enemy : AI_Human {
             if (Angle <= 160) { MovementDirection = -1; }
             if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
             transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
-        }
-        else
-        {
-            base.LookAtTarget();
-        }
+        }   // Else, LookAtTarget normally.
+        else { base.LookAtTarget(); }
     }
 
     protected override void OnDrawGizmos()
