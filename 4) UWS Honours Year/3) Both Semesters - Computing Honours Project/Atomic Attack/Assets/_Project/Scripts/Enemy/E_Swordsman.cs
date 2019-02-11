@@ -23,8 +23,21 @@ public class E_Swordsman : AI_Enemy {
 
     void OnCollisionEnter2D(Collision2D collision)
     {   // Switching layers so can walk out of Castle if chucked on it.
-        if (collision.gameObject.tag == "Ground") { OnCastle = false; Grounded = true; gameObject.layer = 8; }
-        if (collision.gameObject.tag == "Castle") { OnCastle = true;  Grounded = true; gameObject.layer = 12; }
+        if (collision.gameObject.tag == "Ground")
+        {
+            OnCastle = false;
+            Grounded = true;
+            gameObject.layer = 8;
+            if (GrabbedByMouse == true)
+            { StartCoroutine(HitTheGround()); }
+        }
+
+        if (collision.gameObject.tag == "Castle")
+        {
+            OnCastle = true;
+            Grounded = true;
+            gameObject.layer = 12;
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)

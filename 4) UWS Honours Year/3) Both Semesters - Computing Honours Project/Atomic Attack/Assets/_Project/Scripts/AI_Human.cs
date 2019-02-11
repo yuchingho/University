@@ -18,15 +18,23 @@ public abstract class AI_Human : MonoBehaviour {
     protected float MovementSpeedInitial;
     protected int MovementDirection;
     public bool Grounded;
-    public bool RunAway;    // For 16_Sulphur as a deterent, so can't get close. If doesn't work, switch to Poison.
-    public bool Suffocate;  // For 07_Nitrogen + 15_Phosphorus. (DoT)
-    public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT)
-    public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT)
-    [SerializeField] protected GameObject EffectSuffocate;
-    [SerializeField] protected GameObject EffectPoisoned;
-    [SerializeField] protected GameObject EffectBurned;
+    protected Vector3 PreviousGrabbedPosition;
+    [SerializeField] protected bool GrabbedByMouse;
+    [SerializeField] protected bool OnCastle;
 
-    [Space( 10), Header("---- Target ----")]
+    [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
+    public bool Suffocate;  // For 07_Nitrogen + 15_Phosphorus. (DoT).
+    public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT).
+    public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT).
+    public bool Blinded;    // For Enemies.
+    public bool Stunned;    // For Enemies.
+    [SerializeField] protected GameObject EffectSuffocate;  // Text Effect.
+    [SerializeField] protected GameObject EffectPoisoned;   // Text Effect.
+    [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
+    [SerializeField] protected GameObject EffectBlinded;    // Text Effect.
+    [SerializeField] protected GameObject EffectStunned;    // Order in layer = 1.
+
+    [Space( 10), Header("----------------- Target ----------------")]
     public Transform Target;
     [SerializeField] protected float TargetHealth;
     public Transform FinalTarget;
@@ -45,23 +53,34 @@ public abstract class AI_Human : MonoBehaviour {
         MovementSpeedInitial = MovementSpeed;
     }
 
+    // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
+    // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
+    protected virtual void Update()
+    {   // If out of bounds, destroy GameObject and not add to score, etc.
+        if (transform.position.x<=-15 || transform.position.x>=15 || transform.position.y<=-7) { Destroy(gameObject); }
+        else if (Grounded == true && HealthSystem.Deceased == true) { PlayAnimationDeath(); }
+        else if (Grounded == true && GrabbedByMouse == false) { Movement(); }
+    }
+
     protected virtual void LookAtTarget()
     {   // Sprites flipping to look at its Target.
         if (Target != null)
         {
             Vector3 dir = Target.position - transform.position;
             float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            if (Angle <= 160) { MovementDirection = -1; }
+            if (Angle <= 160) { MovementDirection =-1; }
             if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
             transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
         }
     }
 
     protected virtual void Movement()
-    {   // When velocity = 0, can't start moving again. fix???
+    {
         Rigidbody2D.velocity = new Vector2(MovementSpeed * -MovementDirection, 0);
         transform.localScale = new Vector2(0.3f * MovementDirection, 0.3f);
-
+        
+        if (Stunned == true) { StartCoroutine(StatusStunned()); }
+        else {
         if (Target != null)
         {   // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
             float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
@@ -75,7 +94,7 @@ public abstract class AI_Human : MonoBehaviour {
                 MovementSpeed = MovementSpeedInitial;
                 Animator.Play("Run");
             }
-        }
+        } }
     }
 
     protected virtual void PlayAnimationAttack()
@@ -85,8 +104,7 @@ public abstract class AI_Human : MonoBehaviour {
              // Need the other 2 overloads, otherwise won't repeat every AttackRate.
             Animator.Play("Attack", -1, 0);
             NextAttackTime = Time.time + AttackRate;
-            // If Swordsman, Playing Animation will make DamageArea active, triggering Damage to be taken.
-            Shoot();
+            Shoot(); // Shoot is overridden in Gunmen.
         }
     }
 
@@ -95,7 +113,7 @@ public abstract class AI_Human : MonoBehaviour {
         Animator.Play("Die");
         Destroy(gameObject, 1f);
         return;
-        // Add to score or collateral damage score
+        // Add to points and score or collateral damage score
     }
 
     // Added two new Layers - "Enemy" and "Friend".
@@ -109,21 +127,43 @@ public abstract class AI_Human : MonoBehaviour {
 
     protected virtual void Shoot() { }
 
-    protected virtual void StatusSuffocate()
+    protected virtual IEnumerator StatusSuffocate()
     {
+        yield return new WaitForSeconds(1f);
         if (Suffocate == true) { EffectSuffocate.SetActive(true); }
         else { EffectSuffocate.SetActive(false); }
     }
 
-    protected virtual void StatusPoisoned()
+    protected virtual IEnumerator StatusPoisoned()
     {
+        yield return new WaitForSeconds(1f);
+
         if (Poisoned == true) { EffectPoisoned.SetActive(true); }
         else { EffectPoisoned.SetActive(false); }
     }
 
-    protected virtual void StatusBurned()
+    protected virtual IEnumerator StatusBurned()
     {
+        yield return new WaitForSeconds(1f);
+
         if (Burned == true) { EffectBurned.SetActive(true); }
         else { EffectBurned.SetActive(false); }
+    }
+
+    // ------- Only for Enemies -------
+    protected virtual IEnumerator StatusBlinded()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (Blinded == true) { EffectBlinded.SetActive(true); }
+        else { EffectBlinded.SetActive(false); }
+    }
+
+    protected virtual IEnumerator StatusStunned()
+    {
+        MovementSpeed = 0;
+        gameObject.GetComponent<Animator>().Play("Stunned");
+        yield return new WaitForSeconds(1f);
+        Stunned = false;
     }
 }

@@ -23,7 +23,8 @@ public class F_Gunman : AI_Friend {
 
     protected override void Shoot()
     {   // Instantiating Bullet prefab.
-        GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
+        GameObject Bullet = Instantiate(Projectile,
+        new Vector3 (FireLocation.position.x, FireLocation.position.y, FireLocation.position.z-1), FireLocation.rotation);
         _Bullet bullet = Bullet.GetComponent<_Bullet>();
         // Using Bullet's script Seek method.
         if (bullet != null) { bullet.Seek(Target); } 

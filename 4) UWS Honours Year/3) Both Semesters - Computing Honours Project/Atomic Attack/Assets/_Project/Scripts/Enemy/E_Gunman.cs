@@ -23,13 +23,18 @@ public class E_Gunman : AI_Enemy {
 
     protected override void Update()
     {
-        if (OnCastle == true) { MovementSpeed = 0; base.Update(); }
+        if (OnCastle == true)
+        {
+            MovementSpeed = 0;
+            base.Update();
+        }
         else { base.Update(); }
     }
     
     protected override void Shoot()
     {   // Instantiating Bullet prefab.
-        GameObject Bullet = Instantiate(Projectile, FireLocation.position, FireLocation.rotation);
+        GameObject Bullet = Instantiate(Projectile,
+        new Vector3(FireLocation.position.x, FireLocation.position.y, FireLocation.position.z - 1), FireLocation.rotation);
         _Bullet bullet = Bullet.GetComponent<_Bullet>();
         // Using Bullet's script Seek method.
         if (bullet != null) { bullet.Seek(Target); }
@@ -43,6 +48,8 @@ public class E_Gunman : AI_Enemy {
             Grounded = true;
             LookRadius = 4f;
             AttackRadius = 4f;
+            if (GrabbedByMouse == true)
+            { StartCoroutine(HitTheGround()); }
         }
 
         if (collision.gameObject.tag == "Castle")
@@ -51,6 +58,7 @@ public class E_Gunman : AI_Enemy {
             Grounded = true;
             LookRadius = 10f;
             AttackRadius = 10f;
+            GrabbedByMouse = false;
         }
     }
 }

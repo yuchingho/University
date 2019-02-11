@@ -12,6 +12,7 @@ public class F_Swordsman : AI_Friend {
     [Space( 10), Header("[^ Child:   F_Swordsman ] Steriods")]
     public bool Boron;        // Add MovementSpeed for when activated.
     public bool Aluminium;    // Add AttackDamage and AttackRate for when activated.
+    [SerializeField] GameObject Glow;
 
     void Reset()
     {
@@ -19,6 +20,14 @@ public class F_Swordsman : AI_Friend {
         AttackRate = 1f;
         LookRadius = 3f;
         AttackRadius = 0.85f;
+    }
+
+    protected override void Movement()
+    {   // Activating the Steriods.
+        if (Boron == true)      { MovementSpeed = MovementSpeed * 2; }
+        if (Aluminium == true)  {  AttackDamage = 2; AttackRate = 0.5f; /*Glow.SetActive(true );*/ }
+        if (Aluminium == false) {  AttackDamage = 1; AttackRate = 1;    /*Glow.SetActive(false);*/ }
+        base.Movement();
     }
 
     void OnCollisionEnter2D(Collision2D collision)

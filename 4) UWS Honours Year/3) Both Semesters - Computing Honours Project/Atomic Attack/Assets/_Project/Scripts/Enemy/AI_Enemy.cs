@@ -7,38 +7,12 @@ public class AI_Enemy : AI_Human {
     // Child Class AI_Friend inheriting from AI_Human.
     [Space( 10), Header("[^ Child: AI_Enemy ]")]
     public int EnemyCounter = 1;
-    public bool Stunned;
-    public bool Blinded;
-    protected Vector3 PreviousGrabbedPosition;
-    [SerializeField] protected bool GrabbedByMouse;
-    [SerializeField] protected bool OnCastle;
-    [SerializeField] protected GameObject EffectStunned;
-    [SerializeField] protected GameObject EffectBlinded;
 
     protected override void Start()
     {   // If GameObjectTag == Enemy, will target Friend.
         base.Start();
         FinalTarget = GameObject.Find("Enemy End").transform;
         InvokeRepeating("UpdateTargetFriend", 0f, 0.25f);
-    }
-
-    // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
-    // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
-    protected virtual void Update()
-    {
-        if (HealthSystem.Deceased == true && Grounded == true)
-        {
-            PlayAnimationDeath();
-        }
-        else
-        {
-            Movement();
-            StatusSuffocate();
-            StatusPoisoned();
-            StatusBurned();
-            StatusStunned();
-            StatusBlinded();
-        }
     }
 
     protected virtual void UpdateTargetFriend()
@@ -67,7 +41,14 @@ public class AI_Enemy : AI_Human {
             LookAtTarget();
         }
     }
-    
+
+    protected override void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, AttackRadius);
+        Gizmos.DrawWireSphere(transform.position, LookRadius);
+    }
+
     protected override void LookAtTarget()
     {   // Sprites flipping to look at its Target.
         if (OnCastle == true)
@@ -81,20 +62,6 @@ public class AI_Enemy : AI_Human {
         else { base.LookAtTarget(); }
     }
 
-    protected override void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, AttackRadius);
-        Gizmos.DrawWireSphere(transform.position, LookRadius);
-    }
-
-    protected override void Movement()
-    {
-        if (Grounded == true && GrabbedByMouse == false) { base.Movement(); }
-        // For when chucked in air, only start coroutine after enemy has hit the ground.
-        else if (Grounded == true && GrabbedByMouse == true) { StartCoroutine(HitTheGround()); }
-    }
-
     protected virtual void OnMouseDown()
     {
         GrabbedByMouse = true;
@@ -106,6 +73,7 @@ public class AI_Enemy : AI_Human {
         if (Input.mousePosition.y >= 130)
         {
             GrabbedByMouse = true;
+            MovementSpeed = 0;
             Grounded = false;
             gameObject.layer = 10;  // Mouse Layer.
             // Calculating the ThrowVelocity.
@@ -134,17 +102,6 @@ public class AI_Enemy : AI_Human {
         gameObject.GetComponent<Animator>().Play("Die");
         yield return new WaitForSeconds(1f);
         GrabbedByMouse = false;
-    }
-
-    protected virtual void StatusStunned()
-    {
-        if (Stunned == true) { EffectStunned.SetActive(true); }
-        else { EffectStunned.SetActive(false); }
-    }
-
-    protected virtual void StatusBlinded()
-    {
-        if (Blinded == true) { EffectBlinded.SetActive(true); }
-        else { EffectBlinded.SetActive(false); }
+        MovementSpeed = MovementSpeedInitial;
     }
 }

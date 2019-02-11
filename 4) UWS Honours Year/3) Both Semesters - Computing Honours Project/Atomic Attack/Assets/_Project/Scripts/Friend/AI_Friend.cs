@@ -8,35 +8,11 @@ public class AI_Friend : AI_Human {
     [Space( 10), Header("[^ Child: AI_Friend ]")]
     public int FriendCounter = 1;
 
-
-
-
-
-
-
-
     protected override void Start()
     {   // If GameObjectTag == Friend, will target Enemy.
         base.Start();
         FinalTarget = GameObject.Find("Castle Health").transform;
         InvokeRepeating("UpdateTargetEnemy", 0f, 0.25f);
-    }
-
-    // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
-    // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
-    protected virtual void Update()
-    {
-        if (HealthSystem.Deceased == true && Grounded == true)
-        {
-            PlayAnimationDeath();
-        }
-        else
-        {
-            Movement();
-            StatusSuffocate();
-            StatusPoisoned();
-            StatusBurned();
-        }
     }
 
     protected virtual void UpdateTargetEnemy()
