@@ -49,19 +49,6 @@ public class AI_Enemy : AI_Human {
         Gizmos.DrawWireSphere(transform.position, LookRadius);
     }
 
-    protected override void LookAtTarget()
-    {   // Sprites flipping to look at its Target.
-        if (OnCastle == true)
-        {   // When on Castle, different Angle algorithm so will face Target correctly.
-            Vector3 dir = Target.position - transform.position;
-            float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
-            if (Angle <= 160) { MovementDirection = -1; }
-            if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
-            transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
-        }   // Else, LookAtTarget normally.
-        else { base.LookAtTarget(); }
-    }
-
     protected virtual void OnMouseDown()
     {
         GrabbedByMouse = true;
@@ -94,7 +81,9 @@ public class AI_Enemy : AI_Human {
         gameObject.GetComponent<Rigidbody2D>().velocity = ThrowVelocity / 5;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         // Adding fall damage.
-        GetComponent<HealthSystem>().DamageTaken(ThrowVelocity.y);
+        GetComponent<HealthSystem>().DamageTaken(ThrowVelocity.y * ThrowMultiplyer);
+        Debug.Log("Throw Damage = " + (ThrowVelocity.y * ThrowMultiplyer).ToString("n0"));
+        // Balance later.
     }
 
     protected virtual IEnumerator HitTheGround()

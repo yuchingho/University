@@ -21,6 +21,19 @@ public class E_Gunman : AI_Enemy {
         AttackRadius = LookRadius;
     }
 
+    protected override void LookAtTarget()
+    {   // Sprites flipping to look at its Target.
+        if (OnCastle == true)
+        {   // When on Castle, different Angle algorithm so will face Target correctly.
+            Vector3 dir = Target.position - transform.position;
+            float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
+            if (Angle <= 160) { MovementDirection = -1; }
+            if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
+            transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
+        }   // Else, LookAtTarget normally.
+        else { base.LookAtTarget(); }
+    }
+
     protected override void Update()
     {
         if (OnCastle == true)

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 271}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 1
-  controlID: 23
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -63,8 +63,8 @@ MonoBehaviour:
     y: 0
     width: 218
     height: 731
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 271}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 24
+  controlID: 10
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 12376
+  m_LastSelectedObjectID: 12382
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,9 +319,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 982f0000
-    m_LastClickedID: 12184
-    m_ExpandedIDs: e6fbffff0000000058300000c2300000
+    m_SelectedIDs: fe270000
+    m_LastClickedID: 0
+    m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -416,11 +416,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Project/Prefabs/Projectiles/Bullet
+    - Assets/_Project/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Project/Prefabs/Projectiles/Bullet
+  - Assets/_Project/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\A\GitHub\University\4) UWS Honours Year\3) Both Semesters
     - Computing Honours Project\Atomic Attack
@@ -428,9 +428,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 111}
-    m_SelectedIDs: 262b0000
-    m_LastClickedID: 11046
-    m_ExpandedIDs: 000000006a2a0000942a0000a82a0000062b0000322b00003a2b00009c2b0000f62b0000202c0000402d00004e2d0000722d0000ca2d00007a31000000ca9a3b
+    m_SelectedIDs: fa2b0000
+    m_LastClickedID: 11258
+    m_ExpandedIDs: 000000006c2a0000962a0000aa2a0000082b0000342b00003c2b0000a02b0000fa2b0000242c0000442d0000522d0000762d0000ce2d00008231000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -458,7 +458,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a2a0000942a0000062b0000322b00003a2b00009c2b0000f62b0000202c0000402d00004e2d0000722d0000ca2d00007a310000
+    m_ExpandedIDs: 000000006c2a0000962a0000aa2a0000082b0000342b00003c2b0000a02b0000fa2b0000242c0000442d0000522d0000762d0000ce2d000082310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

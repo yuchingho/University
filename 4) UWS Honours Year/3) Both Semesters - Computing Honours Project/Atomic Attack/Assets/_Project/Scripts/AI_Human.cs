@@ -21,6 +21,7 @@ public abstract class AI_Human : MonoBehaviour {
     protected Vector3 PreviousGrabbedPosition;
     [SerializeField] protected bool GrabbedByMouse;
     [SerializeField] protected bool OnCastle;
+    [SerializeField] protected float ThrowMultiplyer = 1; // Balance later.
 
     [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
     public bool Suffocate;  // For 07_Nitrogen + 15_Phosphorus. (DoT).
@@ -59,7 +60,7 @@ public abstract class AI_Human : MonoBehaviour {
     {   // If out of bounds, destroy GameObject and not add to score, etc.
         if (transform.position.x<=-15 || transform.position.x>=15 || transform.position.y<=-7) { Destroy(gameObject); }
         else if (Grounded == true && HealthSystem.Deceased == true) { PlayAnimationDeath(); }
-        else if (Grounded == true && GrabbedByMouse == false) { Movement(); }
+        else if (Grounded == true && GrabbedByMouse == false)       { Movement(); }
     }
 
     protected virtual void LookAtTarget()

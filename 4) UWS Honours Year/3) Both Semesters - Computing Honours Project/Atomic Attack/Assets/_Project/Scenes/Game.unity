@@ -265,7 +265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &66215367
 Animator:
   serializedVersion: 3
@@ -397,6 +397,7 @@ MonoBehaviour:
   Grounded: 0
   GrabbedByMouse: 0
   OnCastle: 0
+  ThrowMultiplyer: 1
   Suffocate: 0
   Poisoned: 0
   Burned: 0
@@ -895,7 +896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &330684812
 Animator:
   serializedVersion: 3
@@ -1022,6 +1023,7 @@ MonoBehaviour:
   Grounded: 0
   GrabbedByMouse: 0
   OnCastle: 0
+  ThrowMultiplyer: 1
   Suffocate: 0
   Poisoned: 0
   Burned: 0
@@ -3127,6 +3129,7 @@ MonoBehaviour:
   Grounded: 0
   GrabbedByMouse: 0
   OnCastle: 0
+  ThrowMultiplyer: 1
   Suffocate: 0
   Poisoned: 0
   Burned: 0
@@ -4110,6 +4113,7 @@ MonoBehaviour:
   Grounded: 0
   GrabbedByMouse: 0
   OnCastle: 0
+  ThrowMultiplyer: 1
   Suffocate: 0
   Poisoned: 0
   Burned: 0
@@ -4309,6 +4313,7 @@ MonoBehaviour:
   Grounded: 0
   GrabbedByMouse: 0
   OnCastle: 0
+  ThrowMultiplyer: 1
   Suffocate: 0
   Poisoned: 0
   Burned: 0
