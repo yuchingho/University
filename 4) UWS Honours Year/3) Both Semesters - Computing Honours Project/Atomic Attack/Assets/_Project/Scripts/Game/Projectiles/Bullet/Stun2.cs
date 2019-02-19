@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Stun2 : Stun {
 
-    private void Reset()
+    void Reset()
     {
         Damage = 5;
         Speed = 10;

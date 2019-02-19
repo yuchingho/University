@@ -24,15 +24,12 @@ public abstract class AI_Human : MonoBehaviour {
     [SerializeField] protected float ThrowMultiplyer = 1; // Balance later.
 
     [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
-    public bool Suffocate;  // For 07_Nitrogen + 15_Phosphorus. (DoT).
-    public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT).
+    public bool Suffocate;  // For 07_Nitrogen + 15_Phosphorus. (DoT). Flash Red or Blue.
+    public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT). Flash Green.
     public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT).
-    public bool Blinded;    // For Enemies.
+    public bool Blinded;    // For Enemies. If true, don't instantiate bullet explosion.
     public bool Stunned;    // For Enemies.
-    [SerializeField] protected GameObject EffectSuffocate;  // Text Effect.
-    [SerializeField] protected GameObject EffectPoisoned;   // Text Effect.
     [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
-    [SerializeField] protected GameObject EffectBlinded;    // Text Effect.
     [SerializeField] protected GameObject EffectStunned;    // Order in layer = 1.
 
     [Space( 10), Header("----------------- Target ----------------")]
@@ -131,16 +128,16 @@ public abstract class AI_Human : MonoBehaviour {
     protected virtual IEnumerator StatusSuffocate()
     {
         yield return new WaitForSeconds(1f);
-        if (Suffocate == true) { EffectSuffocate.SetActive(true); }
-        else { EffectSuffocate.SetActive(false); }
+        if (Suffocate == true) {  }
+        else {  }
     }
 
     protected virtual IEnumerator StatusPoisoned()
     {
         yield return new WaitForSeconds(1f);
 
-        if (Poisoned == true) { EffectPoisoned.SetActive(true); }
-        else { EffectPoisoned.SetActive(false); }
+        if (Poisoned == true) {  }
+        else {  }
     }
 
     protected virtual IEnumerator StatusBurned()
@@ -156,8 +153,8 @@ public abstract class AI_Human : MonoBehaviour {
     {
         yield return new WaitForSeconds(1f);
 
-        if (Blinded == true) { EffectBlinded.SetActive(true); }
-        else { EffectBlinded.SetActive(false); }
+        if (Blinded == true) {  }
+        else {  }
     }
 
     protected virtual IEnumerator StatusStunned()

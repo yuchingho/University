@@ -77,6 +77,8 @@
     <Compile Include="Assets\_Project\Scripts\Game\HealthSystem.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\ManagerGame.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\_Bullet.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\Blind.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\Blind2.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\Stun.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\Stun2.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Explode\_Explode.cs" />
