@@ -61,28 +61,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Project\Scripts\AI_Human.cs" />
-    <Compile Include="Assets\_Project\Scripts\Enemy\AI_Enemy.cs" />
-    <Compile Include="Assets\_Project\Scripts\Enemy\E_Gunman.cs" />
-    <Compile Include="Assets\_Project\Scripts\Enemy\E_Swordsman.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\AI_Friend.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\F_Gunman.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\F_Swordsman.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\Periodic Table\F01_Hydrogen.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\Periodic Table\F02_Helium.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\Periodic Table\F03_Lithium.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\Periodic Table\F04_Beryllium.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\Periodic Table\F11_Sodium.cs" />
-    <Compile Include="Assets\_Project\Scripts\Friend\Periodic Table\F12_Magnesium.cs" />
-    <Compile Include="Assets\_Project\Scripts\HealthSystem.cs" />
-    <Compile Include="Assets\_Project\Scripts\ManagerGame.cs" />
-    <Compile Include="Assets\_Project\Scripts\Projectiles\Bullet\_Bullet.cs" />
-    <Compile Include="Assets\_Project\Scripts\Projectiles\Bullet\Stun.cs" />
-    <Compile Include="Assets\_Project\Scripts\Projectiles\Bullet\Stun2.cs" />
-    <Compile Include="Assets\_Project\Scripts\Projectiles\Explode\_Explode.cs" />
-    <Compile Include="Assets\_Project\Scripts\Projectiles\Explode\Grenade.cs" />
-    <Compile Include="Assets\_Project\Scripts\Projectiles\RemoveEffect.cs" />
-    <Compile Include="Assets\_Project\Scripts\Projectiles\RemoveExplosions.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\AI_Human.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Enemy\AI_Enemy.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Enemy\E_Gunman.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Enemy\E_Swordsman.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\AI_Friend.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\F_Gunman.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\F_Swordsman.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F01_Hydrogen.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F02_Helium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F03_Lithium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F04_Beryllium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F11_Sodium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F12_Magnesium.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\HealthSystem.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\ManagerGame.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\_Bullet.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\Stun.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\Stun2.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Explode\_Explode.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Explode\Grenade.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\RemoveEffect.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\RemoveExplosions.cs" />
     <None Include="Assets\Credit Links.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/A/GitHub/University/4) UWS Honours Year/3) Both Semesters - Computing Honours Project/Atomic Attack/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
