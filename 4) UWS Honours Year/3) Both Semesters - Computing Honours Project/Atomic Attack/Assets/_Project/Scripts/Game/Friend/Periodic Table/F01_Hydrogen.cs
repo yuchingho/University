@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class F01_Hydrogen : F_Gunman {
 
-    // Child Class F01_Hydrogen inheriting from F_Gunman.
     [Space( 10), Header("[^ Child: F01_Hydrogen ]")]
     #pragma warning disable
     [SerializeField] string Effect = "AoE Damage";
-
 
     void Reset()
     {
