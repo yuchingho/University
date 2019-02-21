@@ -42,6 +42,7 @@ public class F02_Helium : MonoBehaviour {
     void SpawnFlying()
     {
         //Instantiate(ShockUnits, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+        // Spawn 5, and when drops down, can see the 5 in a row.
     }
 
     // instiate blimp at spawn location + y.
