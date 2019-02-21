@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class _Explode : MonoBehaviour {
 
-    public bool Magnify;
     public int Damage;
 
     public void MagnifyExplosions()

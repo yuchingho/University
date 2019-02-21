@@ -7,7 +7,7 @@ public class F01_Hydrogen : F_Gunman {
     [Space( 10), Header("[^ Child: F01_Hydrogen ]")]
     #pragma warning disable
     [SerializeField] string Effect = "AoE Damage";
-
+    Magnifyed Magnify;  // -------------------------------------------------------------------------
     void Reset()
     {
         MovementSpeed = 1f;

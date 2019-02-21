@@ -21,9 +21,16 @@ public class E_Swordsman : AI_Enemy {
         AttackRadius = 0.85f;
     }
 
+    protected override void Movement()
+    {   // Activating Blinded.
+        if (Blinded == true)  { AttackRate = 0; }
+        if (Blinded == false) { AttackRate = 1; }
+        base.Movement();
+    }
+
     protected override void LookAtTarget()
     {   // Sprites flipping to look at its Target.
-        if (OnCastle == true)
+        if (OnTheCastle == true)
         {   // When on Castle, different Angle algorithm so will face Target correctly.
             Vector3 dir = Target.position - transform.position;
             float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
@@ -54,8 +61,8 @@ public class E_Swordsman : AI_Enemy {
     {   // Switching layers so can walk out of Castle if chucked on it.
         if (collision.gameObject.tag == "Ground")
         {
-            OnCastle = false;
             Grounded = true;
+            OnTheCastle = false;
             gameObject.layer = 8;
             if (GrabbedByMouse == true)
             { StartCoroutine(HitTheGround()); }
@@ -63,15 +70,15 @@ public class E_Swordsman : AI_Enemy {
 
         if (collision.gameObject.tag == "Castle")
         {
-            OnCastle = true;
             Grounded = true;
+            OnTheCastle = true;
             gameObject.layer = 12;
         }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {   // As lil guy walks off Castle Platform, switching layers.
-        if (collision.gameObject.tag == "Castle") { OnCastle = false;  Grounded = false; gameObject.layer = 8; }
+        if (collision.gameObject.tag == "Castle") { OnTheCastle = false;  Grounded = false; gameObject.layer = 8; }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

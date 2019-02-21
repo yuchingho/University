@@ -7,7 +7,7 @@ public class _Bullet : MonoBehaviour {
     protected Transform Target;
     protected HealthSystem HealthSystem;
 
-    [Space( 18)]       public int Damage = 2;
+    public int Damage = 2;
     [SerializeField] protected int Speed = 15;
     [SerializeField] GameObject Explosion;
 

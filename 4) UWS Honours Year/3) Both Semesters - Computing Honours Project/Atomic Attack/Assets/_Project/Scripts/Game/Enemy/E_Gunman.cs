@@ -21,9 +21,16 @@ public class E_Gunman : AI_Enemy {
         AttackRadius = LookRadius;
     }
 
+    protected override void Movement()
+    {   // Activating Blinded.
+        if (Blinded == true)  { AttackRate = 2;     }
+        if (Blinded == false) { AttackRate = 0.75f; }
+        base.Movement();
+    }
+
     protected override void LookAtTarget()
     {   // Sprites flipping to look at its Target.
-        if (OnCastle == true)
+        if (OnTheCastle == true)
         {   // When on Castle, different Angle algorithm so will face Target correctly.
             Vector3 dir = Target.position - transform.position;
             float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
@@ -36,7 +43,7 @@ public class E_Gunman : AI_Enemy {
 
     protected override void Update()
     {
-        if (OnCastle == true)
+        if (OnTheCastle == true)
         {
             MovementSpeed = 0;
             base.Update();
@@ -57,8 +64,8 @@ public class E_Gunman : AI_Enemy {
     {
         if (collision.gameObject.tag == "Ground")
         {
-            OnCastle = false;
             Grounded = true;
+            OnTheCastle = false;
             LookRadius = 4f;
             AttackRadius = 4f;
             if (GrabbedByMouse == true)
@@ -67,8 +74,8 @@ public class E_Gunman : AI_Enemy {
 
         if (collision.gameObject.tag == "Castle")
         {
-            OnCastle = true;
             Grounded = true;
+            OnTheCastle = true;
             LookRadius = 10f;
             AttackRadius = 10f;
             GrabbedByMouse = false;

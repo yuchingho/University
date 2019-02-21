@@ -83,6 +83,7 @@
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\Stun2.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Explode\_Explode.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Explode\Grenade.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Explode\Magnifyed.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\RemoveEffect.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\RemoveExplosions.cs" />
     <None Include="Assets\Credit Links.txt" />

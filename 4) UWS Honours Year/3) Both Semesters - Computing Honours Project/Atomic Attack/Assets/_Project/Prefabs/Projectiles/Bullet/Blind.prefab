@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4252052643859314}
-  - component: {fileID: 114831770336664306}
+  - component: {fileID: 114794344285278776}
   - component: {fileID: 212415791485151764}
   m_Layer: 0
   m_Name: Blind
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114831770336664306
+--- !u!114 &114794344285278776
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1556022897310762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c76b5c0d87b47034db877b33fae5354c, type: 3}
+  m_Script: {fileID: 11500000, guid: c7e404c8c3c7a334fbebfda57f30400a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 2

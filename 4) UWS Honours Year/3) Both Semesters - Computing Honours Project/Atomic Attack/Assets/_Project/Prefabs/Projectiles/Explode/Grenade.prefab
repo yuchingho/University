@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4879260560498148}
   - component: {fileID: 114671462704627878}
+  - component: {fileID: 114407187135184062}
   - component: {fileID: 212972339083259542}
   - component: {fileID: 50308692935428178}
   - component: {fileID: 58491440490342798}
@@ -78,6 +79,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.87499994
+--- !u!114 &114407187135184062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1801079812914224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5fbbc8ec886fba4aad0f70b4627ef2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Magnify: 0
 --- !u!114 &114671462704627878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094ccd965cb447b4f9afaf9e4dc4d16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Magnify: 0
   Damage: 3
   Speed: 6
   Explosion: {fileID: 1176723143312394, guid: b67f4f2aa62fdbc41b80657a9182daf4, type: 2}

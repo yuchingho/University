@@ -5,11 +5,12 @@ using UnityEngine;
 public abstract class AI_Human : MonoBehaviour {
 
     // Parent Class for Inheritance.
-    Rigidbody2D Rigidbody2D;
-    Animator Animator;
+    protected SpriteRenderer SpriteRenderer;
+    protected Rigidbody2D Rigidbody2D;
+    protected Animator Animator;
     protected HealthSystem HealthSystem;
 
-    [Space(-10), Header("[ Parent: AI_Human ] Movement")]
+    [Space(-10), Header("[ Parent: AI_Human ] Cost")]
     public int CostValue;
     public int ScoreValue;
 
@@ -19,18 +20,23 @@ public abstract class AI_Human : MonoBehaviour {
     protected int MovementDirection;
     public bool Grounded;
     protected Vector3 PreviousGrabbedPosition;
+    [SerializeField] protected bool Unshakeable;
+    [SerializeField] protected bool OnTheCastle;
     [SerializeField] protected bool GrabbedByMouse;
-    [SerializeField] protected bool OnCastle;
     [SerializeField] protected float ThrowMultiplyer = 1; // Balance later.
 
     [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
-    public bool Suffocate;  // For 07_Nitrogen + 15_Phosphorus. (DoT). Flash Red or Blue.
-    public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT). Flash Green.
-    public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT).
     public bool Blinded;    // For Enemies. If true, don't instantiate bullet explosion.
     public bool Stunned;    // For Enemies.
-    [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
+    public bool Suffocated; // For 07_Nitrogen + 15_Phosphorus. (DoT). Flash Red or Blue.
+    public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT). Flash Green.
+    public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT).
+    [SerializeField] protected Color ColourInitial;
+    [SerializeField] protected Color ColourSuffocated;
+    [SerializeField] protected Color ColourPoisoned;
+    [SerializeField] protected GameObject EffectBlinded;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectStunned;    // Order in layer = 1.
+    [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
 
     [Space( 10), Header("----------------- Target ----------------")]
     public Transform Target;
@@ -45,6 +51,8 @@ public abstract class AI_Human : MonoBehaviour {
 
     protected virtual void Start()
     {
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+        ColourInitial = new Color(255f, 55f, 255f);
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         HealthSystem = GetComponent<HealthSystem>();
@@ -57,7 +65,11 @@ public abstract class AI_Human : MonoBehaviour {
     {   // If out of bounds, destroy GameObject and not add to score, etc.
         if (transform.position.x<=-15 || transform.position.x>=15 || transform.position.y<=-7) { Destroy(gameObject); }
         else if (Grounded == true && HealthSystem.Deceased == true) { PlayAnimationDeath(); }
-        else if (Grounded == true && GrabbedByMouse == false)       { Movement(); }
+        else if (Grounded == true && GrabbedByMouse == false)
+        {
+            StartCoroutine(StatusBlinded());
+            Movement();
+        }
     }
 
     protected virtual void LookAtTarget()
@@ -125,10 +137,31 @@ public abstract class AI_Human : MonoBehaviour {
 
     protected virtual void Shoot() { }
 
+    // ------- Only for Enemies -------
+    protected virtual IEnumerator StatusBlinded()
+    {   // Duration = 2s.
+        if (Blinded == true)
+        {
+            EffectBlinded.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            Blinded = false;
+            EffectBlinded.SetActive(false);
+        }
+    }
+
+    protected virtual IEnumerator StatusStunned()
+    {   // Duration = 1s.
+        MovementSpeed = 0;
+        gameObject.GetComponent<Animator>().Play("Stunned");
+        yield return new WaitForSeconds(1f);
+        Stunned = false;
+    }
+    // ------- Only for Enemies -------
+
     protected virtual IEnumerator StatusSuffocate()
     {
         yield return new WaitForSeconds(1f);
-        if (Suffocate == true) {  }
+        if (Suffocated == true) {  }
         else {  }
     }
 
@@ -146,22 +179,5 @@ public abstract class AI_Human : MonoBehaviour {
 
         if (Burned == true) { EffectBurned.SetActive(true); }
         else { EffectBurned.SetActive(false); }
-    }
-
-    // ------- Only for Enemies -------
-    protected virtual IEnumerator StatusBlinded()
-    {
-        yield return new WaitForSeconds(1f);
-
-        if (Blinded == true) {  }
-        else {  }
-    }
-
-    protected virtual IEnumerator StatusStunned()
-    {
-        MovementSpeed = 0;
-        gameObject.GetComponent<Animator>().Play("Stunned");
-        yield return new WaitForSeconds(1f);
-        Stunned = false;
     }
 }
