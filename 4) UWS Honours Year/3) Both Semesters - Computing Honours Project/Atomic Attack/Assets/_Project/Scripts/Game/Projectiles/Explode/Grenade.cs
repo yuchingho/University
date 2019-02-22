@@ -4,44 +4,38 @@ using UnityEngine;
 
 public class Grenade : _Explode {
 
-    F01_Hydrogen F01_Hydrogen;
+    protected Transform Target;
     Rigidbody2D Rigidbody2D;
-    protected HealthSystem HealthSystem;
-    [SerializeField] protected Transform Target;
-    [SerializeField] float Speed;
-    [SerializeField] GameObject Explosion;
-    [SerializeField] float ExplosionRadius;
-    [SerializeField] float ThrowAngle;
-    float Rand;
-    int ThrowDirection;
 
-    public void Seek(Transform target)
+    float Rand;
+    [SerializeField] protected int Speed = 3;
+    [SerializeField] protected int ThrowAngle = 150;
+
+    public void Throw(Transform target)
     {
         Target = target;
     }
 
-    void Start()
+    void Reset()
     {
-        //F01_Hydrogen = GetComponent<F01_Hydrogen>();
-        //ThrowDirection = F01_Hydrogen.MovementDirection;
-        //Debug.Log(ThrowDirection);
-        Debug.Log(Target);
-        // Get Target's movement direction to * it by, and make sure throwing in right direction
-
-        // smh wrong with f01_hydrogen throw grenade coroutine and shoot, not targetting correctly
-
-        Rand = Random.Range(1, 100);
-        Rigidbody2D = GetComponent<Rigidbody2D>();
-        Rigidbody2D.AddForce(transform.up * ThrowAngle);
-        Rigidbody2D.AddForce(transform.right * ThrowAngle);
+        Damage = 5;
+        ExplosionRadius = 10;
     }
 
-    // Whenever Grenade is thrown, will spin along the Z axis.
-    void Update() { transform.Rotate(Vector3.forward * Rand); }
+    protected override void Start()
+    {
+        Rand = Random.Range(1, 100);
+        int ThrowDir = Target.GetComponent<AI_Human>().MovementDirection;
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+        Rigidbody2D.AddForce(transform.up * ThrowAngle);
+        Rigidbody2D.AddForce(transform.right * ThrowAngle * ThrowDir);
+        // Adding ThrowDir so Grenade will throw in the correct direction when facing enemy of 1 or -1.
+    }
 
+    // Whenever Grenade is thrown, will have a random spin along the Z axis.
+    protected override void Update() { transform.Rotate(Vector3.forward * Rand); }
 
     // if magnifed = true, add more damage
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         //add damage in explosion radius

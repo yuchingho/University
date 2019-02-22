@@ -5,29 +5,31 @@ using UnityEngine;
 public class F02_Helium : MonoBehaviour {
 
     HealthSystem HealthSystem;
+    Rigidbody2D Rigidbody2D;
 
-    [Space(-10), Header("BLIMP Cost")]
     public int CostValue;
     public int ScoreValue;
-
-    [Space( 10), Header("[ BLIMP")]
     [SerializeField] protected float MovementSpeed = 1f;
     [SerializeField] GameObject Explosion;
-    [SerializeField] GameObject ShockUnits;
+    [SerializeField] GameObject SpawnUnits;
 
     void Start()
     {
         HealthSystem = GetComponent<HealthSystem>();
+        Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
         transform.Translate(Vector2.right * MovementSpeed * Time.deltaTime);
-        if (HealthSystem.Deceased == true || transform.position.x >= 5)
+        if (HealthSystem.Deceased == true || transform.position.x >= 5.75)
         {
-
-            Destroy(gameObject);
-            Instantiate(Explosion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            Rigidbody2D.gravityScale = 1;
+            if (transform.position.y <= -1.45f)
+            {
+                Destroy(gameObject);
+                Instantiate(Explosion, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            }
             // damage building 
             // and units 
             // and explosion blowback

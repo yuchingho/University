@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class _Explode : MonoBehaviour {
 
-    public int Damage;
+    // _Explode only has a target with Grenade.
+    protected HealthSystem HealthSystem;
 
-    public void MagnifyExplosions()
+    public int Damage;
+    [SerializeField] protected GameObject Explosion;
+    [SerializeField] protected int ExplosionRadius;
+
+
+    protected virtual void Start()
     {
-        // if in magnified area, will cause lil guys to fly away.
-        // add screen-shake related to damage
-        // don't need to calculate FallDamage cause damage should already kill them
-    }
+		
+	}
+
+    protected virtual void Update() 
+    {
+		
+	}
 }

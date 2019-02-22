@@ -83,7 +83,6 @@ public class AI_Enemy : AI_Human {
         // Adding fall damage.
         GetComponent<HealthSystem>().DamageTaken(ThrowVelocity.y * ThrowMultiplyer);
         Debug.Log("Throw Damage = " + (ThrowVelocity.y * ThrowMultiplyer).ToString("n0"));
-        // Balance later.
     }
 
     protected virtual IEnumerator HitTheGround()

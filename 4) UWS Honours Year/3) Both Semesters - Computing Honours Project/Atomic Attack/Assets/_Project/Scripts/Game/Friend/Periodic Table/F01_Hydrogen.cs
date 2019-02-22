@@ -49,13 +49,14 @@ public class F01_Hydrogen : F_Gunman {
         }
     }
 
-    protected override void Shoot() { }
+    protected override void Shoot() { /* So won't spawn double Grenades. */ }
     IEnumerator ThrowGrenade()
     {   // Instantiating Grenade prefab with delay so inline with Throw Animation.
         yield return new WaitForSeconds(0.35f);
-        Instantiate(Projectile,
+        GameObject Grenade = Instantiate(Projectile,
         new Vector3(FireLocation.position.x, FireLocation.position.y, FireLocation.position.z - 1), FireLocation.rotation);
-        Grenade grenade = GetComponent<Grenade>();
-        if (grenade != null) { grenade.Seek(Target); }
+        Debug.Log("Shooting at " + Target);
+        Grenade grenade = Grenade.GetComponent<Grenade>();
+        if (grenade != null) { grenade.Throw(Target); }
     }
 }

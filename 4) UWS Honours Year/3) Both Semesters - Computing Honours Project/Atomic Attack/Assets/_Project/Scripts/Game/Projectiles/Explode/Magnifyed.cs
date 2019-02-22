@@ -5,4 +5,5 @@ using UnityEngine;
 public class Magnifyed : MonoBehaviour {
 
     public bool Magnify;
+    // add screenshake if magnified
 }

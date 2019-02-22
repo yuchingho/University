@@ -102,10 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094ccd965cb447b4f9afaf9e4dc4d16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 3
-  Speed: 6
+  Damage: 5
   Explosion: {fileID: 1176723143312394, guid: b67f4f2aa62fdbc41b80657a9182daf4, type: 2}
-  ExplosionRadius: 0
+  ExplosionRadius: 10
+  Speed: 3
   ThrowAngle: 150
 --- !u!212 &212972339083259542
 SpriteRenderer:
