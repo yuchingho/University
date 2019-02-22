@@ -11,7 +11,7 @@ public class F_Swordsman : AI_Friend {
     [Space( 10), Header("[^ Child:   F_Swordsman ] Steriods")]
     public bool Boron;        // Add MovementSpeed for when activated.
     public bool Aluminium;    // Add AttackDamage and AttackRate for when activated.
-    [SerializeField] Color ColorSteroids;
+    [SerializeField] Color ColorAluminium = new Color(150f, 100f, 100f);
 
     void Reset()
     {

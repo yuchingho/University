@@ -38,23 +38,18 @@ public class E_Swordsman : AI_Enemy {
             if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
             transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
         }
-
-        // Create new rotation cuz swordsman bugging out?
-        /*
-            protected virtual void LookAtTarget()
-            {   // Sprites flipping to look at its Target.
-                if (Target != null)
-                {
-                    Vector3 dir = Target.position - transform.position;
-                    float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                    if (Angle <= 160) { MovementDirection =-1; }
-                    if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
-                    transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
-                }
+        else
+        {
+            if (Target != null)
+            {
+                Vector3 dir = Target.position - transform.position;
+                float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                if (Angle <=  160) { MovementDirection = -1; }
+                if (Angle >=  170) { MovementDirection =  1; Angle -= 180; }
+                if (Angle <= -170) { MovementDirection =  1; Angle += 180; }
+                transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
             }
-        */
-        // Else, LookAtTarget normally.
-        else { base.LookAtTarget(); }
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -87,13 +82,7 @@ public class E_Swordsman : AI_Enemy {
         {   // When E_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
             // Will damage Target's Health with E_Swordsman's AttackDamage.
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
-
-            // Bugs
-            // Doesn't damage f_swordsman   (because same sprite size?)
-            // Doesn't damage hydrogen      (because same sprite size?)
-            // Damages f_gunman fine.
-            // Damages lithium, but runs in wrong direction when shot at
-            // After being chucked in air, runs in wrong direction
+            // Bugs: Doesn't damage f_swordsman or F01_Hydrogen.
         }
     }
 }

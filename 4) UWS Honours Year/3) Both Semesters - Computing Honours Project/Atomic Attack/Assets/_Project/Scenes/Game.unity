@@ -139,7 +139,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1476455146}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &18548672
 GameObject:
@@ -167,7 +167,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2109663549}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &66215366
 GameObject:
@@ -190,7 +190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &66215367
 Animator:
   serializedVersion: 3
@@ -320,20 +320,21 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1.2
   Grounded: 0
+  MovementDirection: 0
   Unshakeable: 0
   OnTheCastle: 0
   GrabbedByMouse: 0
   ThrowMultiplyer: 1
-  Blinded: 0
   Stunned: 0
+  Blinded: 0
   Suffocated: 0
   Poisoned: 0
   Burned: 0
-  ColourInitial: {r: 0, g: 0, b: 0, a: 0}
-  ColourSuffocated: {r: 0, g: 0, b: 0, a: 0}
-  ColourPoisoned: {r: 0, g: 0, b: 0, a: 0}
-  EffectBlinded: {fileID: 474992837}
+  ColourInitial: {r: 255, g: 255, b: 255, a: 1}
+  ColourSuffocated: {r: 255, g: 0, b: 0, a: 1}
+  ColourPoisoned: {r: 0, g: 255, b: 0, a: 1}
   EffectStunned: {fileID: 370004693}
+  EffectBlinded: {fileID: 474992837}
   EffectBurned: {fileID: 1517171250}
   Target: {fileID: 0}
   TargetHealth: 0
@@ -365,13 +366,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 66215366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.19, y: -1.45, z: 0}
+  m_LocalPosition: {x: -1, y: -1.45, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
-  - {fileID: 1472332598}
+  - {fileID: 370004695}
   - {fileID: 474992838}
   - {fileID: 1517171251}
-  - {fileID: 370004695}
+  - {fileID: 1472332598}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -498,7 +499,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2074922152}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &179185573
 BoxCollider2D:
@@ -793,20 +794,21 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1
   Grounded: 0
+  MovementDirection: 0
   Unshakeable: 0
   OnTheCastle: 0
   GrabbedByMouse: 0
   ThrowMultiplyer: 1
-  Blinded: 0
   Stunned: 0
+  Blinded: 0
   Suffocated: 0
   Poisoned: 0
   Burned: 0
-  ColourInitial: {r: 0, g: 0, b: 0, a: 0}
-  ColourSuffocated: {r: 0, g: 0, b: 0, a: 0}
-  ColourPoisoned: {r: 0, g: 0, b: 0, a: 0}
-  EffectBlinded: {fileID: 722079006}
+  ColourInitial: {r: 255, g: 255, b: 255, a: 1}
+  ColourSuffocated: {r: 255, g: 0, b: 0, a: 1}
+  ColourPoisoned: {r: 0, g: 255, b: 0, a: 1}
   EffectStunned: {fileID: 820344681}
+  EffectBlinded: {fileID: 722079006}
   EffectBurned: {fileID: 448199234}
   Target: {fileID: 0}
   TargetHealth: 0
@@ -815,7 +817,7 @@ MonoBehaviour:
   AttackRadius: 4
   AttackRate: 0.75
   EnemyCounter: 1
-  AttackDamage: 2 [RO] Add to Prefab
+  AttackDamage: 2 [Read Only Prefab]
   Projectile: {fileID: 1574258756806926, guid: 0f6b8ae62c4abbf42b1bf274ca991f34, type: 2}
   FireLocation: {fileID: 1994818427}
 --- !u!4 &330684817
@@ -828,10 +830,10 @@ Transform:
   m_LocalPosition: {x: 7.7, y: 2.17, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
-  - {fileID: 1994818427}
+  - {fileID: 820344682}
   - {fileID: 722079007}
   - {fileID: 448199236}
-  - {fileID: 820344682}
+  - {fileID: 1994818427}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -859,13 +861,13 @@ GameObject:
   - component: {fileID: 361476373}
   - component: {fileID: 361476372}
   - component: {fileID: 361476371}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: F02_Helium
   m_TagString: Friend
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &361476371
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1030,7 +1032,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 66215373}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383327994
 GameObject:
@@ -1060,7 +1062,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2074922152}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &383327996
 Animator:
@@ -2251,7 +2253,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 862941729}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &697928937
 GameObject:
@@ -2455,7 +2457,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 330684817}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &820344683
 SpriteRenderer:
@@ -2676,32 +2678,35 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1
   Grounded: 0
+  MovementDirection: 0
   Unshakeable: 0
   OnTheCastle: 0
   GrabbedByMouse: 0
   ThrowMultiplyer: 1
-  Blinded: 0
   Stunned: 0
+  Blinded: 0
   Suffocated: 0
   Poisoned: 0
   Burned: 0
-  ColourInitial: {r: 1, g: 1, b: 1, a: 0}
-  ColourSuffocated: {r: 0, g: 0, b: 0, a: 0}
-  ColourPoisoned: {r: 0, g: 0, b: 0, a: 0}
-  EffectBlinded: {fileID: 0}
-  EffectStunned: {fileID: 0}
+  ColourInitial: {r: 255, g: 255, b: 255, a: 1}
+  ColourSuffocated: {r: 255, g: 0, b: 0, a: 1}
+  ColourPoisoned: {r: 0, g: 255, b: 0, a: 1}
+  EffectStunned: {fileID: 1740694791413676, guid: 67df1fd710af6ff4990979fe4b77ed2a,
+    type: 2}
+  EffectBlinded: {fileID: 1740694791413676, guid: 67df1fd710af6ff4990979fe4b77ed2a,
+    type: 2}
   EffectBurned: {fileID: 627217414}
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
   LookRadius: 4
   AttackRadius: 4
-  AttackRate: 5
+  AttackRate: 0.75
   FriendCounter: 1
-  AttackDamage: 2 [RO] Add to Prefab
+  AttackDamage: 2 [Read Only Prefab]
   Projectile: {fileID: 1556022897310762, guid: ecc554946da159648b37465235dfd5e3, type: 2}
   FireLocation: {fileID: 1886309034}
-  Effect: Blind
+  DurationBlind: 2
 --- !u!114 &862941728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,8 +2730,8 @@ Transform:
   m_LocalPosition: {x: -4.746, y: -1.45, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
-  - {fileID: 1886309034}
   - {fileID: 627217417}
+  - {fileID: 1886309034}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2799,7 +2804,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2109663549}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1402702710
 Animator:
@@ -2894,7 +2899,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 66215373}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1472332599
 BoxCollider2D:
@@ -3067,32 +3072,35 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1
   Grounded: 0
+  MovementDirection: 0
   Unshakeable: 0
   OnTheCastle: 0
   GrabbedByMouse: 0
   ThrowMultiplyer: 1
-  Blinded: 0
   Stunned: 0
+  Blinded: 0
   Suffocated: 0
   Poisoned: 0
   Burned: 0
-  ColourInitial: {r: 0, g: 0, b: 0, a: 0}
-  ColourSuffocated: {r: 0, g: 0, b: 0, a: 0}
-  ColourPoisoned: {r: 0, g: 0, b: 0, a: 0}
-  EffectBlinded: {fileID: 0}
-  EffectStunned: {fileID: 0}
+  ColourInitial: {r: 255, g: 255, b: 255, a: 1}
+  ColourSuffocated: {r: 255, g: 0, b: 0, a: 1}
+  ColourPoisoned: {r: 0, g: 255, b: 0, a: 1}
+  EffectStunned: {fileID: 1740694791413676, guid: 67df1fd710af6ff4990979fe4b77ed2a,
+    type: 2}
+  EffectBlinded: {fileID: 1740694791413676, guid: 67df1fd710af6ff4990979fe4b77ed2a,
+    type: 2}
   EffectBurned: {fileID: 1735585875}
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
-  LookRadius: 4
-  AttackRadius: 4
-  AttackRate: 3
+  LookRadius: 3.5
+  AttackRadius: 3.5
+  AttackRate: 0.75
   FriendCounter: 1
-  AttackDamage: 2 [RO] Add to Prefab
+  AttackDamage: 2 [Read Only Prefab]
   Projectile: {fileID: 1189801525606974, guid: 18c88926cacbed541bde11ae00706a5c, type: 2}
   FireLocation: {fileID: 4972427}
-  Effect: Stun
+  DurationStun: 2
 --- !u!114 &1476455145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3116,8 +3124,8 @@ Transform:
   m_LocalPosition: {x: -3.49, y: -1.45, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
-  - {fileID: 4972427}
   - {fileID: 1735585876}
+  - {fileID: 4972427}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3287,7 +3295,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 1476455146}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1735585877
 Animator:
@@ -3433,7 +3441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 862941729}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994818426
 GameObject:
@@ -3461,7 +3469,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 330684817}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2019753070
 GameObject:
@@ -3754,7 +3762,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.6875, y: 2.9375}
+  m_Size: {x: 1.875, y: 3.625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3770,8 +3778,8 @@ Transform:
   m_LocalPosition: {x: -8, y: -1.45, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
-  - {fileID: 179185572}
   - {fileID: 383327995}
+  - {fileID: 179185572}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3792,7 +3800,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.875, y: 3.625}
-    newSize: {x: 2.6875, y: 2.9375}
+    newSize: {x: 1.875, y: 3.625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3815,20 +3823,23 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1.2
   Grounded: 0
+  MovementDirection: 0
   Unshakeable: 0
   OnTheCastle: 0
   GrabbedByMouse: 0
   ThrowMultiplyer: 1
-  Blinded: 0
   Stunned: 0
+  Blinded: 0
   Suffocated: 0
   Poisoned: 0
   Burned: 0
-  ColourInitial: {r: 0, g: 0, b: 0, a: 0}
-  ColourSuffocated: {r: 0, g: 0, b: 0, a: 0}
-  ColourPoisoned: {r: 0, g: 0, b: 0, a: 0}
-  EffectBlinded: {fileID: 0}
-  EffectStunned: {fileID: 0}
+  ColourInitial: {r: 255, g: 255, b: 255, a: 1}
+  ColourSuffocated: {r: 255, g: 0, b: 0, a: 1}
+  ColourPoisoned: {r: 0, g: 255, b: 0, a: 1}
+  EffectStunned: {fileID: 1740694791413676, guid: 67df1fd710af6ff4990979fe4b77ed2a,
+    type: 2}
+  EffectBlinded: {fileID: 1740694791413676, guid: 67df1fd710af6ff4990979fe4b77ed2a,
+    type: 2}
   EffectBurned: {fileID: 383327994}
   Target: {fileID: 0}
   TargetHealth: 0
@@ -3840,7 +3851,7 @@ MonoBehaviour:
   AttackDamage: 1
   Boron: 0
   Aluminium: 0
-  ColorSteroids: {r: 0, g: 0, b: 0, a: 0}
+  ColorAluminium: {r: 150, g: 100, b: 100, a: 1}
 --- !u!95 &2074922155
 Animator:
   serializedVersion: 3
@@ -3892,7 +3903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &2109663543
 Animator:
   serializedVersion: 3
@@ -4017,20 +4028,23 @@ MonoBehaviour:
   ScoreValue: 0
   MovementSpeed: 1
   Grounded: 0
+  MovementDirection: 0
   Unshakeable: 0
   OnTheCastle: 0
   GrabbedByMouse: 0
   ThrowMultiplyer: 1
-  Blinded: 0
   Stunned: 0
+  Blinded: 0
   Suffocated: 0
   Poisoned: 0
   Burned: 0
-  ColourInitial: {r: 0, g: 0, b: 0, a: 0}
-  ColourSuffocated: {r: 0, g: 0, b: 0, a: 0}
-  ColourPoisoned: {r: 0, g: 0, b: 0, a: 0}
-  EffectBlinded: {fileID: 0}
-  EffectStunned: {fileID: 0}
+  ColourInitial: {r: 255, g: 255, b: 255, a: 1}
+  ColourSuffocated: {r: 255, g: 0, b: 0, a: 1}
+  ColourPoisoned: {r: 0, g: 255, b: 0, a: 1}
+  EffectStunned: {fileID: 1740694791413676, guid: 67df1fd710af6ff4990979fe4b77ed2a,
+    type: 2}
+  EffectBlinded: {fileID: 1740694791413676, guid: 67df1fd710af6ff4990979fe4b77ed2a,
+    type: 2}
   EffectBurned: {fileID: 1402702708}
   Target: {fileID: 0}
   TargetHealth: 0
@@ -4039,7 +4053,7 @@ MonoBehaviour:
   AttackRadius: 3
   AttackRate: 2
   FriendCounter: 1
-  AttackDamage: 2 [RO] Add to Prefab
+  AttackDamage: 2 [Read Only Prefab]
   Projectile: {fileID: 1801079812914224, guid: 0fa186b2c473eaf41abde5482de701e9, type: 2}
   FireLocation: {fileID: 18548673}
   Effect: AoE Damage
@@ -4066,8 +4080,8 @@ Transform:
   m_LocalPosition: {x: -6, y: -1.45, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
-  - {fileID: 18548673}
   - {fileID: 1402702709}
+  - {fileID: 18548673}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

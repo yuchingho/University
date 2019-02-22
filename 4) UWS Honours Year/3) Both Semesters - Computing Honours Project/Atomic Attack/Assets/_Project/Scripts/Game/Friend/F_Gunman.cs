@@ -7,7 +7,7 @@ public class F_Gunman : AI_Friend {
     // Child Class F_Gunman inheriting from AI_Friend.
     [Space(-10), Header("[^ Child:   F_Gunman ]")]
     #pragma warning disable
-    [SerializeField] string AttackDamage = "2 [RO] Add to Prefab";
+    [SerializeField] string AttackDamage = "2 [Read Only Prefab]";
     [SerializeField] protected GameObject Projectile;
     [SerializeField] protected Transform FireLocation;
 

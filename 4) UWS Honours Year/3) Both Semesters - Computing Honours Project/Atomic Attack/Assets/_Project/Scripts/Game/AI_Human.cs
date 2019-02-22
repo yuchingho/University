@@ -14,11 +14,11 @@ public abstract class AI_Human : MonoBehaviour {
     public int CostValue;
     public int ScoreValue;
 
-    [Space( 10), Header("[ Parent: AI_Human ] Movement")]
+    [Space(10), Header("[ Parent: AI_Human ] Movement")]
     [SerializeField] protected float MovementSpeed;
     protected float MovementSpeedInitial;
-    protected int MovementDirection;
     public bool Grounded;
+    [HideInInspector] public int MovementDirection;
     protected Vector3 PreviousGrabbedPosition;
     [SerializeField] protected bool Unshakeable;
     [SerializeField] protected bool OnTheCastle;
@@ -26,16 +26,16 @@ public abstract class AI_Human : MonoBehaviour {
     [SerializeField] protected float ThrowMultiplyer = 1; // Balance later.
 
     [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
-    public bool Blinded;    // For Enemies. If true, don't instantiate bullet explosion.
     public bool Stunned;    // For Enemies.
-    public bool Suffocated; // For 07_Nitrogen + 15_Phosphorus. (DoT). Flash Red or Blue.
-    public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT). Flash Green.
+    public bool Blinded;    // For Enemies.
+    public bool Suffocated; // For 07_Nitrogen + 15_Phosphorus. (DoT).
+    public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT).
     public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT).
-    [SerializeField] protected Color ColourInitial;
-    [SerializeField] protected Color ColourSuffocated;
-    [SerializeField] protected Color ColourPoisoned;
-    [SerializeField] protected GameObject EffectBlinded;    // Order in layer = 1.
+    [SerializeField] protected Color ColourInitial    = new Color(255f, 255f, 255f); // White.
+    [SerializeField] protected Color ColourSuffocated = new Color(255f,   0f,   0f); // Red.
+    [SerializeField] protected Color ColourPoisoned   = new Color(  0f, 255f,   0f); // Green.
     [SerializeField] protected GameObject EffectStunned;    // Order in layer = 1.
+    [SerializeField] protected GameObject EffectBlinded;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
 
     [Space( 10), Header("----------------- Target ----------------")]
@@ -52,7 +52,6 @@ public abstract class AI_Human : MonoBehaviour {
     protected virtual void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
-        ColourInitial = new Color(255f, 55f, 255f);
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         HealthSystem = GetComponent<HealthSystem>();

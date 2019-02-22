@@ -11,9 +11,33 @@ public class F01_Hydrogen : F_Gunman {
     void Reset()
     {
         MovementSpeed = 1f;
+        AttackRate = 2f;
         LookRadius = 3f;
         AttackRadius = LookRadius;
-        AttackRate = 2f;
+    }
+
+    protected override void LookAtTarget()
+    {   // Sprites flipping to look at its Target.
+        if (OnTheCastle == true)
+        {   // When on Castle, different Angle algorithm so will face Target correctly.
+            Vector3 dir = Target.position - transform.position;
+            float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
+            if (Angle <= 160) { MovementDirection = -1; }
+            if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
+            transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
+        }
+        else
+        {
+            if (Target != null)
+            {
+                Vector3 dir = Target.position - transform.position;
+                float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                if (Angle <= 160) { MovementDirection = -1; }
+                if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
+                if (Angle <= -170) { MovementDirection = 1; Angle += 180; }
+                transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
+            }
+        }
     }
 
     protected override void PlayAnimationAttack()
@@ -31,5 +55,7 @@ public class F01_Hydrogen : F_Gunman {
         yield return new WaitForSeconds(0.35f);
         Instantiate(Projectile,
         new Vector3(FireLocation.position.x, FireLocation.position.y, FireLocation.position.z - 1), FireLocation.rotation);
+        Grenade grenade = GetComponent<Grenade>();
+        if (grenade != null) { grenade.Seek(Target); }
     }
 }

@@ -10,9 +10,10 @@ public class F12_Magnesium : F04_Beryllium {
 
     void Reset()
     {
+        //ColourInitial = 
         MovementSpeed = 1f;
         AttackRate = 0.75f;
-        LookRadius = 4f;
+        LookRadius = 5.5f;
         AttackRadius = LookRadius;
     }
 }
