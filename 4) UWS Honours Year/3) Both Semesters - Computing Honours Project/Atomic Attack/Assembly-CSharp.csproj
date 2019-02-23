@@ -76,6 +76,7 @@
     <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F12_Magnesium.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\HealthSystem.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\ManagerGame.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\ManagerSpawn.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\_Bullet.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\Blind.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Projectiles\Bullet\Blind2.cs" />
