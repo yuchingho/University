@@ -47,7 +47,7 @@ public class F02_Helium : MonoBehaviour {
     {
         Instantiate(SpawnUnits, new Vector2(transform.position.x + 0.4f, transform.position.y), Quaternion.identity);
         Instantiate(SpawnUnits, new Vector2(transform.position.x + 0.2f, transform.position.y), Quaternion.identity);
-        Instantiate(SpawnUnits, new Vector2(transform.position.x - 0.0f, transform.position.y), Quaternion.identity);
+        Instantiate(SpawnUnits, new Vector2(transform.position.x + 0.0f, transform.position.y), Quaternion.identity);
         Instantiate(SpawnUnits, new Vector2(transform.position.x - 0.2f, transform.position.y), Quaternion.identity);
         Instantiate(SpawnUnits, new Vector2(transform.position.x - 0.4f, transform.position.y), Quaternion.identity);
         Spawn = true;

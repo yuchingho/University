@@ -55,7 +55,6 @@ public class F01_Hydrogen : F_Gunman {
         yield return new WaitForSeconds(0.35f);
         GameObject Grenade = Instantiate(Projectile,
         new Vector3(FireLocation.position.x, FireLocation.position.y, FireLocation.position.z - 1), FireLocation.rotation);
-        Debug.Log("Shooting at " + Target);
         Grenade grenade = Grenade.GetComponent<Grenade>();
         if (grenade != null) { grenade.Throw(Target); }
     }
