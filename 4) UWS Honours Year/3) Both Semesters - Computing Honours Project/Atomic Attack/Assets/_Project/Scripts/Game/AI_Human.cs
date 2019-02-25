@@ -65,7 +65,7 @@ public abstract class AI_Human : MonoBehaviour {
         if (transform.position.x<=-15 || transform.position.x>=15 || transform.position.y<=-7) { Destroy(gameObject); }
         else if (Grounded == true && HealthSystem.Deceased == true) { PlayAnimationDeath(); }
         else if (Grounded == true && GrabbedByMouse == false)
-        {
+        {   // Where status effects are...
             StartCoroutine(StatusBlinded());
             Movement();
         }

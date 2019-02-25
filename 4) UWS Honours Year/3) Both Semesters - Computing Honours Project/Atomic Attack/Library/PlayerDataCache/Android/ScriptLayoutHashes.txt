@@ -85,7 +85,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-b540ac235e6f65035ec5bfe634168fc2 Assembly-CSharp.dll:.ManagerSpawn
+a218178a378097e31c4c216cb21e8bc7 Assembly-CSharp.dll:.ManagerSpawn
 daa4fdaee3727a29d80329641f6f65f5 Assembly-CSharp.dll:.F11_Sodium
 457fcb16ad304c6997de9b37d6b30ba2 Assembly-CSharp.dll:.F03_Lithium
 0df177e08541f0b963c60b0c164d5550 Assembly-CSharp.dll:.F_Swordsman

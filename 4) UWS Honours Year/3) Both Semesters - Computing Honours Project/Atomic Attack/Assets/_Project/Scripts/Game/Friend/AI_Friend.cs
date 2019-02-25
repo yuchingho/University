@@ -13,6 +13,13 @@ public class AI_Friend : AI_Human {
         base.Start();
         FinalTarget = GameObject.Find("Castle Health").transform;
         InvokeRepeating("UpdateTargetEnemy", 0f, 0.25f);
+        gameObject.layer = 12; // Start "boundary" layer.
+    }
+
+    protected override void Update()
+    {   // Changing back to "Friend" layer.
+        if (transform.position.x >= -8) { gameObject.layer = 9; }
+        base.Update();
     }
 
     protected virtual void UpdateTargetEnemy()
