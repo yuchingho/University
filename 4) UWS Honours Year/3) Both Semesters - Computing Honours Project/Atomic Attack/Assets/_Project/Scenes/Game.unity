@@ -1747,7 +1747,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 381261883}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: 1.87, z: 0}
+  m_LocalPosition: {x: 7.8, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1130290272}
@@ -4491,7 +4491,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1080236013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: 0.41, z: 0}
+  m_LocalPosition: {x: 7.8, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1130290272}
@@ -8533,7 +8533,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2040987499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: 3.33, z: 0}
+  m_LocalPosition: {x: 7.8, y: 3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1130290272}
@@ -9559,7 +9559,7 @@ MonoBehaviour:
   F_SwordsmanGO: {fileID: 1239407495441330, guid: a2ffab7b86f9ee14f96811bce9c87acd,
     type: 2}
   Hydrogen: {fileID: 1282936956505702, guid: d27872d8d96a2424fb33729c35547ad5, type: 2}
-  Helium: {fileID: 1917281826224038, guid: 66bca1851cfeec447b28dd38db7e1ff2, type: 2}
+  Helium: {fileID: 1867713818380554, guid: 66bca1851cfeec447b28dd38db7e1ff2, type: 2}
   Lithium: {fileID: 1121232779419898, guid: 9e49fa4edc0138946a4cca51ad4b792f, type: 2}
   Beryllium: {fileID: 1243052234810688, guid: 4625ca124f1a95d479ffed54f8901436, type: 2}
   Carbon: {fileID: 0}

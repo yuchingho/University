@@ -58,7 +58,7 @@ public class ManagerSpawn : MonoBehaviour {
         F_Swordsman = GetComponent<F_Swordsman>();
         Explanation.gameObject.SetActive(false);
         InvokeRepeating("CannonFodderEnemy",  1, 2);
-        InvokeRepeating("CannonFodderFriend", 0, 2);
+        InvokeRepeating("CannonFodderFriend", 0, 5);
 	}
 	
 	void Update() 
@@ -259,20 +259,20 @@ public class ManagerSpawn : MonoBehaviour {
     // need percentage based spawning on choosing the rows.
     void CannonFodderEnemy()
     {
-        float RandomLocation = Random.Range(0, 3);
-        RowCastle = (int)RandomLocation;
-        //Debug.Log(RowCastle);
+        float RandomSpace = Random.Range(-5, 5);    // For position when in Castle.
+        float RandomLocation = Random.Range(0, 5);  // Simulating percentage-based spawning.
+        RowCastle = (int) RandomLocation;
         switch (RowCastle)
         {
-            case 1:     // First level of Castle.
-                Instantiate(E_Gunman, E_CastleLocationOne);
-                break;
-            case 2:     // Second level of Castle.
-                Instantiate(E_Gunman, E_CastleLocationTwo);
-                break;
-            case 3:     // Third level of Castle.
-                Instantiate(E_Gunman, E_CastleLocationThree);
-                break;
+            case 2:     // First level of Castle.
+                Instantiate(E_Gunman, new Vector2(E_CastleLocationOne.position.x + (RandomSpace * 0.1f), 
+                E_CastleLocationOne.position.y), Quaternion.identity); break;
+            case 3:     // Second level of Castle.
+                Instantiate(E_Gunman, new Vector2(E_CastleLocationTwo.position.x + (RandomSpace * 0.1f),
+                E_CastleLocationTwo.position.y), Quaternion.identity); break;
+            case 4:     // Third level of Castle.
+                Instantiate(E_Gunman, new Vector2(E_CastleLocationThree.position.x + (RandomSpace * 0.1f),
+                E_CastleLocationThree.position.y), Quaternion.identity); break;
             default:    // Ground level. Spawn E_Gunman or E_Swordsman.
                 // Simulating percentage-based spawning.
                 int UnitSwitch = Random.Range(0, 3);
