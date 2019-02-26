@@ -57,7 +57,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         F_Swordsman = GetComponent<F_Swordsman>();
         Explanation.gameObject.SetActive(false);
-        InvokeRepeating("CannonFodderEnemy",  1, 2);
+        InvokeRepeating("CannonFodderEnemy",  1, 5);
         InvokeRepeating("CannonFodderFriend", 0, 5);
 	}
 	
@@ -148,6 +148,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Sodium ] shoots big tazers";
         StartCoroutine(FlashText());
+        Instantiate(Sodium, F_SpawnLocation);
     }
 
     public void Spawn12Mg()
@@ -256,7 +257,6 @@ public class ManagerSpawn : MonoBehaviour {
         Instantiate(F_SwordsmanGO, F_SpawnLocation);
     }
 
-    // need percentage based spawning on choosing the rows.
     void CannonFodderEnemy()
     {
         float RandomSpace = Random.Range(-5, 5);    // For position when in Castle.

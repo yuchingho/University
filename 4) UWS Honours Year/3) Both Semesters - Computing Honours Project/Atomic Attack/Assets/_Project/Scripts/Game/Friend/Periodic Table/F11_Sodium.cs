@@ -10,10 +10,10 @@ public class F11_Sodium : F03_Lithium {
 
     void Reset()
     {
-        //ColourInitial = 
+        ColourInitial = new Color(255, 194, 0);
         MovementSpeed = 1f;
-        AttackRate = 0.75f;
-        LookRadius = 4.5f;
-        AttackRadius = LookRadius;
+        AttackRate = 1f;
+        LookRadius = 6f;
+        AttackRadius = 6f;
     }
 }

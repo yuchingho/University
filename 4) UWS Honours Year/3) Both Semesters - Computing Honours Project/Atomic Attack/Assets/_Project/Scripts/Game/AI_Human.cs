@@ -77,8 +77,9 @@ public abstract class AI_Human : MonoBehaviour {
         {
             Vector3 dir = Target.position - transform.position;
             float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            if (Angle <= 160) { MovementDirection =-1; }
-            if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
+            if (Angle <=  160) { MovementDirection =-1; }
+            if (Angle >=  170) { MovementDirection = 1; Angle -= 180; }
+            if (Angle <= -170) { MovementDirection = 1; Angle += 180; }
             transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
         }
     }

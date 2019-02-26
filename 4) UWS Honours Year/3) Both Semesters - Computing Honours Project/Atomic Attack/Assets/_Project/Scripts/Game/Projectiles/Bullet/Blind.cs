@@ -12,7 +12,7 @@ public class Blind : _Bullet {
 
     protected override void HitTarget()
     {   // If the Bullet's Target's target is Blinded, then just destroy.
-        if (Target.gameObject.name == "E_Swordsman" || Target.gameObject.name == "E_Gunman")
+        if (Target.gameObject.name == "E_Swordsman(Clone)" || Target.gameObject.name == "E_Gunman(Clone)")
         { Target.GetComponent<AI_Human>().Blinded = true; }
         base.HitTarget();
     }

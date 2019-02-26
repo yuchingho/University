@@ -12,7 +12,7 @@ public class Stun : _Bullet {
 
     protected override void HitTarget()
     {
-        if (Target.gameObject.name == "E_Swordsman" || Target.gameObject.name ==  "E_Gunman")
+        if (Target.gameObject.name == "E_Swordsman(Clone)" || Target.gameObject.name == "E_Gunman(Clone)")
         { Target.GetComponent<AI_Human>().Stunned = true; }
         base.HitTarget();
     }
