@@ -14,6 +14,7 @@ public class ManagerSpawn : MonoBehaviour {
     [SerializeField] GameObject RowThree;
     [SerializeField] GameObject ButtonsUp;
     [SerializeField] GameObject ButtonsDown;
+    bool ButtonDisable = false;
     int RowNumber = 0;
 
     [Space( 10), Header("Cannon Fodder Enemies")]
@@ -21,6 +22,7 @@ public class ManagerSpawn : MonoBehaviour {
     [SerializeField] Transform  E_CastleLocationOne;
     [SerializeField] Transform  E_CastleLocationTwo;
     [SerializeField] Transform  E_CastleLocationThree;
+    int RowCastle = 0;
     [SerializeField] GameObject E_Gunman;
     [SerializeField] GameObject E_Swordsman;
 
@@ -48,52 +50,31 @@ public class ManagerSpawn : MonoBehaviour {
     [SerializeField] GameObject Chlorine;
     [SerializeField] GameObject Argon;
 
+    [Space(10), Header("Buttons Elements")]
+    [SerializeField] Button[] Elements;
+
     void Start()
     {
         F_Swordsman = GetComponent<F_Swordsman>();
         Explanation.gameObject.SetActive(false);
+        InvokeRepeating("CannonFodderEnemy",  1, 2);
+        InvokeRepeating("CannonFodderFriend", 0, 2);
 	}
 	
 	void Update() 
     {
         SwitchRows();
-	}
-
-    IEnumerator FlashText()
-    {
-        Explanation.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2);
-        Explanation.gameObject.SetActive(false);
-    }
-
-    public void ButtonUp()   { if (RowNumber != 0) { RowNumber--; } }
-    public void ButtonDown() { if (RowNumber != 2) { RowNumber++; } }
-    void SwitchRows()
-    {
-        switch (RowNumber)
-        {
-            case 1:
-                ButtonsUp.GetComponent<Image>().color   = new Color(255, 255, 255);
-                ButtonsDown.GetComponent<Image>().color = new Color(255, 255, 255);
-                RowOne.SetActive  (false);
-                RowTwo.SetActive  (true );
-                RowThree.SetActive(false);
-                break;
-            case 2:
-                ButtonsDown.GetComponent<Image>().color = new Color(0, 0, 0);
-                RowOne.SetActive  (false);
-                RowTwo.SetActive  (false);
-                RowThree.SetActive(true );
-                break;
-            default:
-                ButtonsUp.GetComponent<Image>().color = new Color(0, 0, 0);
-                RowOne.SetActive  (true );
-                RowTwo.SetActive  (false);
-                RowThree.SetActive(false);
-                break;
+        if (ButtonDisable == true)
+        {   // Whenever an Element is spawned, will disable all buttons for 2 seconds.
+            for (int i = 0; i < Elements.Length; i++)
+            {   // ButtonDisable == false; in FlashText();
+                Elements[i].GetComponent<Image>().color = new Color(200, 200, 200);
+                Elements[i].interactable = false;
+            }
         }
     }
 
+    #region Spawn Elements
     public void Spawn01H ()
     {
         Explanation.text = "[ Hydrogen ] spawns Grenadiers";
@@ -225,5 +206,80 @@ public class ManagerSpawn : MonoBehaviour {
         F_Swordsman.Aluminium = true;
         yield return new WaitForSeconds(5);
         F_Swordsman.Aluminium = false;
+    }
+    #endregion
+
+    public void ButtonUp()   { if (RowNumber != 0) { RowNumber--; } }
+    public void ButtonDown() { if (RowNumber != 2) { RowNumber++; } }
+    void SwitchRows()
+    {   // For the UI Buttons.
+        switch (RowNumber)
+        {
+            case 1:     // Second Row.
+                ButtonsUp.GetComponent<Image>().color   = new Color(255, 255, 255);
+                ButtonsDown.GetComponent<Image>().color = new Color(255, 255, 255);
+                RowOne.SetActive(false);
+                RowTwo.SetActive(true);
+                RowThree.SetActive(false);
+                break;
+            case 2:     // Third Row.
+                ButtonsDown.GetComponent<Image>().color = new Color(0, 0, 0);
+                RowOne.SetActive(false);
+                RowTwo.SetActive(false);
+                RowThree.SetActive(true);
+                break;
+            default:    // First Row.
+                ButtonsUp.GetComponent<Image>().color  = new Color(0, 0, 0);
+                RowOne.SetActive(true);
+                RowTwo.SetActive(false);
+                RowThree.SetActive(false);
+                break;
+        }
+    }
+
+    IEnumerator FlashText()
+    {
+        Explanation.gameObject.SetActive(true);
+        ButtonDisable = true;
+        yield return new WaitForSeconds(2);
+        Explanation.gameObject.SetActive(false);
+        ButtonDisable = false;
+        for (int i = 0; i < Elements.Length; i++)
+        {
+            Elements[i].GetComponent<Image>().color = new Color(255, 255, 255);
+            Elements[i].interactable = true;
+        }
+    }
+
+    void CannonFodderFriend()
+    {
+        Instantiate(F_SwordsmanGO, F_SpawnLocation);
+    }
+
+    // need percentage based spawning on choosing the rows.
+    void CannonFodderEnemy()
+    {
+        float RandomLocation = Random.Range(0, 3);
+        RowCastle = (int)RandomLocation;
+        //Debug.Log(RowCastle);
+        switch (RowCastle)
+        {
+            case 1:     // First level of Castle.
+                Instantiate(E_Gunman, E_CastleLocationOne);
+                break;
+            case 2:     // Second level of Castle.
+                Instantiate(E_Gunman, E_CastleLocationTwo);
+                break;
+            case 3:     // Third level of Castle.
+                Instantiate(E_Gunman, E_CastleLocationThree);
+                break;
+            default:    // Ground level. Spawn E_Gunman or E_Swordsman.
+                // Simulating percentage-based spawning.
+                int UnitSwitch = Random.Range(0, 3);
+                if (UnitSwitch == 0) { Instantiate(E_Gunman,    E_SpawnLocation); }
+                if (UnitSwitch == 1) { Instantiate(E_Swordsman, E_SpawnLocation); }
+                if (UnitSwitch == 2) { Instantiate(E_Swordsman, E_SpawnLocation); }
+                break;
+        }
     }
 }

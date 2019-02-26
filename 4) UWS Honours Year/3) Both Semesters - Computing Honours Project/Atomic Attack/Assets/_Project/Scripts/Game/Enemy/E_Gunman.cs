@@ -76,8 +76,8 @@ public class E_Gunman : AI_Enemy {
         {
             Grounded = true;
             OnTheCastle = true;
-            LookRadius = 10f;
-            AttackRadius = 10f;
+            LookRadius = 15f;
+            AttackRadius = 15f;
             GrabbedByMouse = false;
         }
     }

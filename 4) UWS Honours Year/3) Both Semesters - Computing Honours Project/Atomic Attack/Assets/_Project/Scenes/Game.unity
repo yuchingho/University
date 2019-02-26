@@ -1209,7 +1209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -9574,3 +9574,22 @@ MonoBehaviour:
   Sulphur: {fileID: 0}
   Chlorine: {fileID: 0}
   Argon: {fileID: 0}
+  Elements:
+  - {fileID: 1616217192}
+  - {fileID: 638401683}
+  - {fileID: 1337644767}
+  - {fileID: 2089520897}
+  - {fileID: 116629837}
+  - {fileID: 1991171559}
+  - {fileID: 2040444877}
+  - {fileID: 1964650246}
+  - {fileID: 955734386}
+  - {fileID: 520967353}
+  - {fileID: 1988362498}
+  - {fileID: 529293493}
+  - {fileID: 1592176682}
+  - {fileID: 2109330987}
+  - {fileID: 590263086}
+  - {fileID: 1096591038}
+  - {fileID: 1258939518}
+  - {fileID: 473354780}

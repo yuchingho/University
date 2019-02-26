@@ -278,7 +278,7 @@ MonoBehaviour:
   Unshakeable: 0
   OnTheCastle: 0
   GrabbedByMouse: 0
-  ThrowMultiplyer: 1
+  ThrowMultiplyer: 10
   Stunned: 0
   Blinded: 0
   Suffocated: 0
