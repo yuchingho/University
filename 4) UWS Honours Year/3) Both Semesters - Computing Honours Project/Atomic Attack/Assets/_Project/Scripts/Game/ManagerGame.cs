@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ManagerGame : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class ManagerGame : MonoBehaviour {
     public float ScoreCurrent;
     public int CounterEnemiesKilled;
     public int CounterFriendsKilled; // Collateral Damage
+    bool Paused = false;
 
     void Start()
     {
@@ -18,6 +20,8 @@ public class ManagerGame : MonoBehaviour {
 	
 	void Update() 
     {
-		
-	}
+        if      (Input.GetKeyDown(KeyCode.P) && Paused == false) { Time.timeScale = 0; Paused = true;  }
+        else if (Input.GetKeyDown(KeyCode.P) && Paused == true ) { Time.timeScale = 1; Paused = false; }
+        if (Input.GetKeyDown(KeyCode.Escape)) { Application.Quit(); }
+    }
 }

@@ -51,6 +51,7 @@ public class ManagerSpawn : MonoBehaviour {
     void Start()
     {
         F_Swordsman = GetComponent<F_Swordsman>();
+        Explanation.gameObject.SetActive(false);
 	}
 	
 	void Update() 
@@ -97,11 +98,9 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Hydrogen ] spawns Grenadiers";
         StartCoroutine(FlashText());
-        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 1.4f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
-        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.0f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x       , F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x - 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
-        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x - 1.4f, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn02He()
@@ -115,18 +114,16 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Lithium ] shoots small tazers";
         StartCoroutine(FlashText());
-        Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
-        Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x + 0.0f, F_SpawnLocation.position.y), Quaternion.identity);
-        Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x - 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x - 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn04Be()
     {
         Explanation.text = "[ Beryllium ] blinds a bit";
         StartCoroutine(FlashText());
-        Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
-        Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x + 0.0f, F_SpawnLocation.position.y), Quaternion.identity);
-        Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x - 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x - 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn05B ()
