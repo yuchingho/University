@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ManagerSpawn : MonoBehaviour {
 
-    F_Swordsman F_Swordsman;
+    F_Swordsman F_Swordsman;    // For the Suffocate and Poison.
 
     [Space(-10), Header("Rows for UI")]
     [SerializeField] Text Explanation;

@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\_Project\Scripts\Game\AI_Human.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Enemy\AI_Enemy.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Enemy\CastleHealth.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Enemy\E_Gunman.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Enemy\E_Swordsman.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Friend\AI_Friend.cs" />

@@ -133,6 +133,7 @@ aad8a13781b54930e59d5044405b9661 Assembly-CSharp.dll:.F12_Magnesium
 1e63d34285c5125ffcb294c95aa9018d Assembly-CSharp.dll:.RemoveEffect
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 f486b4869c741ad67807ee260649800e Assembly-CSharp.dll:.Grenade
+13c119b43b056c7b1e52b4f34eecddef Assembly-CSharp.dll:.CastleHealth
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 6878025e74afe178c0cb34f9d8d21cf3 Assembly-CSharp.dll:.AI_Enemy
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
@@ -179,7 +180,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 c6bd27687a060e0cd6c099cf3ef32181 Assembly-CSharp.dll:.F_Gunman
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-0b4b5d4daa4732ad7e6b0f0b56fd580f Assembly-CSharp.dll:.ManagerGame
+e3aa98e04d14960a793c3da242bce96f Assembly-CSharp.dll:.ManagerGame
 19c8e19d22759be653531fbe4f58caf8 Assembly-CSharp.dll:._Bullet
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro

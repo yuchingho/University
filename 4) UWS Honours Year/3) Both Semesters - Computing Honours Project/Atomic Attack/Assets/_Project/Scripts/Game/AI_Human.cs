@@ -14,7 +14,7 @@ public abstract class AI_Human : MonoBehaviour {
     public int CostValue;
     public int ScoreValue;
 
-    [Space(10), Header("[ Parent: AI_Human ] Movement")]
+    [Space( 10), Header("[ Parent: AI_Human ] Movement")]
     [SerializeField] protected float MovementSpeed;
     protected float MovementSpeedInitial;
     public bool Grounded;

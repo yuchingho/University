@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AI_Friend : AI_Human {
 
-    // Child Class AI_Friend inheriting from AI_Human.
     [Space( 10), Header("[^ Child: AI_Friend ]")]
     public int FriendCounter = 1;
 

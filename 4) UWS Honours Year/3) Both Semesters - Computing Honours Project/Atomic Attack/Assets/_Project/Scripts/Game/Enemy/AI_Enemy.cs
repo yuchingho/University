@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class AI_Enemy : AI_Human {
 
-    // Child Class AI_Friend inheriting from AI_Human.
     [Space( 10), Header("[^ Child: AI_Enemy ]")]
     public int EnemyCounter = 1;
 
     protected override void Start()
     {   // If GameObjectTag == Enemy, will target Friend.
         base.Start();
-        FinalTarget = GameObject.Find("Enemy End").transform;
+        FinalTarget = GameObject.Find("Manager Game").transform;
         InvokeRepeating("UpdateTargetFriend", 0f, 0.25f);
+    }
+
+    protected override void Update()
+    {   // Changing to "Boundary" layer.
+        if (transform.position.x <= -8 && Grounded == true && GrabbedByMouse == false)
+        { gameObject.layer = 12; /* Destroying gameObject with ManagerGame OnTrigger2D*/ }
+        base.Update();
     }
 
     protected virtual void UpdateTargetFriend()
@@ -80,9 +86,10 @@ public class AI_Enemy : AI_Human {
         Vector3 ThrowVelocity = ThrowSpeed * ThrowVector.normalized;
         gameObject.GetComponent<Rigidbody2D>().velocity = ThrowVelocity / 5;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-        // Adding fall damage.
-        GetComponent<HealthSystem>().DamageTaken(ThrowVelocity.y * ThrowMultiplyer);
-        Debug.Log("Throw Damage = " + (ThrowVelocity.y * ThrowMultiplyer).ToString("n0"));
+        // Adding fall damage. Mathf.Abs returns any value as true;
+        float Damage = Mathf.Abs(ThrowVelocity.y * ThrowMultiplyer);
+        GetComponent<HealthSystem>().DamageTaken((int)Damage);
+        Debug.Log("Throw Damage = " + ((int)Damage));
     }
 
     protected virtual IEnumerator HitTheGround()
