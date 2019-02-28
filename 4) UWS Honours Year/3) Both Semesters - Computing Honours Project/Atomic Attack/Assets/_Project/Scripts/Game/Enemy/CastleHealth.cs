@@ -12,6 +12,7 @@ public class CastleHealth : HealthSystem {
 	void Start()
     {
         InitialHealth = (int)Health;
+        HealthBar.maxValue = InitialHealth;
 	}
 	
 	void Update() 

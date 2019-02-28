@@ -19,3 +19,7 @@ https://opengameart.org/content/pixel-barrel - barrel
 https://opengameart.org/content/missile-0 - missile
 
 https://opengameart.org/content/flame-animation - flame
+
+https://opengameart.org/content/heart-pixel-art - heart icon
+
+https://opengameart.org/content/gold-coin-2 - gold icon

@@ -88,7 +88,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Helium ] spawns a BLIMP";
         StartCoroutine(FlashText());
-        Instantiate(Helium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y + 4.5f), Quaternion.identity);
+        Instantiate(Helium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y + 4f), Quaternion.identity);
     }
 
     public void Spawn03Li()
