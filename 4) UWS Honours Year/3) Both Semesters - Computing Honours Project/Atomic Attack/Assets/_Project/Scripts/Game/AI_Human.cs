@@ -14,16 +14,16 @@ public abstract class AI_Human : MonoBehaviour {
     public int CostValue;
     public int ScoreValue;
 
-    [Space( 10), Header("[ Parent: AI_Human ] Movement")]
+    [Space(10), Header("[ Parent: AI_Human ] Movement")]
     [SerializeField] protected float MovementSpeed;
     protected float MovementSpeedInitial;
     public bool Grounded;
-    [HideInInspector] public int MovementDirection;
     protected Vector3 PreviousGrabbedPosition;
     [SerializeField] protected bool Unshakeable;
     [SerializeField] protected bool OnTheCastle;
     [SerializeField] protected bool GrabbedByMouse;
-    [SerializeField] protected float ThrowMultiplyer = 1; // Balance later.
+    [SerializeField] protected float ThrowMultiplyer = 1;
+    [HideInInspector] public int MovementDirection;
 
     [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
     public bool Stunned;    // For Enemies.
@@ -31,9 +31,10 @@ public abstract class AI_Human : MonoBehaviour {
     public bool Suffocated; // For 07_Nitrogen + 15_Phosphorus. (DoT).
     public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT).
     public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT).
-    [SerializeField] protected Color ColourInitial    = new Color(255f, 255f, 255f); // White.
-    [SerializeField] protected Color ColourSuffocated = new Color(255f,   0f,   0f); // Red.
-    [SerializeField] protected Color ColourPoisoned   = new Color(  0f, 255f,   0f); // Green.
+    [SerializeField] protected Color ColourInitial;     // White. Set manually in Inspector + SpriteRenderer.
+    [SerializeField] protected Color ColourSuffocated;  // Red.   Set manually in Inspector.
+    [SerializeField] protected Color ColourPoisoned;    // Green. Set manually in Inspector.
+    /* ^ Remember to set Alpha to 255. Because if don't set manually, Prefab Colour will spawn at most 191, 191, 191.*/
     [SerializeField] protected GameObject EffectStunned;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectBlinded;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
@@ -56,17 +57,20 @@ public abstract class AI_Human : MonoBehaviour {
         Animator = GetComponent<Animator>();
         HealthSystem = GetComponent<HealthSystem>();
         MovementSpeedInitial = MovementSpeed;
-    }
+}
 
-    // Child Classes Enemy.cs and Friend.cs have InvokeRepeating UpdateTarget() every 0.25f.
+    // Child Classes "AI_Enemy" and "AI_Friend" have InvokeRepeating UpdateTarget() every 0.25f.
     // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
     protected virtual void Update()
     {   // If out of bounds, destroy GameObject and not add to score, etc.
         if (transform.position.x<=-15 || transform.position.x>=15 || transform.position.y<=-7) { Destroy(gameObject); }
         else if (Grounded == true && HealthSystem.Deceased == true) { PlayAnimationDeath(); }
         else if (Grounded == true && GrabbedByMouse == false)
-        {   // Where status effects are...
+        {   // Status effects initialized.
             StartCoroutine(StatusBlinded());
+            StatusSuffocated();
+            StatusPoisoned();
+            StatusBurned();
             Movement();
         }
     }
@@ -90,8 +94,7 @@ public abstract class AI_Human : MonoBehaviour {
         transform.localScale = new Vector2(0.3f * MovementDirection, 0.3f);
         
         if (Stunned == true) { StartCoroutine(StatusStunned()); }
-        else {
-        if (Target != null)
+        else { if (Target != null)
         {   // Calculate the distance inbetween Target and Self. Will stop if inside AttackRadius.
             float AttackRange = Vector2.Distance(transform.position, Target.transform.position);
             if (AttackRange <= AttackRadius)
@@ -137,7 +140,7 @@ public abstract class AI_Human : MonoBehaviour {
 
     protected virtual void Shoot() { }
 
-    // ------- Only for Enemies -------
+    #region Enemy status effects
     protected virtual IEnumerator StatusBlinded()
     {   // Duration = 2s.
         if (Blinded == true)
@@ -156,28 +159,25 @@ public abstract class AI_Human : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         Stunned = false;
     }
-    // ------- Only for Enemies -------
-
-    protected virtual IEnumerator StatusSuffocate()
+    #endregion
+    #region All status effects
+    protected virtual void StatusSuffocated()
     {
-        yield return new WaitForSeconds(1f);
-        if (Suffocated == true) {  }
-        else {  }
+        if (Suffocated == true) { SpriteRenderer.color = ColourSuffocated; }
+        else { SpriteRenderer.color = ColourInitial; }
     }
 
-    protected virtual IEnumerator StatusPoisoned()
+    protected virtual void StatusPoisoned()
     {
-        yield return new WaitForSeconds(1f);
-
-        if (Poisoned == true) {  }
-        else {  }
+        if (Poisoned == true) { SpriteRenderer.color = ColourPoisoned; }
+        else { SpriteRenderer.color = ColourInitial; }
     }
 
-    protected virtual IEnumerator StatusBurned()
+    protected virtual void StatusBurned()
     {
-        yield return new WaitForSeconds(1f);
-
+        // not yet fully done
         if (Burned == true) { EffectBurned.SetActive(true); }
         else { EffectBurned.SetActive(false); }
     }
+    #endregion
 }

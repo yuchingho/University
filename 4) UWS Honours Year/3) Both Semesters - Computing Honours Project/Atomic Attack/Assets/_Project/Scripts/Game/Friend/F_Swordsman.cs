@@ -11,7 +11,7 @@ public class F_Swordsman : AI_Friend {
     [Space( 10), Header("[^ Child:   F_Swordsman ] Steriods")]
     public bool Boron;        // Add MovementSpeed for when activated.
     public bool Aluminium;    // Add AttackDamage and AttackRate for when activated.
-    [SerializeField] Color ColorAluminium = new Color(150f, 100f, 100f);
+    [SerializeField] protected Color ColourAluminium;    // Grey. Set manually in Inspector.
 
     void Reset()
     {
@@ -24,20 +24,19 @@ public class F_Swordsman : AI_Friend {
     protected override void Movement()
     {   // Activating the Steriods.
         if (Boron == true)      { MovementSpeed = MovementSpeed * 2; }
-        if (Aluminium == true)  {  AttackDamage = 2; AttackRate = 0.5f; /*Glow.ColorSteroids(true );*/ }
-        if (Aluminium == false) {  AttackDamage = 1; AttackRate = 1;    /*Glow.ColorSteroids(false);*/ }
+        if (Aluminium == true)  {  AttackDamage = 2; AttackRate = 0.5f; SpriteRenderer.color = ColourAluminium; }
+        if (Aluminium == false) {  AttackDamage = 1; AttackRate = 1;    SpriteRenderer.color = ColourInitial; }
         base.Movement();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
+    {   // not detecting when the sprite has left the ground... else function doesn't work
         if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
-        // not detecting when the sprite has left the ground... else function doesn't work
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Castle")
         {   // When F_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
             // Will damage Target's Health with F_Swordsman's AttackDamage.
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);

@@ -11,8 +11,8 @@ public class Stun : _Bullet {
     }
 
     protected override void HitTarget()
-    {
-        if (Target.gameObject.name == "E_Swordsman(Clone)" || Target.gameObject.name == "E_Gunman(Clone)")
+    {   // So only Units will be Stunned, and not the Castle.
+        if (Target.gameObject.tag == "Enemy")
         { Target.GetComponent<AI_Human>().Stunned = true; }
         base.HitTarget();
     }

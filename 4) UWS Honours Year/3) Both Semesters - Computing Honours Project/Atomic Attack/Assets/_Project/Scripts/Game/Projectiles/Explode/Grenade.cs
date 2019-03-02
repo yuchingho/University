@@ -24,16 +24,16 @@ public class Grenade : _Explode {
     }
 
     protected override void Start()
-    {
+    {   // Tag is "Explode" so "Button_Oxygen" can find if need to be Magnified.
         Rand = Random.Range(1, 100);
         Rigidbody2D = GetComponent<Rigidbody2D>();
         if (Target != null) {
-        if (Target.gameObject.name == "E_Swordsman(Clone)" || Target.gameObject.name == "E_Gunman(Clone)")
+        if (Target.gameObject.tag == "Enemy")
         { ThrowDir = Target.GetComponent<AI_Human>().MovementDirection; }
-        else { ThrowDir = 1; } }
+        else { ThrowDir = 1; } }    // ThrowDir will be -1 (left) or 1 (right).
         Rigidbody2D.AddForce(transform.up * ThrowAngle);
         Rigidbody2D.AddForce(transform.right * ThrowAngle * ThrowDir);
-        // Adding ThrowDir so Grenade will throw in the correct direction when facing enemy of 1 or -1.
+        // Adding ThrowDir so Grenade will throw in the correct direction.
     }
     
     // Whenever Grenade is thrown, will have a random spin along the Z axis.

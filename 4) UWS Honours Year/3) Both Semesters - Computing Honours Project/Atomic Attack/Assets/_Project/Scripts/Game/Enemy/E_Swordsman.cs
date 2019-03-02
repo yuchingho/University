@@ -68,6 +68,7 @@ public class E_Swordsman : AI_Enemy {
             Grounded = true;
             OnTheCastle = true;
             gameObject.layer = 12;
+            GrabbedByMouse = false;
         }
     }
 
@@ -78,11 +79,10 @@ public class E_Swordsman : AI_Enemy {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Friend")
+        if (collision.gameObject.tag == "Friend")   // Bugs: Doesn't damage f_swordsman or F01_Hydrogen.
         {   // When E_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
             // Will damage Target's Health with E_Swordsman's AttackDamage.
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
-            // Bugs: Doesn't damage f_swordsman or F01_Hydrogen.
         }
     }
 }

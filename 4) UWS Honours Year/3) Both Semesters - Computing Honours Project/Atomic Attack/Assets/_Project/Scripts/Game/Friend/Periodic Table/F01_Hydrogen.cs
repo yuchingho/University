@@ -8,6 +8,11 @@ public class F01_Hydrogen : F_Gunman {
     #pragma warning disable
     [SerializeField] string Effect = "AoE Damage";
     Magnifyed Magnify;  // -------------------------------------------------------------------------
+
+
+
+
+
     void Reset()
     {
         MovementSpeed = 1f;

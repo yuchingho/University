@@ -8,9 +8,13 @@ public class F03_Lithium : F_Gunman {
     #pragma warning disable
     [SerializeField] int DurationStun = 1;
 
+
+
+
+
+
     void Reset()
-    {   
-        // Upgrade = F11_Sodium.
+    {   // Upgrade = F11_Sodium.
         MovementSpeed = 1f;
         AttackRate = 0.75f;
         LookRadius = 3.5f;

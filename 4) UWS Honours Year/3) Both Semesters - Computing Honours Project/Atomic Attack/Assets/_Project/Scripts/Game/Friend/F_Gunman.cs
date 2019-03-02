@@ -31,8 +31,7 @@ public class F_Gunman : AI_Friend {
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
+    {   // not detecting when the sprite has left the ground... else function doesn't work
         if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
-        // not detecting when the sprite has left the ground... else function doesn't work
     }
 }

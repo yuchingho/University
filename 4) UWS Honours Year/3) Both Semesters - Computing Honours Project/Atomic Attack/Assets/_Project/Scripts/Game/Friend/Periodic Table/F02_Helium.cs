@@ -6,7 +6,6 @@ public class F02_Helium : MonoBehaviour {
 
     HealthSystem HealthSystem;
     Rigidbody2D Rigidbody2D;
-
     public int CostValue;
     public int ScoreValue;
     [SerializeField] protected int MovementSpeed = 1;
@@ -28,8 +27,9 @@ public class F02_Helium : MonoBehaviour {
         {
             if (Spawn == false) { SpawnFlying(); }
             if (HealthSystem.Deceased == true)
-            {
+            {   // Changing the tag so "Button_Oxygen" can find if need to be Magnified.
                 Rigidbody2D.gravityScale = 1;
+                gameObject.tag = "Explode";
                 if (transform.position.y <= -1.45f)
                 {
                     // damage building 

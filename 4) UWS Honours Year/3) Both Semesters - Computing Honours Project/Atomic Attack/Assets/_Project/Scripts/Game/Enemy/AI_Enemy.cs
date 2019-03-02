@@ -6,6 +6,7 @@ public class AI_Enemy : AI_Human {
 
     [Space( 10), Header("[^ Child: AI_Enemy ]")]
     public int EnemyCounter = 1;
+    public bool RunAway;
 
     protected override void Start()
     {   // If GameObjectTag == Enemy, will target Friend.
@@ -18,6 +19,7 @@ public class AI_Enemy : AI_Human {
     {   // Changing to "Boundary" layer.
         if (transform.position.x <= -8 && Grounded == true && GrabbedByMouse == false)
         { gameObject.layer = 12; /* Destroying gameObject with ManagerGame OnTrigger2D*/ }
+        if (RunAway == true) { MovementDirection = -1; }
         base.Update();
     }
 

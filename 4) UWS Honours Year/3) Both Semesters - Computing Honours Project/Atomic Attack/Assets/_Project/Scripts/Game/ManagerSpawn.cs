@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class ManagerSpawn : MonoBehaviour {
 
-    F_Swordsman F_Swordsman;    // For the Suffocate and Poison.
-
     [Space(-10), Header("Rows for UI")]
     [SerializeField] Text Explanation;
     [SerializeField] GameObject RowOne;
@@ -55,7 +53,6 @@ public class ManagerSpawn : MonoBehaviour {
 
     void Start()
     {
-        F_Swordsman = GetComponent<F_Swordsman>();
         Explanation.gameObject.SetActive(false);
         InvokeRepeating("CannonFodderEnemy",  1, 5);
         InvokeRepeating("CannonFodderFriend", 0, 5);
@@ -74,14 +71,91 @@ public class ManagerSpawn : MonoBehaviour {
         }
     }
 
+    #region UI Stuff
+    public void ButtonUp()   { if (RowNumber != 0) { RowNumber--; } }
+    public void ButtonDown() { if (RowNumber != 2) { RowNumber++; } }
+    void SwitchRows()
+    {   // For the UI Buttons.
+        switch (RowNumber)
+        {
+            case 1:     // Second Row.
+                ButtonsUp.GetComponent<Image>().color   = new Color(255, 255, 255);
+                ButtonsDown.GetComponent<Image>().color = new Color(255, 255, 255);
+                RowOne.SetActive(false);
+                RowTwo.SetActive(true);
+                RowThree.SetActive(false);
+                break;
+            case 2:     // Third Row.
+                ButtonsDown.GetComponent<Image>().color = new Color(0, 0, 0);
+                RowOne.SetActive(false);
+                RowTwo.SetActive(false);
+                RowThree.SetActive(true);
+                break;
+            default:    // First Row.
+                ButtonsUp.GetComponent<Image>().color = new Color(0, 0, 0);
+                RowOne.SetActive(true);
+                RowTwo.SetActive(false);
+                RowThree.SetActive(false);
+                break;
+        }
+    }
+
+    IEnumerator FlashText()
+    {
+        Explanation.gameObject.SetActive(true);
+        ButtonDisable = true;
+        yield return new WaitForSeconds(2);
+        Explanation.gameObject.SetActive(false);
+        ButtonDisable = false;
+        for (int i = 0; i < Elements.Length; i++)
+        {
+            Elements[i].GetComponent<Image>().color = new Color(255, 255, 255);
+            Elements[i].interactable = true;
+        }
+    }
+    #endregion
+    #region Spawn Cannon Fodder
+    void CannonFodderFriend()
+    {
+        Instantiate(F_SwordsmanGO, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
+    }
+
+    void CannonFodderEnemy()
+    {
+        float RandomSpace    = Random.Range(-5, 5); // For position when in Castle.
+        float RandomLocation = Random.Range(0, 6);  // Simulating percentage-based spawning.
+        RowCastle = (int)RandomLocation;
+        switch (RowCastle)
+        {
+            case 3:     // First level of Castle.
+                Instantiate(E_Gunman, new Vector2(E_CastleLocationOne.position.x + (RandomSpace * 0.1f),
+                E_CastleLocationOne.position.y), Quaternion.identity);
+                break;
+            case 4:     // Second level of Castle.
+                Instantiate(E_Gunman, new Vector2(E_CastleLocationTwo.position.x + (RandomSpace * 0.1f),
+                E_CastleLocationTwo.position.y), Quaternion.identity);
+                break;
+            case 5:     // Third level of Castle.
+                Instantiate(E_Gunman, new Vector2(E_CastleLocationThree.position.x + (RandomSpace * 0.1f),
+                E_CastleLocationThree.position.y), Quaternion.identity);
+                break;
+            default:    // Ground level. Spawn E_Gunman or E_Swordsman.
+                int UnitSwitch = Random.Range(0, 3);
+                if (UnitSwitch == 0) { Instantiate(E_Gunman,    new Vector2(E_SpawnLocation.position.x, E_SpawnLocation.position.y), Quaternion.identity); }
+                if (UnitSwitch == 1) { Instantiate(E_Swordsman, new Vector2(E_SpawnLocation.position.x, E_SpawnLocation.position.y), Quaternion.identity); }
+                if (UnitSwitch == 2) { Instantiate(E_Swordsman, new Vector2(E_SpawnLocation.position.x, E_SpawnLocation.position.y), Quaternion.identity); }
+                break;  // Simulating percentage-based spawning.
+        }
+    }
+    #endregion
     #region Spawn Elements
     public void Spawn01H ()
     {
         Explanation.text = "[ Hydrogen ] spawns Grenadiers";
         StartCoroutine(FlashText());
-        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
+        //Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x       , F_SpawnLocation.position.y), Quaternion.identity);
-        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x - 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
+        //Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x - 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn02He()
@@ -128,7 +202,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn08O ()
     {
-        Explanation.text = "[ Oxygen ] makes explosions big";
+        Explanation.text = "[ Oxygen ] magnifies explosions";
         StartCoroutine(FlashText());
     }
 
@@ -148,7 +222,8 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Sodium ] shoots big tazers";
         StartCoroutine(FlashText());
-        Instantiate(Sodium, F_SpawnLocation);
+        Instantiate(Sodium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
+
     }
 
     public void Spawn12Mg()
@@ -178,7 +253,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn16S ()
     {
-        Explanation.text = "[ Sulphur ] makes explosions even bigger";
+        Explanation.text = "[ Sulphur ] magnifies explosions even more";
         StartCoroutine(FlashText());
     }
 
@@ -196,90 +271,37 @@ public class ManagerSpawn : MonoBehaviour {
 
 
     IEnumerator ActivateBoron()
-    {   // not working, fix
-        F_Swordsman.Boron = true;
+    {
+        Elements[4].gameObject.SetActive(false);
+        GameObject[] AllFSwordsmen = GameObject.FindGameObjectsWithTag("Friend");
+        foreach (GameObject NewSwordsman in AllFSwordsmen)
+        { if (NewSwordsman.name == "F_Swordsman(Clone)")
+            { NewSwordsman.GetComponent<F_Swordsman>().Boron = true; }
+        }
         yield return new WaitForSeconds(5);
-        F_Swordsman.Boron = false;
+        foreach (GameObject NewSwordsman in AllFSwordsmen)
+        { if (NewSwordsman.name == "F_Swordsman(Clone)")
+            { NewSwordsman.GetComponent<F_Swordsman>().Boron = false; }
+        }
+        Elements[4].gameObject.SetActive(true);
     }
 
     IEnumerator ActivateAluminium()
-    {   // not working, fix
-        F_Swordsman.Aluminium = true;
+    {
+        Elements[12].gameObject.SetActive(false);
+        GameObject[] AllFSwordsmen = GameObject.FindGameObjectsWithTag("Friend");
+        foreach (GameObject NewSwordsman in AllFSwordsmen)
+        {
+            if (NewSwordsman.name == "F_Swordsman(Clone)")
+            { NewSwordsman.GetComponent<F_Swordsman>().Aluminium = true; }
+        }
         yield return new WaitForSeconds(5);
-        F_Swordsman.Aluminium = false;
+        foreach (GameObject NewSwordsman in AllFSwordsmen)
+        {
+            if (NewSwordsman.name == "F_Swordsman(Clone)")
+            { NewSwordsman.GetComponent<F_Swordsman>().Aluminium = false; }
+        }
+        Elements[12].gameObject.SetActive(true);
     }
     #endregion
-
-    public void ButtonUp()   { if (RowNumber != 0) { RowNumber--; } }
-    public void ButtonDown() { if (RowNumber != 2) { RowNumber++; } }
-    void SwitchRows()
-    {   // For the UI Buttons.
-        switch (RowNumber)
-        {
-            case 1:     // Second Row.
-                ButtonsUp.GetComponent<Image>().color   = new Color(255, 255, 255);
-                ButtonsDown.GetComponent<Image>().color = new Color(255, 255, 255);
-                RowOne.SetActive(false);
-                RowTwo.SetActive(true);
-                RowThree.SetActive(false);
-                break;
-            case 2:     // Third Row.
-                ButtonsDown.GetComponent<Image>().color = new Color(0, 0, 0);
-                RowOne.SetActive(false);
-                RowTwo.SetActive(false);
-                RowThree.SetActive(true);
-                break;
-            default:    // First Row.
-                ButtonsUp.GetComponent<Image>().color  = new Color(0, 0, 0);
-                RowOne.SetActive(true);
-                RowTwo.SetActive(false);
-                RowThree.SetActive(false);
-                break;
-        }
-    }
-
-    IEnumerator FlashText()
-    {
-        Explanation.gameObject.SetActive(true);
-        ButtonDisable = true;
-        yield return new WaitForSeconds(2);
-        Explanation.gameObject.SetActive(false);
-        ButtonDisable = false;
-        for (int i = 0; i < Elements.Length; i++)
-        {
-            Elements[i].GetComponent<Image>().color = new Color(255, 255, 255);
-            Elements[i].interactable = true;
-        }
-    }
-
-    void CannonFodderFriend()
-    {
-        Instantiate(F_SwordsmanGO, F_SpawnLocation);
-    }
-
-    void CannonFodderEnemy()
-    {
-        float RandomSpace = Random.Range(-5, 5);    // For position when in Castle.
-        float RandomLocation = Random.Range(0, 5);  // Simulating percentage-based spawning.
-        RowCastle = (int) RandomLocation;
-        switch (RowCastle)
-        {
-            case 2:     // First level of Castle.
-                Instantiate(E_Gunman, new Vector2(E_CastleLocationOne.position.x + (RandomSpace * 0.1f), 
-                E_CastleLocationOne.position.y), Quaternion.identity); break;
-            case 3:     // Second level of Castle.
-                Instantiate(E_Gunman, new Vector2(E_CastleLocationTwo.position.x + (RandomSpace * 0.1f),
-                E_CastleLocationTwo.position.y), Quaternion.identity); break;
-            case 4:     // Third level of Castle.
-                Instantiate(E_Gunman, new Vector2(E_CastleLocationThree.position.x + (RandomSpace * 0.1f),
-                E_CastleLocationThree.position.y), Quaternion.identity); break;
-            default:    // Ground level. Spawn E_Gunman or E_Swordsman.
-                // Simulating percentage-based spawning.
-                int UnitSwitch = Random.Range(0, 3);
-                if (UnitSwitch == 0) { Instantiate(E_Gunman,    E_SpawnLocation); }
-                if (UnitSwitch == 1) { Instantiate(E_Swordsman, E_SpawnLocation); }
-                if (UnitSwitch == 2) { Instantiate(E_Swordsman, E_SpawnLocation); }
-                break;
-        }
-    }
 }

@@ -8,9 +8,13 @@ public class F11_Sodium : F03_Lithium {
     #pragma warning disable
     [SerializeField] string Downgrade = "F03_Lithium";
 
+
+
+
+
+
     void Reset()
-    {
-        ColourInitial = new Color(255, 194, 0);
+    {   // Setting colour manually in Inspector + SpriteRenderer.
         MovementSpeed = 1f;
         AttackRate = 1f;
         LookRadius = 6f;

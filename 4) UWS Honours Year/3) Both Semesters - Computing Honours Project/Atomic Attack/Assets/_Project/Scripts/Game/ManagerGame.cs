@@ -40,7 +40,6 @@ public class ManagerGame : MonoBehaviour {
         {
             Destroy(collision.gameObject);
             Lives--;
-            Debug.Log(Lives);
         }
     }
 }
