@@ -14,7 +14,7 @@ public class F11_Sodium : F03_Lithium {
 
 
     void Reset()
-    {   // Setting colour manually in Inspector + SpriteRenderer.
+    {
         MovementSpeed = 1f;
         AttackRate = 1f;
         LookRadius = 6f;

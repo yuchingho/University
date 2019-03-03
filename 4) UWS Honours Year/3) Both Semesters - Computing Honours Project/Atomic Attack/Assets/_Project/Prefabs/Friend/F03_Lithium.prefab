@@ -217,14 +217,12 @@ MonoBehaviour:
   Unshakeable: 0
   OnTheCastle: 0
   GrabbedByMouse: 0
-  ThrowMultiplyer: 1
   MovementDirection: 0
   Stunned: 0
   Blinded: 0
   Suffocated: 0
   Poisoned: 0
   Burned: 0
-  ColourInitial: {r: 1, g: 1, b: 1, a: 1}
   ColourSuffocated: {r: 1, g: 0, b: 0, a: 1}
   ColourPoisoned: {r: 0, g: 1, b: 0, a: 1}
   EffectStunned: {fileID: 1530330318128794, guid: d3b4ee73f118d8445a1e07aa35f00441,

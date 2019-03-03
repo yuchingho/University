@@ -14,7 +14,7 @@ public class F12_Magnesium : F04_Beryllium {
 
 
     void Reset()
-    {   // Setting colour manually in Inspector + SpriteRenderer.
+    {
         MovementSpeed = 1f;
         AttackRate = 0.75f;
         LookRadius = 5.5f;

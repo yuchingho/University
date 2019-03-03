@@ -11,7 +11,7 @@ public class F_Swordsman : AI_Friend {
     [Space( 10), Header("[^ Child:   F_Swordsman ] Steriods")]
     public bool Boron;        // Add MovementSpeed for when activated.
     public bool Aluminium;    // Add AttackDamage and AttackRate for when activated.
-    [SerializeField] protected Color ColourAluminium;    // Grey. Set manually in Inspector.
+    [SerializeField] protected Color ColourAluminium;
 
     void Reset()
     {
@@ -25,7 +25,7 @@ public class F_Swordsman : AI_Friend {
     {   // Activating the Steriods.
         if (Boron == true)      { MovementSpeed = MovementSpeed * 2; }
         if (Aluminium == true)  {  AttackDamage = 2; AttackRate = 0.5f; SpriteRenderer.color = ColourAluminium; }
-        if (Aluminium == false) {  AttackDamage = 1; AttackRate = 1;    SpriteRenderer.color = ColourInitial; }
+        if (Aluminium == false) {  AttackDamage = 1; AttackRate = 1;    SpriteRenderer.color = new Color(255, 255, 255); } /* White */
         base.Movement();
     }
 

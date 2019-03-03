@@ -55,7 +55,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.gameObject.SetActive(false);
         InvokeRepeating("CannonFodderEnemy",  1, 5);
-        InvokeRepeating("CannonFodderFriend", 0, 5);
+        //InvokeRepeating("CannonFodderFriend", 0, 5);
 	}
 	
 	void Update() 
@@ -81,20 +81,20 @@ public class ManagerSpawn : MonoBehaviour {
             case 1:     // Second Row.
                 ButtonsUp.GetComponent<Image>().color   = new Color(255, 255, 255);
                 ButtonsDown.GetComponent<Image>().color = new Color(255, 255, 255);
-                RowOne.SetActive(false);
-                RowTwo.SetActive(true);
+                RowOne.SetActive  (false);
+                RowTwo.SetActive  (true );
                 RowThree.SetActive(false);
                 break;
             case 2:     // Third Row.
                 ButtonsDown.GetComponent<Image>().color = new Color(0, 0, 0);
-                RowOne.SetActive(false);
-                RowTwo.SetActive(false);
-                RowThree.SetActive(true);
+                RowOne.SetActive  (false);
+                RowTwo.SetActive  (false);
+                RowThree.SetActive(true );
                 break;
             default:    // First Row.
                 ButtonsUp.GetComponent<Image>().color = new Color(0, 0, 0);
-                RowOne.SetActive(true);
-                RowTwo.SetActive(false);
+                RowOne.SetActive  (true );
+                RowTwo.SetActive  (false);
                 RowThree.SetActive(false);
                 break;
         }
@@ -106,6 +106,7 @@ public class ManagerSpawn : MonoBehaviour {
         ButtonDisable = true;
         yield return new WaitForSeconds(2);
         Explanation.gameObject.SetActive(false);
+        yield return new WaitForSeconds(2);
         ButtonDisable = false;
         for (int i = 0; i < Elements.Length; i++)
         {
@@ -153,9 +154,9 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Hydrogen ] spawns Grenadiers";
         StartCoroutine(FlashText());
-        //Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x       , F_SpawnLocation.position.y), Quaternion.identity);
-        //Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x - 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x - 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn02He()
@@ -192,6 +193,8 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Carbon ] has some armour";
         StartCoroutine(FlashText());
+        Instantiate(Carbon, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Carbon, new Vector2(F_SpawnLocation.position.x - 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn07N ()
@@ -230,6 +233,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Magnesium ] blinds a lot";
         StartCoroutine(FlashText());
+        Instantiate(Magnesium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn13Al()
@@ -243,6 +247,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Silicon ] has lots of armour";
         StartCoroutine(FlashText());
+        Instantiate(Silicon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn15P ()
@@ -271,37 +276,31 @@ public class ManagerSpawn : MonoBehaviour {
 
 
     IEnumerator ActivateBoron()
-    {
-        Elements[4].gameObject.SetActive(false);
+    {   // Finding all current F_Swordsman and activating Boron.
         GameObject[] AllFSwordsmen = GameObject.FindGameObjectsWithTag("Friend");
         foreach (GameObject NewSwordsman in AllFSwordsmen)
-        { if (NewSwordsman.name == "F_Swordsman(Clone)")
+        { if (NewSwordsman != null && NewSwordsman.name == "F_Swordsman(Clone)")
             { NewSwordsman.GetComponent<F_Swordsman>().Boron = true; }
         }
         yield return new WaitForSeconds(5);
         foreach (GameObject NewSwordsman in AllFSwordsmen)
-        { if (NewSwordsman.name == "F_Swordsman(Clone)")
+        { if (NewSwordsman != null && NewSwordsman.name == "F_Swordsman(Clone)")
             { NewSwordsman.GetComponent<F_Swordsman>().Boron = false; }
         }
-        Elements[4].gameObject.SetActive(true);
     }
 
     IEnumerator ActivateAluminium()
-    {
-        Elements[12].gameObject.SetActive(false);
+    {   // Finding all current F_Swordsman and activating Aluminium.
         GameObject[] AllFSwordsmen = GameObject.FindGameObjectsWithTag("Friend");
         foreach (GameObject NewSwordsman in AllFSwordsmen)
-        {
-            if (NewSwordsman.name == "F_Swordsman(Clone)")
+        { if (NewSwordsman != null && NewSwordsman.name == "F_Swordsman(Clone)")
             { NewSwordsman.GetComponent<F_Swordsman>().Aluminium = true; }
         }
         yield return new WaitForSeconds(5);
         foreach (GameObject NewSwordsman in AllFSwordsmen)
-        {
-            if (NewSwordsman.name == "F_Swordsman(Clone)")
+        { if (NewSwordsman != null && NewSwordsman.name == "F_Swordsman(Clone)")
             { NewSwordsman.GetComponent<F_Swordsman>().Aluminium = false; }
         }
-        Elements[12].gameObject.SetActive(true);
     }
     #endregion
 }

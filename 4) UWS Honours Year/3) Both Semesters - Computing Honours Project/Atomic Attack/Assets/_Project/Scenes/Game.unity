@@ -11055,13 +11055,13 @@ MonoBehaviour:
   Helium: {fileID: 1867713818380554, guid: 66bca1851cfeec447b28dd38db7e1ff2, type: 2}
   Lithium: {fileID: 1121232779419898, guid: 9e49fa4edc0138946a4cca51ad4b792f, type: 2}
   Beryllium: {fileID: 1243052234810688, guid: 4625ca124f1a95d479ffed54f8901436, type: 2}
-  Carbon: {fileID: 0}
+  Carbon: {fileID: 1628575746728882, guid: 35d0a8426910b7643a59613022b875f0, type: 2}
   Nitrogen: {fileID: 0}
   Oxygen: {fileID: 0}
   Fluorine: {fileID: 0}
   Neon: {fileID: 0}
-  Sodium: {fileID: 1904198905923998, guid: 5527e282f8520104b8bd002b21b737a9, type: 2}
-  Magnesium: {fileID: 0}
+  Sodium: {fileID: 1461076586478250, guid: 5527e282f8520104b8bd002b21b737a9, type: 2}
+  Magnesium: {fileID: 1268587300841802, guid: 3510eb260ad62a74586c4a9f35d2b6e5, type: 2}
   Silicon: {fileID: 0}
   Phosphorus: {fileID: 0}
   Sulphur: {fileID: 0}

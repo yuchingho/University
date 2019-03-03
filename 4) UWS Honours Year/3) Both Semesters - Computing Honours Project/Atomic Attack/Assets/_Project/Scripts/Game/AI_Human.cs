@@ -22,7 +22,6 @@ public abstract class AI_Human : MonoBehaviour {
     [SerializeField] protected bool Unshakeable;
     [SerializeField] protected bool OnTheCastle;
     [SerializeField] protected bool GrabbedByMouse;
-    [SerializeField] protected float ThrowMultiplyer = 1;
     [HideInInspector] public int MovementDirection;
 
     [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
@@ -31,10 +30,9 @@ public abstract class AI_Human : MonoBehaviour {
     public bool Suffocated; // For 07_Nitrogen + 15_Phosphorus. (DoT).
     public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT).
     public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT).
-    [SerializeField] protected Color ColourInitial;     // White. Set manually in Inspector + SpriteRenderer.
-    [SerializeField] protected Color ColourSuffocated;  // Red.   Set manually in Inspector.
-    [SerializeField] protected Color ColourPoisoned;    // Green. Set manually in Inspector.
-    /* ^ Remember to set Alpha to 255. Because if don't set manually, Prefab Colour will spawn at most 191, 191, 191.*/
+    /* Set Colours manually in Inspector, because if do it via code and spawn Prefab, only goes up to 191. */
+    [SerializeField] protected Color ColourSuffocated;
+    [SerializeField] protected Color ColourPoisoned;
     [SerializeField] protected GameObject EffectStunned;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectBlinded;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
@@ -163,14 +161,14 @@ public abstract class AI_Human : MonoBehaviour {
     #region All status effects
     protected virtual void StatusSuffocated()
     {
-        if (Suffocated == true) { SpriteRenderer.color = ColourSuffocated; }
-        else { SpriteRenderer.color = ColourInitial; }
+        if (Suffocated == true) { SpriteRenderer.color = ColourSuffocated; Debug.Log("suffocate"); }
+        else { SpriteRenderer.color = new Color(255, 255, 255); } /* White */
     }
 
     protected virtual void StatusPoisoned()
     {
         if (Poisoned == true) { SpriteRenderer.color = ColourPoisoned; }
-        else { SpriteRenderer.color = ColourInitial; }
+        else { SpriteRenderer.color = new Color(255, 255, 255); } /* White */
     }
 
     protected virtual void StatusBurned()
