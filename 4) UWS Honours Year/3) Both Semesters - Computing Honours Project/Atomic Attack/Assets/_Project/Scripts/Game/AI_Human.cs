@@ -161,7 +161,7 @@ public abstract class AI_Human : MonoBehaviour {
     #region All status effects
     protected virtual void StatusSuffocated()
     {
-        if (Suffocated == true) { SpriteRenderer.color = ColourSuffocated; Debug.Log("suffocate"); }
+        if (Suffocated == true) { SpriteRenderer.color = ColourSuffocated; }
         else { SpriteRenderer.color = new Color(255, 255, 255); } /* White */
     }
 

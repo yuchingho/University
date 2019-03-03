@@ -55,7 +55,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.gameObject.SetActive(false);
         InvokeRepeating("CannonFodderEnemy",  1, 5);
-        //InvokeRepeating("CannonFodderFriend", 0, 5);
+        InvokeRepeating("CannonFodderFriend", 0, 5);
 	}
 	
 	void Update() 

@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1628575746728882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3013144, y: -1.0812488, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4081253975454688}
@@ -192,8 +192,8 @@ MonoBehaviour:
   TargetHealth: 0
   FinalTarget: {fileID: 0}
   LookRadius: 3
-  AttackRadius: 0.55
-  AttackRate: 0
+  AttackRadius: 0.7
+  AttackRate: 5
   FriendCounter: 1
   Upgrade: Shield
 --- !u!114 &114867005986795334
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4841d6fb8b6845439f9515b7a495f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 400
   Deceased: 0
 --- !u!212 &212825111338811368
 SpriteRenderer:

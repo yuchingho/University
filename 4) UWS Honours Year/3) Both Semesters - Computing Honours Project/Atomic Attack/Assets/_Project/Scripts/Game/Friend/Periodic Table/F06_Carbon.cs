@@ -14,11 +14,11 @@ public class F06_Carbon : AI_Friend {
 
 
     void Reset()
-    {
+    {   // Health = ...
         MovementSpeed = 1.2f;
-        AttackRate = 0f;
+        AttackRate = 5f;
         LookRadius = 3f;
-        AttackRadius = 0.55f;
+        AttackRadius = 0.7f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

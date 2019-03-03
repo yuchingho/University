@@ -7832,7 +7832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimePlayed: 0
   ScoreCurrent: 0
-  Lives: 200
+  Lives: 50
   CounterEnemiesKilled: 0
   CounterFriendsKilled: 0
   UITimer: {fileID: 640324308}
