@@ -12,7 +12,7 @@ public class Blind : _Bullet {
 
     protected override void HitTarget()
     {   // So only Units will be Blinded, and not the Castle.
-        if (Target.gameObject.tag == "Enemy")
+        if (Target.gameObject.name == "E_Gunman(Clone)" || Target.gameObject.name == "E_Swordsman(Clone)")
         { Target.GetComponent<AI_Human>().Blinded = true; }
         base.HitTarget();
     }

@@ -28,8 +28,8 @@ public class Grenade : _Explode {
         Rand = Random.Range(1, 100);
         Rigidbody2D = GetComponent<Rigidbody2D>();
         if (Target != null) {
-        if (Target.gameObject.tag == "Enemy")
-        { ThrowDir = Target.GetComponent<AI_Human>().MovementDirection; }
+        if (Target.gameObject.name == "E_Gunman(Clone)" || Target.gameObject.name == "E_Swordsman(Clone)")
+        {   ThrowDir = Target.GetComponent<AI_Human>().MovementDirection; }
         else { ThrowDir = 1; } }    // ThrowDir will be -1 (left) or 1 (right).
         Rigidbody2D.AddForce(transform.up * ThrowAngle);
         Rigidbody2D.AddForce(transform.right * ThrowAngle * ThrowDir);

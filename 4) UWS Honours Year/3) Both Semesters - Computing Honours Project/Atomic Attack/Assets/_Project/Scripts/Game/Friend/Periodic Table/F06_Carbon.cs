@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class F06_Carbon : AI_Friend {
 
-    // Child Class F06_Carbon inheriting from AI_Friend.
-    [Space( 10), Header("[^ Child:   F06_Carbon ]")]
+    [Space( 10), Header("[^ Child: F06_Carbon ]")]
     #pragma warning disable
     [SerializeField] protected string Upgrade = "Shield";
 
@@ -13,10 +12,11 @@ public class F06_Carbon : AI_Friend {
 
 
 
+
     void Reset()
-    {   // Health = ...
-        MovementSpeed = 1.2f;
-        AttackRate = 5f;
+    {   // Upgrade = F14_Silicon. Health = ...
+        MovementSpeed = 1f;
+        AttackRate = 1f;
         LookRadius = 3f;
         AttackRadius = 0.7f;
     }
