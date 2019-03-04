@@ -74,9 +74,11 @@
     <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F03_Lithium.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F04_Beryllium.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F06_Carbon.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F10_Neon.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F11_Sodium.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F12_Magnesium.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F14_Silicon.cs" />
+    <Compile Include="Assets\_Project\Scripts\Game\Friend\Periodic Table\F18_Argon.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\HealthSystem.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\ManagerGame.cs" />
     <Compile Include="Assets\_Project\Scripts\Game\ManagerSpawn.cs" />
