@@ -14,11 +14,11 @@ public class F14_Silicon : F06_Carbon {
 
 
     void Reset()
-    {   Unshakeable = true;    // Health = ...
-        MovementSpeed = 1f; 
-        AttackRate = 1f;
-        LookRadius = 3f;
-        AttackRadius = 0.5f;
+    {     Unshakeable = true;
+        MovementSpeed = 1.00f; 
+           AttackRate = 1.00f;
+           LookRadius = 3.00f;
+         AttackRadius = 0.65f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

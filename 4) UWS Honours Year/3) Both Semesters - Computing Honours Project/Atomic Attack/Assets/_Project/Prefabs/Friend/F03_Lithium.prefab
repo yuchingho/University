@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4841d6fb8b6845439f9515b7a495f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 75
   Deceased: 0
 --- !u!114 &114750401742908576
 MonoBehaviour:
@@ -233,14 +233,14 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
-  LookRadius: 3.5
-  AttackRadius: 3.5
-  AttackRate: 0.75
+  AttackRate: 2
+  LookRadius: 3.25
+  AttackRadius: 3.25
   FriendCounter: 1
-  AttackDamage: 2 [Read Only Prefab]
+  AttackDamage: 5. [Read Only Prefab]
   Projectile: {fileID: 1189801525606974, guid: 18c88926cacbed541bde11ae00706a5c, type: 2}
   FireLocation: {fileID: 4520687892917350}
-  DurationStun: 1
+  Effect: Stunned 1 sec.
 --- !u!212 &212922941183786198
 SpriteRenderer:
   m_ObjectHideFlags: 1

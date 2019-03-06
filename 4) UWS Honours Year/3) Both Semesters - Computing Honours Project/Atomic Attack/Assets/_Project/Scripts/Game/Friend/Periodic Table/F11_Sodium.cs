@@ -15,9 +15,9 @@ public class F11_Sodium : F03_Lithium {
 
     void Reset()
     {
-        MovementSpeed = 1f;
-        AttackRate = 1f;
-        LookRadius = 6f;
-        AttackRadius = 6f;
+        MovementSpeed = 1.20f;
+           AttackRate = 1.10f;
+           LookRadius = 4.50f;
+         AttackRadius = 4.50f;
     }
 }

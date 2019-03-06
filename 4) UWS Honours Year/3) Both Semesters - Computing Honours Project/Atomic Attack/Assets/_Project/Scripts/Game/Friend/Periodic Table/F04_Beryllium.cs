@@ -6,7 +6,7 @@ public class F04_Beryllium : F_Gunman {
 
     [Space( 10), Header("[^ Child: F04_Beryllium ]")]
     #pragma warning disable
-    [SerializeField] string Effect = "Blind 2 sec";
+    [SerializeField] string Effect = "Blinded 2 sec.";
 
 
 
@@ -15,9 +15,9 @@ public class F04_Beryllium : F_Gunman {
 
     void Reset()
     {   // Upgrade = F12_Magnesium.
-        MovementSpeed = 1f;
-        AttackRate = 0.75f;
-        LookRadius = 4f;
-        AttackRadius = LookRadius;
+        MovementSpeed = 1.00f;
+           AttackRate = 2.00f;
+           LookRadius = 3.75f;
+         AttackRadius = 3.75f;
     }
 }

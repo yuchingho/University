@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4841d6fb8b6845439f9515b7a495f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 300
+  Health: 200
   Deceased: 0
 --- !u!114 &114891392253831784
 MonoBehaviour:
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CostValue: 0
   ScoreValue: 0
-  MovementSpeed: 1
+  MovementSpeed: 0.9
   Grounded: 0
   Unshakeable: 0
   OnTheCastle: 0
@@ -204,11 +204,11 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
-  LookRadius: 3
-  AttackRadius: 0.7
   AttackRate: 1
+  LookRadius: 3
+  AttackRadius: 0.75
   FriendCounter: 1
-  Upgrade: Shield
+  Effect: Shield
 --- !u!212 &212635185824174322
 SpriteRenderer:
   m_ObjectHideFlags: 1

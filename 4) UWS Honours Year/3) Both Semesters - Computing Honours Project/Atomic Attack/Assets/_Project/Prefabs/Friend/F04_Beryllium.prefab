@@ -220,14 +220,14 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
-  LookRadius: 4
-  AttackRadius: 4
-  AttackRate: 0.75
+  AttackRate: 2
+  LookRadius: 3.75
+  AttackRadius: 3.75
   FriendCounter: 1
-  AttackDamage: 2 [Read Only Prefab]
+  AttackDamage: 5. [Read Only Prefab]
   Projectile: {fileID: 1556022897310762, guid: ecc554946da159648b37465235dfd5e3, type: 2}
   FireLocation: {fileID: 4936530579609040}
-  DurationBlind: 2
+  Effect: Blinded 2 sec.
 --- !u!114 &114921343387028694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4841d6fb8b6845439f9515b7a495f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 100
+  Health: 75
   Deceased: 0
 --- !u!212 &212543614343015846
 SpriteRenderer:

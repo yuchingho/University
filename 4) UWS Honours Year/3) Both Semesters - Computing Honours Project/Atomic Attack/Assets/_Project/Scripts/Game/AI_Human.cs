@@ -43,9 +43,9 @@ public abstract class AI_Human : MonoBehaviour {
     public Transform FinalTarget;
 
     [Space( 10), Header("----------------- Stats -----------------")]
+    [SerializeField] protected float AttackRate;
     [SerializeField] protected float LookRadius;
     [SerializeField] protected float AttackRadius;
-    [SerializeField] protected float AttackRate;
     protected float NextAttackTime = 0;
 
     protected virtual void Start()
@@ -174,7 +174,7 @@ public abstract class AI_Human : MonoBehaviour {
     protected virtual void StatusBurned()
     {
         // not yet fully done
-        if (Burned == true) { EffectBurned.SetActive(true); }
+        if (Burned == true) { EffectBurned.SetActive(true);}
         else { EffectBurned.SetActive(false); }
     }
     #endregion

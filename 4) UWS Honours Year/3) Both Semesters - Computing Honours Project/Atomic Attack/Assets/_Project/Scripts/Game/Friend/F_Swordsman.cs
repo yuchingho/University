@@ -15,10 +15,10 @@ public class F_Swordsman : AI_Friend {
 
     void Reset()
     {
-        MovementSpeed = 1.2f;
-        AttackRate = 1f;
-        LookRadius = 3f;
-        AttackRadius = 0.85f;
+        MovementSpeed = 1.20f;
+           AttackRate = 1.00f;
+           LookRadius = 3.00f;
+         AttackRadius = 0.85f;
     }
 
     protected override void Movement()

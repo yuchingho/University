@@ -6,7 +6,7 @@ public class F01_Hydrogen : F_Gunman {
 
     [Space( 10), Header("[^ Child: F01_Hydrogen ]")]
     #pragma warning disable
-    [SerializeField] string Effect = "AoE Damage";
+    [SerializeField] string Effect = "AoE Damage.";
     Magnifyed Magnify;  // -------------------------------------------------------------------------
 
 
@@ -15,10 +15,10 @@ public class F01_Hydrogen : F_Gunman {
 
     void Reset()
     {
-        MovementSpeed = 1f;
-        AttackRate = 2f;
-        LookRadius = 3f;
-        AttackRadius = LookRadius;
+        MovementSpeed = 1.00f;
+           AttackRate = 2.00f;
+           LookRadius = 3.00f;
+         AttackRadius = 3.00f;
     }
 
     protected override void PlayAnimationAttack()

@@ -15,15 +15,15 @@ public class E_Gunman : AI_Enemy {
     
     void Reset()
     {
-        MovementSpeed = 1f;
-        AttackRate = 0.75f;
-        LookRadius = 4f;
-        AttackRadius = LookRadius;
+        MovementSpeed = 1.00f;
+           AttackRate = 0.75f;
+           LookRadius = 4.00f;
+         AttackRadius = 4.00f;
     }
 
     protected override void Movement()
     {   // Activating Blinded.
-        if (Blinded == true)  { AttackRate = 2;     }
+        if (Blinded == true)  { AttackRate = 2.00f;     }
         if (Blinded == false) { AttackRate = 0.75f; }
         base.Movement();
     }
@@ -51,20 +51,20 @@ public class E_Gunman : AI_Enemy {
     {
         if (collision.gameObject.tag == "Ground")
         {
-            Grounded = true;
-            OnTheCastle = false;
-            LookRadius = 4f;
-            AttackRadius = 4f;
+                Grounded = true;
+             OnTheCastle = false;
+              LookRadius = 4.00f;
+            AttackRadius = 4.00f;
             if (GrabbedByMouse == true)
             { StartCoroutine(HitTheGround()); }
         }
 
         if (collision.gameObject.tag == "Castle")
         {
-            Grounded = true;
-            OnTheCastle = true;
-            LookRadius = 15f;
-            AttackRadius = 15f;
+                Grounded = true;
+             OnTheCastle = true;
+              LookRadius = 15.00f;
+            AttackRadius = 15.00f;
             GrabbedByMouse = false;
         }
     }

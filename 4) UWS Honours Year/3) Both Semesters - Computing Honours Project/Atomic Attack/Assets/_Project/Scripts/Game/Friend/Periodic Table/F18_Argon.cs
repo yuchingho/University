@@ -14,11 +14,11 @@ public class F18_Argon : AI_Friend {
 
 
     void Reset()
-    {   Unshakeable = true;
-        MovementSpeed = 0.7f;
-        AttackRate = 0f;
-        LookRadius = 1.3f;
-        AttackRadius = LookRadius;
+    {     Unshakeable = true;
+        MovementSpeed = 0.80f;
+           AttackRate = 0.00f;
+           LookRadius = 2.00f;
+         AttackRadius = 2.00f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

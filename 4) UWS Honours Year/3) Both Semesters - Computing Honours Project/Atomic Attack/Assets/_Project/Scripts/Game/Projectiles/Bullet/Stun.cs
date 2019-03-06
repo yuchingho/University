@@ -6,8 +6,8 @@ public class Stun : _Bullet {
 
     void Reset()
     {
-        Damage = 2;
-        Speed = 5;
+        Damage = 5;
+        Speed = 10;
     }
 
     protected override void HitTarget()

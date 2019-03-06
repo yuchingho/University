@@ -212,7 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CostValue: 0
   ScoreValue: 0
-  MovementSpeed: 1
+  MovementSpeed: 1.2
   Grounded: 0
   Unshakeable: 0
   OnTheCastle: 0
@@ -233,14 +233,14 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
-  LookRadius: 5.5
-  AttackRadius: 5.5
-  AttackRate: 0.75
+  AttackRate: 1.1
+  LookRadius: 5
+  AttackRadius: 5
   FriendCounter: 1
-  AttackDamage: 2 [Read Only Prefab]
+  AttackDamage: 7. [Read Only Prefab]
   Projectile: {fileID: 1556022897310762, guid: 23d252070f0e7d64b9251bb574ead23c, type: 2}
   FireLocation: {fileID: 4517080480363884}
-  DurationBlind: 2
+  Effect: Blinded 2 sec.
   Downgrade: F04_Beryllium
 --- !u!212 &212084980687331570
 SpriteRenderer:

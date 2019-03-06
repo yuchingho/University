@@ -9,7 +9,7 @@ public class F02_Helium : MonoBehaviour {
     CapsuleCollider2D CapsuleCollider2D;
     public int CostValue;
     public int ScoreValue;
-    [SerializeField] protected int MovementSpeed = 1;
+    [SerializeField] int MovementSpeed = 1;
     [SerializeField] GameObject SpawnUnits;
     bool Spawn;
 

@@ -6,7 +6,7 @@ public class Blind2 : Blind {
 
     void Reset()
     {
-        Damage = 5;
-        Speed = 10;
+        Damage = 7;
+        Speed = 12;
     }
 }

@@ -8,8 +8,8 @@ public class _Bullet : MonoBehaviour {
     protected HealthSystem HealthSystem;
 
     public int Damage = 2;
-    [SerializeField] protected GameObject Explosion;
     [SerializeField] protected int Speed = 15;
+    [SerializeField] protected GameObject Explosion;
 
     public void Seek(Transform target)
     {

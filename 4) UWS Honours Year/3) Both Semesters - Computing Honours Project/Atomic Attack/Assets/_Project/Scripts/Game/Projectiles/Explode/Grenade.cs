@@ -8,14 +8,9 @@ public class Grenade : _Explode {
     Rigidbody2D Rigidbody2D;
 
     float Rand;
-    [SerializeField] int ThrowDir;
-    [SerializeField] protected int Speed = 3;
-    [SerializeField] protected int ThrowAngle = 150;
-
-    public void Throw(Transform target)
-    {
-        Target = target;
-    }
+    int ThrowDir;
+    int ThrowAngle = 150;
+    public void Throw(Transform target) { Target = target; }
 
     void Reset()
     {
@@ -27,10 +22,12 @@ public class Grenade : _Explode {
     {   // Tag is "Explode" so "Button_Oxygen" can find if need to be Magnified.
         Rand = Random.Range(1, 100);
         Rigidbody2D = GetComponent<Rigidbody2D>();
-        if (Target != null) {
-        if (Target.gameObject.name == "E_Gunman(Clone)" || Target.gameObject.name == "E_Swordsman(Clone)")
-        {   ThrowDir = Target.GetComponent<AI_Human>().MovementDirection; }
-        else { ThrowDir = 1; } }    // ThrowDir will be -1 (left) or 1 (right).
+        if (Target != null)
+        {
+            if (Target.gameObject.name == "E_Gunman(Clone)" || Target.gameObject.name == "E_Swordsman(Clone)")
+            {      ThrowDir = Target.GetComponent<AI_Human>().MovementDirection; }
+            else { ThrowDir = 1; }  // ThrowDir will be -1 (left) or 1 (right).
+        }
         Rigidbody2D.AddForce(transform.up * ThrowAngle);
         Rigidbody2D.AddForce(transform.right * ThrowAngle * ThrowDir);
         // Adding ThrowDir so Grenade will throw in the correct direction.

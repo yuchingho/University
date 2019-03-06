@@ -7,7 +7,7 @@ public class F_Gunman : AI_Friend {
     // Child Class F_Gunman inheriting from AI_Friend.
     [Space(-10), Header("[^ Child:   F_Gunman ]")]
     #pragma warning disable
-    [SerializeField] string AttackDamage = "2 [Read Only Prefab]";
+    [SerializeField] string AttackDamage = "[Read Only Prefab]";
     [SerializeField] protected GameObject Projectile;
     [SerializeField] protected Transform FireLocation;
 
@@ -15,10 +15,10 @@ public class F_Gunman : AI_Friend {
 
     void Reset()
     {
-        MovementSpeed = 1f;
-        AttackRate = 0.75f;
-        LookRadius = 4f;
-        AttackRadius = LookRadius;
+        MovementSpeed = 1.00f;
+           AttackRate = 0.75f;
+           LookRadius = 4.00f;
+         AttackRadius = 4.00f;
     }
 
     protected override void Shoot()

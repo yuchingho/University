@@ -6,7 +6,7 @@ public class F10_Neon : AI_Friend {
 
     [Space( 10), Header("[^ Child: F10_Neon ]")]
     #pragma warning disable
-    [SerializeField] protected int AttackDamage = 500;
+    [SerializeField] int AttackDamage = 100;
     [SerializeField] string Effect = "Lightsaber";
 
 
@@ -14,11 +14,11 @@ public class F10_Neon : AI_Friend {
 
 
     void Reset()
-    {   // Health...
-        MovementSpeed = 1.4f;
-        AttackRate = 1.4f;
-        LookRadius = 4f;
-        AttackRadius = 1f;
+    {
+        MovementSpeed = 1.40f;
+           AttackRate = 1.40f;
+           LookRadius = 4.00f;
+         AttackRadius = 1.00f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -28,11 +28,10 @@ public class F10_Neon : AI_Friend {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
-        {   // When F_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
-            // Will damage Target's Health with F_Swordsman's AttackDamage.
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Friend")
+        {   // When F10_Neon plays Attack.anim, will make the DamageArea active briefly to damage Target.
+            // Will damage Target's Health with F10_Neon's AttackDamage.
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
         }
-        // on trigger enter, everyone dies
     }
 }

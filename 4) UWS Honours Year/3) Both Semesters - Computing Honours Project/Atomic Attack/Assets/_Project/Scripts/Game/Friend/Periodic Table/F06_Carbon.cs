@@ -14,11 +14,11 @@ public class F06_Carbon : AI_Friend {
 
 
     void Reset()
-    {   // Upgrade = F14_Silicon. Health = ...
-        MovementSpeed = 1f;
-        AttackRate = 1f;
-        LookRadius = 3f;
-        AttackRadius = 0.7f;
+    {   // Upgrade = F14_Silicon.
+        MovementSpeed = 0.90f;
+           AttackRate = 1.00f;
+           LookRadius = 3.00f;
+         AttackRadius = 0.75f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
