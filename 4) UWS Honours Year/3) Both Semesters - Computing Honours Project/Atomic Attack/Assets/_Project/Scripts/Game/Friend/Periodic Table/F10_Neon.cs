@@ -2,15 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class F10_Neon : MonoBehaviour {
+public class F10_Neon : AI_Friend {
 
-	void Start()
+    [Space( 10), Header("[^ Child: F10_Neon ]")]
+    #pragma warning disable
+    [SerializeField] protected int AttackDamage = 500;
+    [SerializeField] string Effect = "Lightsaber";
+
+
+
+
+
+    void Reset()
+    {   // Health...
+        MovementSpeed = 1.4f;
+        AttackRate = 1.4f;
+        LookRadius = 4f;
+        AttackRadius = 1f;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {   // not detecting when the sprite has left the ground... else function doesn't work
+        if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
-		
-	}
-	
-	void Update() 
-    {
-		
-	}
+        if (collision.gameObject.tag == "Enemy")
+        {   // When F_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
+            // Will damage Target's Health with F_Swordsman's AttackDamage.
+            collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
+        }
+        // on trigger enter, everyone dies
+    }
 }

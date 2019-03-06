@@ -6,7 +6,7 @@ public class F04_Beryllium : F_Gunman {
 
     [Space( 10), Header("[^ Child: F04_Beryllium ]")]
     #pragma warning disable
-    [SerializeField] int DurationBlind = 2;
+    [SerializeField] string Effect = "Blind 2 sec";
 
 
 

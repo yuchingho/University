@@ -6,7 +6,7 @@ public class F06_Carbon : AI_Friend {
 
     [Space( 10), Header("[^ Child: F06_Carbon ]")]
     #pragma warning disable
-    [SerializeField] protected string Upgrade = "Shield";
+    [SerializeField] string Effect = "Shield";
 
 
 

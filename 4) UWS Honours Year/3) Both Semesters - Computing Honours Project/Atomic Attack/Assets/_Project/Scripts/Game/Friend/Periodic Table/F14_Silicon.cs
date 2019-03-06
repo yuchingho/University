@@ -6,7 +6,7 @@ public class F14_Silicon : F06_Carbon {
 
     [Space( 10), Header("[^ Child: F14_Silicon ]")]
     #pragma warning disable
-    [SerializeField] protected string Downgrade = "F06_Carbon";
+    [SerializeField] string Downgrade = "F06_Carbon";
 
 
 

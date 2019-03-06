@@ -6,7 +6,7 @@ public class F03_Lithium : F_Gunman {
 
     [Space( 10), Header("[^ Child: F03_Lithium ]")]
     #pragma warning disable
-    [SerializeField] int DurationStun = 1;
+    [SerializeField] string Effect = "Stunned 1 sec";
 
 
 

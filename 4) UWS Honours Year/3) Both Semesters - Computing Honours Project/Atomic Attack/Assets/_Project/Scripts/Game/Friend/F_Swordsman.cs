@@ -36,7 +36,7 @@ public class F_Swordsman : AI_Friend {
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Castle")
+        if (collision.gameObject.tag == "Enemy")
         {   // When F_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
             // Will damage Target's Health with F_Swordsman's AttackDamage.
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);

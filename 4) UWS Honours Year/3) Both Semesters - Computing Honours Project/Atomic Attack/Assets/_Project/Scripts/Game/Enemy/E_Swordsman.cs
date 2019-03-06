@@ -28,30 +28,6 @@ public class E_Swordsman : AI_Enemy {
         base.Movement();
     }
 
-    protected override void LookAtTarget()
-    {   // Sprites flipping to look at its Target.
-        if (OnTheCastle == true)
-        {   // When on Castle, different Angle algorithm so will face Target correctly.
-            Vector3 dir = Target.position - transform.position;
-            float Angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
-            if (Angle <= 160) { MovementDirection = -1; }
-            if (Angle >= 170) { MovementDirection = 1; Angle -= 180; }
-            transform.rotation = Quaternion.AngleAxis(Angle, Vector3.left);
-        }
-        else
-        {
-            if (Target != null)
-            {
-                Vector3 dir = Target.position - transform.position;
-                float Angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                if (Angle <=  160) { MovementDirection = -1; }
-                if (Angle >=  170) { MovementDirection =  1; Angle -= 180; }
-                if (Angle <= -170) { MovementDirection =  1; Angle += 180; }
-                transform.rotation = Quaternion.AngleAxis(Angle, Vector3.forward);
-            }
-        }
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {   // Switching layers so can walk out of Castle if chucked on it.
         if (collision.gameObject.tag == "Ground")
@@ -78,8 +54,8 @@ public class E_Swordsman : AI_Enemy {
     }
 
     void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Friend")   // Bugs: Doesn't damage f_swordsman or F01_Hydrogen.
+    {   // Bugs: Doesn't damage f_swordsman or F01_Hydrogen.
+        if (collision.gameObject.tag == "Friend")
         {   // When E_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
             // Will damage Target's Health with E_Swordsman's AttackDamage.
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);

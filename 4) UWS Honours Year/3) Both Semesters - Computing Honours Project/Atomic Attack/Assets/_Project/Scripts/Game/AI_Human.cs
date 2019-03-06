@@ -61,7 +61,7 @@ public abstract class AI_Human : MonoBehaviour {
     // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
     protected virtual void Update()
     {   // If out of bounds, destroy GameObject and not add to score, etc.
-        if (transform.position.x<=-15 || transform.position.x>=15 || transform.position.y<=-7) { Destroy(gameObject); }
+        if (transform.position.x <= -15 || transform.position.x >= 15 || transform.position.y <= -7) { Destroy(gameObject); }
         else if (Grounded == true && HealthSystem.Deceased == true) { PlayAnimationDeath(); }
         else if (Grounded == true && GrabbedByMouse == false)
         {   // Status effects initialized.

@@ -54,7 +54,7 @@ public class ManagerSpawn : MonoBehaviour {
     void Start()
     {
         Explanation.gameObject.SetActive(false);
-        //InvokeRepeating("CannonFodderEnemy",  1, 5);
+        InvokeRepeating("CannonFodderEnemy",  1, 5);
         //InvokeRepeating("CannonFodderFriend", 0, 5);
 	}
 	
@@ -219,6 +219,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Neon ] Lightsaber time";
         StartCoroutine(FlashText());
+        Instantiate(Neon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn11Na()
@@ -272,6 +273,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Argon ] fire fire";
         StartCoroutine(FlashText());
+        Instantiate(Argon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
 
