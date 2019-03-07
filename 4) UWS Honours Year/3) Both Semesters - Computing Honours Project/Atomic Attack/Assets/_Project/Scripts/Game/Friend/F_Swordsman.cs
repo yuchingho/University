@@ -29,11 +29,6 @@ public class F_Swordsman : AI_Friend {
         base.Movement();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {   // not detecting when the sprite has left the ground... else function doesn't work
-        if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
@@ -42,4 +37,7 @@ public class F_Swordsman : AI_Friend {
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
 }

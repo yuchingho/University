@@ -17,12 +17,10 @@ public class F18_Argon : AI_Friend {
     {     Unshakeable = true;
         MovementSpeed = 0.80f;
            AttackRate = 0.00f;
-           LookRadius = 2.00f;
-         AttackRadius = 2.00f;
+           LookRadius = 3.00f;
+         AttackRadius = 3.00f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {   // not detecting when the sprite has left the ground... else function doesn't work
-        if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
-    }
+    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
 }

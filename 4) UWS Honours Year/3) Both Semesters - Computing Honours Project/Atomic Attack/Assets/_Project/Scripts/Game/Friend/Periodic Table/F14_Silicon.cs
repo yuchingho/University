@@ -22,7 +22,5 @@ public class F14_Silicon : F06_Carbon {
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {   // not detecting when the sprite has left the ground... else function doesn't work
-        if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
-    }
+    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
 }

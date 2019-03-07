@@ -18,10 +18,10 @@ public abstract class AI_Human : MonoBehaviour {
     [SerializeField] protected float MovementSpeed;
     protected float MovementSpeedInitial;
     public bool Grounded;
-    protected Vector3 PreviousGrabbedPosition;
-    [SerializeField] protected bool Unshakeable;
+    public bool Unshakeable;
+    public bool GrabbedByMouse;
     [SerializeField] protected bool OnTheCastle;
-    [SerializeField] protected bool GrabbedByMouse;
+    protected Vector3 PreviousGrabbedPosition;
     [HideInInspector] public int MovementDirection;
 
     [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
@@ -55,7 +55,7 @@ public abstract class AI_Human : MonoBehaviour {
         Animator = GetComponent<Animator>();
         HealthSystem = GetComponent<HealthSystem>();
         MovementSpeedInitial = MovementSpeed;
-}
+    }
 
     // Child Classes "AI_Enemy" and "AI_Friend" have InvokeRepeating UpdateTarget() every 0.25f.
     // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
@@ -171,11 +171,6 @@ public abstract class AI_Human : MonoBehaviour {
         else { SpriteRenderer.color = new Color(255, 255, 255); } /* White */
     }
 
-    protected virtual void StatusBurned()
-    {
-        // not yet fully done
-        if (Burned == true) { EffectBurned.SetActive(true);}
-        else { EffectBurned.SetActive(false); }
-    }
+    protected virtual void StatusBurned() { if (Burned == true) { EffectBurned.SetActive(true); } }
     #endregion
 }

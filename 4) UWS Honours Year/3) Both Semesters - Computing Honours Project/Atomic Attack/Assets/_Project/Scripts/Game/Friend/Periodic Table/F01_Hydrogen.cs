@@ -7,7 +7,7 @@ public class F01_Hydrogen : F_Gunman {
     [Space( 10), Header("[^ Child: F01_Hydrogen ]")]
     #pragma warning disable
     [SerializeField] string Effect = "AoE Damage.";
-    Magnifyed Magnify;  // -------------------------------------------------------------------------
+
 
 
 
@@ -18,7 +18,7 @@ public class F01_Hydrogen : F_Gunman {
         MovementSpeed = 1.00f;
            AttackRate = 2.00f;
            LookRadius = 3.00f;
-         AttackRadius = 3.00f;
+         AttackRadius = 1.75f;
     }
 
     protected override void PlayAnimationAttack()
@@ -39,4 +39,7 @@ public class F01_Hydrogen : F_Gunman {
         Grenade grenade = Grenade.GetComponent<Grenade>();
         if (grenade != null) { grenade.Throw(Target); }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
 }

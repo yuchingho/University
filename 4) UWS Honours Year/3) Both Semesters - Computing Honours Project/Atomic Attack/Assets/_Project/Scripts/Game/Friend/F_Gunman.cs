@@ -17,8 +17,8 @@ public class F_Gunman : AI_Friend {
     {
         MovementSpeed = 1.00f;
            AttackRate = 0.75f;
-           LookRadius = 4.00f;
-         AttackRadius = 4.00f;
+           LookRadius = 3.00f;
+         AttackRadius = 3.00f;
     }
 
     protected override void Shoot()
@@ -31,7 +31,5 @@ public class F_Gunman : AI_Friend {
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {   // not detecting when the sprite has left the ground... else function doesn't work
-        if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
-    }
+    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
 }

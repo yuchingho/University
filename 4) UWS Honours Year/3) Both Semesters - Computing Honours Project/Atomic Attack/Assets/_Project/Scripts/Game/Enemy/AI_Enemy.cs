@@ -105,7 +105,7 @@ public class AI_Enemy : AI_Human {
         // Adding fall damage. Mathf.Abs returns any value as true;
         float Damage = Mathf.Abs(ThrowVelocity.y * ThrowMultiplyer);
         GetComponent<HealthSystem>().DamageTaken((int)Damage);
-        Debug.Log("Throw Damage = " + ((int)Damage));
+        //Debug.Log("Throw Damage = " + ((int)Damage));
     }
 
     protected virtual IEnumerator HitTheGround()

@@ -17,7 +17,10 @@ public class F12_Magnesium : F04_Beryllium {
     {
         MovementSpeed = 1.20f;
            AttackRate = 1.10f;
-           LookRadius = 4.50f;
-         AttackRadius = 4.50f;
+           LookRadius = 4.00f;
+         AttackRadius = 4.00f;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
 }

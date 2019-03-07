@@ -17,13 +17,8 @@ public class F10_Neon : AI_Friend {
     {
         MovementSpeed = 1.40f;
            AttackRate = 1.40f;
-           LookRadius = 4.00f;
+           LookRadius = 3.00f;
          AttackRadius = 1.00f;
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {   // not detecting when the sprite has left the ground... else function doesn't work
-        if (collision.gameObject.tag == "Ground") { Grounded = true; } else { }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -34,4 +29,7 @@ public class F10_Neon : AI_Friend {
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
 }

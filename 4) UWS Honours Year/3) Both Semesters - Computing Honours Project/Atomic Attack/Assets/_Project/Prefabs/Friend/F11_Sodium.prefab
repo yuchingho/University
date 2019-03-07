@@ -221,8 +221,8 @@ MonoBehaviour:
   TargetHealth: 0
   FinalTarget: {fileID: 0}
   AttackRate: 1.1
-  LookRadius: 4.5
-  AttackRadius: 4.5
+  LookRadius: 3.5
+  AttackRadius: 3.5
   FriendCounter: 1
   AttackDamage: 7. [Read Only Prefab]
   Projectile: {fileID: 1131921872701352, guid: 1de47963095df0e4f801bd10d6ce8983, type: 2}

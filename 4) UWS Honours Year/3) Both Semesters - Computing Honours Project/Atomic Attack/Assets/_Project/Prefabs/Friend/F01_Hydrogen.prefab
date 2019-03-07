@@ -202,8 +202,8 @@ MonoBehaviour:
   MovementSpeed: 1
   Grounded: 0
   Unshakeable: 0
-  OnTheCastle: 0
   GrabbedByMouse: 0
+  OnTheCastle: 0
   MovementDirection: 0
   Stunned: 0
   Blinded: 0
@@ -222,7 +222,7 @@ MonoBehaviour:
   FinalTarget: {fileID: 0}
   AttackRate: 2
   LookRadius: 3
-  AttackRadius: 3
+  AttackRadius: 1.75
   FriendCounter: 1
   AttackDamage: 5. [Read Only Prefab]
   Projectile: {fileID: 1801079812914224, guid: 0fa186b2c473eaf41abde5482de701e9, type: 2}

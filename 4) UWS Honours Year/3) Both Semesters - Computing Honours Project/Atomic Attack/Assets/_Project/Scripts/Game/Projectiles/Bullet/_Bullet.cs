@@ -5,7 +5,6 @@ using UnityEngine;
 public class _Bullet : MonoBehaviour {
 
     protected Transform Target;
-    protected HealthSystem HealthSystem;
 
     public int Damage = 2;
     [SerializeField] protected int Speed = 15;

@@ -1311,7 +1311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246065174}
   - component: {fileID: 246065175}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Window02
   m_TagString: Castle
   m_Icon: {fileID: 0}
@@ -4360,7 +4360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802226367}
   - component: {fileID: 802226368}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Window01
   m_TagString: Castle
   m_Icon: {fileID: 0}
@@ -10821,7 +10821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2127877965}
   - component: {fileID: 2127877966}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Window03
   m_TagString: Castle
   m_Icon: {fileID: 0}
@@ -11052,7 +11052,7 @@ MonoBehaviour:
   F_SwordsmanGO: {fileID: 1239407495441330, guid: a2ffab7b86f9ee14f96811bce9c87acd,
     type: 2}
   Hydrogen: {fileID: 1783645857741044, guid: d27872d8d96a2424fb33729c35547ad5, type: 2}
-  Helium: {fileID: 1976892918889914, guid: 66bca1851cfeec447b28dd38db7e1ff2, type: 2}
+  Helium: {fileID: 1599209585643534, guid: 66bca1851cfeec447b28dd38db7e1ff2, type: 2}
   Lithium: {fileID: 1121232779419898, guid: 9e49fa4edc0138946a4cca51ad4b792f, type: 2}
   Beryllium: {fileID: 1243052234810688, guid: 4625ca124f1a95d479ffed54f8901436, type: 2}
   Carbon: {fileID: 1719993554971898, guid: 35d0a8426910b7643a59613022b875f0, type: 2}

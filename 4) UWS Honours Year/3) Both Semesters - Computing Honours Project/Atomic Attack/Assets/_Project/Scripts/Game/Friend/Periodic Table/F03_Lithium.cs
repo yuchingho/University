@@ -17,7 +17,10 @@ public class F03_Lithium : F_Gunman {
     {   // Upgrade = F11_Sodium.
         MovementSpeed = 1.00f;
            AttackRate = 2.00f;
-           LookRadius = 3.25f;
-         AttackRadius = 3.25f;
+           LookRadius = 3.00f;
+         AttackRadius = 2.25f;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
 }

@@ -259,9 +259,9 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
-  LookRadius: 1
-  AttackRadius: 0.85
   AttackRate: 1
+  LookRadius: 3
+  AttackRadius: 0.85
   FriendCounter: 1
   AttackDamage: 1
   Boron: 0

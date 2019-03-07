@@ -292,8 +292,8 @@ MonoBehaviour:
   TargetHealth: 0
   FinalTarget: {fileID: 0}
   AttackRate: 0.75
-  LookRadius: 4
-  AttackRadius: 4
+  LookRadius: 3
+  AttackRadius: 3
   ThrowMultiplyer: 30
   EnemyCounter: 1
   RunAway: 0

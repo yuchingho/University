@@ -17,7 +17,10 @@ public class F11_Sodium : F03_Lithium {
     {
         MovementSpeed = 1.20f;
            AttackRate = 1.10f;
-           LookRadius = 4.50f;
-         AttackRadius = 4.50f;
+           LookRadius = 3.50f;
+         AttackRadius = 3.50f;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
 }
