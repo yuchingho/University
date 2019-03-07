@@ -24,7 +24,6 @@ public class _Explode : MonoBehaviour {
             {   // ExplosionScale and Screenshake.
                 Explosion.transform.localScale = new Vector2(ExplosionScale * 2, ExplosionScale * 2);
                 //Debug.Log("screenshake"); https://youtu.be/9A9yj8KnM8c 
-
                 if (obj.name == "Castle Health") { HP.DamageTaken(Damage * 2); }
                 else if (obj.tag == "Enemy" || obj.tag == "Friend")
                 {
@@ -41,7 +40,7 @@ public class _Explode : MonoBehaviour {
                     else { HP.DamageTaken(Damage * 2); }
                 }
             }
-            else if (obj.tag == "Enemy")
+            else if (obj.tag == "Enemy" || obj.tag == "Friend")
             {
                 Explosion.transform.localScale = new Vector2(ExplosionScale, ExplosionScale);
                 HP.DamageTaken(Damage);

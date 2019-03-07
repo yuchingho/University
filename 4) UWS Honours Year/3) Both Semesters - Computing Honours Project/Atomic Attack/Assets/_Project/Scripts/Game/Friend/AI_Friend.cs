@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class AI_Friend : AI_Human {
 
-    [Space( 10), Header("[^ Child: AI_Friend ]")]
-    public int FriendCounter = 1;
+
+
+
+
+
+
+
+
 
     protected override void Start()
     {   // If GameObjectTag == Friend, will target Enemy.

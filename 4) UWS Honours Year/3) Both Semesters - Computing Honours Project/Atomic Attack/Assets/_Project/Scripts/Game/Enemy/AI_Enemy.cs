@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AI_Enemy : AI_Human {
-
-    [Space( 10), Header("[^ Child: AI_Enemy ]")]
     [SerializeField] protected float ThrowMultiplyer = 30;
-    public int EnemyCounter = 1;
-    public bool RunAway;
 
     protected override void Start()
     {   // If GameObjectTag == Enemy, will target Friend.

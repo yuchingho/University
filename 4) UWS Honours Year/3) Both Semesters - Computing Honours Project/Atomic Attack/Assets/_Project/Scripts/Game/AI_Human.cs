@@ -29,12 +29,14 @@ public abstract class AI_Human : MonoBehaviour {
     public bool Blinded;    // For Enemies.
     public bool Suffocated; // For 07_Nitrogen + 15_Phosphorus. (DoT).
     public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT).
+    public bool RunAway;    // For 16_Sulphur.
     public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT).
     /* Set Colours manually in Inspector, because if do it via code and spawn Prefab, only goes up to 191. */
     [SerializeField] protected Color ColourSuffocated;
     [SerializeField] protected Color ColourPoisoned;
     [SerializeField] protected GameObject EffectStunned;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectBlinded;    // Order in layer = 1.
+    [SerializeField] protected GameObject GasMask;
     [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
 
     [Space( 10), Header("----------------- Target ----------------")]
