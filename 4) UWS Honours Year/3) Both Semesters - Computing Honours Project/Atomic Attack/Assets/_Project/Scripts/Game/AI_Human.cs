@@ -15,13 +15,13 @@ public abstract class AI_Human : MonoBehaviour {
     public int ScoreValue;
 
     [Space(10), Header("[ Parent: AI_Human ] Movement")]
-    [SerializeField] protected float MovementSpeed;
-    protected float MovementSpeedInitial;
+    public float MovementSpeed;
     public bool Grounded;
     public bool Unshakeable;
     public bool GrabbedByMouse;
     [SerializeField] protected bool OnTheCastle;
     protected Vector3 PreviousGrabbedPosition;
+    protected float MovementSpeedInitial;
     [HideInInspector] public int MovementDirection;
 
     [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
@@ -62,8 +62,10 @@ public abstract class AI_Human : MonoBehaviour {
     protected virtual void Update()
     {   // If out of bounds, destroy GameObject and not add to score, etc.
         if (transform.position.x <= -15 || transform.position.x >= 15 || transform.position.y <= -7) { Destroy(gameObject); }
-        else if (Grounded == true && HealthSystem.Deceased == true) { PlayAnimationDeath(); }
-        else if (Grounded == true && GrabbedByMouse == false)
+        // A lot of the time, in "_Explode.cs" Guy slides across the ground. Grounded == true doesn't properly register.
+        // So will stand there till Dead. That's why commented out "Grounded".
+        else if (/* Grounded == true && */ HealthSystem.Deceased == true) { PlayAnimationDeath(); }
+        else if (   Grounded == true &&    GrabbedByMouse == false)
         {   // Status effects initialized.
             StartCoroutine(StatusBlinded());
             StatusSuffocated();
@@ -137,8 +139,15 @@ public abstract class AI_Human : MonoBehaviour {
     protected abstract void OnDrawGizmos();
 
     protected virtual void Shoot() { }
-
     #region Enemy status effects
+    protected virtual IEnumerator StatusStunned()
+    {   // Duration = 1s.
+        MovementSpeed = 0;
+        Animator.Play("Stunned");
+        yield return new WaitForSeconds(1f);
+        Stunned = false;
+    }
+
     protected virtual IEnumerator StatusBlinded()
     {   // Duration = 2s.
         if (Blinded == true)
@@ -149,16 +158,8 @@ public abstract class AI_Human : MonoBehaviour {
             EffectBlinded.SetActive(false);
         }
     }
-
-    protected virtual IEnumerator StatusStunned()
-    {   // Duration = 1s.
-        MovementSpeed = 0;
-        gameObject.GetComponent<Animator>().Play("Stunned");
-        yield return new WaitForSeconds(1f);
-        Stunned = false;
-    }
     #endregion
-    #region All status effects
+    #region [All] status effects
     protected virtual void StatusSuffocated()
     {
         if (Suffocated == true) { SpriteRenderer.color = ColourSuffocated; }
@@ -171,6 +172,16 @@ public abstract class AI_Human : MonoBehaviour {
         else { SpriteRenderer.color = new Color(255, 255, 255); } /* White */
     }
 
+    // Not doing "if (Burned == false)" because unit will die soon anyway.
     protected virtual void StatusBurned() { if (Burned == true) { EffectBurned.SetActive(true); } }
     #endregion
+
+    // Use if GrabbedByMouse or thrown in air by Explosion.
+    protected virtual IEnumerator HitTheGround()
+    {
+        Animator.Play("Die");
+        yield return new WaitForSeconds(1f);
+        GrabbedByMouse = false;
+        MovementSpeed = MovementSpeedInitial;
+    }
 }

@@ -27,3 +27,7 @@ https://opengameart.org/content/gold-coin-2 - gold icon
 https://opengameart.org/content/pixel-flame-animation-2 - flame for Argon
 
 https://www.spriters-resource.com/game_boy_advance/onepiece/sheet/15782/ - lightsaber
+
+https://opengameart.org/content/plague-doctor-mask-16x18 - mask
+
+https://opengameart.org/content/mist - mist

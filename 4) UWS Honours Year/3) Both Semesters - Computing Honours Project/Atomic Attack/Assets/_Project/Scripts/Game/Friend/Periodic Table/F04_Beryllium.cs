@@ -22,5 +22,15 @@ public class F04_Beryllium : F_Gunman {
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Grounded = true;
+            if (transform.position.x >= -9 && GrabbedByMouse == true)
+            {
+                gameObject.layer = 9;
+                StartCoroutine(HitTheGround());
+            }
+        }
+    }
 }

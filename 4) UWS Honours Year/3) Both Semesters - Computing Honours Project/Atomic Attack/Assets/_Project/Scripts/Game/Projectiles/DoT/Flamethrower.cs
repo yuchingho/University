@@ -10,6 +10,6 @@ public class Flamethrower : MonoBehaviour {
         if (collision.gameObject.name == "Castle Health")
         { HP.DamageTaken(1.0f); }
         else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Friend")
-        { HP.DamageTaken(0.4f); collision.gameObject.GetComponent<AI_Human>().Burned = true; }
+        { HP.DamageTaken(0.4f);   collision.gameObject.GetComponent<AI_Human>().Burned = true; }
     }
 }

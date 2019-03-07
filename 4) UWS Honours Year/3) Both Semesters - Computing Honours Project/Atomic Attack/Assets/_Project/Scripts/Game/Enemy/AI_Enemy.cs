@@ -17,9 +17,8 @@ public class AI_Enemy : AI_Human {
     }
 
     protected override void Update()
-    {   // Changing to "Boundary" layer.
-        if (transform.position.x <= -8 && Grounded == true && GrabbedByMouse == false)
-        { gameObject.layer = 12; /* Destroying gameObject with ManagerGame OnTrigger2D*/ }
+    {   // Changing to "Boundary" layer and destroy gameObject with ManagerGame OnTrigger2D to --PlayerLives. 
+        if (transform.position.x <= -8 && Grounded == true && GrabbedByMouse == false) { gameObject.layer = 12; }
         if (RunAway == true) { MovementDirection = -1; }
         base.Update();
     }
@@ -71,19 +70,20 @@ public class AI_Enemy : AI_Human {
         Gizmos.DrawWireSphere(transform.position, LookRadius);
     }
 
+    #region Mouse Stuff
     protected virtual void OnMouseDown()
     {
-        GrabbedByMouse = true;
         MovementSpeed = 0;
+        GrabbedByMouse = true;
     }
 
     protected virtual void OnMouseDrag()
     {
         if (Input.mousePosition.y >= 130)
         {
-            GrabbedByMouse = true;
             MovementSpeed = 0;
             Grounded = false;
+            GrabbedByMouse = true;
             gameObject.layer = 10;  // Mouse Layer.
             // Calculating the ThrowVelocity.
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -107,12 +107,5 @@ public class AI_Enemy : AI_Human {
         GetComponent<HealthSystem>().DamageTaken((int)Damage);
         //Debug.Log("Throw Damage = " + ((int)Damage));
     }
-
-    protected virtual IEnumerator HitTheGround()
-    {
-        gameObject.GetComponent<Animator>().Play("Die");
-        yield return new WaitForSeconds(1f);
-        GrabbedByMouse = false;
-        MovementSpeed = MovementSpeedInitial;
-    }
+    #endregion
 }

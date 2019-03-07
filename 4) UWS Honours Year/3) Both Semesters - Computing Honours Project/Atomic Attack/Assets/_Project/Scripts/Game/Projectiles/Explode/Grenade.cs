@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Grenade : _Explode {
 
-    protected Transform Target;
+    Transform Target;
     Rigidbody2D Rigidbody2D;
 
     float Rand;
     int ThrowDir;
     int ThrowAngle = 90;
+
     public void Throw (Transform target) { Target = target; }
 
     void Reset()
@@ -18,11 +19,9 @@ public class Grenade : _Explode {
         ExplosionRadius = 0.25f;
         ExplosionScale = 0.1f;
     }
-
+    
     protected virtual void Start()
-    {   // Tag is "Explode" so "Button_Oxygen" can find if need to be Magnified.
-        Magnified = true;
-
+    {
         Rand = Random.Range(1, 100);
         Rigidbody2D = GetComponent<Rigidbody2D>();
         if (Target != null)
@@ -38,7 +37,6 @@ public class Grenade : _Explode {
     // Whenever Grenade is thrown, will have a random spin along the Z axis.
     protected virtual void Update() { transform.Rotate(Vector3.forward * Rand); }
 
-    // if magnifed = true, add more damage
     void OnCollisionEnter2D(Collision2D collision)
     {   // Updating ExplosionRadius here. It is updated even though OnDrawGizmo doesn't show properly.
         if (Magnified == true) { ExplosionRadius = ExplosionRadius * 2; }

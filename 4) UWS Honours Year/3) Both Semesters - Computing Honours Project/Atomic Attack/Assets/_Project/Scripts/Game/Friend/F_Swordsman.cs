@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class F_Swordsman : AI_Friend {
-    [Space( 10), Header("[^ Child: AI_Friend ]")]
+    [Space(10), Header("[^ Child: AI_Friend ]")]
     // Child Class F_Swordsman inheriting from AI_Friend.
     [Space(-10), Header("[^ Child:   F_Swordsman ]")]
-    #pragma warning disable
+#pragma warning disable
     [SerializeField] protected int AttackDamage = 1;
-    [Space( 10), Header("[^ Child:   F_Swordsman ] Steriods")]
+    [Space(10), Header("[^ Child:   F_Swordsman ] Steriods")]
     public bool Boron;        // Add MovementSpeed for when activated.
     public bool Aluminium;    // Add AttackDamage and AttackRate for when activated.
     [SerializeField] protected Color ColourAluminium;
@@ -16,16 +16,16 @@ public class F_Swordsman : AI_Friend {
     void Reset()
     {
         MovementSpeed = 1.20f;
-           AttackRate = 1.00f;
-           LookRadius = 3.00f;
-         AttackRadius = 0.85f;
+        AttackRate = 1.00f;
+        LookRadius = 3.00f;
+        AttackRadius = 0.85f;
     }
 
     protected override void Movement()
     {   // Activating the Steriods.
-        if (Boron == true)      { MovementSpeed = MovementSpeed * 2; }
-        if (Aluminium == true)  {  AttackDamage = 2; AttackRate = 0.5f; SpriteRenderer.color = ColourAluminium; }
-        if (Aluminium == false) {  AttackDamage = 1; AttackRate = 1;    SpriteRenderer.color = new Color(255, 255, 255); } /* White */
+        if (Boron == true) { MovementSpeed = MovementSpeed * 2; }
+        if (Aluminium == true) { AttackDamage = 2; AttackRate = 0.5f; SpriteRenderer.color = ColourAluminium; }
+        if (Aluminium == false) { AttackDamage = 1; AttackRate = 1; SpriteRenderer.color = new Color(255, 255, 255); } /* White */
         base.Movement();
     }
 
@@ -39,5 +39,15 @@ public class F_Swordsman : AI_Friend {
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    { if (collision.gameObject.tag == "Ground") { Grounded = true; } GrabbedByMouse = false; }
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Grounded = true;
+            if (transform.position.x >= -9 && GrabbedByMouse == true)
+            {
+                gameObject.layer = 9;
+                StartCoroutine(HitTheGround());
+            }
+        }
+    }
 }
