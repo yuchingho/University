@@ -27,17 +27,14 @@ public abstract class AI_Human : MonoBehaviour {
     [Space( 10), Header("[ Parent: AI_Human ] Affected By")]
     public bool Stunned;    // For Enemies.
     public bool Blinded;    // For Enemies.
-    public bool Suffocated; // For 07_Nitrogen + 15_Phosphorus. (DoT).
-    public bool Poisoned;   // For 09_Flourine + 17_Chlorine.   (DoT).
+    public bool Frozen;     // For 07_Nitrogen.
+    public bool Burned;     // For 15_Phosphorus + 18_Argon.    (DoT).
     public bool RunAway;    // For 16_Sulphur.
-    public bool Burned;     // For 18_Argon, flamethrower guy.  (DoT).
-    /* Set Colours manually in Inspector, because if do it via code and spawn Prefab, only goes up to 191. */
-    [SerializeField] protected Color ColourSuffocated;
-    [SerializeField] protected Color ColourPoisoned;
     [SerializeField] protected GameObject EffectStunned;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectBlinded;    // Order in layer = 1.
-    [SerializeField] protected GameObject GasMask;
     [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
+    [SerializeField] protected GameObject GasMask;          // Order in layer = 1. (still to do)
+
 
     [Space( 10), Header("----------------- Target ----------------")]
     public Transform Target;
@@ -63,16 +60,17 @@ public abstract class AI_Human : MonoBehaviour {
     // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
     protected virtual void Update()
     {   // If out of bounds, destroy GameObject and not add to score, etc.
-        if (transform.position.x <= -15 || transform.position.x >= 15 || transform.position.y <= -7) { Destroy(gameObject); }
-        // A lot of the time, in "_Explode.cs" Guy slides across the ground. Grounded == true doesn't properly register.
-        // So will stand there till Dead. That's why commented out "Grounded".
-        else if (/* Grounded == true && */ HealthSystem.Deceased == true) { PlayAnimationDeath(); }
-        else if (   Grounded == true &&    GrabbedByMouse == false)
+        if (transform.position.x <= -15 || transform.position.x >= 15 || transform.position.y <= -7)
+        { Destroy(gameObject); }
+        // A lot of the time, in "_Explode.cs" Guy slides across the ground.
+        // Grounded == true doesn't properly register, so will stand there till Dead.
+        else if ((Grounded == true && HealthSystem.Deceased == true) || 
+                 HealthSystem.Health <= -200) { PlayAnimationDeath(); }
+        else if (Grounded == true && GrabbedByMouse == false)
         {   // Status effects initialized.
             StartCoroutine(StatusBlinded());
-            StatusSuffocated();
-            StatusPoisoned();
-            StatusBurned();
+            StartCoroutine(StatusBurned());
+            StatusSmell();
             Movement();
         }
     }
@@ -162,20 +160,18 @@ public abstract class AI_Human : MonoBehaviour {
     }
     #endregion
     #region [All] status effects
-    protected virtual void StatusSuffocated()
+    // Set Colours manually in Inspector, because if do it via code and spawn Prefab, only goes up to 191.
+    protected virtual IEnumerator StatusBurned()
     {
-        if (Suffocated == true) { SpriteRenderer.color = ColourSuffocated; }
-        else { SpriteRenderer.color = new Color(255, 255, 255); } /* White */
+        if (Burned == true)
+        {
+            EffectBurned.SetActive(true);
+            yield return new WaitForSeconds(5);
+            EffectBurned.SetActive(false);
+        }
     }
-
-    protected virtual void StatusPoisoned()
-    {
-        if (Poisoned == true) { SpriteRenderer.color = ColourPoisoned; }
-        else { SpriteRenderer.color = new Color(255, 255, 255); } /* White */
-    }
-
-    // Not doing "if (Burned == false)" because unit will die soon anyway.
-    protected virtual void StatusBurned() { if (Burned == true) { EffectBurned.SetActive(true); } }
+    // Not removing gas-masks, will look cool.
+    protected virtual void StatusSmell() { if (RunAway == true) { GasMask.SetActive(true); } }
     #endregion
 
     // Use if GrabbedByMouse or thrown in air by Explosion.

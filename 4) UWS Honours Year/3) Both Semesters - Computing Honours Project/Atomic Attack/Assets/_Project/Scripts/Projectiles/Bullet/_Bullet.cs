@@ -10,6 +10,9 @@ public class _Bullet : MonoBehaviour {
     [SerializeField] protected int Speed = 15;
     [SerializeField] protected GameObject Explosion;
 
+
+
+
     public void Seek(Transform target)
     {
         Target = target;

@@ -275,19 +275,19 @@ MonoBehaviour:
   MovementSpeed: 1
   Grounded: 0
   Unshakeable: 0
-  OnTheCastle: 0
   GrabbedByMouse: 0
+  OnTheCastle: 0
   MovementDirection: 0
   Stunned: 0
   Blinded: 0
-  Suffocated: 0
+  Frozen: 0
   Poisoned: 0
   Burned: 0
-  ColourSuffocated: {r: 1, g: 0, b: 0, a: 1}
-  ColourPoisoned: {r: 0, g: 1, b: 0, a: 1}
+  RunAway: 0
   EffectStunned: {fileID: 1757799695395276}
   EffectBlinded: {fileID: 1510049784246146}
   EffectBurned: {fileID: 1314385504484932}
+  GasMask: {fileID: 1530330318128794, guid: d3b4ee73f118d8445a1e07aa35f00441, type: 2}
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
@@ -295,8 +295,6 @@ MonoBehaviour:
   LookRadius: 3
   AttackRadius: 3
   ThrowMultiplyer: 30
-  EnemyCounter: 1
-  RunAway: 0
   AttackDamage: 2 [RO] Add to Prefab
   Projectile: {fileID: 1574258756806926, guid: 0f6b8ae62c4abbf42b1bf274ca991f34, type: 2}
   FireLocation: {fileID: 4667032424649286}

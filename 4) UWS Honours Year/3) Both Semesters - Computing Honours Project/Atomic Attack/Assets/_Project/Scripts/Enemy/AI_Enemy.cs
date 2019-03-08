@@ -3,7 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AI_Enemy : AI_Human {
-    [SerializeField] protected float ThrowMultiplyer = 30;
+
+    int ThrowMultiplyer = 30;
+
+
+
+
+
+
+
 
     protected override void Start()
     {   // If GameObjectTag == Enemy, will target Friend.
@@ -15,7 +23,7 @@ public class AI_Enemy : AI_Human {
     protected override void Update()
     {   // Changing to "Boundary" layer and destroy gameObject with ManagerGame OnTrigger2D to --PlayerLives. 
         if (transform.position.x <= -8 && Grounded == true && GrabbedByMouse == false) { gameObject.layer = 12; }
-        if (RunAway == true) { MovementDirection = -1; }
+        StartCoroutine(Smelly());
         base.Update();
     }
 
@@ -104,4 +112,18 @@ public class AI_Enemy : AI_Human {
         //Debug.Log("Throw Damage = " + ((int)Damage));
     }
     #endregion
+
+    IEnumerator Smelly()
+    {
+        if (RunAway == true)
+        {
+            Target = null;
+            MovementDirection = -1;
+            MovementSpeed = 1;
+            gameObject.GetComponent<Animator>().Play("Run");
+            yield return new WaitForSeconds(4);
+            RunAway = false;
+            MovementDirection =  1;
+        }
+    }
 }

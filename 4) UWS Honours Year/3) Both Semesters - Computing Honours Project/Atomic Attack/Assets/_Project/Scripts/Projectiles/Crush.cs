@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Crush : MonoBehaviour {
 
+    [Space(-10)]
+#pragma warning disable
+    [SerializeField] string Effect = "Crush everyone.";
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         HealthSystem HP = collision.gameObject.GetComponent<HealthSystem>();

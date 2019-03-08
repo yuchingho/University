@@ -20,8 +20,6 @@ public class ManagerGame : MonoBehaviour {
     void Start()
     {
         // Counter for the Game Data, and will be passed onto for local High Score.
-        // How to make sure "tutorial-like" pop-up shows up only once?
-        DontDestroyOnLoad(this);
 	}
 	
 	void Update() 

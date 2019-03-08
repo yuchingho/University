@@ -16,7 +16,7 @@ public class F01_Hydrogen : F_Gunman {
     void Reset()
     {
         MovementSpeed = 1.00f;
-           AttackRate = 2.00f;
+           AttackRate = 1.40f;
            LookRadius = 3.00f;
          AttackRadius = 1.75f;
     }

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class _Explode : MonoBehaviour {
 
-    [Space(-10), Header("[   Tag == 'Explode'   ]")]
+    [Space(-10)]
+    #pragma warning disable
+    [SerializeField] string Tag = "Explode";
     public bool Magnified;
     public int Damage;
     [SerializeField] protected GameObject Explosion;
     [SerializeField] protected float ExplosionRadius;
     [SerializeField] protected float ExplosionScale;
-
-
 
     protected virtual void ExplosionDamage()
     {   // Returns array of all colliders in ExplosionRadius.

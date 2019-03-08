@@ -7,6 +7,12 @@ public class HealthSystem : MonoBehaviour {
     public float Health;
     public bool Deceased = false;
 
+
+
+
+
+
+
     public void DamageTaken(float Damage)
     {
         Health -= Damage;

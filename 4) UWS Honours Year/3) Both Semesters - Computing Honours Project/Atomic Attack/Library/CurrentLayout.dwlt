@@ -44,7 +44,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 271}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 1
-  controlID: 42
+  controlID: 23
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 271}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 43
+  controlID: 24
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,14 +230,14 @@ MonoBehaviour:
     height: 731
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 16}
   - {fileID: 12}
   - {fileID: 11}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -265272
+  m_LastSelectedObjectID: 13806
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,23 +319,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 205fffff
-    m_LastClickedID: -41184
-    m_ExpandedIDs: 6efbffff00000000c8310000ec310000c03200001c330000ac3400000c35000078350000
+    m_SelectedIDs: 1457ecff
+    m_LastClickedID: 0
+    m_ExpandedIDs: 2045ebff704debff807eebff7e3cecffe8c5f3ff0ed2f9ff26d2f9ffe6fbffff00000000b6350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Mist_Oxygen
-      m_OriginalName: Mist_Oxygen
+      m_Name: F_Swordsman
+      m_OriginalName: F_Swordsman
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -41184
+      m_UserData: -801304
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 4
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 3}
     m_SearchString: 
@@ -416,21 +416,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Project/Scripts/Game/Friend/Periodic Table
+    - Assets/_Project/Prefabs/Friend
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Project/Scripts/Game/Friend/Periodic Table
+  - Assets/_Project/Prefabs/Friend
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\A\GitHub\University\4) UWS Honours Year\3) Both Semesters
     - Computing Honours Project\Atomic Attack
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 159}
-    m_SelectedIDs: 8a2e0000
-    m_LastClickedID: 11914
-    m_ExpandedIDs: 000000009a2a0000c42a0000da2a0000622b0000b82b0000be2b0000c42b0000322c0000982c0000da2c00005e2e00006c2e0000882e0000aa2e00001c2f00006837000000ca9a3b
+    scrollPos: {x: 0, y: 143}
+    m_SelectedIDs: ac2b0000
+    m_LastClickedID: 11180
+    m_ExpandedIDs: 000000008e2a0000b82a0000ce2a00005a2b0000b02b0000b62b0000bc2b0000282c00008e2c0000d02c00005c2e00006a2e0000862e0000ac2e0000242f0000e037000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -458,7 +458,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a2a0000c42a0000da2a0000622b0000b82b0000be2b0000c42b0000322c0000982c0000da2c00005e2e00006c2e0000aa2e00001c2f000068370000
+    m_ExpandedIDs: 000000008e2a0000b82a0000ce2a00005a2b0000b02b0000b62b0000bc2b0000282c00008e2c0000d02c00005c2e00006a2e0000862e0000ac2e0000242f0000e0370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -486,7 +486,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: f02b000000000000
+    m_ExpandedInstanceIDs: f02b000000000000722e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -510,7 +510,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 185.5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 177
 --- !u!114 &16
@@ -560,7 +560,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -618,14 +618,14 @@ MonoBehaviour:
     height: 710
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 393.02609810199726
+  lastFramingTime: 3989.0825225359854
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.8869461, y: 0.8337529, z: 0.96018064}
+    m_Target: {x: -6.873534, y: -1.9523911, z: -0.035357285}
     speed: 2
-    m_Value: {x: 1.8869461, y: 0.8337529, z: 0.96018064}
+    m_Value: {x: -6.873534, y: -1.9523911, z: -0.035357285}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -657,9 +657,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.471369
+    m_Target: 5.123787
     speed: 2
-    m_Value: 8.471369
+    m_Value: 5.123787
   m_Ortho:
     m_Target: 1
     speed: 2

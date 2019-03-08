@@ -11,7 +11,12 @@ public class Grenade : _Explode {
     int ThrowDir;
     int ThrowAngle = 90;
 
-    public void Throw (Transform target) { Target = target; }
+
+
+    public void Throw (Transform target)
+    {
+        Target = target;
+    }
 
     void Reset()
     {

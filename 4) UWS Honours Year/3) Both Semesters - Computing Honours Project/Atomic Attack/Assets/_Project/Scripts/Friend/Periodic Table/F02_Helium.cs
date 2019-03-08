@@ -54,7 +54,7 @@ public class F02_Helium : MonoBehaviour {
     IEnumerator DelayDisappear()
     {
         MovementSpeed = 0;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
         if (Spawn == false) { SpawnFlying(); }
     }

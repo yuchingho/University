@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ManagerSpawn : MonoBehaviour {
 
     [Space(-10), Header("Rows for UI")]
+    [SerializeField] Text Countdown;
     [SerializeField] Text Explanation;
     [SerializeField] GameObject RowOne;
     [SerializeField] GameObject RowTwo;
@@ -48,14 +49,16 @@ public class ManagerSpawn : MonoBehaviour {
     [SerializeField] GameObject Chlorine;
     [SerializeField] GameObject Argon;
 
-    [Space(10), Header("Buttons Elements")]
+    [Space( 10), Header("Buttons Elements")]
     [SerializeField] Button[] Elements;
+
+    GameObject CurrentMist;
 
     void Start()
     {
         Explanation.gameObject.SetActive(false);
-        InvokeRepeating("CannonFodderEnemy",  1, 5);
-        InvokeRepeating("CannonFodderFriend", 0, 5);
+        InvokeRepeating("CannonFodderEnemy",  1, 3);
+        InvokeRepeating("CannonFodderFriend", 0, 3);
 	}
 	
 	void Update() 
@@ -104,9 +107,8 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.gameObject.SetActive(true);
         ButtonDisable = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         Explanation.gameObject.SetActive(false);
-        yield return new WaitForSeconds(2);
         ButtonDisable = false;
         for (int i = 0; i < Elements.Length; i++)
         {
@@ -152,23 +154,23 @@ public class ManagerSpawn : MonoBehaviour {
     #region Spawn Elements
     public void Spawn01H ()
     {
-        Explanation.text = "[ Hydrogen ] spawns Grenadiers";
+        Explanation.text = "[ Hydrogen ] Bombs";
         StartCoroutine(FlashText());
-        //Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x       , F_SpawnLocation.position.y), Quaternion.identity);
-        //Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x - 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
+        Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x - 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn02He()
     {
-        Explanation.text = "[ Helium ] spawns a BLIMP";
+        Explanation.text = "[ Helium ] BLIMP Time";
         StartCoroutine(FlashText());
         Instantiate(Helium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y + 4f), Quaternion.identity);
     }
 
     public void Spawn03Li()
     {
-        Explanation.text = "[ Lithium ] shoots small tazers";
+        Explanation.text = "[ Lithium ] Small Tasers ELECTRICITY";
         StartCoroutine(FlashText());
         Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x - 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
@@ -176,7 +178,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn04Be()
     {
-        Explanation.text = "[ Beryllium ] blinds a bit";
+        Explanation.text = "[ Beryllium ] Blinds";
         StartCoroutine(FlashText());
         Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x - 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
@@ -184,14 +186,14 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn05B ()
     {
-        Explanation.text = "[ Boron ] increases Movement";
+        Explanation.text = "[ Boron ] Increases Movement Speed";
         StartCoroutine(FlashText());
         StartCoroutine(ActivateBoron());
     }
 
     public void Spawn06C ()
     {
-        Explanation.text = "[ Carbon ] has some armour";
+        Explanation.text = "[ Carbon ] Light Armour";
         StartCoroutine(FlashText());
         Instantiate(Carbon, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Carbon, new Vector2(F_SpawnLocation.position.x - 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
@@ -199,32 +201,36 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn07N ()
     {
-        Explanation.text = "[ Nitrogen ] reduces some Oxygen";
+        Explanation.text = "[ Nitrogen ] Freezes";
         StartCoroutine(FlashText());
+        CurrentMist = Nitrogen;
+        StartCoroutine(MistTimer());
     }
 
     public void Spawn08O ()
     {
-        Explanation.text = "[ Oxygen ] magnifies explosions";
+        Explanation.text = "[ Oxygen ] Magnifies Bomb Power";
         StartCoroutine(FlashText());
+        CurrentMist = Oxygen;
+        StartCoroutine(MistTimer());
     }
 
     public void Spawn09F ()
     {
-        Explanation.text = "[ Fluorine ] drops a bigger nuke";
+        Explanation.text = "[ Fluorine ] Big Rocket";
         StartCoroutine(FlashText());
     }
 
     public void Spawn10Ne()
     {
-        Explanation.text = "[ Neon ] Lightsaber time";
+        Explanation.text = "[ Neon ] Lightsaber Time";
         StartCoroutine(FlashText());
         Instantiate(Neon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn11Na()
     {
-        Explanation.text = "[ Sodium ] shoots big tazers";
+        Explanation.text = "[ Sodium ] Big Tasers ELECTRICITY";
         StartCoroutine(FlashText());
         Instantiate(Sodium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
 
@@ -232,50 +238,53 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn12Mg()
     {
-        Explanation.text = "[ Magnesium ] blinds a lot";
+        Explanation.text = "[ Magnesium ] Blinds More";
         StartCoroutine(FlashText());
         Instantiate(Magnesium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn13Al()
     {
-        Explanation.text = "[ Aluminium ] increases Attack Speed";
+        Explanation.text = "[ Aluminium ] Increases Attack Speed";
         StartCoroutine(FlashText());
         StartCoroutine(ActivateAluminium());
     }
 
     public void Spawn14Si()
     {
-        Explanation.text = "[ Silicon ] has lots of armour";
+        Explanation.text = "[ Silicon ] Heavy Armour";
         StartCoroutine(FlashText());
         Instantiate(Silicon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
     }
 
     public void Spawn15P ()
     {
-        Explanation.text = "[ Phosphorus ] reduces a lot of Oxygen";
+        Explanation.text = "[ Phosphorus ] Burns";
         StartCoroutine(FlashText());
+        CurrentMist = Phosphorus;
+        StartCoroutine(MistTimer());
     }
 
     public void Spawn16S ()
     {
-        Explanation.text = "[ Sulphur ] magnifies explosions even more";
+        Explanation.text = "[ Sulphur ] Magnifies Bomb Power More";
         StartCoroutine(FlashText());
+        CurrentMist = Sulphur;
+        StartCoroutine(MistTimer());
     }
 
     public void Spawn17Cl()
     {
-        Explanation.text = "[ Chlorine ] drops a small nuke";
+        Explanation.text = "[ Chlorine ] Small Rocket";
         StartCoroutine(FlashText());
     }
 
     public void Spawn18Ar()
     {
-        Explanation.text = "[ Argon ] fire fire";
+        Explanation.text = "[ Argon ] Flamethrower Time";
         StartCoroutine(FlashText());
         Instantiate(Argon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
     }
-
 
     IEnumerator ActivateBoron()
     {   // Finding all current F_Swordsman and activating Boron.
@@ -284,7 +293,7 @@ public class ManagerSpawn : MonoBehaviour {
         { if (NewSwordsman != null && NewSwordsman.name == "F_Swordsman(Clone)")
             { NewSwordsman.GetComponent<F_Swordsman>().Boron = true; }
         }
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4);
         foreach (GameObject NewSwordsman in AllFSwordsmen)
         { if (NewSwordsman != null && NewSwordsman.name == "F_Swordsman(Clone)")
             { NewSwordsman.GetComponent<F_Swordsman>().Boron = false; }
@@ -298,11 +307,18 @@ public class ManagerSpawn : MonoBehaviour {
         { if (NewSwordsman != null && NewSwordsman.name == "F_Swordsman(Clone)")
             { NewSwordsman.GetComponent<F_Swordsman>().Aluminium = true; }
         }
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4);
         foreach (GameObject NewSwordsman in AllFSwordsmen)
         { if (NewSwordsman != null && NewSwordsman.name == "F_Swordsman(Clone)")
             { NewSwordsman.GetComponent<F_Swordsman>().Aluminium = false; }
         }
+    }
+
+    IEnumerator MistTimer()
+    {
+        CurrentMist.SetActive(true);
+        yield return new WaitForSeconds(5);
+        CurrentMist.SetActive(false);
     }
     #endregion
 }

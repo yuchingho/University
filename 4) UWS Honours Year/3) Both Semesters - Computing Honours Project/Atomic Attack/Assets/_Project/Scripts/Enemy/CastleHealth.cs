@@ -9,6 +9,10 @@ public class CastleHealth : HealthSystem {
     public Text HealthText;
     int InitialHealth;
 
+
+
+
+
 	void Start()
     {
         InitialHealth = (int)Health;
