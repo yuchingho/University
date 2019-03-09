@@ -14,6 +14,6 @@ public class Flamethrower : MonoBehaviour {
         if (collision.gameObject.name == "Castle Health")
         { HP.DamageTaken(1.0f); /* Not setting "Burn" active since Castle doesn't have it. */}
         else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Friend")
-        { HP.DamageTaken(0.4f); collision.gameObject.GetComponent<AI_Human>().Burned = true; }
-    }
-}
+        { HP.DamageTaken(0.41f); collision.gameObject.GetComponent<AI_Human>().Burned = true;
+            if (collision.gameObject.GetComponent<AI_Human>().MovementSpeed != 0)
+            {   collision.gameObject.GetComponent<AI_Human>().MovementSpeed = 2f; } } } }

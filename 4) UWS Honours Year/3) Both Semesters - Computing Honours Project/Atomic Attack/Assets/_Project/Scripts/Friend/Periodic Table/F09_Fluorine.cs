@@ -20,5 +20,5 @@ public class F09_Fluorine : MonoBehaviour {
     }
 
     void Start() { StartCoroutine(Timer(4)); }
-    IEnumerator Timer(int Time) { yield return new WaitForSeconds(Time); gameObject.SetActive(false); }
+    IEnumerator Timer(int Time) { yield return new WaitForSeconds(Time); Destroy(gameObject); }
 }

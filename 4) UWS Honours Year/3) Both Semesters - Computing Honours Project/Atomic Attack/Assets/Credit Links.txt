@@ -18,6 +18,8 @@ https://opengameart.org/content/missile-0 - missile
 
 https://opengameart.org/content/flame-animation - flame for Burned
 
+https://opengameart.org/content/clocks-watches-pocket-watch-with-two-dials-seamless-texture-with-normalmap-1 - timer icon
+
 https://opengameart.org/content/heart-pixel-art - heart icon
 
 https://opengameart.org/content/gold-coin-2 - gold icon
@@ -29,3 +31,5 @@ https://www.spriters-resource.com/game_boy_advance/onepiece/sheet/15782/ - light
 https://opengameart.org/content/plague-doctor-mask-16x18 - mask
 
 https://opengameart.org/content/mist - mist
+
+http://chittagongit.com/icon/diploma-icon-12.html - diploma icon

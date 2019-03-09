@@ -12,7 +12,7 @@ public class F_Swordsman : AI_Friend {
     public bool Boron;        // Add MovementSpeed for when activated.
     public bool Aluminium;    // Add AttackDamage and AttackRate for when activated.
     [SerializeField] protected Color ColourAluminium;
-
+    // Set Colours manually in Inspector, because if do it via code and spawn Prefab, only goes up to 191.
     void Reset()
     {
         MovementSpeed = 1.20f;

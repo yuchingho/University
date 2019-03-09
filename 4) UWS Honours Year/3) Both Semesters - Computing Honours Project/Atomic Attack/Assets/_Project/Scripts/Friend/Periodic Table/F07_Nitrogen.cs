@@ -14,6 +14,6 @@ public class F07_Nitrogen : MonoBehaviour {
         if (collision.gameObject.name == "Castle Health")
         { /* Nothing. */}
         else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Friend")
-        { if (collision.gameObject.GetComponent<AI_Human>().MovementSpeed != 0)
-            { collision.gameObject.GetComponent<AI_Human>().MovementSpeed = 0.5f; } } }
-}
+        {
+            if (collision.gameObject.GetComponent<AI_Human>().MovementSpeed != 0)
+            { collision.gameObject.GetComponent<AI_Human>().MovementSpeed = 0.5f; } } } }

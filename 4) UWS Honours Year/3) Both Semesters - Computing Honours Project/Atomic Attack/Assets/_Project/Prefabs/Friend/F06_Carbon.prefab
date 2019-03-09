@@ -211,7 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc93e264e9ae5614f8b0c173ace4a192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostValue: 0
   ScoreValue: 0
   MovementSpeed: 0.9
   Grounded: 0
@@ -236,7 +235,7 @@ MonoBehaviour:
   AttackRate: 1
   LookRadius: 3
   AttackRadius: 0.75
-  Effect: Shield
+  Effect: Shield.
 --- !u!212 &212449283828964498
 SpriteRenderer:
   m_ObjectHideFlags: 1

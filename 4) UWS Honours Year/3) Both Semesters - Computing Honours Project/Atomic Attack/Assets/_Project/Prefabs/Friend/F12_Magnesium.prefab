@@ -240,7 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce910456f3c424e40977420aaffa8516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostValue: 0
   ScoreValue: 0
   MovementSpeed: 1.2
   Grounded: 0
@@ -269,7 +268,7 @@ MonoBehaviour:
   Projectile: {fileID: 1556022897310762, guid: 23d252070f0e7d64b9251bb574ead23c, type: 2}
   FireLocation: {fileID: 4517080480363884}
   Effect: Blinded 2 sec.
-  Downgrade: F04_Beryllium
+  Downgrade: F04_Beryllium.
 --- !u!212 &212084980687331570
 SpriteRenderer:
   m_ObjectHideFlags: 1

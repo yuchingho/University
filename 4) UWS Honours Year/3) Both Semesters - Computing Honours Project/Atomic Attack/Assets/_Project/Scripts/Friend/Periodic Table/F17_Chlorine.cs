@@ -20,5 +20,5 @@ public class F17_Chlorine : MonoBehaviour {
     }
 
     void Start() { StartCoroutine(Timer(2)); }
-    IEnumerator Timer(int Time) { yield return new WaitForSeconds(Time); gameObject.SetActive(false); }
+    IEnumerator Timer(int Time) { yield return new WaitForSeconds(Time); Destroy(gameObject); }
 }

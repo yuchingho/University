@@ -198,7 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047475b8682932c498d335346fbac686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostValue: 0
   ScoreValue: 0
   MovementSpeed: 1
   Grounded: 0
@@ -223,8 +222,8 @@ MonoBehaviour:
   AttackRate: 1
   LookRadius: 3
   AttackRadius: 0.65
-  Effect: Shield
-  Downgrade: F06_Carbon
+  Effect: Shield.
+  Downgrade: F06_Carbon.
 --- !u!114 &114175440087993508
 MonoBehaviour:
   m_ObjectHideFlags: 1

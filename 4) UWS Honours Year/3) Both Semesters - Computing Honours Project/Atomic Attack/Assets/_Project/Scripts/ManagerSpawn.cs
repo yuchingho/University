@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ManagerSpawn : MonoBehaviour {
 
     [Space(-10), Header("Rows for UI")]
-    [SerializeField] Text Countdown;
     [SerializeField] Text Explanation;
     [SerializeField] GameObject RowOne;
     [SerializeField] GameObject RowTwo;
@@ -58,8 +57,8 @@ public class ManagerSpawn : MonoBehaviour {
     void Start()
     {
         Explanation.gameObject.SetActive(false);
-        InvokeRepeating("CannonFodderEnemy",  1, 3);
-        InvokeRepeating("CannonFodderFriend", 0, 4);
+        //InvokeRepeating("CannonFodderEnemy",  1, 3);
+        //InvokeRepeating("CannonFodderFriend", 0, 4);
 	}
 	
 	void Update() 

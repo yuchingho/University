@@ -11,10 +11,9 @@ public class AI_Human : MonoBehaviour {
     protected HealthSystem HealthSystem;
 
     [Space(-10), Header("[ Parent: AI_Human ] Cost")]
-    public int CostValue;
     public int ScoreValue;
 
-    [Space(10), Header("[ Parent: AI_Human ] Movement")]
+    [Space( 10), Header("[ Parent: AI_Human ] Movement")]
     public float MovementSpeed;
     public bool Grounded;
     public bool Unshakeable;
@@ -110,6 +109,7 @@ public class AI_Human : MonoBehaviour {
         } }
     }
 
+    protected virtual void Shoot() { }
     protected virtual void PlayAnimationAttack()
     {
         if (Time.time > NextAttackTime)
@@ -129,49 +129,6 @@ public class AI_Human : MonoBehaviour {
         // Add to points and score or collateral damage score
     }
 
-    // Added two new Layers - "Enemy" and "Friend".
-    // Enemies and Friends can overlap.
-    // The two layers colliding have been disabled.
-    // Edit > Project Settings > Physics 2D.
-    // --------------------------------------------------------------------------
-    // Same as "virtual void", but has to be called in Child classes.
-    // Since added "abstract void" here, have to add "abstract" at start of class.
-    protected virtual void Shoot() { }
-    #region Enemy status effects
-    protected virtual IEnumerator StatusStunned()
-    {   // Duration = 1s.
-        MovementSpeed = 0;
-        Animator.Play("Stunned");
-        yield return new WaitForSeconds(1f);
-        Stunned = false;
-    }
-
-    protected virtual IEnumerator StatusBlinded()
-    {   // Duration = 2s.
-        if (Blinded == true)
-        {
-            EffectBlinded.SetActive(true);
-            yield return new WaitForSeconds(2f);
-            Blinded = false;
-            EffectBlinded.SetActive(false);
-        }
-    }
-    #endregion
-    #region [All] status effects
-    // Set Colours manually in Inspector, because if do it via code and spawn Prefab, only goes up to 191.
-    protected virtual IEnumerator StatusBurned()
-    {
-        if (Burned == true)
-        {
-            EffectBurned.SetActive(true);
-            yield return new WaitForSeconds(5);
-            EffectBurned.SetActive(false);
-        }
-    }
-    // Not removing gas-masks, will look cool.
-    protected virtual void StatusSmell() { if (RunAway == true) { GasMask.SetActive(true); } }
-    #endregion
-
     // Use if GrabbedByMouse or thrown in air by Explosion.
     protected virtual IEnumerator HitTheGround()
     {
@@ -180,4 +137,48 @@ public class AI_Human : MonoBehaviour {
         GrabbedByMouse = false;
         MovementSpeed = MovementSpeedInitial;
     }
+
+    #region Layers and Abstract void
+    // Added two new Layers - "Enemy" and "Friend".
+    // Enemies and Friends can overlap.
+    // The two layers colliding have been disabled.
+    // Edit > Project Settings > Physics 2D.
+    // --------------------------------------------------------------------------
+    // Same as "virtual void", but has to be called in Child classes.
+    // Since added "abstract void" here, have to add "abstract" at start of class.
+    #endregion
+    #region Status effects
+    protected virtual IEnumerator StatusStunned()
+    {   // Enemy Duration = 1s.
+        MovementSpeed = 0;
+        Animator.Play("Stunned");
+        yield return new WaitForSeconds(1);
+        Stunned = false;
+    }
+
+    protected virtual IEnumerator StatusBlinded()
+    {   // Enemy Duration = 2s.
+        if (Blinded == true)
+        {
+            EffectBlinded.SetActive(true);
+            yield return new WaitForSeconds(2);
+            EffectBlinded.SetActive(false);
+            Blinded = false;
+        }
+    }
+
+    protected virtual IEnumerator StatusBurned()
+    {   // All Duration = 5s.
+        if (Burned == true)
+        {
+            EffectBurned.SetActive(true);
+            yield return new WaitForSeconds(5);
+            EffectBurned.SetActive(false);
+            Burned = false;
+        }
+    }
+
+    // Not removing gas-masks, will look cool.
+    protected virtual void StatusSmell() { if (RunAway == true) { GasMask.SetActive(true); } }
+    #endregion
 }

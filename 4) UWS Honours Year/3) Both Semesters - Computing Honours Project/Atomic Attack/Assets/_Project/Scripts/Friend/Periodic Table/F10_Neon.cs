@@ -7,7 +7,7 @@ public class F10_Neon : AI_Friend {
     [Space( 10), Header("[^ Child: F10_Neon ]")]
     #pragma warning disable
     [SerializeField] int AttackDamage = 100;
-    [SerializeField] string Effect = "Lightsaber";
+    [SerializeField] string Effect = "Lightsaber.";
 
 
 

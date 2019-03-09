@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679afff287568af4fa9936fb47ccd0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostValue: 0
   ScoreValue: 0
   MovementSpeed: 1.2
   Grounded: 0
@@ -256,7 +255,7 @@ MonoBehaviour:
   Projectile: {fileID: 1131921872701352, guid: 1de47963095df0e4f801bd10d6ce8983, type: 2}
   FireLocation: {fileID: 4446642342682560}
   Effect: Stunned 1 sec.
-  Downgrade: F03_Lithium
+  Downgrade: F03_Lithium.
 --- !u!114 &114835264328999764
 MonoBehaviour:
   m_ObjectHideFlags: 1

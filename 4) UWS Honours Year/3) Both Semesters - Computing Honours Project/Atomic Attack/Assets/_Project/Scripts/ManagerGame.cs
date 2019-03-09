@@ -6,20 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class ManagerGame : MonoBehaviour {
 
+    public int ScoreCurrent;
     public float TimePlayed;
-    public float ScoreCurrent;
-    public int Lives = 200;
-    public int CounterEnemiesKilled;
-    public int CounterFriendsKilled; // Collateral Damage
+    public int Gold;
+    public int Lives = 50;
+    public int E_Gunmen;
+    public int E_Swordsmen;
     bool Paused = false;
 
+    [SerializeField] Text UIScore;
     [SerializeField] Text UITimer;
     [SerializeField] Text UIGold;
     [SerializeField] Text UILives;
 
     void Start()
     {
-        // Counter for the Game Data, and will be passed onto for local High Score.
+        
 	}
 	
 	void Update() 

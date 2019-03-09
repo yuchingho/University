@@ -6,7 +6,7 @@ public class F18_Argon : AI_Friend {
 
     [Space( 10), Header("[^ Child: F18_Argon ]")]
     #pragma warning disable
-    [SerializeField] string Effect = "Burn DoT";
+    [SerializeField] string Effect = "Burn DoT.";
 
 
 

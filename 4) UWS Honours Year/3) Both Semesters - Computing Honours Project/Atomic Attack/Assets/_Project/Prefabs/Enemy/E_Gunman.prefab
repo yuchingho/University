@@ -270,7 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d29435af154384ebdfded017f38968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostValue: 0
   ScoreValue: 0
   MovementSpeed: 1
   Grounded: 0
@@ -281,7 +280,6 @@ MonoBehaviour:
   Stunned: 0
   Blinded: 0
   Frozen: 0
-  Poisoned: 0
   Burned: 0
   RunAway: 0
   EffectStunned: {fileID: 1757799695395276}
@@ -294,8 +292,7 @@ MonoBehaviour:
   AttackRate: 0.75
   LookRadius: 3
   AttackRadius: 3
-  ThrowMultiplyer: 30
-  AttackDamage: 2 [RO] Add to Prefab
+  AttackDamage: 2. [Read Only Prefab]
   Projectile: {fileID: 1574258756806926, guid: 0f6b8ae62c4abbf42b1bf274ca991f34, type: 2}
   FireLocation: {fileID: 4667032424649286}
 --- !u!212 &212066295423464088

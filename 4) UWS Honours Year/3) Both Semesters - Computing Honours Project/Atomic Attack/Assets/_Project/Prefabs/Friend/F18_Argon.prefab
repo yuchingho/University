@@ -244,7 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ac6107c7701e64e853596ae0174b6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostValue: 0
   ScoreValue: 0
   MovementSpeed: 0.8
   Grounded: 0
@@ -254,25 +253,22 @@ MonoBehaviour:
   MovementDirection: 0
   Stunned: 0
   Blinded: 0
-  Suffocated: 0
-  Poisoned: 0
-  RunAway: 0
+  Frozen: 0
   Burned: 0
-  ColourSuffocated: {r: 1, g: 0, b: 0, a: 1}
-  ColourPoisoned: {r: 0, g: 1, b: 0, a: 1}
+  RunAway: 0
   EffectStunned: {fileID: 1530330318128794, guid: d3b4ee73f118d8445a1e07aa35f00441,
     type: 2}
   EffectBlinded: {fileID: 1530330318128794, guid: d3b4ee73f118d8445a1e07aa35f00441,
     type: 2}
-  GasMask: {fileID: 1530330318128794, guid: d3b4ee73f118d8445a1e07aa35f00441, type: 2}
   EffectBurned: {fileID: 1980383862773870}
+  GasMask: {fileID: 1530330318128794, guid: d3b4ee73f118d8445a1e07aa35f00441, type: 2}
   Target: {fileID: 0}
   TargetHealth: 0
   FinalTarget: {fileID: 0}
   AttackRate: 0
   LookRadius: 3
   AttackRadius: 3
-  Effect: Burn DoT
+  Effect: Burn DoT.
 --- !u!114 &114926837458777142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cafc7f2579b2004992f1a03ff7bf066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Effect: Burns everyone.
 --- !u!114 &114987710160037140
 MonoBehaviour:
   m_ObjectHideFlags: 1

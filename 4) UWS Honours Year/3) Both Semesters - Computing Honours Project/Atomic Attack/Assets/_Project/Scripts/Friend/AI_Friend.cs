@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class AI_Friend : AI_Human {
 
-
-
-
-
-
-
-
-
-
     protected override void Start()
     {   // If GameObjectTag == Friend, will target Enemy.
         base.Start();
