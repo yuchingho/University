@@ -20,9 +20,10 @@ public class Grenade : _Explode {
 
     void Reset()
     {
-        Damage = 5;
+                 Damage = 5;
         ExplosionRadius = 0.25f;
-        ExplosionScale = 0.1f;
+        ExplosionScale  = 0.1f;
+        ExplosionForce  = 10;
     }
     
     protected virtual void Start()

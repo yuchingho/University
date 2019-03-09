@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AI_Human : MonoBehaviour {
+public class AI_Human : MonoBehaviour {
 
     // Parent Class for Inheritance.
     protected SpriteRenderer SpriteRenderer;
@@ -136,8 +136,6 @@ public abstract class AI_Human : MonoBehaviour {
     // --------------------------------------------------------------------------
     // Same as "virtual void", but has to be called in Child classes.
     // Since added "abstract void" here, have to add "abstract" at start of class.
-    protected abstract void OnDrawGizmos();
-
     protected virtual void Shoot() { }
     #region Enemy status effects
     protected virtual IEnumerator StatusStunned()

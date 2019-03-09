@@ -53,11 +53,4 @@ public class AI_Friend : AI_Human {
             LookAtTarget();
         }
     }
-
-    protected override void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, AttackRadius);
-        Gizmos.DrawWireSphere(transform.position, LookRadius);
-    }
 }

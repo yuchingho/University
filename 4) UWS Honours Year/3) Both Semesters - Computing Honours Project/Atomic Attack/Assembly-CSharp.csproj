@@ -97,9 +97,9 @@
     <Compile Include="Assets\_Project\Scripts\Projectiles\Explode\_Explode.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\Explode\Grenade.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\Explode\Missile.cs" />
+    <Compile Include="Assets\_Project\Scripts\Projectiles\Explode\Missile_Chlorine.cs" />
+    <Compile Include="Assets\_Project\Scripts\Projectiles\Explode\Missile_Fluorine.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\Flamethrower.cs" />
-    <Compile Include="Assets\_Project\Scripts\Projectiles\Poison_Cl.cs" />
-    <Compile Include="Assets\_Project\Scripts\Projectiles\Poison_Fl.cs" />
     <Compile Include="Assets\_Project\Scripts\Projectiles\RemoveExplosions.cs" />
     <None Include="Assets\Credit Links.txt" />
     <Reference Include="UnityEditor.StandardEvents">

@@ -89,11 +89,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094ccd965cb447b4f9afaf9e4dc4d16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tag: Explode
   Magnified: 0
   Damage: 5
-  Explosion: {fileID: 1176723143312394, guid: b67f4f2aa62fdbc41b80657a9182daf4, type: 2}
+  Explosion: {fileID: 1176723143312394, guid: 048f7251920a6544397c1f96d18d3456, type: 2}
   ExplosionRadius: 0.25
   ExplosionScale: 0.1
+  ExplosionForce: 10
 --- !u!212 &212972339083259542
 SpriteRenderer:
   m_ObjectHideFlags: 1

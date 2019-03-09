@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AI_Enemy : AI_Human {
 
-    int ThrowMultiplyer = 30;
+
 
 
 
@@ -67,13 +67,6 @@ public class AI_Enemy : AI_Human {
         else { base.LookAtTarget(); }
     }
 
-    protected override void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, AttackRadius);
-        Gizmos.DrawWireSphere(transform.position, LookRadius);
-    }
-
     #region Mouse Stuff
     protected virtual void OnMouseDown()
     {
@@ -107,9 +100,9 @@ public class AI_Enemy : AI_Human {
         gameObject.GetComponent<Rigidbody2D>().velocity = ThrowVelocity / 5;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
         // Adding fall damage. Mathf.Abs returns any value as true;
-        float Damage = Mathf.Abs(ThrowVelocity.y * ThrowMultiplyer);
+        float Damage = Mathf.Abs(ThrowVelocity.y * 1.5f);
         GetComponent<HealthSystem>().DamageTaken((int)Damage);
-        //Debug.Log("Throw Damage = " + ((int)Damage));
+        Debug.Log("Throw Damage = " + ((int)Damage));
     }
     #endregion
 

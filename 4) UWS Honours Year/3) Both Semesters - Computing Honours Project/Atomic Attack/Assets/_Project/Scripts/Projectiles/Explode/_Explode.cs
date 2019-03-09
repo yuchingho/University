@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class _Explode : MonoBehaviour {
 
-    [Space(-10)]
     #pragma warning disable
     [SerializeField] string Tag = "Explode";
     public bool Magnified;
@@ -12,6 +11,7 @@ public class _Explode : MonoBehaviour {
     [SerializeField] protected GameObject Explosion;
     [SerializeField] protected float ExplosionRadius;
     [SerializeField] protected float ExplosionScale;
+    [SerializeField] protected int   ExplosionForce;
 
     protected virtual void ExplosionDamage()
     {   // Returns array of all colliders in ExplosionRadius.
@@ -24,14 +24,14 @@ public class _Explode : MonoBehaviour {
             {   // ExplosionScale and Screenshake.
                 Explosion.transform.localScale = new Vector2(ExplosionScale * 2, ExplosionScale * 2);
                 //Debug.Log("screenshake"); https://youtu.be/9A9yj8KnM8c 
-                if (obj.name == "Castle Health") { HP.DamageTaken(Damage * 2); }
+                if (obj.name == "Castle Health") { HP.DamageTaken(Damage * 5); }
                 else if (obj.tag == "Enemy" || obj.tag == "Friend")
                 {
                     if (Guy.Unshakeable == false)
                     {   // Adding push back from Explosion.
                         HP.DamageTaken(Damage * 2);
-                        Guy.GetComponent<Rigidbody2D>().AddForce(transform.up    * (Damage * 2), ForceMode2D.Impulse);
-                        Guy.GetComponent<Rigidbody2D>().AddForce(transform.right * (Damage * 2), ForceMode2D.Impulse);
+                        Guy.GetComponent<Rigidbody2D>().AddForce(transform.up    * ExplosionForce, ForceMode2D.Impulse);
+                        Guy.GetComponent<Rigidbody2D>().AddForce(transform.right * ExplosionForce, ForceMode2D.Impulse);
                         Guy.MovementSpeed = 0;
                         Guy.Grounded = false;
                         Guy.GrabbedByMouse = true;
@@ -47,11 +47,4 @@ public class _Explode : MonoBehaviour {
             }
         }
     }
-
-    protected virtual void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, ExplosionRadius);
-    }
-
 }

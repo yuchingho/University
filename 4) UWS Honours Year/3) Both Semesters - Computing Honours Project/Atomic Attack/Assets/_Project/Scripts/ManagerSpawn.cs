@@ -26,6 +26,7 @@ public class ManagerSpawn : MonoBehaviour {
     [SerializeField] GameObject E_Swordsman;
 
     [Space( 10), Header("Cannon Fodder Friends")]
+    [SerializeField] Transform  MissileLaunch;
     [SerializeField] Transform  F_SpawnLocation;
     [SerializeField] GameObject F_SwordsmanGO;
 
@@ -58,7 +59,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.gameObject.SetActive(false);
         InvokeRepeating("CannonFodderEnemy",  1, 3);
-        InvokeRepeating("CannonFodderFriend", 0, 5);
+        InvokeRepeating("CannonFodderFriend", 0, 4);
 	}
 	
 	void Update() 
@@ -219,6 +220,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Fluorine ] Big Rocket";
         StartCoroutine(FlashText());
+        Instantiate(Fluorine, MissileLaunch);
     }
 
     public void Spawn10Ne()
@@ -277,6 +279,7 @@ public class ManagerSpawn : MonoBehaviour {
     {
         Explanation.text = "[ Chlorine ] Small Rocket";
         StartCoroutine(FlashText());
+        Instantiate(Chlorine, MissileLaunch);
     }
 
     public void Spawn18Ar()
@@ -317,7 +320,7 @@ public class ManagerSpawn : MonoBehaviour {
     IEnumerator MistTimer()
     {
         CurrentMist.SetActive(true);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4);
         CurrentMist.SetActive(false);
     }
     #endregion
