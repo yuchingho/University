@@ -14,15 +14,15 @@ public class ManagerSpawn : MonoBehaviour {
     [SerializeField] GameObject RowThree;
     [SerializeField] GameObject ButtonsUp;
     [SerializeField] GameObject ButtonsDown;
-    bool ButtonDisable = false;
-    int RowNumber = 0;
+    bool DisableCheck;
+    int RowNumber;
 
     [Space( 10), Header("Cannon Fodder Enemies")]
     [SerializeField] Transform  E_SpawnLocation;
     [SerializeField] Transform  E_CastleLocationOne;
     [SerializeField] Transform  E_CastleLocationTwo;
     [SerializeField] Transform  E_CastleLocationThree;
-    int RowCastle = 0;
+    int RowCastle;
     [SerializeField] GameObject E_Gunman;
     [SerializeField] GameObject E_Swordsman;
 
@@ -55,44 +55,86 @@ public class ManagerSpawn : MonoBehaviour {
     [SerializeField] Button[] Elements;
 
     GameObject CurrentMist;
-    int MoneyFactor;
+    int LocalE_Total;
+    int LocalE_Swordsmen;
+
+    [SerializeField] Slider FluorineSlider;
+    int FluorineInitial;
+    int CounterFluorine;
+
+    [SerializeField] Slider NeonSlider;
+    int NeonInitial;
+    int CounterNeon;
+
 
     void Start()
     {
         ManagerGame = GameObject.Find("Manager Game").GetComponent<ManagerGame>();
+
+        // Setting up the Slider for Fluorine.
+        CounterFluorine = 10; // 100. play the "error" sound...
+        FluorineInitial = 0;
+        FluorineSlider.maxValue = CounterFluorine;
+
+        // Setting up the Slider for Neon.
+        CounterNeon = 3; //30
+        NeonInitial = 0;
+        NeonSlider.maxValue = CounterNeon;
+
+        // UI Periodic Table Rows.
+        DisableCheck = false;
+        RowNumber = 0;
+        RowCastle = 0;
         Explanation.gameObject.SetActive(false);
-        ManagerGame.CurrentGold = 300;
-        //InvokeRepeating("CannonFodderEnemy",  1, 3);
-        //InvokeRepeating("CannonFodderFriend", 0, 5);
+
+        // Release the krakens.
+        InvokeRepeating("CannonFodderEnemy",  1, 2f);
+        InvokeRepeating("CannonFodderFriend", 0, 4f);
 	}
 	
 	void Update() 
     {
         SwitchRows();
+        LocalE_Total = ManagerGame.CopyE_Gunmen + ManagerGame.CopyE_Swordsmen;
+        LocalE_Swordsmen = ManagerGame.CopyE_Swordsmen;
 
-        if (ManagerGame.CurrentGold <= 200)
-        {
-            ButtonRange(2);
-        }
-
-        else if (ManagerGame.CurrentGold <= 100)
-        {
-            ButtonRange(1);
-        }
-
-        else if (ManagerGame.CurrentGold <= 0)
-        {
-            ButtonRange(0);
-        }
-
-        // Whenever an Element is spawned, will disable all buttons for 2 seconds.
-        /* else if (ButtonDisable == true) { ButtonRange(0); } */
+        FluorineSlider.value = LocalE_Total;
+        NeonSlider.value = LocalE_Swordsmen;
+        // Calculating Gold and What can be Spent.
+        if (DisableCheck == true || ManagerGame.CurrentGold <= 99) { ButtonDisableLoop(); }
+        else if (ManagerGame.CurrentGold >= 1800) { ButtonBuy(18); }
+        else if (ManagerGame.CurrentGold >= 1700) { ButtonBuy(17); }
+        else if (ManagerGame.CurrentGold >= 1600) { ButtonBuy(16); }
+        else if (ManagerGame.CurrentGold >= 1500) { ButtonBuy(15); }
+        else if (ManagerGame.CurrentGold >= 1400) { ButtonBuy(14); }
+        else if (ManagerGame.CurrentGold >= 1300) { ButtonBuy(13); }
+        else if (ManagerGame.CurrentGold >= 1200) { ButtonBuy(12); }
+        else if (ManagerGame.CurrentGold >= 1100) { ButtonBuy(11); }
+        else if (ManagerGame.CurrentGold >= 1000) { ButtonBuy(10); }
+        else if (ManagerGame.CurrentGold >= 900)  { ButtonBuy( 9); }
+        else if (ManagerGame.CurrentGold >= 800)  { ButtonBuy( 8); }
+        else if (ManagerGame.CurrentGold >= 700)  { ButtonBuy( 7); }
+        else if (ManagerGame.CurrentGold >= 600)  { ButtonBuy( 6); }
+        else if (ManagerGame.CurrentGold >= 500)  { ButtonBuy( 5); }
+        else if (ManagerGame.CurrentGold >= 400)  { ButtonBuy( 4); }
+        else if (ManagerGame.CurrentGold >= 300)  { ButtonBuy( 3); }
+        else if (ManagerGame.CurrentGold >= 200)  { ButtonBuy( 2); }    // Helium
+        else if (ManagerGame.CurrentGold >= 100)  { ButtonBuy( 1); }    // Hydrogen.
     }
 
-    void ButtonRange(int NumberStart)
-    {
-        for (int i = NumberStart; i < Elements.Length; i++)
-        {   // ButtonDisable == false; in FlashText();
+    void ButtonBuy(int NumberStart)
+    {   // DisableCheck == false; in FlashText();
+        for (int i = 0; i < NumberStart; i++)
+        {
+            Elements[i].GetComponent<Image>().color = new Color(255, 255, 255);
+            Elements[i].interactable = true;
+        }
+    }
+
+    void ButtonDisableLoop()
+    {   // DisableCheck == false; in FlashText();
+        for (int i = 0; i < Elements.Length; i++)
+        {
             Elements[i].GetComponent<Image>().color = new Color(200, 200, 200);
             Elements[i].interactable = false;
         }
@@ -113,13 +155,13 @@ public class ManagerSpawn : MonoBehaviour {
                 RowThree.SetActive(false);
                 break;
             case 2:     // Third Row.
-                ButtonsDown.GetComponent<Image>().color = new Color(0, 0, 0);
+                ButtonsDown.GetComponent<Image>().color = new Color(  0,   0,   0);
                 RowOne.SetActive  (false);
                 RowTwo.SetActive  (false);
                 RowThree.SetActive(true );
                 break;
             default:    // First Row.
-                ButtonsUp.GetComponent<Image>().color = new Color(0, 0, 0);
+                ButtonsUp.GetComponent<Image>().color   = new Color(  0,   0,   0);
                 RowOne.SetActive  (true );
                 RowTwo.SetActive  (false);
                 RowThree.SetActive(false);
@@ -130,33 +172,13 @@ public class ManagerSpawn : MonoBehaviour {
     IEnumerator FlashText()
     {
         Explanation.gameObject.SetActive(true);
-        ButtonDisable = true;
+        DisableCheck = true;
         yield return new WaitForSeconds(5);
         Explanation.gameObject.SetActive(false);
-        ButtonDisable = false;
-        for (int i = 0; i < Elements.Length; i++)
-        {
-            Elements[i].GetComponent<Image>().color = new Color(255, 255, 255);
-            Elements[i].interactable = true;
-        }
+        DisableCheck = false;
+        ButtonBuy(Elements.Length);
     }
     #endregion
-    #region Money Stuff
-    void MoneyBank()
-    {
-        switch (MoneyFactor)
-        {
-            case 1:
-                break;
-            case 2:
-                break;
-
-        }
-    }
-
-    #endregion
-
-
     #region Spawn Cannon Fodder
     void CannonFodderFriend()
     {
@@ -280,22 +302,33 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn09F ()
     {
-        ManagerGame.CurrentScore += 18000000;
-        ManagerGame.CurrentGold -= 900;
+        if (LocalE_Total < CounterFluorine) { /* Do nothing. */ }
+        else
+        {
+            ManagerGame.CurrentScore += 18000000;
+            ManagerGame.CurrentGold -= 900;
+            ManagerGame.CopyE_Gunmen = 0;
+            ManagerGame.CopyE_Swordsmen = 0;
 
-        Explanation.text = "[ Fluorine ] Big Rocket";
-        StartCoroutine(FlashText());
-        Instantiate(Fluorine, MissileLaunch);
+            Explanation.text = "[ Fluorine ] Big Rocket";
+            StartCoroutine(FlashText());
+            Instantiate(Fluorine, MissileLaunch);
+        }
     }
 
     public void Spawn10Ne()
     {
-        ManagerGame.CurrentScore += 20000000;
-        ManagerGame.CurrentGold -= 1000;
+        if (LocalE_Swordsmen < CounterNeon) { /* Do nothing. */ }
+        else
+        {
+            ManagerGame.CurrentScore += 20000000;
+            ManagerGame.CurrentGold -= 1000;
+            ManagerGame.CopyE_Swordsmen = 0;
 
-        Explanation.text = "[ Neon ] Lightsaber Time";
-        StartCoroutine(FlashText());
-        Instantiate(Neon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
+            Explanation.text = "[ Neon ] Lightsaber Time";
+            StartCoroutine(FlashText());
+            Instantiate(Neon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
+        }
     }
 
     public void Spawn11Na()

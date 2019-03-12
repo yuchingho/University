@@ -74,7 +74,9 @@ public class AI_Human : MonoBehaviour {
                 ManagerGame.CurrentScore       += HealthSystem.CounterScore;
                 ManagerGame.CurrentGold        += HealthSystem.GoldEarned;
                 ManagerGame.CurrentE_Gunmen    += HealthSystem.CounterE_Gunmen;
+                ManagerGame.CopyE_Gunmen       += HealthSystem.CounterE_Gunmen;
                 ManagerGame.CurrentE_Swordsmen += HealthSystem.CounterE_Swordsmen;
+                ManagerGame.CopyE_Swordsmen    += HealthSystem.CounterE_Swordsmen;
                 ManagerGame.TotalFriends       += HealthSystem.CounterFriends;
                 HealthSystem.CounterAdded = true;
             }

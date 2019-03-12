@@ -13,7 +13,9 @@ public class ManagerGame : MonoBehaviour {
     public int CurrentGold;
     public int CurrentLives = 50;
     public int CurrentE_Gunmen;
+    [HideInInspector] public int CopyE_Gunmen;
     public int CurrentE_Swordsmen;
+    [HideInInspector] public int CopyE_Swordsmen;
     public int TotalFriends;
     public int TotalEnemies;
     bool Paused;
