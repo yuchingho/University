@@ -22,6 +22,6 @@ public class CastleHealth : HealthSystem {
 	void Update() 
     {
         HealthBar.value = Health;
-        HealthText.text = Health.ToString() + " / " + InitialHealth;
+        HealthText.text = Health.ToString("n0") + " / " + InitialHealth.ToString("n0");
 	}
 }

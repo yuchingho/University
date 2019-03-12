@@ -284,6 +284,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
+  CounterScore: 2000000
+  GoldEarned: 60
+  CounterE_Gunmen: 0
+  CounterE_Swordsmen: 1
+  CounterFriends: 0
+  CounterAdded: 0
   Deceased: 0
 --- !u!114 &114921927775678456
 MonoBehaviour:
@@ -296,8 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64707fbf472ab2d4b83d9254ce05fb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostValue: 0
-  ScoreValue: 0
   MovementSpeed: 1.2
   Grounded: 0
   Unshakeable: 0
@@ -307,7 +311,6 @@ MonoBehaviour:
   Stunned: 0
   Blinded: 0
   Frozen: 0
-  Poisoned: 0
   Burned: 0
   RunAway: 0
   EffectStunned: {fileID: 1339228654421220}
@@ -320,7 +323,6 @@ MonoBehaviour:
   AttackRate: 1
   LookRadius: 3
   AttackRadius: 0.85
-  ThrowMultiplyer: 30
   AttackDamage: 1
 --- !u!212 &212252202133949094
 SpriteRenderer:

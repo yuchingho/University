@@ -6,32 +6,42 @@ using UnityEngine.SceneManagement;
 
 public class ManagerGame : MonoBehaviour {
 
-    public int ScoreCurrent;
+    [SerializeField] int Seconds;
+    [SerializeField] int Minutes;
     public float TimePlayed;
-    public int Gold;
-    public int Lives = 50;
-    public int E_Gunmen;
-    public int E_Swordsmen;
-    bool Paused = false;
+    public float CurrentScore;
+    public int CurrentGold;
+    public int CurrentLives = 50;
+    public int CurrentE_Gunmen;
+    public int CurrentE_Swordsmen;
+    public int TotalFriends;
+    public int TotalEnemies;
+    bool Paused;
 
-    [SerializeField] Text UIScore;
     [SerializeField] Text UITimer;
+    [SerializeField] Text UIScore;
     [SerializeField] Text UIGold;
     [SerializeField] Text UILives;
 
-    void Start()
-    {
-        
-	}
-	
-	void Update() 
+    void Update() 
     {
         if (Input.GetKeyDown(KeyCode.P) && Paused == false) { Time.timeScale = 0; Paused = true;  }
         else if (Input.GetKeyDown(KeyCode.P) && Paused == true ) { Time.timeScale = 1; Paused = false; }
         if (Input.GetKeyDown(KeyCode.Escape)) { Application.Quit(); }
 
-        UILives.text = Lives.ToString();
+        Minutes = Mathf.FloorToInt(TimePlayed / 60);
+        Seconds = Mathf.FloorToInt(TimePlayed % 60);
+        TimePlayed += Time.deltaTime;
+        UITimer.text = Minutes.ToString("00") + ":" + Seconds.ToString("00");
 
+        CurrentScore += Time.deltaTime * 10000;
+        UIScore.text = CurrentScore.ToString("n0");
+
+        UIGold.text  = CurrentGold. ToString("n0");
+        UILives.text = CurrentLives.ToString();
+
+        //TotalFriends += TotalFriends;
+        TotalEnemies = CurrentE_Gunmen + CurrentE_Swordsmen;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -39,7 +49,7 @@ public class ManagerGame : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(collision.gameObject);
-            Lives--;
+            CurrentLives--;
         }
     }
 }

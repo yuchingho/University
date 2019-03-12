@@ -748,6 +748,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 10000
+  CounterScore: 0
+  GoldEarned: 0
+  CounterE_Gunmen: 0
+  CounterE_Swordsmen: 0
+  CounterFriends: 0
+  CounterAdded: 0
   Deceased: 0
   HealthBar: {fileID: 484193876}
   HealthText: {fileID: 1043838332}
@@ -922,7 +928,7 @@ RectTransform:
   m_Children:
   - {fileID: 245324137}
   m_Father: {fileID: 2143372925}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4126,7 +4132,7 @@ GameObject:
   - component: {fileID: 696454996}
   - component: {fileID: 696454995}
   m_Layer: 5
-  m_Name: Score Text
+  m_Name: T_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4143,12 +4149,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2143372925}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -130, y: -170}
-  m_SizeDelta: {x: 1400, y: 50}
+  m_AnchoredPosition: {x: -52, y: -170}
+  m_SizeDelta: {x: 1325, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696454995
 MonoBehaviour:
@@ -7027,7 +7033,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -7752,6 +7758,81 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1544169836}
   m_CullTransparentMesh: 0
+--- !u!1 &1559283157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559283158}
+  - component: {fileID: 1559283160}
+  - component: {fileID: 1559283159}
+  m_Layer: 5
+  m_Name: T_Score Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1559283158
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559283157}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2143372925}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -130, y: -170}
+  m_SizeDelta: {x: 1400, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1559283159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559283157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Score:'
+--- !u!222 &1559283160
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559283157}
+  m_CullTransparentMesh: 0
 --- !u!1 &1565689454
 GameObject:
   m_ObjectHideFlags: 0
@@ -8391,12 +8472,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1b78fc042bd5941bcdf8237e506096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Seconds: 0
+  Minutes: 0
   TimePlayed: 0
-  ScoreCurrent: 0
-  Lives: 50
-  CounterEnemiesKilled: 0
-  CounterFriendsKilled: 0
+  CurrentScore: 0
+  CurrentGold: 0
+  CurrentLives: 50
+  CurrentE_Gunmen: 0
+  CurrentE_Swordsmen: 0
+  TotalFriends: 0
+  TotalEnemies: 0
   UITimer: {fileID: 640324308}
+  UIScore: {fileID: 696454995}
   UIGold: {fileID: 1370915586}
   UILives: {fileID: 819121582}
 --- !u!4 &1717002972
@@ -11575,6 +11662,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 484193875}
+  - {fileID: 1559283158}
   - {fileID: 696454994}
   - {fileID: 185820045}
   m_Father: {fileID: 2079261922}

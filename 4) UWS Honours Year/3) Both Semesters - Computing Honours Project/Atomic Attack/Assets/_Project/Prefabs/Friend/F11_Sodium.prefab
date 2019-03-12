@@ -227,7 +227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679afff287568af4fa9936fb47ccd0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreValue: 0
   MovementSpeed: 1.2
   Grounded: 0
   Unshakeable: 0
@@ -268,6 +267,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
+  CounterScore: 0
+  GoldEarned: 0
+  CounterE_Gunmen: 0
+  CounterE_Swordsmen: 0
+  CounterFriends: 1
+  CounterAdded: 0
   Deceased: 0
 --- !u!212 &212060809230025808
 SpriteRenderer:

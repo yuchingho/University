@@ -9,11 +9,9 @@ public class AI_Human : MonoBehaviour {
     protected Rigidbody2D Rigidbody2D;
     protected Animator Animator;
     protected HealthSystem HealthSystem;
+    protected ManagerGame ManagerGame;
 
-    [Space(-10), Header("[ Parent: AI_Human ] Cost")]
-    public int ScoreValue;
-
-    [Space( 10), Header("[ Parent: AI_Human ] Movement")]
+    [Space(-10), Header("[ Parent: AI_Human ] Movement")]
     public float MovementSpeed;
     public bool Grounded;
     public bool Unshakeable;
@@ -52,6 +50,7 @@ public class AI_Human : MonoBehaviour {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         HealthSystem = GetComponent<HealthSystem>();
+        ManagerGame = GameObject.Find("Manager Game").GetComponent<ManagerGame>();
         MovementSpeedInitial = MovementSpeed;
     }
 
@@ -63,8 +62,23 @@ public class AI_Human : MonoBehaviour {
         { Destroy(gameObject); }
         // A lot of the time, in "_Explode.cs" Guy slides across the ground.
         // Grounded == true doesn't properly register, so will stand there till Dead.
-        else if ((Grounded == true && HealthSystem.Deceased == true) || 
-                 HealthSystem.Health <= -200) { PlayAnimationDeath(); }
+        else if ((Grounded == true && HealthSystem.Deceased == true) || HealthSystem.Health <= -350)
+        {
+            PlayAnimationDeath();
+            
+            // Adding HealthSystem.CounterValues to ManagerGame.CurrentValues.
+            // Killing Enemies earn gold, while Friends dying don't.
+            // Earn Score when Enemies die, and when Friends are Button Spawned.
+            if (HealthSystem.CounterAdded == false)
+            {   
+                ManagerGame.CurrentScore       += HealthSystem.CounterScore;
+                ManagerGame.CurrentGold        += HealthSystem.GoldEarned;
+                ManagerGame.CurrentE_Gunmen    += HealthSystem.CounterE_Gunmen;
+                ManagerGame.CurrentE_Swordsmen += HealthSystem.CounterE_Swordsmen;
+                ManagerGame.TotalFriends       += HealthSystem.CounterFriends;
+                HealthSystem.CounterAdded = true;
+            }
+        }
         else if (Grounded == true && GrabbedByMouse == false)
         {   // Status effects initialized.
             StartCoroutine(StatusBlinded());
@@ -126,7 +140,6 @@ public class AI_Human : MonoBehaviour {
         Animator.Play("Die");
         Destroy(gameObject, 1f);
         return;
-        // Add to points and score or collateral damage score
     }
 
     // Use if GrabbedByMouse or thrown in air by Explosion.

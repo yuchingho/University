@@ -13,7 +13,7 @@ public class F15_Phosphorus : MonoBehaviour {
         HealthSystem HP = collision.gameObject.GetComponent<HealthSystem>();
         if (collision.gameObject.name == "Castle Health")
         { /* Not setting "Burn" active since Castle doesn't have it. */}
-        else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Friend")
-        { HP.DamageTaken(0.41f); collision.gameObject.GetComponent<AI_Human>().Burned = true;
+        else if (collision.gameObject.tag == "Enemy")
+        { HP.DamageTaken(0.7f); collision.gameObject.GetComponent<AI_Human>().Burned = true;
             if (collision.gameObject.GetComponent<AI_Human>().MovementSpeed != 0)
             {   collision.gameObject.GetComponent<AI_Human>().MovementSpeed = 2f; } } } }

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ManagerSpawn : MonoBehaviour {
 
+    ManagerGame ManagerGame;
+
     [Space(-10), Header("Rows for UI")]
     [SerializeField] Text Explanation;
     [SerializeField] GameObject RowOne;
@@ -53,24 +55,46 @@ public class ManagerSpawn : MonoBehaviour {
     [SerializeField] Button[] Elements;
 
     GameObject CurrentMist;
+    int MoneyFactor;
 
     void Start()
     {
+        ManagerGame = GameObject.Find("Manager Game").GetComponent<ManagerGame>();
         Explanation.gameObject.SetActive(false);
+        ManagerGame.CurrentGold = 300;
         //InvokeRepeating("CannonFodderEnemy",  1, 3);
-        //InvokeRepeating("CannonFodderFriend", 0, 4);
+        //InvokeRepeating("CannonFodderFriend", 0, 5);
 	}
 	
 	void Update() 
     {
         SwitchRows();
-        if (ButtonDisable == true)
-        {   // Whenever an Element is spawned, will disable all buttons for 2 seconds.
-            for (int i = 0; i < Elements.Length; i++)
-            {   // ButtonDisable == false; in FlashText();
-                Elements[i].GetComponent<Image>().color = new Color(200, 200, 200);
-                Elements[i].interactable = false;
-            }
+
+        if (ManagerGame.CurrentGold <= 200)
+        {
+            ButtonRange(2);
+        }
+
+        else if (ManagerGame.CurrentGold <= 100)
+        {
+            ButtonRange(1);
+        }
+
+        else if (ManagerGame.CurrentGold <= 0)
+        {
+            ButtonRange(0);
+        }
+
+        // Whenever an Element is spawned, will disable all buttons for 2 seconds.
+        /* else if (ButtonDisable == true) { ButtonRange(0); } */
+    }
+
+    void ButtonRange(int NumberStart)
+    {
+        for (int i = NumberStart; i < Elements.Length; i++)
+        {   // ButtonDisable == false; in FlashText();
+            Elements[i].GetComponent<Image>().color = new Color(200, 200, 200);
+            Elements[i].interactable = false;
         }
     }
 
@@ -117,6 +141,22 @@ public class ManagerSpawn : MonoBehaviour {
         }
     }
     #endregion
+    #region Money Stuff
+    void MoneyBank()
+    {
+        switch (MoneyFactor)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+
+        }
+    }
+
+    #endregion
+
+
     #region Spawn Cannon Fodder
     void CannonFodderFriend()
     {
@@ -154,6 +194,8 @@ public class ManagerSpawn : MonoBehaviour {
     #region Spawn Elements
     public void Spawn01H ()
     {
+        ManagerGame.CurrentScore += 1000000;
+        ManagerGame.CurrentGold -= 100;
         Explanation.text = "[ Hydrogen ] Bombs";
         StartCoroutine(FlashText());
         Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
@@ -163,6 +205,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn02He()
     {
+        ManagerGame.CurrentScore += 2000000;
+        ManagerGame.CurrentGold -= 200;
+
         Explanation.text = "[ Helium ] BLIMP Time";
         StartCoroutine(FlashText());
         Instantiate(Helium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y + 4f), Quaternion.identity);
@@ -170,6 +215,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn03Li()
     {
+        ManagerGame.CurrentScore += 3000000;
+        ManagerGame.CurrentGold -= 300;
+
         Explanation.text = "[ Lithium ] Small Tasers ELECTRICITY";
         StartCoroutine(FlashText());
         Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
@@ -178,6 +226,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn04Be()
     {
+        ManagerGame.CurrentScore += 4000000;
+        ManagerGame.CurrentGold -= 400;
+
         Explanation.text = "[ Beryllium ] Blinds";
         StartCoroutine(FlashText());
         Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
@@ -186,6 +237,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn05B ()
     {
+        ManagerGame.CurrentScore += 5000000;
+        ManagerGame.CurrentGold -= 500;
+
         Explanation.text = "[ Boron ] Increases Movement Speed";
         StartCoroutine(FlashText());
         StartCoroutine(ActivateBoron());
@@ -193,6 +247,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn06C ()
     {
+        ManagerGame.CurrentScore += 6000000;
+        ManagerGame.CurrentGold -= 600;
+
         Explanation.text = "[ Carbon ] Light Armour";
         StartCoroutine(FlashText());
         Instantiate(Carbon, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
@@ -201,6 +258,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn07N ()
     {
+        ManagerGame.CurrentScore += 7000000;
+        ManagerGame.CurrentGold -= 700;
+
         Explanation.text = "[ Nitrogen ] Freezes";
         StartCoroutine(FlashText());
         CurrentMist = Nitrogen;
@@ -209,6 +269,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn08O ()
     {
+        ManagerGame.CurrentScore += 8000000;
+        ManagerGame.CurrentGold -= 800;
+
         Explanation.text = "[ Oxygen ] Magnifies Bomb Power";
         StartCoroutine(FlashText());
         CurrentMist = Oxygen;
@@ -217,6 +280,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn09F ()
     {
+        ManagerGame.CurrentScore += 18000000;
+        ManagerGame.CurrentGold -= 900;
+
         Explanation.text = "[ Fluorine ] Big Rocket";
         StartCoroutine(FlashText());
         Instantiate(Fluorine, MissileLaunch);
@@ -224,6 +290,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn10Ne()
     {
+        ManagerGame.CurrentScore += 20000000;
+        ManagerGame.CurrentGold -= 1000;
+
         Explanation.text = "[ Neon ] Lightsaber Time";
         StartCoroutine(FlashText());
         Instantiate(Neon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
@@ -231,6 +300,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn11Na()
     {
+        ManagerGame.CurrentScore += 11000000;
+        ManagerGame.CurrentGold -= 1100;
+
         Explanation.text = "[ Sodium ] Big Tasers ELECTRICITY";
         StartCoroutine(FlashText());
         Instantiate(Sodium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
@@ -239,6 +311,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn12Mg()
     {
+        ManagerGame.CurrentScore += 12000000;
+        ManagerGame.CurrentGold -= 1200;
+
         Explanation.text = "[ Magnesium ] Blinds More";
         StartCoroutine(FlashText());
         Instantiate(Magnesium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
@@ -246,6 +321,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn13Al()
     {
+        ManagerGame.CurrentScore += 13000000;
+        ManagerGame.CurrentGold -= 1300;
+
         Explanation.text = "[ Aluminium ] Increases Attack Speed";
         StartCoroutine(FlashText());
         StartCoroutine(ActivateAluminium());
@@ -253,6 +331,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn14Si()
     {
+        ManagerGame.CurrentScore += 14000000;
+        ManagerGame.CurrentGold -= 1400;
+
         Explanation.text = "[ Silicon ] Heavy Armour";
         StartCoroutine(FlashText());
         Instantiate(Silicon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
@@ -260,6 +341,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn15P ()
     {
+        ManagerGame.CurrentScore += 15000000;
+        ManagerGame.CurrentGold -= 1500;
+
         Explanation.text = "[ Phosphorus ] Burns";
         StartCoroutine(FlashText());
         CurrentMist = Phosphorus;
@@ -268,6 +352,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn16S ()
     {
+        ManagerGame.CurrentScore += 16000000;
+        ManagerGame.CurrentGold -= 1600;
+
         Explanation.text = "[ Sulphur ] Magnifies Bomb Power More";
         StartCoroutine(FlashText());
         CurrentMist = Sulphur;
@@ -276,6 +363,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn17Cl()
     {
+        ManagerGame.CurrentScore += 17000000;
+        ManagerGame.CurrentGold -= 1700;
+
         Explanation.text = "[ Chlorine ] Small Rocket";
         StartCoroutine(FlashText());
         Instantiate(Chlorine, MissileLaunch);
@@ -283,6 +373,9 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn18Ar()
     {
+        ManagerGame.CurrentScore += 18000000;
+        ManagerGame.CurrentGold -= 1800;
+
         Explanation.text = "[ Argon ] Flamethrower Time";
         StartCoroutine(FlashText());
         Instantiate(Argon, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
