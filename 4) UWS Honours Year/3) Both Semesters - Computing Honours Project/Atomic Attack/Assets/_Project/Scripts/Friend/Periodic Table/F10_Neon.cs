@@ -27,6 +27,13 @@ public class F10_Neon : AI_Friend {
         {   // When F10_Neon plays Attack.anim, will make the DamageArea active briefly to damage Target.
             // Will damage Target's Health with F10_Neon's AttackDamage.
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
+
+            // Damaging Castle will add to Gold and Score.
+            if (collision.gameObject.name == "Castle Health")
+            {
+                ManagerGame.CurrentScore += AttackDamage * 100000;
+                ManagerGame.CurrentGold += AttackDamage;
+            }
         }
     }
 

@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   CounterScore: 2000000
-  GoldEarned: 40
+  GoldEarned: 120
   CounterE_Gunmen: 0
   CounterE_Swordsmen: 1
   CounterFriends: 0

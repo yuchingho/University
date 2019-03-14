@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class F_Swordsman : AI_Friend {
-    [Space(10), Header("[^ Child: AI_Friend ]")]
+
     // Child Class F_Swordsman inheriting from AI_Friend.
     [Space(-10), Header("[^ Child:   F_Swordsman ]")]
-#pragma warning disable
+    #pragma warning disable
     [SerializeField] protected int AttackDamage = 1;
     [Space(10), Header("[^ Child:   F_Swordsman ] Steriods")]
     public bool Boron;        // Add MovementSpeed for when activated.
     public bool Aluminium;    // Add AttackDamage and AttackRate for when activated.
-    [SerializeField] protected Color ColourAluminium;
-    // Set Colours manually in Inspector, because if do it via code and spawn Prefab, only goes up to 191.
+    [SerializeField] protected Color ColourAluminium; // Set Colours manually in Inspector.
+    // Because if setting colour through code and then spawn Prefab, only goes up to 191, 191, 191.
     void Reset()
     {
         MovementSpeed = 1.20f;
@@ -22,10 +22,10 @@ public class F_Swordsman : AI_Friend {
     }
 
     protected override void Movement()
-    {   // Activating the Steriods.
-        if (Boron == true) { MovementSpeed = MovementSpeed * 2; }
-        if (Aluminium == true) { AttackDamage = 2; AttackRate = 0.5f; SpriteRenderer.color = ColourAluminium; }
-        if (Aluminium == false) { AttackDamage = 1; AttackRate = 1; SpriteRenderer.color = new Color(255, 255, 255); } /* White */
+    {   // Activating Steriods.
+        if (Boron     == true) { MovementSpeed = MovementSpeed * 2; }
+        if (Aluminium == true)  { AttackDamage = 2; AttackRate = 0.5f; SpriteRenderer.color = ColourAluminium; }
+        if (Aluminium == false) { AttackDamage = 1; AttackRate = 1.0f; SpriteRenderer.color = new Color(255, 255, 255); } /* White */
         base.Movement();
     }
 
@@ -35,6 +35,13 @@ public class F_Swordsman : AI_Friend {
         {   // When F_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
             // Will damage Target's Health with F_Swordsman's AttackDamage.
             collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
+
+            // Damaging Castle will add to Gold and Score.
+            if (collision.gameObject.name == "Castle Health")
+            {
+                ManagerGame.CurrentScore += AttackDamage * 100000;
+                ManagerGame.CurrentGold  += AttackDamage;
+            }
         }
     }
 

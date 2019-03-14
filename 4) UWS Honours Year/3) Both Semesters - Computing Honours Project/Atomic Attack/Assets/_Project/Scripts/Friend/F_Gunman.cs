@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class F_Gunman : AI_Friend {
-    [Space( 10), Header("[^ Child: AI_Friend ]")]
+
     // Child Class F_Gunman inheriting from AI_Friend.
     [Space(-10), Header("[^ Child:   F_Gunman ]")]
     #pragma warning disable

@@ -30,7 +30,7 @@ public class AI_Human : MonoBehaviour {
     [SerializeField] protected GameObject EffectStunned;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectBlinded;    // Order in layer = 1.
     [SerializeField] protected GameObject EffectBurned;     // Order in layer = 1.
-    [SerializeField] protected GameObject GasMask;          // Order in layer = 1. (still to do)
+    [SerializeField] protected GameObject GasMask;          // Order in layer = 1.
 
 
     [Space( 10), Header("----------------- Target ----------------")]
@@ -55,17 +55,16 @@ public class AI_Human : MonoBehaviour {
     }
 
     // Child Classes "AI_Enemy" and "AI_Friend" have InvokeRepeating UpdateTarget() every 0.25f.
-    // Is basically another "Update" Method, which if has a Target, will go to LookatTarget().
+    // ^ basically another "Update" Method, which if has a Target, will go to LookatTarget().
     protected virtual void Update()
     {   // If out of bounds, destroy GameObject and not add to score, etc.
         if (transform.position.x <= -15 || transform.position.x >= 15 || transform.position.y <= -7)
         { Destroy(gameObject); }
-        // A lot of the time, in "_Explode.cs" Guy slides across the ground.
-        // Grounded == true doesn't properly register, so will stand there till Dead.
         else if ((Grounded == true && HealthSystem.Deceased == true) || HealthSystem.Health <= -350)
         {
+            // A lot of the time, in "_Explode.cs" Guy slides across the ground.
+            // Grounded == true doesn't properly register, so will stand there till Dead.
             PlayAnimationDeath();
-            
             // Adding HealthSystem.CounterValues to ManagerGame.CurrentValues.
             // Killing Enemies earn gold, while Friends dying don't.
             // Earn Score when Enemies die, and when Friends are Button Spawned.
@@ -193,7 +192,7 @@ public class AI_Human : MonoBehaviour {
         }
     }
 
-    // Not removing gas-masks, will look cool.
-    protected virtual void StatusSmell() { if (RunAway == true) { GasMask.SetActive(true); } }
+    protected virtual void StatusSmell() // Not removing gas-masks.
+    { if (RunAway == true) { GasMask.SetActive(true); } }
     #endregion
 }

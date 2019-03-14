@@ -13,8 +13,6 @@ public class F02_Helium : MonoBehaviour {
     [SerializeField] GameObject SpawnUnits;
     [SerializeField] GameObject Crush;
     bool Spawn;
-
-
     void Start()
     {
         HealthSystem = GetComponent<HealthSystem>();
@@ -34,8 +32,8 @@ public class F02_Helium : MonoBehaviour {
             CapsuleCollider2D.enabled = true;
             Crush.SetActive(true);
         }
-        // Out of Bounds.
-        if (transform.position.x >= 14) { Destroy(gameObject); }
+        
+        if (transform.position.x >= 14) { Destroy(gameObject); } // Out of Bounds.
     }
 
     void SpawnFlying()

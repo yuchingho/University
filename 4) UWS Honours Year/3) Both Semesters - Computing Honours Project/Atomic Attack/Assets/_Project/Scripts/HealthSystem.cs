@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour {
-
+    // Counter CollateralDamage;
     public float Health;
     public int CounterScore;
     public int GoldEarned;
-    // Counter CollateralDamage;
-    public int CounterE_Gunmen;
+    public int CounterE_Gunmen; 
     public int CounterE_Swordsmen;
     public int CounterFriends;
     public bool CounterAdded;

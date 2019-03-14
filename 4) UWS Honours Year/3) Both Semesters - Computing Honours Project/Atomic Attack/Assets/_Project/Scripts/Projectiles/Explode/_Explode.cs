@@ -18,13 +18,19 @@ public class _Explode : MonoBehaviour {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, ExplosionRadius);
         foreach (Collider2D obj in colliders)
         {
+            ManagerGame ManagerGame = GameObject.Find("Manager Game").GetComponent<ManagerGame>();
             HealthSystem HP = obj.gameObject.GetComponent<HealthSystem>();
             AI_Human Guy = obj.GetComponent<AI_Human>();
             if (Magnified == true)
             {   // ExplosionScale and Screenshake.
                 Explosion.transform.localScale = new Vector2(ExplosionScale * 2, ExplosionScale * 2);
                 //Debug.Log("screenshake"); https://youtu.be/9A9yj8KnM8c 
-                if (obj.name == "Castle Health") { HP.DamageTaken(Damage * 5); }
+                if (obj.name == "Castle Health")
+                {
+                    HP.DamageTaken(Damage * 2);
+                    ManagerGame.CurrentScore += Damage * 100000;
+                    ManagerGame.CurrentGold  += Damage;
+                }
                 else if (obj.tag == "Enemy" || obj.tag == "Friend")
                 {
                     if (Guy.Unshakeable == false)

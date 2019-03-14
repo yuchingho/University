@@ -39,8 +39,15 @@ public class _Bullet : MonoBehaviour {
 
     protected virtual void HitTarget()
     {
+        ManagerGame ManagerGame = GameObject.Find("Manager Game").GetComponent<ManagerGame>();
         Target.GetComponent<HealthSystem>().DamageTaken(Damage);
         Instantiate(Explosion, transform.position, transform.rotation);
+        //Damaging Castle will add to Gold and Score.
+        if (Target.gameObject.name == "Castle Health")
+        {
+            ManagerGame.CurrentScore += Damage * 100000;
+            ManagerGame.CurrentGold  += Damage;
+        }
         Destroy(gameObject);
         // Don't need to differentiate with tags because already using Target.
         // Bullet will go only towards Target, through any other objects.

@@ -90,7 +90,7 @@ public class AI_Enemy : AI_Human {
         Vector3 ThrowVelocity = ThrowSpeed * ThrowVector.normalized;
         gameObject.GetComponent<Rigidbody2D>().velocity = ThrowVelocity / 5;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-        // Adding fall damage. Mathf.Abs returns any value as true;
+        // Adding fall damage. Mathf.Abs returns any value as true.
         float Damage = Mathf.Abs(ThrowVelocity.y * 2);
         GetComponent<HealthSystem>().DamageTaken((int)Damage);
         //Debug.Log("Throw Damage = " + ((int)Damage));

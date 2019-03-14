@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4841d6fb8b6845439f9515b7a495f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 200
+  Health: 350
   CounterScore: 0
   GoldEarned: 0
   CounterE_Gunmen: 0

@@ -45,9 +45,16 @@ public class Grenade : _Explode {
 
     void OnCollisionEnter2D(Collision2D collision)
     {   // Updating ExplosionRadius here. It is updated even though OnDrawGizmo doesn't show properly.
+        ManagerGame ManagerGame = GameObject.Find("Manager Game").GetComponent<ManagerGame>();
         if (Magnified == true) { ExplosionRadius = ExplosionRadius * 2; }
         ExplosionDamage();  // Calling method from parent class.
         Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z-1), transform.rotation);
+        //Damaging Castle will add to Gold and Score.
+        if (Target.gameObject.name == "Castle Health")
+        {
+            ManagerGame.CurrentScore += Damage * 100000;
+            ManagerGame.CurrentGold  += Damage;
+        }
         Destroy(gameObject);
     }
 }
