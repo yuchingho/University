@@ -31,7 +31,7 @@ public class F10_Neon : AI_Friend {
             // Damaging Castle will add to Gold and Score.
             if (collision.gameObject.name == "Castle Health")
             {
-                ManagerGame.CurrentScore += AttackDamage * 100000;
+                ManagerGame.CurrentScore += AttackDamage * 10;
                 ManagerGame.CurrentGold += AttackDamage;
             }
         }

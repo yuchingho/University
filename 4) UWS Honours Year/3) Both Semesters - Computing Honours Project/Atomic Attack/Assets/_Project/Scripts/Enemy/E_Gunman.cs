@@ -11,8 +11,6 @@ public class E_Gunman : AI_Enemy {
     [SerializeField] protected GameObject Projectile;
     [SerializeField] protected Transform FireLocation;
 
-
-    
     void Reset()
     {
         MovementSpeed = 1.00f;

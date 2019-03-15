@@ -40,12 +40,14 @@ public class _Bullet : MonoBehaviour {
     protected virtual void HitTarget()
     {
         ManagerGame ManagerGame = GameObject.Find("Manager Game").GetComponent<ManagerGame>();
+        //FindObjectOfType<ManagerAudio>().PlayAudioClip("Shoot");
+
         Target.GetComponent<HealthSystem>().DamageTaken(Damage);
         Instantiate(Explosion, transform.position, transform.rotation);
         //Damaging Castle will add to Gold and Score.
         if (Target.gameObject.name == "Castle Health")
         {
-            ManagerGame.CurrentScore += Damage * 100000;
+            ManagerGame.CurrentScore += Damage * 10;
             ManagerGame.CurrentGold  += Damage;
         }
         Destroy(gameObject);

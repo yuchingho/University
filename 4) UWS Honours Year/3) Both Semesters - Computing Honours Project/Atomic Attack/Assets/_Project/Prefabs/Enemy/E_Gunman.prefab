@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 75
-  CounterScore: 1000000
+  CounterScore: 100
   GoldEarned: 60
   CounterE_Gunmen: 1
   CounterE_Swordsmen: 0
@@ -297,6 +297,7 @@ MonoBehaviour:
   AttackRate: 0.75
   LookRadius: 3
   AttackRadius: 3
+  A_Attack: {fileID: 0}
   AttackDamage: 2. [Read Only Prefab]
   Projectile: {fileID: 1574258756806926, guid: 0f6b8ae62c4abbf42b1bf274ca991f34, type: 2}
   FireLocation: {fileID: 4667032424649286}

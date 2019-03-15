@@ -9,8 +9,10 @@ public class ManagerGame : MonoBehaviour {
     [SerializeField] GameObject HelpUI;
     public Button Pause;
     bool Paused;
+    [SerializeField] GameObject LoseUI;
 
-    int Seconds; int Minutes;
+
+    public int Seconds; public int Minutes;
     public float TimePlayed;
     public float CurrentScore;
     public int CurrentGold;
@@ -28,8 +30,48 @@ public class ManagerGame : MonoBehaviour {
     [SerializeField] Text UILives;
     [SerializeField] GameObject LifeLost;
 
-    public void ButtonRestart() { SceneManager.LoadScene("Game"); }
-    public void ButtonQuit()    { Application.Quit();             }
+    void Awake()
+    {
+        Time.timeScale = 0;
+        HelpUI.SetActive(true);
+        CurrentScore -= Time.deltaTime;
+    }
+
+    void Update() 
+    {
+        if (CurrentLives < 0)
+        {
+            Time.timeScale = 0;
+            LoseUI.SetActive(true);
+        }
+        // Time.
+        Minutes = Mathf.FloorToInt(TimePlayed / 60);
+        Seconds = Mathf.FloorToInt(TimePlayed % 60);
+        TimePlayed += Time.deltaTime;
+        UITimer.text = Minutes.ToString("00") + ":" + Seconds.ToString("00");
+
+        // Score.
+        CurrentScore += Time.deltaTime;
+        UIScore.text = CurrentScore.ToString("n0");
+
+        // Gold.
+        UIGold.text  = CurrentGold. ToString("n0");
+        UILives.text = CurrentLives.ToString();
+
+        TotalEnemies = CurrentE_Gunmen + CurrentE_Swordsmen;
+    }
+
+    public void ButtonRestart()
+    {
+        SceneManager.LoadScene("Game");
+        // Usually need below, but resetting it in void Awake().
+        //Time.timeScale = 1;
+    }
+
+    public void ButtonQuit()
+    {
+        Application.Quit();
+    }
 
     public void ButtonPausePressed()
     {
@@ -45,25 +87,6 @@ public class ManagerGame : MonoBehaviour {
             Paused = false;
             HelpUI.SetActive(false);
         }
-    }
-
-    void Update() 
-    {
-        // Time.
-        Minutes = Mathf.FloorToInt(TimePlayed / 60);
-        Seconds = Mathf.FloorToInt(TimePlayed % 60);
-        TimePlayed += Time.deltaTime;
-        UITimer.text = Minutes.ToString("00") + ":" + Seconds.ToString("00");
-
-        // Score.
-        CurrentScore += Time.deltaTime * 10000;
-        UIScore.text = CurrentScore.ToString("n0");
-
-        // Gold.
-        UIGold.text  = CurrentGold. ToString("n0");
-        UILives.text = CurrentLives.ToString();
-
-        TotalEnemies = CurrentE_Gunmen + CurrentE_Swordsmen;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

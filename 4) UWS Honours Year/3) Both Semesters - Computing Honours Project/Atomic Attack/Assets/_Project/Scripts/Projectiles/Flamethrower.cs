@@ -16,7 +16,7 @@ public class Flamethrower : MonoBehaviour {
         if (collision.gameObject.name == "Castle Health")
         {   // Not setting "Burn" active since Castle doesn't have it.
             HP.DamageTaken(Damage);
-            ManagerGame.CurrentScore += Damage * 100000;
+            ManagerGame.CurrentScore += Damage * 10;
             ManagerGame.CurrentGold  += Damage;
         }
         else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Friend")

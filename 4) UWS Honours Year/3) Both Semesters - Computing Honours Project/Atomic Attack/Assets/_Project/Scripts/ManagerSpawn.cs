@@ -76,12 +76,12 @@ public class ManagerSpawn : MonoBehaviour {
 
         // Setting up the Slider for Fluorine.
         FluorineInitial = 0;
-        CounterFluorine = 150;
+        CounterFluorine = 200;
         FluorineSlider.maxValue = CounterFluorine;
 
         // Setting up the Slider for Neon.
         NeonInitial = 0;
-        CounterNeon = 60;
+        CounterNeon = 50;
         NeonSlider.maxValue = CounterNeon;
 
         // UI Periodic Table Rows.
@@ -102,9 +102,22 @@ public class ManagerSpawn : MonoBehaviour {
         LocalE_Swordsmen = ManagerGame.CopyE_Swordsmen;
 
         FluorineSlider.value = LocalE_Total;
-        FluorineCounter.text = LocalE_Total.ToString();
+        if (FluorineSlider.value >= CounterFluorine)
+        { FluorineCounter.text = "Ready"; }
+        else
+        {
+            FluorineSlider.value = LocalE_Total;
+            FluorineCounter.text = LocalE_Total.ToString();
+        }
+
         NeonSlider.value = LocalE_Swordsmen;
-        NeonCounter.text = LocalE_Swordsmen.ToString();
+        if (NeonSlider.value >= CounterNeon)
+        { NeonCounter.text = "Ready"; }
+        else
+        {
+            NeonSlider.value = LocalE_Swordsmen;
+            NeonCounter.text = LocalE_Swordsmen.ToString();
+        }
         // Calculating Gold and what can be Spent.
         if (DisableCheck == true || ManagerGame.CurrentGold <= 99) { ButtonDisableLoop(); }
         else if (ManagerGame.CurrentGold >= 1800) { ButtonBuy(18); }
@@ -220,7 +233,7 @@ public class ManagerSpawn : MonoBehaviour {
     #region Spawn Elements
     public void Spawn01H ()
     {
-        ManagerGame.CurrentScore += 1000000;
+        ManagerGame.CurrentScore += 100;
         ManagerGame.CurrentGold  -= 100;
 
         Explanation.text = "[ Hydrogen ] Bombs";
@@ -232,7 +245,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn02He()
     {
-        ManagerGame.CurrentScore += 2000000;
+        ManagerGame.CurrentScore += 200;
         ManagerGame.CurrentGold  -= 200;
 
         Explanation.text = "[ Helium ] BLIMP Time";
@@ -242,7 +255,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn03Li()
     {
-        ManagerGame.CurrentScore += 3000000;
+        ManagerGame.CurrentScore += 300;
         ManagerGame.CurrentGold  -= 300;
 
         Explanation.text = "[ Lithium ] Small Tasers ELECTRICITY";
@@ -253,7 +266,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn04Be()
     {
-        ManagerGame.CurrentScore += 4000000;
+        ManagerGame.CurrentScore += 400;
         ManagerGame.CurrentGold  -= 400;
 
         Explanation.text = "[ Beryllium ] Blinds";
@@ -264,7 +277,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn05B ()
     {
-        ManagerGame.CurrentScore += 5000000;
+        ManagerGame.CurrentScore += 500;
         ManagerGame.CurrentGold  -= 500;
 
         Explanation.text = "[ Boron ] Increases Movement Speed";
@@ -274,7 +287,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn06C ()
     {
-        ManagerGame.CurrentScore += 6000000;
+        ManagerGame.CurrentScore += 600;
         ManagerGame.CurrentGold  -= 600;
 
         Explanation.text = "[ Carbon ] Light Armour";
@@ -285,7 +298,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn07N ()
     {
-        ManagerGame.CurrentScore += 7000000;
+        ManagerGame.CurrentScore += 700;
         ManagerGame.CurrentGold  -= 700;
 
         Explanation.text = "[ Nitrogen ] Freezes";
@@ -296,7 +309,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn08O ()
     {
-        ManagerGame.CurrentScore += 8000000;
+        ManagerGame.CurrentScore += 800;
         ManagerGame.CurrentGold  -= 800;
 
         Explanation.text = "[ Oxygen ] Magnifies Bomb Power";
@@ -310,10 +323,9 @@ public class ManagerSpawn : MonoBehaviour {
         if (LocalE_Total < CounterFluorine) { /* Do nothing. */ }
         else
         {
-            ManagerGame.CurrentScore += 18000000;
+            ManagerGame.CurrentScore += 1800;
             ManagerGame.CurrentGold  -= 900;
             ManagerGame.CopyE_Gunmen  = 0;
-            ManagerGame.CopyE_Swordsmen = 0;
 
             Explanation.text = "[ Fluorine ] Big Rocket";
             StartCoroutine(FlashText());
@@ -326,7 +338,7 @@ public class ManagerSpawn : MonoBehaviour {
         if (LocalE_Swordsmen < CounterNeon) { /* Do nothing. */ }
         else
         {
-            ManagerGame.CurrentScore += 20000000;
+            ManagerGame.CurrentScore += 2000;
             ManagerGame.CurrentGold  -= 1000;
             ManagerGame.CopyE_Swordsmen = 0;
 
@@ -338,7 +350,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn11Na()
     {
-        ManagerGame.CurrentScore += 11000000;
+        ManagerGame.CurrentScore += 1100;
         ManagerGame.CurrentGold  -= 1100;
 
         Explanation.text = "[ Sodium ] Big Tasers ELECTRICITY";
@@ -349,7 +361,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn12Mg()
     {
-        ManagerGame.CurrentScore += 12000000;
+        ManagerGame.CurrentScore += 1200;
         ManagerGame.CurrentGold  -= 1200;
 
         Explanation.text = "[ Magnesium ] Blinds More";
@@ -359,7 +371,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn13Al()
     {
-        ManagerGame.CurrentScore += 13000000;
+        ManagerGame.CurrentScore += 1300;
         ManagerGame.CurrentGold  -= 1300;
 
         Explanation.text = "[ Aluminium ] Increases Attack Speed";
@@ -369,7 +381,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn14Si()
     {
-        ManagerGame.CurrentScore += 14000000;
+        ManagerGame.CurrentScore += 1400;
         ManagerGame.CurrentGold  -= 1400;
 
         Explanation.text = "[ Silicon ] Heavy Armour";
@@ -379,7 +391,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn15P ()
     {
-        ManagerGame.CurrentScore += 15000000;
+        ManagerGame.CurrentScore += 1500;
         ManagerGame.CurrentGold  -= 1500;
 
         Explanation.text = "[ Phosphorus ] Burns";
@@ -390,7 +402,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn16S ()
     {
-        ManagerGame.CurrentScore += 16000000;
+        ManagerGame.CurrentScore += 1600;
         ManagerGame.CurrentGold  -= 1600;
 
         Explanation.text = "[ Sulphur ] Magnifies Bomb Power More";
@@ -401,7 +413,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn17Cl()
     {
-        ManagerGame.CurrentScore += 17000000;
+        ManagerGame.CurrentScore += 1700;
         ManagerGame.CurrentGold  -= 1700;
 
         Explanation.text = "[ Chlorine ] Small Rocket";
@@ -411,7 +423,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     public void Spawn18Ar()
     {
-        ManagerGame.CurrentScore += 18000000;
+        ManagerGame.CurrentScore += 1800;
         ManagerGame.CurrentGold  -= 1800;
 
         Explanation.text = "[ Argon ] Flamethrower Time";

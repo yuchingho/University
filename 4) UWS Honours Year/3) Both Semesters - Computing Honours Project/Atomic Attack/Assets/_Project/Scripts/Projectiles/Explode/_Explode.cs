@@ -28,7 +28,7 @@ public class _Explode : MonoBehaviour {
                 if (obj.name == "Castle Health")
                 {
                     HP.DamageTaken(Damage * 2);
-                    ManagerGame.CurrentScore += Damage * 100000;
+                    ManagerGame.CurrentScore += Damage * 10;
                     ManagerGame.CurrentGold  += Damage;
                 }
                 else if (obj.tag == "Enemy" || obj.tag == "Friend")

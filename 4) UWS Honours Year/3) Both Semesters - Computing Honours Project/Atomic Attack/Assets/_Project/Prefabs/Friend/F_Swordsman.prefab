@@ -295,6 +295,7 @@ MonoBehaviour:
   AttackRate: 1
   LookRadius: 3
   AttackRadius: 0.85
+  A_Attack: {fileID: 0}
   AttackDamage: 1
   Boron: 0
   Aluminium: 0

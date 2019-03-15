@@ -16,7 +16,7 @@ public class Crush : MonoBehaviour {
         if (collision.gameObject.name == "Castle Health")
         {
             HP.DamageTaken(Damage);
-            ManagerGame.CurrentScore += Damage * 100000;
+            ManagerGame.CurrentScore += Damage * 10;
             ManagerGame.CurrentGold  += Damage;
         }
         else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Friend")
