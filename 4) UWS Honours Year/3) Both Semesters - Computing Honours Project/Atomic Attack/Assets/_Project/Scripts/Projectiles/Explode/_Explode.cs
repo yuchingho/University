@@ -24,6 +24,7 @@ public class _Explode : MonoBehaviour {
             if (Magnified == true)
             {   // ExplosionScale and Screenshake.
                 Explosion.transform.localScale = new Vector2(ExplosionScale * 2, ExplosionScale * 2);
+                //StartCoroutine(CameraShake.Shake(ExplosionRadius, ExplosionForce)); /* Duration, Magnitude */
                 //Debug.Log("screenshake"); https://youtu.be/9A9yj8KnM8c 
                 if (obj.name == "Castle Health")
                 {

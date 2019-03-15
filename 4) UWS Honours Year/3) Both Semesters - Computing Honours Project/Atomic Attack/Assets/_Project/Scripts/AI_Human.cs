@@ -8,8 +8,6 @@ public class AI_Human : MonoBehaviour {
     protected SpriteRenderer SpriteRenderer;
     protected Rigidbody2D Rigidbody2D;
     protected Animator Animator;
-    protected AudioSource AudioSource;
-    //protected ManagerAudio ManagerAudio;
     protected HealthSystem HealthSystem;
     protected ManagerGame ManagerGame;
 
@@ -45,15 +43,12 @@ public class AI_Human : MonoBehaviour {
     [SerializeField] protected float LookRadius;
     [SerializeField] protected float AttackRadius;
     protected float NextAttackTime = 0;
-    [SerializeField] protected AudioClip A_Attack;
-
 
     protected virtual void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
-        AudioSource = GetComponent<AudioSource>();
         HealthSystem = GetComponent<HealthSystem>();
         ManagerGame = GameObject.Find("Manager Game").GetComponent<ManagerGame>();
         MovementSpeedInitial = MovementSpeed;
@@ -135,7 +130,6 @@ public class AI_Human : MonoBehaviour {
         if (Time.time > NextAttackTime)
         {    // Animator.Play(state, layer, normalizedTime);
              // Need the other 2 overloads, otherwise won't repeat every AttackRate.
-            AudioSource.PlayOneShot(A_Attack, 0.4f);
             Animator.Play("Attack", -1, 0);
             NextAttackTime = Time.time + AttackRate;
             Shoot(); // Shoot is overridden in Gunmen.

@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   CounterScore: 200
-  GoldEarned: 120
+  GoldEarned: 80
   CounterE_Gunmen: 0
   CounterE_Swordsmen: 1
   CounterFriends: 0
@@ -323,7 +323,6 @@ MonoBehaviour:
   AttackRate: 1
   LookRadius: 3
   AttackRadius: 0.85
-  A_Attack: {fileID: 0}
   AttackDamage: 1
 --- !u!212 &212252202133949094
 SpriteRenderer:
