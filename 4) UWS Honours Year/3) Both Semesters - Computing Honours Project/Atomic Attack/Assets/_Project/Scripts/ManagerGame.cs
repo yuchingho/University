@@ -33,6 +33,7 @@ public class ManagerGame : MonoBehaviour {
     void Awake()
     {
         Time.timeScale = 0;
+        Paused = true;
         HelpUI.SetActive(true);
         CurrentScore -= Time.deltaTime;
     }
@@ -62,10 +63,9 @@ public class ManagerGame : MonoBehaviour {
     }
 
     public void ButtonRestart()
-    {
-        SceneManager.LoadScene("Game");
-        // Usually need below, but resetting it in void Awake().
+    {   // Usually need below, but resetting it in void Awake().
         //Time.timeScale = 1;
+        SceneManager.LoadScene("Game");
     }
 
     public void ButtonQuit()

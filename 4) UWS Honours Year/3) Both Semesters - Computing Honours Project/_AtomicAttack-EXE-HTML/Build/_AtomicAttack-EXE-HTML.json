@@ -1,0 +1,13 @@
+{
+"companyName": "yuchingho",
+"productName": "Atomic Attack",
+"dataUrl": "_AtomicAttack-EXE-HTML.data.unityweb",
+"wasmCodeUrl": "_AtomicAttack-EXE-HTML.wasm.code.unityweb",
+"wasmFrameworkUrl": "_AtomicAttack-EXE-HTML.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"}
+}

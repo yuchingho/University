@@ -25,8 +25,8 @@ public class Grenade : _Explode {
         ExplosionScale  = 0.1f;
         ExplosionForce  = 10;
     }
-    
-    protected virtual void Start()
+
+    void Start()
     {
         Rand = Random.Range(1, 100);
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -39,13 +39,13 @@ public class Grenade : _Explode {
         Rigidbody2D.AddForce(transform.up    * ThrowAngle);
         Rigidbody2D.AddForce(transform.right * ThrowAngle * ThrowDir);
     }
-    
+
     // Whenever Grenade is thrown, will have a random spin along the Z axis.
-    protected virtual void Update() { transform.Rotate(Vector3.forward * Rand); }
+    void Update() { transform.Rotate(Vector3.forward * Rand); }
 
     void OnCollisionEnter2D(Collision2D collision)
     {   // Updating ExplosionRadius here. It is updated even though OnDrawGizmo doesn't show properly.
-        if (Magnified == true) { ExplosionRadius = ExplosionRadius * 2; ThrowAngle = 200; }
+        if (Magnified == true) { ExplosionRadius = ExplosionRadius * 2; }
         ExplosionDamage();  // Calling method from parent class.
         Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z-1), transform.rotation);
         Destroy(gameObject);

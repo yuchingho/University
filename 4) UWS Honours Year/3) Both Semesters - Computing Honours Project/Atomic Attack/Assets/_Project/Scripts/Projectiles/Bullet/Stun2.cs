@@ -6,7 +6,7 @@ public class Stun2 : Stun {
 
     void Reset()
     {
-        Damage = 7;
-        Speed = 12;
+        Damage= 20;
+        Speed = 15;
     }
 }

@@ -92,7 +92,7 @@ public class ManagerSpawn : MonoBehaviour {
 
         // Release the kraken.
         InvokeRepeating("CannonFodderEnemy",  1, 2f);
-        InvokeRepeating("CannonFodderFriend", 0, 4f);
+        InvokeRepeating("CannonFodderFriend", 9, 4f);
 	}
 	
 	void Update() 
