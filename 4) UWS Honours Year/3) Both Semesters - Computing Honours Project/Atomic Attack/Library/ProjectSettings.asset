@@ -244,8 +244,9 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/A/GitHub/University/4) UWS Honours Year/3) Both Semesters
+    - Computing Honours Project/Atomic Attack/yuchingho.keystore
+  AndroidKeyaliasName: atomicattack
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
