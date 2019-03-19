@@ -1,6 +1,12 @@
 Android
-> PlayerSettings
+> Player Settings in "Build Settings" (botttom left)
   > Publishing Settings
     - Keystore pass - AtomicAttackRelease
 
 https://forum.unity.com/threads/android-signing.62137/
+
+Updating
+> Other Settings
+  > Upgrade 
+    - Version*
+    - Bundle Version Code

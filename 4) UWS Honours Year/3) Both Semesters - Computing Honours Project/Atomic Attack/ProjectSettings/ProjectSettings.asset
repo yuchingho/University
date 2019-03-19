@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  bundleVersion: 0.1
+  bundleVersion: 2
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -155,7 +155,7 @@ PlayerSettings:
     Android: com.yuchingho.atomic_attack
     Standalone: com.Company.ProductName
   buildNumber: {}
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -245,7 +245,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: C:/A/GitHub/University/4) UWS Honours Year/3) Both Semesters
-    - Computing Honours Project/Atomic Attack/yuchingho.keystore
+    - Computing Honours Project/_AtomicAttack-EXE-Android/yuchingho.keystore
   AndroidKeyaliasName: atomicattack
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
