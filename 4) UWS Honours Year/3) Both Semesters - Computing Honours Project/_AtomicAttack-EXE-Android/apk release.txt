@@ -2,6 +2,7 @@ Android
 > Player Settings in "Build Settings" (botttom left)
   > Publishing Settings
     - Keystore pass - AtomicAttackRelease
+    - Key      pass - atomicattackrelease
 
 https://forum.unity.com/threads/android-signing.62137/
 
