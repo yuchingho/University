@@ -44,7 +44,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 271}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 1
-  controlID: 76
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 271}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 77
+  controlID: 10
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -321,7 +321,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 3c35ffff1636ffffee36ffff6438ffff3042ffff0a43ffffe243ffff5845ffff247dfffffc7dffffd27effff4a80ffffe6fbffff00000000d8340000ba3d0000
+    m_ExpandedIDs: 7632ffff5433ffff3034ffffa635ffffde97ffff9698ffff089affffa49fffff6ea0ffffe0a1ffff9abfffff52c0ffffc4c1ffff32c7fffffec7ffff72c9ffffe6fbffff00000000283600008c3a0000c83b0000d83c0000a83d0000ba3d00008688000058890000948a0000a48b0000748c0000868c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -548,10 +548,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -367
-    m_HBaseRangeMax: 367
-    m_VBaseRangeMin: -206.40001
-    m_VBaseRangeMax: 206.40001
+    m_HBaseRangeMin: -293.6
+    m_HBaseRangeMax: 293.6
+    m_VBaseRangeMin: -165.2
+    m_VBaseRangeMax: 165.2
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1

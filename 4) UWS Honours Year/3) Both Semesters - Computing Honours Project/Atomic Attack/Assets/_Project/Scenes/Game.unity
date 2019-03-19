@@ -525,11 +525,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'How high Blue is thrown is how much damage is dealt !
+  m_Text: 'How far Blue is thrown is how much damage is dealt !
 
     Don''t let Blue on Red''s (left) side of the map.
 
-    You will lose a life and you only have 50 chances !'
+    You will lose a life and you only have 50 lives !'
 --- !u!222 &27900019
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7257,7 +7257,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Press the top-left (x) to start playing.
 
-    Press the top-left (Pause) at any time to check what each units does !'
+    Press the top-left (Pause) at any time to check what each unit does !'
 --- !u!222 &482909247
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22632,7 +22632,7 @@ MonoBehaviour:
 
     Drag & Flick enemies into the air to kill Blue.
 
-    Earn gold when Blue dies and buy upgrades for Red.'
+    Earn gold when Blue dies and buy upgrades !'
 --- !u!222 &1741178175
 CanvasRenderer:
   m_ObjectHideFlags: 0
