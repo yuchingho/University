@@ -236,7 +236,7 @@ public class ManagerSpawn : MonoBehaviour {
         ManagerGame.CurrentScore += 100;
         ManagerGame.CurrentGold  -= 100;
 
-        Explanation.text = "[ Hydrogen ] Bombs";
+        Explanation.text = "[ Hydrogen ] Grenades";
         StartCoroutine(FlashText());
         Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x + 0.7f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Hydrogen, new Vector2(F_SpawnLocation.position.x       , F_SpawnLocation.position.y), Quaternion.identity);
@@ -258,7 +258,7 @@ public class ManagerSpawn : MonoBehaviour {
         ManagerGame.CurrentScore += 300;
         ManagerGame.CurrentGold  -= 300;
 
-        Explanation.text = "[ Lithium ] Small Tasers ELECTRICITY";
+        Explanation.text = "[ Lithium ] Small Tasers";
         StartCoroutine(FlashText());
         Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Lithium, new Vector2(F_SpawnLocation.position.x - 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
@@ -269,7 +269,7 @@ public class ManagerSpawn : MonoBehaviour {
         ManagerGame.CurrentScore += 400;
         ManagerGame.CurrentGold  -= 400;
 
-        Explanation.text = "[ Beryllium ] Blinds";
+        Explanation.text = "[ Beryllium ] Small Flashbangs";
         StartCoroutine(FlashText());
         Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x + 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
         Instantiate(Beryllium, new Vector2(F_SpawnLocation.position.x - 0.5f, F_SpawnLocation.position.y), Quaternion.identity);
@@ -312,7 +312,7 @@ public class ManagerSpawn : MonoBehaviour {
         ManagerGame.CurrentScore += 800;
         ManagerGame.CurrentGold  -= 800;
 
-        Explanation.text = "[ Oxygen ] Magnifies Bomb Power";
+        Explanation.text = "[ Oxygen ] Magnifies Explosive Power";
         StartCoroutine(FlashText());
         CurrentMist = Oxygen;
         StartCoroutine(MistTimer2(12));
@@ -353,7 +353,7 @@ public class ManagerSpawn : MonoBehaviour {
         ManagerGame.CurrentScore += 1100;
         ManagerGame.CurrentGold  -= 1100;
 
-        Explanation.text = "[ Sodium ] Big Tasers ELECTRICITY";
+        Explanation.text = "[ Sodium ] Big Tasers";
         StartCoroutine(FlashText());
         Instantiate(Sodium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
 
@@ -364,7 +364,7 @@ public class ManagerSpawn : MonoBehaviour {
         ManagerGame.CurrentScore += 1200;
         ManagerGame.CurrentGold  -= 1200;
 
-        Explanation.text = "[ Magnesium ] Blinds More";
+        Explanation.text = "[ Magnesium ] Big Flashbangs";
         StartCoroutine(FlashText());
         Instantiate(Magnesium, new Vector2(F_SpawnLocation.position.x, F_SpawnLocation.position.y), Quaternion.identity);
     }
@@ -405,7 +405,7 @@ public class ManagerSpawn : MonoBehaviour {
         ManagerGame.CurrentScore += 1600;
         ManagerGame.CurrentGold  -= 1600;
 
-        Explanation.text = "[ Sulphur ] Magnifies Bomb Power More";
+        Explanation.text = "[ Sulphur ] Magnifies Explosive Power More";
         StartCoroutine(FlashText());
         CurrentMist = Sulphur;
         StartCoroutine(MistTimer());

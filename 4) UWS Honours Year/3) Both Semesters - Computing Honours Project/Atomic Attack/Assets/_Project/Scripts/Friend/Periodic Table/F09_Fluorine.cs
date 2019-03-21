@@ -12,7 +12,7 @@ public class F09_Fluorine : MonoBehaviour {
     {
         HealthSystem HP = collision.gameObject.GetComponent<HealthSystem>();
         if (collision.gameObject.name == "Castle Health")
-        { /* Nothing. */}
+        { /* Nothing. */ }
         else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Friend")
         { HP.DamageTaken(1); }
 

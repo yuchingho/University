@@ -15,7 +15,7 @@ public class F16_Sulphur : MonoBehaviour {
         { if (Upgrade != null) { Upgrade.GetComponent<_Explode>().Magnified = true; } }
 
         if (collision.gameObject.name == "Castle Health")
-        { /* Nothing. */}
+        { /* Nothing. */ }
         else if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Friend")
         { collision.gameObject.GetComponent<AI_Human>().RunAway = true; }
     }

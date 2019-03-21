@@ -1979,7 +1979,7 @@ MonoBehaviour:
 
     : 1500g
 
-    : Burning Mist affecting Enemies.
+    : Burning Mist damages Enemies.
 
     : Found in the tips of safety matches.
 
@@ -2139,7 +2139,7 @@ MonoBehaviour:
 
     : Magnifying explosions Mist.
 
-    : 21% of Earth''s atmosphere is Oxygen.'
+    : Combine with Hydrogen!'
 --- !u!222 &169439252
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2575,7 +2575,7 @@ MonoBehaviour:
 
     : 1200g
 
-    : 1 x Big Blinders.
+    : 1 x Big Flashbangs.
 
     : Stronger version of Beryllium.
 
@@ -4559,7 +4559,7 @@ MonoBehaviour:
 
     : 700g
 
-    : Freezing Mist affecting everyone.
+    : Freezing Mist damages Enemies.
 
     : Liquid nitrogen causes rapid freezing.'
 --- !u!222 &378246869
@@ -5175,7 +5175,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: ": Helium\n: 2\n: 4.00u\n: Noble Gases\n: 200g\n: 1 x BLIMP.\n   - Releases
-    5 x Swordsmen.\n: Second lightest element."
+    5 x Swordsmen.\n: The second lightest element."
 --- !u!222 &402027190
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11562,7 +11562,7 @@ MonoBehaviour:
 
     : 400g
 
-    : 2 x Small Blinders.
+    : 2 x Small Flashbangs.
 
     : High thermal conductivity.'
 --- !u!222 &870197223
@@ -12831,7 +12831,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 646325280}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.083653845
+  m_Size: 0.08365384
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13429,8 +13429,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: ": Neon\n: 10\n: 20.17u\n: Noble Gases\n: 1000g + 50 Enemy Swordsmen\n:
-    Jedi Master who damages everyone.\n: Combined with helium to make\n  helium-neon
-    lasers."
+    Jedi Master who damages all.\n: Electricity is applied to ionize Neon gas\n  causing
+    it to emit light."
 --- !u!222 &1042890180
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16360,9 +16360,9 @@ MonoBehaviour:
 
     : 1700g
 
-    : Small Rocket and Friendly Poison.
+    : Small Rocket and Gas Masks on Allies.
 
-    : Poisonous, and in swimming pools.
+    : Poisonous, and in swimming pools!
 
     : Green.'
 --- !u!222 &1277390501
@@ -16815,7 +16815,7 @@ MonoBehaviour:
 
     : 2 x Small Tasers.
 
-    : Found in batteries.'
+    : Lithium-ion batteries are rechargeable.'
 --- !u!222 &1294952651
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26129,7 +26129,7 @@ MonoBehaviour:
 
     : 900g + 200 Enemies
 
-    : Big Rocket and Poison damaging all.
+    : Big Rocket and Poison damages all.
 
     : Stronger version of Chlorine.
 
@@ -28679,7 +28679,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: ": Argon\n: 18\n: 39.94u\n: Noble Gases\n: 1800g\n: Flamethrower who damages
-    everyone.\n: Creates plasma with ICP-OES at an\n  average of 8000\xB0C."
+    all.\n: Creates plasma with ICP-OES at an\n  average of 8000\xB0C."
 --- !u!222 &2121619852
 CanvasRenderer:
   m_ObjectHideFlags: 0

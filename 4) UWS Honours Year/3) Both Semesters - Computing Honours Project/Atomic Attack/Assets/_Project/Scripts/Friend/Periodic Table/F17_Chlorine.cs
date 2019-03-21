@@ -12,7 +12,7 @@ public class F17_Chlorine : MonoBehaviour {
     {
         HealthSystem HP = collision.gameObject.GetComponent<HealthSystem>();
         if (collision.gameObject.name == "Castle Health")
-        { /* Nothing. */}
+        { /* Nothing. */ }
         else if (collision.gameObject.tag == "Enemy")
         { HP.DamageTaken(1); } // Not running away in Enemies because already got Poison.
         else if (collision.gameObject.tag == "Friend") // Gas-Masks to appear in only Friendlies.
