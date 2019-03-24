@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Missile : _Explode {
 
-    HealthSystem HealthSystem;
     Rigidbody2D Rigidbody2D;
 
     [SerializeField] protected float MovementSpeed;
     [SerializeField] protected GameObject Mist;
+
 
 
 

@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Project\Scripts\AI_Human.cs" />
-    <Compile Include="Assets\_Project\Scripts\CameraScript.cs" />
     <Compile Include="Assets\_Project\Scripts\Enemy\AI_Enemy.cs" />
     <Compile Include="Assets\_Project\Scripts\Enemy\CastleHealth.cs" />
     <Compile Include="Assets\_Project\Scripts\Enemy\E_Gunman.cs" />

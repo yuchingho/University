@@ -7,12 +7,12 @@ public class F02_Helium : MonoBehaviour {
     HealthSystem HealthSystem;
     Rigidbody2D Rigidbody2D;
     CapsuleCollider2D CapsuleCollider2D;
-    public int CostValue;
-    public int ScoreValue;
+
     [SerializeField] int MovementSpeed = 1;
     [SerializeField] GameObject SpawnUnits;
     [SerializeField] GameObject Crush;
     bool Spawn;
+
     void Start()
     {
         HealthSystem = GetComponent<HealthSystem>();
@@ -46,16 +46,16 @@ public class F02_Helium : MonoBehaviour {
         Spawn = true;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground") { StartCoroutine(DelayDisappear()); }
-    }
-
     IEnumerator DelayDisappear()
     {
         MovementSpeed = 0;
         yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
         if (Spawn == false) { SpawnFlying(); }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground") { StartCoroutine(DelayDisappear()); }
     }
 }

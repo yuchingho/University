@@ -5,10 +5,10 @@ using UnityEngine;
 public class AI_Human : MonoBehaviour {
 
     // Parent Class for Inheritance.
+    protected HealthSystem HealthSystem;
     protected SpriteRenderer SpriteRenderer;
     protected Rigidbody2D Rigidbody2D;
     protected Animator Animator;
-    protected HealthSystem HealthSystem;
     protected ManagerGame ManagerGame;
 
     [Space(-10), Header("[ Parent: AI_Human ] Movement")]

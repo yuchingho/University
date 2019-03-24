@@ -66,7 +66,7 @@ public class ManagerSpawn : MonoBehaviour {
 
     [SerializeField] Slider NeonSlider;
     [SerializeField] Text NeonCounter;
-#pragma warning disable
+    #pragma warning disable
     int NeonInitial;
     int CounterNeon;
 

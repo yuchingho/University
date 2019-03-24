@@ -11,7 +11,6 @@ public class ManagerGame : MonoBehaviour {
     bool Paused;
     [SerializeField] GameObject LoseUI;
 
-
     public int Seconds; public int Minutes;
     public float TimePlayed;
     public float CurrentScore;

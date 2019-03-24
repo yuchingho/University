@@ -28,6 +28,20 @@ public class E_Swordsman : AI_Enemy {
         base.Movement();
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {   // Bugs: Doesn't damage f_swordsman or F01_Hydrogen.
+        if (collision.gameObject.tag == "Friend")
+        {   // When E_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
+            // Will damage Target's Health with E_Swordsman's AttackDamage.
+            collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {   // As lil guy walks off Castle Platform, switching layers.
+        if (collision.gameObject.tag == "Castle") { OnTheCastle = false; Grounded = false; gameObject.layer = 8; }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {   // Switching layers so can walk out of Castle if chucked on it.
         if (collision.gameObject.tag == "Ground")
@@ -45,20 +59,6 @@ public class E_Swordsman : AI_Enemy {
             OnTheCastle = true;
             gameObject.layer = 12;
             GrabbedByMouse = false;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {   // As lil guy walks off Castle Platform, switching layers.
-        if (collision.gameObject.tag == "Castle") { OnTheCastle = false;  Grounded = false; gameObject.layer = 8; }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {   // Bugs: Doesn't damage f_swordsman or F01_Hydrogen.
-        if (collision.gameObject.tag == "Friend")
-        {   // When E_Swordsman plays Attack.anim, will make the DamageArea active briefly to damage Target.
-            // Will damage Target's Health with E_Swordsman's AttackDamage.
-            collision.GetComponent<HealthSystem>().DamageTaken(AttackDamage);
         }
     }
 }

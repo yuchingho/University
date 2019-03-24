@@ -1,0 +1,1254 @@
+<Project>
+  <Name>Atomic Attack UML Class Diagram</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Untitled</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>HealthSystem</Name>
+        <Access>Public</Access>
+        <Location left="335" top="139" />
+        <Size width="251" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public float Health</Member>
+        <Member type="Field">public int CounterScore</Member>
+        <Member type="Field">public int GoldEarned</Member>
+        <Member type="Field">public int CounterE_Gunmen</Member>
+        <Member type="Field">public int CounterE_Swordsmen</Member>
+        <Member type="Field">public int CounterFriends</Member>
+        <Member type="Field">public bool CounterAdded</Member>
+        <Member type="Field">public bool Deceased</Member>
+        <Member type="Method">public void DamageTaken(float Damage)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AI_Human</Name>
+        <Access>Public</Access>
+        <Location left="744" top="502" />
+        <Size width="259" height="876" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected HealthSystem HealthSystem</Member>
+        <Member type="Field">protected SpriteRenderer SpriteRenderer</Member>
+        <Member type="Field">protected Rigidbody2D Rigidbody2D</Member>
+        <Member type="Field">protected Animator Animator</Member>
+        <Member type="Field">protected ManagerGame ManagerGame</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">public float MovementSpeed</Member>
+        <Member type="Field">protected float MovementSpeedInitial</Member>
+        <Member type="Field">public int MovementDirection</Member>
+        <Member type="Field">public bool Grounded</Member>
+        <Member type="Field">public bool Unshakeable</Member>
+        <Member type="Field">public bool GrabbedByMouse</Member>
+        <Member type="Field">protected bool OnTheCastle</Member>
+        <Member type="Field">protected Vector3 PreviousGrabbedPosition</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">public bool Stunned</Member>
+        <Member type="Field">public bool Blinded</Member>
+        <Member type="Field">public bool Frozen</Member>
+        <Member type="Field">public bool Burned</Member>
+        <Member type="Field">public bool RunAway</Member>
+        <Member type="Field">protected GameObjected EffectStunned</Member>
+        <Member type="Field">protected GameObject EffectBlinded</Member>
+        <Member type="Field">protected GameObject EffectBurned</Member>
+        <Member type="Field">protected GameObject GasMask</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">public Transform Target</Member>
+        <Member type="Field">protected float TargetHealth</Member>
+        <Member type="Field">public Transform FinalTarget</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">protected float AttackRate</Member>
+        <Member type="Field">protected float LookRadius</Member>
+        <Member type="Field">protected float AttackRadius</Member>
+        <Member type="Field">protected float NextAttackTime</Member>
+        <Member type="Method">protected virtual_void Start()</Member>
+        <Member type="Method">protected virtual_void Update()</Member>
+        <Member type="Method">protected virtual_void LookAtTarget()</Member>
+        <Member type="Method">protected virtual_void Movement()</Member>
+        <Member type="Method">protected virtual_void Shoot()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">protected virtual_void PlayAnimationAttack()</Member>
+        <Member type="Method">protected virtual_void PlayAnimationDeath()</Member>
+        <Member type="Method">protected virtual_IEnumerator HitTheGround()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">protected virtual_IEnumerator StatusStunned()</Member>
+        <Member type="Method">protected virtual_IEnumerator StatusBlinded()</Member>
+        <Member type="Method">protected virtual_IEnumerator StatusBurned()</Member>
+        <Member type="Method">protected virtual_void StatusSmell()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AI_Enemy</Name>
+        <Access>Public</Access>
+        <Location left="1170" top="258" />
+        <Size width="259" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">protected void_override Start()</Member>
+        <Member type="Method">protected void_override Update()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">protected virtual_void UpdateTargetFriend()</Member>
+        <Member type="Method">protected virtual_void OnMouseDown()</Member>
+        <Member type="Method">protected virtual_void OnMouseDrag()</Member>
+        <Member type="Method">protected virtual_void OnMouseUp()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">private IEnumerator Smelly()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AI_Friend</Name>
+        <Access>Public</Access>
+        <Location left="1170" top="539" />
+        <Size width="259" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">protected override_void Start()</Member>
+        <Member type="Method">protected override_void Update()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">protected virtual_void UpdateTargetEnemy()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ManagerGame</Name>
+        <Access>Public</Access>
+        <Location left="335" top="741" />
+        <Size width="251" height="638" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">GameObject HelpUI</Member>
+        <Member type="Field">public Button Pause</Member>
+        <Member type="Field">bool Paused</Member>
+        <Member type="Field">GameObject LoseUI</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">public int Seconds</Member>
+        <Member type="Field">public int Minutes</Member>
+        <Member type="Field">public float TimePlayed</Member>
+        <Member type="Field">public float CurrentScore</Member>
+        <Member type="Field">public int CurrentGold</Member>
+        <Member type="Field">public int CurrentLives</Member>
+        <Member type="Field">public int CurrentE_Gunmen</Member>
+        <Member type="Field">public int CurrentE_Swordsmen</Member>
+        <Member type="Field">public int TotalFriends</Member>
+        <Member type="Field">public int TotalEnemies</Member>
+        <Member type="Field">public int CopyE_Gunmen</Member>
+        <Member type="Field">public int CopyE_Swordsmen</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">Text UITimer</Member>
+        <Member type="Field">Text UIScore</Member>
+        <Member type="Field">Text UIGold</Member>
+        <Member type="Field">Text UILives</Member>
+        <Member type="Field">GameObject LifeLost</Member>
+        <Member type="Field">int newField</Member>
+        <Member type="Method">void Awake()</Member>
+        <Member type="Method">void Update()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">public void ButtonRestart()</Member>
+        <Member type="Method">public void ButtonQuit()</Member>
+        <Member type="Method">public void ButtonPausePressed()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnTriggerEnter2D(Collider2D collision)</Member>
+        <Member type="Method">IEnumerator LifeLostFlash(float Time)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ManagerSpawn</Name>
+        <Access>Public</Access>
+        <Location left="10" top="10" />
+        <Size width="206" height="1369" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">ManagerGame ManagerGame</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">Text Explanation</Member>
+        <Member type="Field">GameObject RowOne</Member>
+        <Member type="Field">GameObject RowTwo</Member>
+        <Member type="Field">GameObject RowThree</Member>
+        <Member type="Field">int RowNumber</Member>
+        <Member type="Field">GameObject ButtonsUp</Member>
+        <Member type="Field">GameObject ButtonsDown</Member>
+        <Member type="Field">bool DisableCheck</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">Transform E_SpawnLocation</Member>
+        <Member type="Field">Transform E_CastleLocationOne</Member>
+        <Member type="Field">Transform E_CastleLocationTwo</Member>
+        <Member type="Field">Transform E_CastleLocationThree</Member>
+        <Member type="Field">int RowCastle</Member>
+        <Member type="Field">GameObject E_Gunman</Member>
+        <Member type="Field">GameObject E_Swordsman</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">Transform MissileLaunch</Member>
+        <Member type="Field">Transform F_SpawnLocation</Member>
+        <Member type="Field">GameObject F_SwordsmanPrefab</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">GameObject[] Elements</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">Button[] Elements</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">GameObject CurrentMist</Member>
+        <Member type="Field">int LocalE_Total</Member>
+        <Member type="Field">int LocalE_Swordsmen</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">Slider FluorineSlider</Member>
+        <Member type="Field">Text FluorineCounter</Member>
+        <Member type="Field">int FluorineInitial</Member>
+        <Member type="Field">int CounterFluorine</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">Slider NeonSlider</Member>
+        <Member type="Field">Text NeonCounter</Member>
+        <Member type="Field">int NeonInitial</Member>
+        <Member type="Field">int CounterNeon</Member>
+        <Member type="Method">void Start()</Member>
+        <Member type="Method">void Update()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void ButtonBuy(int NumberStart)</Member>
+        <Member type="Method">void ButtonDisableLoop()</Member>
+        <Member type="Method">public void ButtonUp()</Member>
+        <Member type="Method">public void ButtonDown()</Member>
+        <Member type="Method">void SwitchRows()</Member>
+        <Member type="Method">IEnumerator FlashText()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void CannonFodderFriend()</Member>
+        <Member type="Method">void CannonFodderEnemy()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void Spawn01H()</Member>
+        <Member type="Method">void Spawn02He()</Member>
+        <Member type="Method">void Spawn03Li()</Member>
+        <Member type="Method">void Spawn04Be()</Member>
+        <Member type="Method">void Spawn05B()</Member>
+        <Member type="Method">void Spawn06C()</Member>
+        <Member type="Method">void Spawn07N()</Member>
+        <Member type="Method">void Spawn08O()</Member>
+        <Member type="Method">void Spawn09F()</Member>
+        <Member type="Method">void Spawn10Ne()</Member>
+        <Member type="Method">void Spawn11Na()</Member>
+        <Member type="Method">void Spawn12Mg()</Member>
+        <Member type="Method">void Spawn13Al()</Member>
+        <Member type="Method">void Spawn14Si()</Member>
+        <Member type="Method">void Spawn15P()</Member>
+        <Member type="Method">void Spawn16S()</Member>
+        <Member type="Method">void Spawn17Cl()</Member>
+        <Member type="Method">void Spawn18Ar()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">IEnumerator ActivateBoron()</Member>
+        <Member type="Method">IEnumerator ActivateAluminium()</Member>
+        <Member type="Method">IEnumerator MistTimer()</Member>
+        <Member type="Method">IEnumerator MistTimer2(int Time)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>CastleHealth</Name>
+        <Access>Public</Access>
+        <Location left="335" top="432" />
+        <Size width="251" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">ManagerGame ManagerGame</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">Slider HealthBar</Member>
+        <Member type="Field">Text HealthText</Member>
+        <Member type="Field">int InitialHealth</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">GameOject WinUI</Member>
+        <Member type="Field">Text StatsUI</Member>
+        <Member type="Method">void Start()</Member>
+        <Member type="Method">void Update()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>E_Swordsman</Name>
+        <Access>Public</Access>
+        <Location left="1170" top="10" />
+        <Size width="259" height="196" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected int AttackDamage</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">protected override_void Movement()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnTriggerEnter2D(Collider2D collision)</Member>
+        <Member type="Method">void OnCollisionExit2D(Collision2D collision)</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>E_Gunman</Name>
+        <Access>Public</Access>
+        <Location left="1495" top="10" />
+        <Size width="259" height="213" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected GameObject Projectile</Member>
+        <Member type="Field">protected Transform FireLocation</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">protected override_void Update()</Member>
+        <Member type="Method">protected override_void Movement()</Member>
+        <Member type="Method">protected override_void Shoot()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>_Bullet</Name>
+        <Access>Public</Access>
+        <Location left="2451" top="10" />
+        <Size width="259" height="196" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected Transform Target</Member>
+        <Member type="Field">public int Damage</Member>
+        <Member type="Field">protected int Speed</Member>
+        <Member type="Field">protected GameObject Explosion</Member>
+        <Member type="Method">public void Seek(Transform target)</Member>
+        <Member type="Method">protected virtual_void Update()</Member>
+        <Member type="Method">protected virtual void HitTarget()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RemoveExplosions</Name>
+        <Access>Public</Access>
+        <Location left="2548" top="635" />
+        <Size width="163" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">public void DestroyExplosions()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F_Swordsman</Name>
+        <Access>Public</Access>
+        <Location left="1495" top="856" />
+        <Size width="259" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected int AttackDamage</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">public bool Boron</Member>
+        <Member type="Field">public bool Aluminium</Member>
+        <Member type="Field">protected Colour ColourAluminium</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">protected override_void Movement()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnTriggerEnter2D(Collider2D collision)</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F_Gunman</Name>
+        <Access>Public</Access>
+        <Location left="1495" top="539" />
+        <Size width="259" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected GameObject Projectile</Member>
+        <Member type="Field">protected Transform FireLocation</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">protected override_void Shoot()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F01_Hydrogen</Name>
+        <Access>Public</Access>
+        <Location left="1840" top="1080" />
+        <Size width="259" height="196" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">protected override_void PlayAnimationAttack()</Member>
+        <Member type="Method">protected override_void Shoot()</Member>
+        <Member type="Method">IEnumerator ThrowGrenade()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Grenade</Name>
+        <Access>Public</Access>
+        <Location left="2224" top="1112" />
+        <Size width="259" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Transform Target</Member>
+        <Member type="Field">Rigidbody2D Rigidbody2D</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">float Rand</Member>
+        <Member type="Field">int ThrowDir</Member>
+        <Member type="Field">int ThrowAngle</Member>
+        <Member type="Method">public void Throw(Transform Target)</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">void Start()</Member>
+        <Member type="Method">void Update()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>_Explode</Name>
+        <Access>Public</Access>
+        <Location left="2224" top="1479" />
+        <Size width="259" height="213" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public bool Magnified</Member>
+        <Member type="Field">public int Damage</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">protected GameObject Explosion</Member>
+        <Member type="Field">protected float ExplosionRadius</Member>
+        <Member type="Field">protected float ExplosionScale</Member>
+        <Member type="Field">protected int ExplosionForce</Member>
+        <Member type="Method">protected virtual void ExplosionDamage()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F02_Helium</Name>
+        <Access>Public</Access>
+        <Location left="744" top="139" />
+        <Size width="259" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">HealthSystem HealthSystem</Member>
+        <Member type="Field">Rigidbody2D Rigidbody2D</Member>
+        <Member type="Field">CapsuleCollider2D CapsuleCollider2D</Member>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Field">int MovementSpeed</Member>
+        <Member type="Field">GameObject SpawnUnits</Member>
+        <Member type="Field">GameObject Crush</Member>
+        <Member type="Field">bool Spawn</Member>
+        <Member type="Method">void Start()</Member>
+        <Member type="Method">void Update()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void SpawnFlying()</Member>
+        <Member type="Method">IEnumerator DelayDisappear()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F03_Lithium</Name>
+        <Access>Public</Access>
+        <Location left="1840" top="638" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Blind</Name>
+        <Access>Public</Access>
+        <Location left="2224" top="380" />
+        <Size width="163" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">protected override_void HitTarget()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F11_Sodium</Name>
+        <Access>Public</Access>
+        <Location left="1842" top="869" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Blind2</Name>
+        <Access>Public</Access>
+        <Location left="2224" top="160" />
+        <Size width="163" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Stun</Name>
+        <Access>Public</Access>
+        <Location left="2224" top="635" />
+        <Size width="163" height="148" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">protected override_void HitTarget()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Stun2</Name>
+        <Access>Public</Access>
+        <Location left="2224" top="869" />
+        <Size width="163" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F12_Magnesium</Name>
+        <Access>Public</Access>
+        <Location left="1842" top="160" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F04_Beryllium</Name>
+        <Access>Public</Access>
+        <Location left="1842" top="380" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F06_Carbon</Name>
+        <Access>Public</Access>
+        <Location left="1495" top="1160" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F14_Silicon</Name>
+        <Access>Public</Access>
+        <Location left="1843" top="1332" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F10_Neon</Name>
+        <Access>Public</Access>
+        <Location left="1170" top="856" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected int AttackDamage</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F18_Argon</Name>
+        <Access>Public</Access>
+        <Location left="1170" top="1038" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">protected int AttackDamage</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Crush</Name>
+        <Access>Public</Access>
+        <Location left="891" top="10" />
+        <Size width="251" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int Damage</Member>
+        <Member type="Method">void OnTriggerEnter2D(Collider2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Flamethrower</Name>
+        <Access>Public</Access>
+        <Location left="1170" top="1243" />
+        <Size width="251" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int Damage</Member>
+        <Member type="Method">void OnTriggerStay2D(Collider2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Missile</Name>
+        <Access>Public</Access>
+        <Location left="1840" top="1542" />
+        <Size width="259" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Rigidbody2D Rigidbody2D</Member>
+        <Member type="Field">protected float MovementSpeed</Member>
+        <Member type="Field">protected GameObject Mist</Member>
+        <Member type="Method">protected virtual_void Start()</Member>
+        <Member type="Method">protected virtual_void Update()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Missile_Fluorine</Name>
+        <Access>Public</Access>
+        <Location left="1495" top="1354" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Missile_Chlorine</Name>
+        <Access>Public</Access>
+        <Location left="1496" top="1547" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void Reset()</Member>
+        <Member type="Method">______ ____________()</Member>
+        <Member type="Method">void OnCollisionEnter2D(Collision2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F07_Nitrogen</Name>
+        <Access>Public</Access>
+        <Location left="10" top="1580" />
+        <Size width="246" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void OnTriggerStay2D(Collider2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F15_Phosphorus</Name>
+        <Access>Public</Access>
+        <Location left="601" top="1580" />
+        <Size width="246" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void OnTriggerStay2D(Collider2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F16_Sulphur</Name>
+        <Access>Public</Access>
+        <Location left="893" top="1580" />
+        <Size width="246" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void OnTriggerStay2D(Collider2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F08_Oxygen</Name>
+        <Access>Public</Access>
+        <Location left="295" top="1580" />
+        <Size width="246" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void OnTriggerStay2D(Collider2D collision)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F09_Fluorine</Name>
+        <Access>Public</Access>
+        <Location left="1170" top="1387" />
+        <Size width="251" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void OnTriggerStay2D(Collider2D collision)</Member>
+        <Member type="Method">void Start()</Member>
+        <Member type="Method">IEnumerator Timer(int Time)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>F17_Chlorine</Name>
+        <Access>Public</Access>
+        <Location left="1170" top="1579" />
+        <Size width="251" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">______ ____________</Member>
+        <Member type="Method">void OnTriggerStay2D(Collider2D collision)</Member>
+        <Member type="Method">void Start()</Member>
+        <Member type="Method">IEnumerator Timer(int Time)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="4" second="1">
+        <Label>Association</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>611</X>
+          <Y>872</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>719</X>
+          <Y>637</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="4">
+        <Label>Association</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>301</X>
+          <Y>1210</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1145</X>
+          <Y>336</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1035</X>
+          <Y>548</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>310</X>
+          <Y>478</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>270</X>
+          <Y>185</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="4" second="6">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>287</X>
+          <Y>787</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>272</X>
+          <Y>629</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1300</X>
+          <Y>231</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1300</X>
+          <Y>233</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="8" second="2">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1470</X>
+          <Y>106</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1457</X>
+          <Y>336</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="8" second="9">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1813</X>
+          <Y>55</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2426</X>
+          <Y>55</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="1" second="0">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>717</X>
+          <Y>547</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>611</X>
+          <Y>337</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="9" second="10">
+        <Label>Composition</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2633</X>
+          <Y>233</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2633</X>
+          <Y>610</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="11" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1625</X>
+          <Y>825</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1270</X>
+          <Y>825</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="12" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1470</X>
+          <Y>633</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1455</X>
+          <Y>633</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="12" second="9">
+        <Label>Composition</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1620</X>
+          <Y>514</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1791</X>
+          <Y>366</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="13" second="12">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1815</X>
+          <Y>1160</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1801</X>
+          <Y>776</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="13" second="14">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2129</X>
+          <Y>1158</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2199</X>
+          <Y>1158</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="14" second="15">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="14" second="10">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2583</X>
+          <Y>1154</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2633</X>
+          <Y>785</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="19" second="17">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="24" second="12">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1817</X>
+          <Y>459</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1779</X>
+          <Y>584</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="23" second="24">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="20" second="18">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="22" second="21">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="21" second="9">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2412</X>
+          <Y>713</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2519</X>
+          <Y>713</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="18" second="9">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2412</X>
+          <Y>459</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2477</X>
+          <Y>231</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="19" second="22">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2136</X>
+          <Y>947</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2199</X>
+          <Y>947</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="24" second="18">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2126</X>
+          <Y>459</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2190</X>
+          <Y>459</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="23" second="20">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2126</X>
+          <Y>238</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2185</X>
+          <Y>238</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="17" second="21">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2124</X>
+          <Y>716</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="17" second="12">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1815</X>
+          <Y>716</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1783</X>
+          <Y>635</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="16" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>611</X>
+          <Y>185</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="5">
+        <Label>Association</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>871</X>
+          <Y>108</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>241</X>
+          <Y>55</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="1">
+        <Label>Association</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>204</X>
+          <Y>1403</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>880</X>
+          <Y>1403</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1145</X>
+          <Y>634</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="25" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1761</X>
+          <Y>1130</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1777</X>
+          <Y>808</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="26" second="25">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1818</X>
+          <Y>1378</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1779</X>
+          <Y>1237</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="27" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1129</X>
+          <Y>934</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1144</X>
+          <Y>702</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="28" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1092</X>
+          <Y>1116</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1100</X>
+          <Y>667</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="16" second="29">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1038</X>
+          <Y>336</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="28" second="30">
+        <Label>Composition</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1295</X>
+          <Y>1218</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="31" second="15">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2124</X>
+          <Y>1588</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="32" second="10">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1799</X>
+          <Y>1434</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2652</X>
+          <Y>1730</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="33" second="10">
+        <Label>Composition</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1780</X>
+          <Y>1623</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2673</X>
+          <Y>1753</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="34" second="5">
+        <Label>Association</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>30</X>
+          <Y>1555</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="37" second="5">
+        <Label>Association</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>107</X>
+          <Y>1538</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="35" second="5">
+        <Label>Association</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>155</X>
+          <Y>1441</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="36" second="5">
+        <Label>Association</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1011</X>
+          <Y>1503</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>186</X>
+          <Y>1404</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
