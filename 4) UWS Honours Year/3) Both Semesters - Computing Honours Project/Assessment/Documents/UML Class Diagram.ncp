@@ -24,7 +24,7 @@
       <Entity type="Class">
         <Name>AI_Human</Name>
         <Access>Public</Access>
-        <Location left="744" top="609" />
+        <Location left="744" top="610" />
         <Size width="259" height="876" />
         <Collapsed>False</Collapsed>
         <Member type="Field">protected HealthSystem HealthSystem</Member>
@@ -47,7 +47,7 @@
         <Member type="Field">public bool Frozen</Member>
         <Member type="Field">public bool Burned</Member>
         <Member type="Field">public bool RunAway</Member>
-        <Member type="Field">protected GameObjected EffectStunned</Member>
+        <Member type="Field">protected GameObject EffectStunned</Member>
         <Member type="Field">protected GameObject EffectBlinded</Member>
         <Member type="Field">protected GameObject EffectBurned</Member>
         <Member type="Field">protected GameObject GasMask</Member>
@@ -685,7 +685,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>717</X>
-          <Y>756</Y>
+          <Y>757</Y>
         </BendPoint>
         <Direction>Bidirectional</Direction>
         <AssociationType>Association</AssociationType>
@@ -710,7 +710,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>1039</X>
-          <Y>654</Y>
+          <Y>655</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="6" second="0">
@@ -789,7 +789,7 @@
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="True">
           <X>717</X>
-          <Y>654</Y>
+          <Y>655</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>611</X>
@@ -858,6 +858,8 @@
         <EndOrientation>Vertical</EndOrientation>
       </Relationship>
       <Relationship type="Association" first="14" second="10">
+        <Label>
+        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
@@ -985,6 +987,8 @@
         </BendPoint>
       </Relationship>
       <Relationship type="Association" first="16" second="0">
+        <Label>
+        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="False">
@@ -1021,7 +1025,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>873</X>
-          <Y>1515</Y>
+          <Y>1516</Y>
         </BendPoint>
         <Direction>Bidirectional</Direction>
         <AssociationType>Association</AssociationType>
@@ -1205,40 +1209,30 @@
         <EndRole>1</EndRole>
       </Relationship>
       <Relationship type="Association" first="34" second="5">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Bidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="37" second="5">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Bidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="35" second="5">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Bidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="36" second="5">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <Direction>Bidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="38" second="5">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
