@@ -11,5 +11,6 @@ Introduction to Computer Animation was focused on:
 | 1 - 2D Animation| 25/30 |
 | 2 - Multiple choice test | 27/30 |
 | 3 - 3D Airship Model | Very Good. Strange looking but good. |
-| 4 - 3D Car Animation | Very Good.\ Odd problem with the camera and the vehicle but on the whole, very good animation and use of camera. |
+| 4 - 3D Car Animation | Very Good.\
+Odd problem with the camera and the vehicle but on the whole, very good animation and use of camera. |
 | Final Mark | A |
