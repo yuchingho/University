@@ -15,10 +15,10 @@ Assessment.pdf gives the outline of the submission - a Game Design Document, Pos
 
 | Marks | Element |
 | :---: | --- |
-| 10 / 10 | Design Document|
 | 9 / 10 | Multiple Choice Test |
-| 9 / 10 | Poster |
 | 6 / 10 | CD Cover |
+| 10 / 10 | GDD |
+| 9 / 10 | Poster |
 | 9 / 10 | Game Demonstration |
 | 37 / 50 | Game | 
 
