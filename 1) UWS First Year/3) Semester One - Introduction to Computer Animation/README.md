@@ -7,7 +7,7 @@ Introduction to Computer Animation was focused on:
 </p>
 
 | Assessment | Mark |
-| ----- | ----------- |
+| ----- | --- |
 | 1 - 2D Animation| 25/30 |
 | 2 - Multiple choice test | 27/30 |
 | 3 - 3D Airship Model | Very Good. Strange looking but good. |
