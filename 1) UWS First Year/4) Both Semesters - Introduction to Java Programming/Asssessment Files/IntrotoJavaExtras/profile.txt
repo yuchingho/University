@@ -1,4 +1,0 @@
-Name: Yu-Ching
-Email: hello@world.com
-Favorite Color: Blue
-Yearly Income: 999999.00

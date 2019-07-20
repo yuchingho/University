@@ -52,7 +52,8 @@ public class Duck	{
 
 		while (i < s.length())
 		if (s.indexOf(key, i) != -1)	{
-			count++;  i = s.indexOf(key, i) + 1;
+			count++;  
+			i = s.indexOf(key, i) + 1;
         }
         else
         	i++;

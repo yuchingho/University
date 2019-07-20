@@ -9,11 +9,10 @@ import java.util.*;
 public class Prog1	{
 
 	public static void main (String[] args)	{
-
 		int Product = 1;
    		int value;
 
-		System.out.println("Enter any integers and end with '0'");
+		System.out.println("Enter any amount of integers and end with '0'");
         Scanner stdin = new Scanner(System.in);
 		value = stdin.nextInt();
 

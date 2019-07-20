@@ -41,8 +41,8 @@ public class MinString	{
 
     private static String FindMin(String[] list, int numItems)	{
     	String REFERENCE = list[0];
-    	for(int i = 1; i < numItems; i++)	{
-    		if(list[i].compareTo(REFERENCE) < 0)
+    	for (int i = 1; i < numItems; i++)	{
+    		if (list[i].compareTo(REFERENCE) < 0)
     			REFERENCE = list[i];
     	}
     	return REFERENCE;
