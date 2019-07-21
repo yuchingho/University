@@ -18,7 +18,7 @@ In the second half, I learnt basic stage fighting and how camera angles and "rea
 
 2. Stand if needed, to have the camera placed at a height where your head, neck, shoulders and bit of chest should fill the screen from top to bottom, like a headshot.
 <p align="center">
-  <img src="https://github.com/yuchingho/University/blob/master/3)%20Mercer%20Erasmus%20Year/7)%20Semester%20Two%20-%20THR218%20Beginning%20Acting/Headshot.jpg?raw=true" alt="Headshot"/>
+  <img src="https://github.com/yuchingho/University/blob/master/3)%20Mercer%20Erasmus%20Year/7)%20Semester%20Two%20-%20THR218%20Beginning%20Acting/Headshot.png?raw=true" alt="Headshot"/>
 </p>
 
 3. Have a solid background - preferably light grey.\
