@@ -7,7 +7,7 @@ The game is endless, competing to get the highest score. There are several bugs 
 [YouTube](https://youtu.be/KCYWLSK5n3I)
 
 ## Assessment
-Some Phaser Example Sprites were used or created through Piskel, Photoshop. The map created with Tiled and the background music was taken from Phaser Example Bodenstaendig_2000. Other audio files were downloaded from [Soundbible](http://soundbible.com) or created myself and edited with Audacity. 
+Some Phaser Example Sprites were used or created through Piskel, Photoshop. The map created with Tiled and the background music was taken from Phaser Example Bodenstaendig_2000. Other audio files were downloaded from [SoundBible](http://soundbible.com) or created myself and edited with Audacity. 
 
 If downloaded, an editor like [Brackets](http://brackets.io/), [Webstorm](https://www.jetbrains.com/webstorm/), [Komodo Edit](https://www.activestate.com/komodo-ide/downloads/edit) or using [XAMPP](https://www.apachefriends.org/index.html) is required to open the project and play the game via the "index.html" file. 
 

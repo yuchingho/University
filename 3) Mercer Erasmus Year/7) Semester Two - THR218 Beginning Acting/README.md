@@ -10,7 +10,7 @@ Both gave me a fasinating insight into the acting world and has raised my respec
 
 The Scenes pdfs were given out as guidelines, like how "Contentless Scenes" and "Bread" can be interpreted so differently by injecting emotion. "Inside your Character", "Emotional Beats" and reading the book [Audition: Everything an Actor Needs to Know to Get the Part by Michael Shurtleff](https://books.google.co.uk/books/about/Audition.html?id=fpgBxuScPEsC&redir_esc=y) explained the core concepts.
 
-In the second half, I learnt basic stage fighting and how camera angles and "reacting" to your partner trick the audience into believing the action; heard interesting stories about [Screen Actors Guild](https://www.sagaftra.org/) and [Voicebunny](https://voicebunny.com/) and learnt 10 valuable lessons for live video interviews:
+In the second half, I learnt basic stage fighting and how camera angles and "reacting" to your partner trick the audience into believing the action; heard interesting stories about [Screen Actors Guild](https://www.sagaftra.org/) and [VoiceBunny](https://voicebunny.com/) and learnt 10 valuable lessons for live video interviews:
 1. Have diffuse lights pointing towards you as it would be in a professional photoshoot. This means there won't be any shadow on your face; and if you can't find strong diffuse light, use natural sunlight.
 <p align="center">
   <img src="https://github.com/yuchingho/University/blob/master/3)%20Mercer%20Erasmus%20Year/7)%20Semester%20Two%20-%20THR218%20Beginning%20Acting/Light.png?raw=true" alt="Light"/>
