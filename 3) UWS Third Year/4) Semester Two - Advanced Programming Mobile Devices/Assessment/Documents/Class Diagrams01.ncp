@@ -7,8 +7,8 @@
       <Entity type="Class">
         <Name>UserInfo</Name>
         <Access>Public</Access>
-        <Location left="106" top="210" />
-        <Size width="162" height="264" />
+        <Location left="227" top="307" />
+        <Size width="162" height="281" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public string name</Member>
         <Member type="Field">public int age</Member>
@@ -20,13 +20,14 @@
         <Member type="Field">private int weeks</Member>
         <Member type="Field">private int months</Member>
         <Member type="Method">private void saveUserInfo()</Member>
-        <Member type="Method">public void skip()</Member>
+        <Member type="Method">public void displayInfo()</Member>
+        <Member type="Method">public void skipInfo()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>UserSettings</Name>
         <Access>Public</Access>
-        <Location left="325" top="56" />
+        <Location left="227" top="67" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">public boolean LBS</Member>
@@ -37,138 +38,230 @@
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>AddRoutines</Name>
+        <Name>Routine</Name>
         <Access>Public</Access>
-        <Location left="564" top="56" />
-        <Size width="162" height="230" />
+        <Location left="913" top="55" />
+        <Size width="162" height="451" />
         <Collapsed>False</Collapsed>
+        <Member type="Field">private string routineName</Member>
+        <Member type="Field">private string excercise</Member>
+        <Member type="Field">private int sets</Member>
+        <Member type="Field">private int reps</Member>
+        <Member type="Field">private int weight</Member>
+        <Member type="Field">protected int weightUnit</Member>
         <Member type="Field">private int days</Member>
         <Member type="Field">private int weeks</Member>
         <Member type="Field">private int months</Member>
-        <Member type="Method">public void editRoutineName()</Member>
-        <Member type="Method">public void addWorkout()</Member>
-        <Member type="Method">public void delete()</Member>
-        <Member type="Method">public void skip()</Member>
-        <Member type="Method">public void saveRoutine()</Member>
-        <Member type="Method">public void removeWorkout()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>AddWorkout</Name>
-        <Access>Public</Access>
-        <Location left="803" top="56" />
-        <Size width="162" height="216" />
-        <Collapsed>False</Collapsed>
-        <Member type="Method">public void editWorkout()</Member>
-        <Member type="Method">public void editWorkoutName()</Member>
-        <Member type="Method">public void delete()</Member>
-        <Member type="Method">public void startCalendar()</Member>
-        <Modifier>None</Modifier>
-      </Entity>
-      <Entity type="Class">
-        <Name>EditWorkout</Name>
-        <Access>Public</Access>
-        <Location left="871" top="362" />
-        <Size width="162" height="400" />
-        <Collapsed>False</Collapsed>
-        <Member type="Field">private string day</Member>
-        <Member type="Field">private int hour</Member>
-        <Member type="Field">private int minute</Member>
-        <Member type="Field">private boolean edit</Member>
-        <Member type="Field">private int sets</Member>
-        <Member type="Field">private int reps</Member>
-        <Member type="Field">private string exercise</Member>
-        <Member type="Field">private int weight</Member>
-        <Member type="Field">protected int weightUnit</Member>
         <Member type="Field">private boolean workoutFinished</Member>
         <Member type="Field">private boolean workoutComplete</Member>
+        <Member type="Method">public void displayRoutine()</Member>
+        <Member type="Method">public void saveRoutine()</Member>
+        <Member type="Method">public void editRoutineName()</Member>
+        <Member type="Method">public void editRoutine()</Member>
+        <Member type="Method">public void deleteRoutine()</Member>
         <Member type="Method">public void addRow()</Member>
         <Member type="Method">public void deleteRow()</Member>
         <Member type="Method">public void addColumn()</Member>
         <Member type="Method">public void deleteColumn()</Member>
-        <Member type="Method">public void saveWorkout()</Member>
         <Member type="Method">public void addTime()</Member>
         <Member type="Method">public void groupSuperset()</Member>
-        <Member type="Method">public void plotGraph()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>PlotGraph</Name>
         <Access>Public</Access>
-        <Location left="385" top="461" />
+        <Location left="484" top="373" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private string xAxis</Member>
         <Member type="Field">private string yAxis</Member>
+        <Member type="Method">public void calcGraph()</Member>
         <Member type="Method">private void seeGraph()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>StartCalendar</Name>
+        <Name>User</Name>
         <Access>Public</Access>
-        <Location left="628" top="337" />
+        <Location left="484" top="67" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void startApp()</Member>
+        <Member type="Method">public void main()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Calendar</Name>
+        <Access>Public</Access>
+        <Location left="718" top="67" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private boolean timeSet</Member>
+        <Member type="Method">public void displayCalendar()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TouchController</Name>
+        <Access>Public</Access>
+        <Location left="22" top="67" />
+        <Size width="162" height="383" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private btn EditRoutine</Member>
+        <Member type="Field">private btn saveRoutine</Member>
+        <Member type="Field">private btn addRoutine</Member>
+        <Member type="Field">private btn deleteRoutine</Member>
+        <Member type="Field">private btn addExcercise</Member>
+        <Member type="Field">private btn skipExcercise</Member>
+        <Member type="Field">private btn displayRoutine</Member>
+        <Member type="Field">private btn displayGraph</Member>
+        <Member type="Field">private btn displayCalendar</Member>
+        <Member type="Field">private btn saveCalendar</Member>
+        <Member type="Field">private btn yesWeighIn</Member>
+        <Member type="Field">private btn noWeighIn</Member>
+        <Member type="Field">private btn DayChoice</Member>
+        <Member type="Field">private btn weekChoice</Member>
+        <Member type="Field">private btn monthChoice</Member>
+        <Member type="Field">private btn lbSelect</Member>
+        <Member type="Field">private btn kgSelect</Member>
+        <Member type="Field">private btn selectNumberChoice</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DateTime</Name>
+        <Access>Public</Access>
+        <Location left="718" top="373" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int time</Member>
+        <Member type="Field">private string date</Member>
+        <Member type="Method">public void displayDate()</Member>
+        <Member type="Method">public void displayTime()</Member>
         <Modifier>None</Modifier>
       </Entity>
     </Entities>
     <Relationships>
-      <Relationship type="Association" first="2" second="3">
-        <Label>
-        </Label>
+      <Relationship type="Association" first="4" second="0">
+        <Label>has a</Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>459</X>
+          <Y>177</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>0..1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
       </Relationship>
-      <Relationship type="Generalization" first="3" second="4">
+      <Relationship type="Association" first="4" second="2">
+        <Label>has a</Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1000</X>
+          <Y>30</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
       </Relationship>
       <Relationship type="Association" first="4" second="5">
-        <Label>
-        </Label>
+        <Label>has a</Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>670</X>
+          <Y>175</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>693</X>
+          <Y>175</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="7">
+        <Label>has</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>631</X>
+          <Y>313</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>772</X>
+          <Y>348</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="3">
+        <Label>has a</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>562</X>
+          <Y>316</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..1</EndMultiplicity>
       </Relationship>
-      <Relationship type="Association" first="0" second="5">
-        <Label>
-        </Label>
+      <Relationship type="Association" first="7" second="5">
+        <Label>has a</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>837</X>
+          <Y>348</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>837</X>
+          <Y>314</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="1">
+        <Label>has</Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>459</X>
+          <Y>117</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>430</X>
+          <Y>117</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>0..*</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
       </Relationship>
-      <Relationship type="Association" first="1" second="5">
-        <Label>
-        </Label>
+      <Relationship type="Association" first="4" second="6">
+        <Label>has</Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>526</X>
+          <Y>31</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>152</X>
+          <Y>31</Y>
+        </BendPoint>
         <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-      <Relationship type="Generalization" first="4" second="6">
-        <StartOrientation>Horizontal</StartOrientation>
-        <EndOrientation>Horizontal</EndOrientation>
-      </Relationship>
-      <Relationship type="Association" first="3" second="6">
-        <Label>
-        </Label>
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
-      </Relationship>
-      <Relationship type="Association" first="2" second="6">
-        <Label>
-        </Label>
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-        <Direction>Unidirectional</Direction>
-        <AssociationType>Association</AssociationType>
+        <AssociationType>Composition</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
       </Relationship>
     </Relationships>
   </ProjectItem>
