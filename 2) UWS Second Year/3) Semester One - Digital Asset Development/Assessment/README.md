@@ -15,7 +15,7 @@ From my [OneDrive](https://1drv.ms/f/s!Aop7ymLBugIggge8X_gd5pCYpIJ3) -
 
 ## Assessment01 - Audacity, Adobe Photoshop CS6, and Adobe Premiere Pro CS6
 The assessment was about an upcoming Animation Jam and split into two parts:
-1) Making a Poster - Animation Jam.png
+1) Making a Poster - Assessment01 Animation Jam.png
 2) [Making a Video](https://youtu.be/NspRm2WFxl4)
 
 ## Assessment02 - Unreal Game Engine
