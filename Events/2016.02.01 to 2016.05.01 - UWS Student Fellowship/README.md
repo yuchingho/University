@@ -4,6 +4,8 @@ UWS Rewards is a prototype mobile-app to increase student engagement and satisfa
 
 [It can be tested here](https://yuchingho.neocities.org/UWS-Rewards-Prototype.html), best seen in mobile view.
 
+---
+
 I became more involved with university by becoming a Student Fellowship member, in addition to becoming a Student Guide and volunteering at the SAUWS Free Shop.
 
 Taken from the expired website description:
