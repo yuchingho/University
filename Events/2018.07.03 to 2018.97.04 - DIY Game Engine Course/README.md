@@ -1,3 +1,5 @@
+## DIY Game Engine Course
+
 The DIY Game Engine Course was run by [Dr. Andreas Stiegler](https://www.edx.org/bio/andreas-stiegler) who took a small group of us and built a Game Engine based off our ideas. This was extremely helpful to me as I learnt the inner workings of how engines like Unity and Unreal worked.
 
 The description of it is below:
