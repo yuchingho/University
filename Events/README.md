@@ -31,7 +31,7 @@ The above folders are for specific events while the documents and below are more
   Or status update\
   VISIBILITY\
   Send email before connect with them\
-  Check up email, then use free email verifier\
+  Check up email, then use free email verifier
   
 - Game Dev CV
   > People can spend 11 seconds on a CV since there's a lot of them. So make it stand out\
@@ -59,7 +59,7 @@ The above folders are for specific events while the documents and below are more
 - Glass Door - a website where employees and former employees anonymously review companies and their management.
 - Natural Motion - a British software company with offices in Oxford, London, Brighton and San Francisco
 - Aardvark Swift - recruitment company for game developers
-- [Grads in Games](http://gradsingames.com/) - finding jobs in the game development industry
+- Grads in Games - finding jobs in the game development industry
 - Riot API - access to League game data
 - Jagex - video game company, best known for RuneScape
 - quill18creates (Unity Youtube tutorials)
