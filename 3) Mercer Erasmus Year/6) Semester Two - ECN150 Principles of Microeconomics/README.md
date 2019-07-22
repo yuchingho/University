@@ -1,1 +1,1 @@
-Principles of Microeconomics was about the business on the smaller-side or individuals, supply and demand and what determined price levels.
+Principles of Microeconomics was about the business on the smaller-side or individuals, supply and demand, and what determined price levels.
