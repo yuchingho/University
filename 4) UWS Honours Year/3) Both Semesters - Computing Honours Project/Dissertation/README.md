@@ -4,13 +4,13 @@ The game is an endless Anti-Tower Defense Serious Game and the objective is to d
 
 The game is there to build a fun introduction and foundation to players who have no prior knowledge of Chemistry on the subject area. If the player does know the subject area within the Periodic Table, the game is there as a revision tool and potentially learn something new outside their curriculum. In both cases, hopefully the player will want to play and learn more and undertake extra-curricular research.
 
-Inheritance and Polymorphism was used in the development of this game due to lots of units being derived from one parent class – AI_Human.cs <!--(click on image to open in new tab)-->
+Inheritance and Polymorphism was used in the development of this game due to lots of units being derived from one parent class – AI_Human.cs (click on image to open in new tab)
 
 <p align="center">
   <img src="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/AtomicAttack%20UML%20Class%20Diagram.png" alt="AtomicAttack UML Class Diagram"/>
 </p>
 
-I could have also used Finite State Machines and Object Pooling to improve the game’s performance. However as there were not many different states a character could do – running towards a target, attacking or dying, the project itself was rather small – 24mb executable, and I was unsure of how many prefabs would be spawned in an average game before recycling, I used Object.Instantiate. Each unit is balanced around the main spawned character – the Enemy Gunman. The statistics for every unit is shown below <!--(click on image to open in new tab)-->
+I could have also used Finite State Machines and Object Pooling to improve the game’s performance. However as there were not many different states a character could do – running towards a target, attacking or dying, the project itself was rather small – 24mb executable, and I was unsure of how many prefabs would be spawned in an average game before recycling, I used Object.Instantiate. Each unit is balanced around the main spawned character – the Enemy Gunman. The statistics for every unit is shown below (click on image to open in new tab)
 <p align="center">
   <img src="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/AtomicAttack%20Unit%20Stats.png" alt="AtomicAttack Unit Stats"/>
 </p>
