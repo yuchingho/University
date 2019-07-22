@@ -55,41 +55,37 @@ Genres:
 - Serious
 - Tower Defence
 
-Market Research
+Market Research\
 Searching online and through Steam produced very little results similar to the game I'm thinking of; there are educational video games but they don't play like one.
 
 Target Audience\
 Mainly aimed towards male teenages from the ages of 14 - 16 who prefers interactive stimulation to learning. Anyone else who doesn't know chemistry and plays it - assuming they enjoy the game - should be able to explain what fuels from a fractional distillation are used for to a GCSE level.
 
-Game Overview
-
+Game Overview\
 This will be a serious game in learning Chemistry to a high-school graduate level. Since this game will be extremely big - an AAA video game standard - I will be breaking down the game into lots of different parts: mini games inside a big game. In the final version of the game, the player would be taken into story mode and as progressing, learn chemistry passively whilst enjoying the game. In this document, I will assume I have already achieved that and thus will be focusing on a "mini-game" about Fractional Distillation at a GCSE Level.
 
 Core Objective\
-
 The core objective of the game is defending against an ALIEN. The secondary objective is to passively learn fractional distillation to a high-school standard. I take these concepts from <a class="LB" href="http://www.bbc.co.uk/education/guides/zm2v4wx/revision">GCSE Bitesize Fractional Distillation</a>:
-<ul>
- 	<li>Crude Oil</li>
- 	<li>Hydrocarbons</li>
- 	<li>Fractions</li>
- 	<li>Different uses of fractions</li>
- 	<li>Positive and side effects of using fractions</li>
- 	<li>The different boiling points, viscosity, flammability</li>
- 	<li>Interesting side tidbits e.g. <a class="LB" href="https://www.youtube.com/watch?v=7nL10C7FSbE">colour of fuel when burnt</a>
-(things you won't see inside a high-school setting)</li>
- 	<li>Cracking</li>
- 	<li>The process of cracking</li>
-</ul>
-<u>Expected Experience\</u>
+- Crude Oil
+- Hydrocarbons
+- Fractions
+- Different uses of fractions
+- Positive and side effects of using fractions
+- The different boiling points, viscosity, flammability
+- Interesting side tidbits e.g. <a class="LB" href="https://www.youtube.com/watch?v=7nL10C7FSbE">colour of fuel when burnt</a> (things you won't see inside a high-school setting)
+- Cracking
+- The process of cracking
+
+Expected Experience\
 Playing through the game won't feel like "learning", and instead people who play it will want to play it over and over again not for the learning aspect, instead for the game aspect - i.e. beat the game with a higher score or pure enjoyment of the game.
 
-<u>Gameplay Theme\</u>
+Gameplay Theme\
 The game will be similar to a game called [Bubble Trouble](https://www.youtube.com/embed/hVFri15sqsE), with a unique twist.
 
-<u>Game Structure\</u>
+Game Structure\
 Bubble Aliens is a unique defense game - defence isn't placed by the player, instead the player defeats the ALIEN by supplying the fuel for Earth. Crude Oil bubbles will bounce around close to the player and the player has to pop the bubble the right number of times to supply the correct fuel.
 
-<u>GUI and Environment\</u>
+GUI and Environment\
 The screen will be split into two: the left side is based off a fractionating column and on the right side, an animation of the Earth's Defense that updates according to the fuel supplied by the player. Below is a rough sketch of the game area to be designed.
 
 <p align="center">
@@ -100,28 +96,22 @@ The screen will be split into two: the left side is based off a fractionating co
   <img src="https://github.com/yuchingho/University/blob/master/3)%20UWS%20Third%20Year/2)%20Semester%20One%20-%20HTML5%20%26%20JavaScript%20Games%20Programming/Assessment/BubbleAliens%20Fractioning%20Column.png" alt="BubbleAliens Fractioning Column"/>
 </p>
 
-<u>Features Implemented\</u>
+Features Implemented\
 Earth's default defense will be a Ground-to-Air tower defense system, and supplying the correct fuel will call in these defenses:
-<ul>
- 	<li>Fuel - Battleships</li>
- 	<li>Diesel - Tanks</li>
- 	<li>Kerosene - Planes</li>
- 	<li>Naphtha - Charging up a bomb</li>
- 	<li>Gasoline/Petrol - Trucks</li>
- 	<li>Refinergy Gases - Increasing the army's damage</li>
-</ul>
-<ul>
- 	<li style="list-style-type: none;">
-<ul>Player Mechanics:\</ul>
-</li>
-</ul>
-<ul>
- 	<li>Arrow Key Left - Move Left</li>
- 	<li>Arrow Key Right - Move Right</li>
- 	<li>Arrow Key Up - Fire special weapon</li>
- 	<li>Space - Shoot</li>
-</ul>
-<u>Gameplay, Interaction &amp; Consequences\</u>
+- Fuel - Battleships
+- Diesel - Tanks
+- Kerosene - Planes
+- Naphtha - Charging up a bomb
+- Gasoline/Petrol - Trucks
+- Refinergy Gases - Increasing the army's damage
+
+Player Mechanics:
+- Arrow Key Left - Move Left
+- Arrow Key Right - Move Right
+- Arrow Key Up - Fire special weapon
+- Space - Shoot
+
+Gameplay, Interaction &amp; Consequences\
 Black bubbles enter from the left hand side of the screen, and bouncing quite low to the ground and slowly to the right hand side. These bubbles represent unbroken "Crude Oil" - and they will keep bouncing until they are broken. The player controls a bunsen burner and the default weapon will be shooting out fireballs to heat up and crack the bubble. When the player cracks Crude Oil, the bubble becomes Fuel. Fuel can become Diesel, Desiel to Kerosene, etc. until the bubble becomes Refinery Gas which floats to the top. As each bubble is cracked, they bounce higher and higher and the Residue left behind will drip down.
 
 Each time a bubble touches the right-hand side of the fractionating column, the bubble is destroyed and its representative faction is added to the Earth Defense System. In terms of firepower the game doesn't make sense: battleships does the least amount of damage whilst trucks do the most. This is because of how the fractional column is set out, because getting Fuel is very easy - the bubble needs to be popped once - and getting gasoline/petrol is difficult.
