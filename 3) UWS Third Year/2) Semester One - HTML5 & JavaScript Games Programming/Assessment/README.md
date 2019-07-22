@@ -39,25 +39,28 @@ I received 91/100, A1 - Lecturer's comments:
 >
 > A menu including the instructions are implemented at the start of the game. The assets are fairly basic but it is clear and relevant. The spawned objects on the battlefield looks good (and funny) too.
 
-<h1><span style="text-decoration: underline;">Game Design Document</span></h1>
+---
+
+# Game Design Document
+
+Change Log:
+- 25/09/2017: Document Completed
+- 27/09/2017: Document Updated for clarity and nature of game
+- 07/10/2017: Embedded into website
+- 07/12/2017: Design Document Final Version
+
+Genres:
 <ul>
- 	<li style="list-style-type: none;"><span style="text-decoration: underline;">Change Log:\</span></li>
- 	<li>25/09/2017: Document Completed</li>
- 	<li>27/09/2017: Document Updated for clarity and nature of game</li>
- 	<li>07/10/2017: Embedded into website</li>
- 	<li>07/12/2017: Design Document Final Version</li>
-</ul>
-<ul>
- 	<li style="list-style-type: none;"><span style="text-decoration: underline;">Genres:\</span></li>
+ 	<li style="list-style-type: none;"><span style="text-decoration: underline;">Genres:</span></li>
  	<li>Casual</li>
  	<li>Platform</li>
  	<li>Serious</li>
  	<li>Tower Defence</li>
 </ul>
-<u>Market Research\</u>
+Market Research\
 Searching online and through Steam produced very little results similar to the game I'm thinking of; there are educational video games but they don't play like one.
 
-<u>Target Audience\</u>
+<u>Target Audience</u>\
 Mainly aimed towards male teenages from the ages of 14 - 16 who prefers interactive stimulation to learning. Anyone else who doesn't know chemistry and plays it - assuming they enjoy the game - should be able to explain what fuels from a fractional distillation are used for to a GCSE level.
 
 <u>Game Overview\</u>
