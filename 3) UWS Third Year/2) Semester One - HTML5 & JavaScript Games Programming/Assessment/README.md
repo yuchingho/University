@@ -43,7 +43,7 @@ I received 91/100, A1 - Lecturer's comments:
 
 # Game Design Document
 
-Change Log:
+__Change Log__:
 - 25/09/2017: Document Completed
 - 27/09/2017: Document Updated for clarity and nature of game
 - 07/10/2017: Embedded into website
@@ -65,14 +65,14 @@ Game Overview\
 This will be a serious game in learning Chemistry to a high-school graduate level. Since this game will be extremely big - an AAA video game standard - I will be breaking down the game into lots of different parts: mini games inside a big game. In the final version of the game, the player would be taken into story mode and as progressing, learn chemistry passively whilst enjoying the game. In this document, I will assume I have already achieved that and thus will be focusing on a "mini-game" about Fractional Distillation at a GCSE Level.
 
 Core Objective\
-The core objective of the game is defending against an ALIEN. The secondary objective is to passively learn fractional distillation to a high-school standard. I take these concepts from <a class="LB" href="http://www.bbc.co.uk/education/guides/zm2v4wx/revision">GCSE Bitesize Fractional Distillation</a>:
+The core objective of the game is defending against an ALIEN. The secondary objective is to passively learn fractional distillation to a high-school standard. I take these concepts from [GCSE Bitesize Fractional Distillation](https://www.bbc.co.uk/education/guides/zm2v4wx/revision):
 - Crude Oil
 - Hydrocarbons
 - Fractions
 - Different uses of fractions
 - Positive and side effects of using fractions
 - The different boiling points, viscosity, flammability
-- Interesting side tidbits e.g. <a class="LB" href="https://www.youtube.com/watch?v=7nL10C7FSbE">colour of fuel when burnt</a> (things you won't see inside a high-school setting)
+- Interesting side tidbits e.g. [colour of fuel when burnt](https://www.youtube.com/watch?v=7nL10C7FSbE) (things you won't see inside a high-school setting)
 - Cracking
 - The process of cracking
 
@@ -111,13 +111,12 @@ Player Mechanics:
 - Arrow Key Up - Fire special weapon
 - Space - Shoot
 
-Gameplay, Interaction &amp; Consequences\
+Gameplay, Interaction & Consequences\
 Black bubbles enter from the left hand side of the screen, and bouncing quite low to the ground and slowly to the right hand side. These bubbles represent unbroken "Crude Oil" - and they will keep bouncing until they are broken. The player controls a bunsen burner and the default weapon will be shooting out fireballs to heat up and crack the bubble. When the player cracks Crude Oil, the bubble becomes Fuel. Fuel can become Diesel, Desiel to Kerosene, etc. until the bubble becomes Refinery Gas which floats to the top. As each bubble is cracked, they bounce higher and higher and the Residue left behind will drip down.
 
 Each time a bubble touches the right-hand side of the fractionating column, the bubble is destroyed and its representative faction is added to the Earth Defense System. In terms of firepower the game doesn't make sense: battleships does the least amount of damage whilst trucks do the most. This is because of how the fractional column is set out, because getting Fuel is very easy - the bubble needs to be popped once - and getting gasoline/petrol is difficult.
 
-To add a bit of knowledge, whenever a bubble is popped its cracking temperature is shown. This information is sourced from <a class="LB" href="https://sophiesrevisionblog.blogspot.co.uk/2014/02/gces-chemistry-unit-1-crude-oil.html">GCSE's Chemistry Unit 1</a>.
-
+To add a bit of knowledge, whenever a bubble is popped its cracking temperature is shown. This information is sourced from [GCSE's Chemistry Unit 1](https://sophiesrevisionblog.blogspot.co.uk/2014/02/gces-chemistry-unit-1-crude-oil.html).
 <p align="center">
   <img src="https://github.com/yuchingho/University/blob/master/3)%20UWS%20Third%20Year/2)%20Semester%20One%20-%20HTML5%20%26%20JavaScript%20Games%20Programming/Assessment/BubbleAliens%20Fractioning%20Column%20Temperatures.png" alt="BubbleAliens Fractioning Column Temperatures"/>
 </p>
