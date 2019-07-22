@@ -1,15 +1,24 @@
-The Maze of League of Legends was created to help completely new League players ease into the game. It is a complex game, so a maze game with easy controls will show how the game can feel like by using allies, enemies, and objectives.
+Made in 2014, 1st Year, The Maze of League of Legends was created to help completely new League players ease into the game.
 
-[Portfolio](https://yuchingho.com/)\
+It is a complex game, so a maze game with easy controls will show how the game can feel like by using allies, enemies, and objectives.
+
+Responsible for – Scripting, level design, finding free assets and editing if necessary.
+
+<!-- Screenshots Slideshow -->
+
+[Portfolio](https://yuchingho.com/league-maze)\
 [Play on Itch](https://yuchingho.itch.io/league-maze)\
 [YouTube](https://youtu.be/qZtnu4YWFSM)
 
+<!-- Code on GitHub, before YouTube -->
+<!-- Game Design Document, after YouTube -->
+
 ## Assessment
 
-Assessment.pdf gives the outline of the submission - a Game Design Document, Poster, CD Cover, GameMaker Executable File. One of Lab03 was chosen to help with the the final assessment, and I chose "Creating Maze Games".
-- Audio and Images Folders contain the assets used to build LoL_Maze.gm81 file.
-- LoLMaze.gm81 opens the GameMaker file
-- LoLMaze.exe is the executable file, or play on Itch
+Assessment.pdf gives the outline of the submission - a CD Cover, Game Design Document, Poster, and GameMaker Executable File. One of Lab03 was chosen to help with the the final assessment, and I chose "Creating Maze Games".
+- Audio and Images Folders contain the assets used to build LeagueMaze.gm81 file.
+- LeagueMaze.gm81 opens the GameMaker file
+- LeagueMaze.exe is the executable file, or play on Itch
 
 ## Marks Breakdown
 

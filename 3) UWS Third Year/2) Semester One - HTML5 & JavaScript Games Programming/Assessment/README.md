@@ -89,11 +89,11 @@ __GUI and Environment__\
 The screen will be split into two: the left side is based off a fractionating column and on the right side, an animation of the Earth's Defense that updates according to the fuel supplied by the player. Below is a rough sketch of the game area to be designed.
 
 <p align="center">
-  <img src="https://github.com/yuchingho/University/blob/master/3)%20UWS%20Third%20Year/2)%20Semester%20One%20-%20HTML5%20%26%20JavaScript%20Games%20Programming/Assessment/BubbleAliens%20Prototype.png" alt="BubbleAliens Prototype"/>
+  <img src="https://github.com/yuchingho/University/blob/master/3)%20UWS%20Third%20Year/2)%20Semester%20One%20-%20HTML5%20%26%20JavaScript%20Games%20Programming/Assessment/BubbleAliens_Prototype.png" alt="BubbleAliens Prototype"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/yuchingho/University/blob/master/3)%20UWS%20Third%20Year/2)%20Semester%20One%20-%20HTML5%20%26%20JavaScript%20Games%20Programming/Assessment/BubbleAliens%20Fractioning%20Column.png" alt="BubbleAliens Fractioning Column"/>
+  <img src="https://github.com/yuchingho/University/blob/master/3)%20UWS%20Third%20Year/2)%20Semester%20One%20-%20HTML5%20%26%20JavaScript%20Games%20Programming/Assessment/BubbleAliens_Fractioning_Column.png" alt="BubbleAliens Fractioning Column"/>
 </p>
 
 __Features Implemented__\
@@ -118,7 +118,7 @@ Each time a bubble touches the right-hand side of the fractionating column, the 
 
 To add a bit of knowledge, whenever a bubble is popped its cracking temperature is shown. This information is sourced from [GCSE's Chemistry Unit 1](https://sophiesrevisionblog.blogspot.co.uk/2014/02/gces-chemistry-unit-1-crude-oil.html).
 <p align="center">
-  <img src="https://github.com/yuchingho/University/blob/master/3)%20UWS%20Third%20Year/2)%20Semester%20One%20-%20HTML5%20%26%20JavaScript%20Games%20Programming/Assessment/BubbleAliens%20Fractioning%20Column%20Temperatures.png" alt="BubbleAliens Fractioning Column Temperatures"/>
+  <img src="https://github.com/yuchingho/University/blob/master/3)%20UWS%20Third%20Year/2)%20Semester%20One%20-%20HTML5%20%26%20JavaScript%20Games%20Programming/Assessment/BubbleAliens_Fractioning_Column_Temperatures.png" alt="BubbleAliens Fractioning Column Temperatures"/>
 </p>
 
 Time is of essence here! If the player does not kill the ALIEN within the time-limit, Earth will lose! How to go about winning this game is up to the player: spawning lots and lots of battleships, or call more powerful forces and increase their damage with Refinery Gas, or charge up a bomb that will do massive damage to the ALIEN. Residue is equally important as the rest of the fractions being made as it repairs the base defense system.
