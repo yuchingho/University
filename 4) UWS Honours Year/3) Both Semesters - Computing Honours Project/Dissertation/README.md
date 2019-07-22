@@ -15,8 +15,8 @@ I could have also used Finite State Machines and Object Pooling to improve the g
   <img src="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/AtomicAttack%20Unit%20Stats.png" alt="AtomicAttack Unit Stats"/>
 </p>
 
-Responsible for – Scripting, finding free assets and editing if necessary.
-Content creators are credited <a href="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/Atomic%20Attack/Assets/Credit%20Links.txt">here in this file</a>.
+Responsible for – Scripting, finding free assets and editing if necessary.\
+Content creators are credited <a href="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/Atomic%20Attack/Assets/Credit%20Links.txt">here in this file</a>.\
 Contribution – [Dr Iain McLellan](https://research-portal.uws.ac.uk/en/persons/iain-mclellan) for providing me the correct scientific knowledge for each of the element’s real-life application.
 
 [Portfolio](https://yuchingho.com/atmoic-attack/)\
