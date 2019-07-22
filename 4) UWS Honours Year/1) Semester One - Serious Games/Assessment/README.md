@@ -1,4 +1,4 @@
-Nutrition Blocks is a Serious Game inspired by “Breakout” developed to teach players about nutrition.
+Made in 2018, Nutrition Blocks is a Serious Game inspired by “Breakout” developed to teach players about nutrition.
 
 The game is endless, competing to get the highest score. There is a percentage-based spawning system that changes in each milestone of difficulty. In the Beginner Difficulty, the default white blocks have a 90% chance of appearing, and drops down 20% every time the difficulty changes from Easy, Medium, to Hard, and each block has its own spawn chance. The Game Design Document goes into more detail.
 
