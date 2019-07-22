@@ -19,11 +19,15 @@ Responsible for – Scripting, finding free assets and editing if necessary.\
 Content creators are credited <a href="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/Atomic%20Attack/Assets/Credit%20Links.txt">here in this file</a>.\
 Contribution – [Dr Iain McLellan](https://research-portal.uws.ac.uk/en/persons/iain-mclellan) for providing me the correct scientific knowledge for each of the element’s real-life application.
 
+<!-- Screenshots Slideshow -->
+
 [Portfolio](https://yuchingho.com/atmoic-attack/)\
 [Download for Android](https://play.google.com/store/apps/details?id=com.yuchingho.atomic_attack)\
 [Download for PC](https://yuchingho.itch.io/atomic-attack)\
 [Play on Itch](https://yuchingho.itch.io/atomic-attack-web)\
 [YouTube](https://youtu.be/A2t76M7-ylU)
+
+<!-- Game Design Document -->
 
 ## Assessment
 - Documents contains the processes went through to create this game
