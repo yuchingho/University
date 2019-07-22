@@ -55,7 +55,8 @@ Genres:
 - Serious
 - Tower Defence
 
-Market Research
+Market Research\
+
 Searching online and through Steam produced very little results similar to the game I'm thinking of; there are educational video games but they don't play like one.
 
 <u>Target Audience</u>\
