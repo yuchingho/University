@@ -1,4 +1,4 @@
-SpaceX Travel is a Level Design Environment of a to-scale model of half the Solar System.\
+SpaceX Travel is a Level Design Environment of a __to-scale model__ of half the Solar System.\
 Everything is scaled correctly, apart from the Sun.
 
 Responsible for – Blueprinting, level design, and creating Blender models.
