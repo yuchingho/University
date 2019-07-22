@@ -1,8 +1,15 @@
-Rooms is a Level Design Environment to show off high quality models and textures produced.
+Made in 2015, 2nd Year, Rooms is a Level Design Environment to show off models and textures produced.
 
-[Portfolio](https://yuchingho.com/)\
+Responsible for – Level design, creating models and textures in Blender.
+
+<!-- Screenshots Slideshow -->
+
+[Portfolio](https://yuchingho.com/rooms)\
 [Play on Itch](https://yuchingho.itch.io/rooms)\
 [YouTube](https://youtu.be/XCwwLIuUZGs)
+
+<!-- Code on GitHub -->
+<!-- Game Design Document -->
 
 ## Assessment
 
