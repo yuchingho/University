@@ -6,7 +6,6 @@ The game is there to build a fun introduction and foundation to players who have
 
 Inheritance and Polymorphism was used in the development of this game due to lots of units being derived from one parent class – AI_Human.cs <!--(click on image to open in new tab)-->
 
-Research was undertaken after the game was developed and my dissertation goes into more detail.
 <p align="center">
   <img src="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/AtomicAttack%20UML%20Class%20Diagram.png" alt="AtomicAttack UML Class Diagram"/>
 </p>
