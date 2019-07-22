@@ -8,16 +8,16 @@ Inheritance and Polymorphism was used in the development of this game due to lot
 
 Research was undertaken after the game was developed and my dissertation goes into more detail.
 <p align="center">
-  <img src="github_link" alt="AtomicAttack UML Class Diagram"/>
+  <img src="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/AtomicAttack%20UML%20Class%20Diagram.png" alt="AtomicAttack UML Class Diagram"/>
 </p>
 
 I could have also used Finite State Machines and Object Pooling to improve the game’s performance. However as there were not many different states a character could do – running towards a target, attacking or dying, the project itself was rather small – 24mb executable, and I was unsure of how many prefabs would be spawned in an average game before recycling, I used Object.Instantiate. Each unit is balanced around the main spawned character – the Enemy Gunman. The statistics for every unit is shown below <!--(click on image to open in new tab)-->
 <p align="center">
-  <img src="github_link" alt="AtomicAttack Unit Stats"/>
+  <img src="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/AtomicAttack%20Unit%20Stats.png" alt="AtomicAttack Unit Stats"/>
 </p>
 
 Responsible for – Scripting, finding free assets and editing if necessary.
-Content creators are [credited here in this file](https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/Atomic%20Attack/Assets/Credit%20Links.txt).
+Content creators are credited <a href="https://github.com/yuchingho/University/blob/master/4)%20UWS%20Honours%20Year/3)%20Both%20Semesters%20-%20Computing%20Honours%20Project/Dissertation/Atomic%20Attack/Assets/Credit%20Links.txt">here in this file</a>.
 Contribution – [Dr Iain McLellan](https://research-portal.uws.ac.uk/en/persons/iain-mclellan) for providing me the correct scientific knowledge for each of the element’s real-life application.
 
 [Portfolio](https://yuchingho.com/atmoic-attack/)\
