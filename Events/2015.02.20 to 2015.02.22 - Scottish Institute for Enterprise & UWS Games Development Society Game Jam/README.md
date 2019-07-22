@@ -1,6 +1,7 @@
 ## 2015 UWS Games Development Society Game Jam
 
-The [Scottish Institute for Enterprise (SIE) and the UWS Games Development Society](https://www.eventbrite.co.uk/e/sie-uws-gds-game-jam-tickets-15718480398) event's theme was "out of time". Made in 2015, 1st Year, Native Pixel Wars was a small card game made out of card and paper. Our group won the award for “Best Innovation”.
+The [Scottish Institute for Enterprise (SIE) and the UWS Games Development Society](https://www.eventbrite.co.uk/e/sie-uws-gds-game-jam-tickets-15718480398) event's theme was "out of time".\
+Made in 2015, 1st Year, Native Pixel Wars was a small card game made out of card and paper. Our group won the award for “Best Innovation”.
 
 [Portfolio](https://yuchingho.com/game-jams)
 
