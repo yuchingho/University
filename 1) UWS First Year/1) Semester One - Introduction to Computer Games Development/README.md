@@ -1,1 +1,1 @@
-Introduction to Computer Games Development was focused on [GameMaker 8.1 _Lite_](https://game-maker.en.uptodown.com/windows) and the basic principles of games development.
+Introduction to Computer Games Development focused on [GameMaker 8.1 _Lite_](https://game-maker.en.uptodown.com/windows) and the basic principles of games development.

@@ -1,1 +1,1 @@
-was focused on
+Professional Portfolio Production focused on CV writing and building an online professional presence.

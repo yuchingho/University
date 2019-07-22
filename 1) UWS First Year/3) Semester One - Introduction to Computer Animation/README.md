@@ -1,4 +1,4 @@
-Introduction to Computer Animation was focused on:
+Introduction to Computer Animation focused on:
 - 2D Animation using Adobe Flash Professional CS6
 - 3D Animation using Blender
 

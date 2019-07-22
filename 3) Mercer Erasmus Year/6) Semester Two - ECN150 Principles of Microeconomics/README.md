@@ -1,1 +1,1 @@
-Principles of Microeconomics focused on powerpoints and note-taking and online multiple choice tests were given out to test the knowledge learnt.
+Principles of Microeconomics was about the business on the smaller-side or individuals, supply and demand and what determined price levels.

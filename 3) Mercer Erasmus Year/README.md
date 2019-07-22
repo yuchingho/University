@@ -16,4 +16,4 @@
 | PED 151 | Beginner Fitness: Weight Training | 1.0 | 1.0 | 0.000 | S |
 |  | Spring Semester GPA |  |  |  | 3.5 |
 
-My credits at Mercer University would not transfer back to UWS, so I could choose what was most interesting to me!
+My credits at Mercer University would not transfer back to UWS, so I picked what was most interesting to me!

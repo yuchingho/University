@@ -1,1 +1,1 @@
-was focused on
+Computing Honours Project focused on what was required to submit a dissertation.

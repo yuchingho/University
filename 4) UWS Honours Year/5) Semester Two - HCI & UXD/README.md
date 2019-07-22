@@ -1,1 +1,1 @@
-was focused on
+Human Computer Interaction & User Experience Design focused on the importance of design layouts and how humans would intuitively interact with virtual devices.

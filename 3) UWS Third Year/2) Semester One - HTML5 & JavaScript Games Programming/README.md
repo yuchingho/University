@@ -1,1 +1,1 @@
-HTML5 & JavaScript Games Programming was focused on learning JavaScript and using the Phaser Framework.
+HTML5 & JavaScript Games Programming focused on learning JavaScript and using the Phaser Framework.
