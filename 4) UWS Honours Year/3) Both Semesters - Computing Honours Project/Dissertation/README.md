@@ -30,7 +30,7 @@ Contribution – [Dr Iain McLellan](https://research-portal.uws.ac.uk/en/persons
 <!-- Code on GitHub, before YouTube -->
 <!-- Game Design Document, after YouTube -->
 
-## Assessment
+## Dissertation
 - Documents contains the processes went through to create this game
 - Atomic Attack is the Unity Project
 - AtomicAttack-EXE-Windows Folder contains the executable file, or play on Itch
