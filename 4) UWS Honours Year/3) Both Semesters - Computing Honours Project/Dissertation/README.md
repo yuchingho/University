@@ -28,7 +28,7 @@ Contribution – [Dr Iain McLellan](https://research-portal.uws.ac.uk/en/persons
 [YouTube](https://youtu.be/A2t76M7-ylU)
 
 <!-- Code on GitHub, before YouTube -->
-<!-- Game Design Document -->
+<!-- Game Design Document, after YouTube -->
 
 ## Assessment
 - Documents contains the processes went through to create this game
