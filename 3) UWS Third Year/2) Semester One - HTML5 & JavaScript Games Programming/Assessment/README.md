@@ -55,17 +55,18 @@ Genres:
 - Serious
 - Tower Defence
 
-Market Research\
-
+Market Research
 Searching online and through Steam produced very little results similar to the game I'm thinking of; there are educational video games but they don't play like one.
 
-<u>Target Audience</u>\
+Target Audience\
 Mainly aimed towards male teenages from the ages of 14 - 16 who prefers interactive stimulation to learning. Anyone else who doesn't know chemistry and plays it - assuming they enjoy the game - should be able to explain what fuels from a fractional distillation are used for to a GCSE level.
 
-<u>Game Overview\</u>
+Game Overview
+
 This will be a serious game in learning Chemistry to a high-school graduate level. Since this game will be extremely big - an AAA video game standard - I will be breaking down the game into lots of different parts: mini games inside a big game. In the final version of the game, the player would be taken into story mode and as progressing, learn chemistry passively whilst enjoying the game. In this document, I will assume I have already achieved that and thus will be focusing on a "mini-game" about Fractional Distillation at a GCSE Level.
 
-<u>Core Objective\</u>
+Core Objective\
+
 The core objective of the game is defending against an ALIEN. The secondary objective is to passively learn fractional distillation to a high-school standard. I take these concepts from <a class="LB" href="http://www.bbc.co.uk/education/guides/zm2v4wx/revision">GCSE Bitesize Fractional Distillation</a>:
 <ul>
  	<li>Crude Oil</li>
