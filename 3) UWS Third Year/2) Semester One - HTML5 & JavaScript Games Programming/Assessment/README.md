@@ -2,7 +2,8 @@ Made in 2017, Bubble Aliens is a short serious game designed to teach people abo
 
 The game is endless, competing to get the highest score. There are several bugs - collision handling sometimes messes up, text sprites aren't destroyed correctly, sounds overlap, and a major bug of which bubbles don't reset correctly until it's been popped again and thus the same unit can spawn multiple times.
 
-Responsible for – Scripting, finding free assets and editing if necessary. Content creators are credited.
+Responsible for – Scripting, finding free assets and editing if necessary.\
+Content creators are credited.
 
 <!-- Screenshots Slideshow -->
 
@@ -10,6 +11,14 @@ Responsible for – Scripting, finding free assets and editing if necessary. Con
 [Play on Itch](https://yuchingho.itch.io/bubble-aliens)\
 [YouTube](https://youtu.be/KCYWLSK5n3I)
 
+<!-- What each hydrocarbon spawns:
+2:35 - Bitumen
+0:16 - Fuel
+0:35 - Diesel
+0:50 - Kerosene
+1:07 - Naphtha
+4:30 - Petrol
+5:55 - Refinery Gases -->
 <!-- Code on GitHub, before YouTube -->
 <!-- Game Design Document, after YouTube -->
 
