@@ -178,9 +178,9 @@ Bubble Aliens is a unique defense game - defence isn't placed by the player, ins
 <!--<u>GUI and Environment</u>
 The screen will be split into two: the left side is based off a fractionating column and on the right side, an animation of the Earth's Defense that updates according to the fuel supplied by the player. Below is a rough sketch of the game area to be designed.
 
-<!--<img class="hoverZoomLink aligncenter wp-image-1343 size-full" src="https://yuchingho.com/wp-content/uploads/BubbleAliens-Prototype.png" alt="" width="1366" height="768" />
+<!--<img class="hoverZoomLink aligncenter wp-image-1671 size-full" src="https://yuchingho.com/wp-content/uploads/BubbleAliens_Prototype.png" alt="" width="1366" height="768" />
 
-<!--<img class="hoverZoomLink aligncenter wp-image-901 size-full" src="https://yuchingho.com/wp-content/uploads/2018/05/infoFractioningColumn.png" alt="" width="546" height="522" />
+<!--<img class="hoverZoomLink aligncenter wp-image-1670 size-full" src="https://yuchingho.com/wp-content/uploads/BubbleAliens_Fractioning_Column.png" alt="" width="546" height="522" />
 
 <!--<u>Features Implemented</u>
 Earth's default defense will be a Ground-to-Air tower defense system, and supplying the correct fuel will call in these defenses:
@@ -209,6 +209,8 @@ Black bubbles enter from the left hand side of the screen, and bouncing quite lo
 <!--Each time a bubble touches the right-hand side of the fractionating column, the bubble is destroyed and its representative faction is added to the Earth Defense System. In terms of firepower the game doesn't make sense: battleships does the least amount of damage whilst trucks do the most. This is because of how the fractional column is set out, because getting Fuel is very easy - the bubble needs to be popped once - and getting gasoline/petrol is difficult.
 To add a bit of knowledge, whenever a bubble is popped its cracking temperature is shown. This information is sourced from <a class="LB" href="https://sophiesrevisionblog.blogspot.co.uk/2014/02/gces-chemistry-unit-1-crude-oil.html">GCSE's Chemistry Unit 1</a>.
 
-<!--<center><img class="hoverZoomLink aligncenter wp-image-902 size-full" src="https://yuchingho.com/wp-content/uploads/2018/05/infoFractioningColumnTemperature.jpg" alt="" width="546" height="400" /></center>Time is of essence here! If the player does not kill the ALIEN within the time-limit, Earth will lose! How to go about winning this game is up to the player: spawning lots and lots of battleships, or call more powerful forces and increase their damage with Refinery Gas, or charge up a bomb that will do massive damage to the ALIEN. Residue is equally important as the rest of the fractions being made as it repairs the base defense system.
+<!--<img class="hoverZoomLink aligncenter wp-image-1669 size-full" src="https://yuchingho.com/wp-content/uploads/BubbleAliens_Fractioning_Column_Temperatures.png" alt="" width="546" height="400" />
+
+<!--Time is of essence here! If the player does not kill the ALIEN within the time-limit, Earth will lose! How to go about winning this game is up to the player: spawning lots and lots of battleships, or call more powerful forces and increase their damage with Refinery Gas, or charge up a bomb that will do massive damage to the ALIEN. Residue is equally important as the rest of the fractions being made as it repairs the base defense system.
 
 <!--The player has three chances before the game is lost. To not lose thoses chances, Residue must be avoided because if in contact, Residue will drench the player. The player will become flammable for a few seconds. If the player tries to fire during that time period, the player will explode, lose a life and ultimately, slowing down Earth's Defense. To get rid of the drench, the player must wait until they are dry again before firing.
