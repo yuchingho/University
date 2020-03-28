@@ -7,8 +7,7 @@ Content creators are credited.
 
 <!-- Screenshots Slideshow -->
 
-[Portfolio](https://yuchingho.com/bubble-aliens)\
-[Play on Itch](https://yuchingho.itch.io/bubble-aliens)\
+[Portfolio](https://yuchingho.com/university/bubble-aliens)\
 [YouTube](https://youtu.be/KCYWLSK5n3I)
 
 <!-- What each hydrocarbon spawns:

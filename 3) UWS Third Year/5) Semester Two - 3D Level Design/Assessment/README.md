@@ -5,8 +5,7 @@ Responsible for – Blueprinting, level design, and creating Blender models.
 
 <!-- Screenshots Slideshow -->
 
-[Portfolio](https://yuchingho.com/spacex-travel)\
-[Play on Itch](https://yuchingho.itch.io/spacex-travel)\
+[Portfolio](https://yuchingho.com/university/spacex-travel)\
 [YouTube](https://youtu.be/EmloSZn0GBQ)
 
 <!-- Code on GitHub, before YouTube -->

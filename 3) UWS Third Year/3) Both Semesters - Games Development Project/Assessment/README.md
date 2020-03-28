@@ -4,8 +4,7 @@ Responsible for – Scripting, level design, and making assets. (Group Project).
 
 <!-- Screenshots Slideshow -->
 
-[Portfolio](https://yuchingho.com/spelling-test)\
-[Play on Itch](https://yuchingho.itch.io/spelling-test)\
+[Portfolio](https://yuchingho.com/university/spelling-test)\
 [YouTube](https://youtu.be/Nqi0lJqTfHE)
 
 <!-- Code on GitHub, before YouTube -->

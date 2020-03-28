@@ -1,7 +1,6 @@
 Made in 2015, 1st Year, Splat is a game where you are falling from a plane and you try to control yourself to grab the parachute. The indicator points to where parachute is and your goal is to not be hit by the falling objects - as they can rip off your limbs - and grab the parachute to land safely.
 
-[Portfolio](https://yuchingho.com/game-jams)\
-[Play on Itch](https://yuchingho.itch.io/splat)\
+[Portfolio](https://yuchingho.com/university/game-jams)\
 [YouTube](https://youtu.be/_-F7lOQdqdI)
 
 ## 2015 Global Game Jam Glasgow Caledonian

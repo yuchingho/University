@@ -6,8 +6,7 @@ Responsible for – Scripting, level design, finding free assets and editing if 
 
 <!-- Screenshots Slideshow -->
 
-[Portfolio](https://yuchingho.com/league-maze)\
-[Play on Itch](https://yuchingho.itch.io/league-maze)\
+[Portfolio](https://yuchingho.com/university/league-maze)\
 [YouTube](https://youtu.be/qZtnu4YWFSM)
 
 <!-- Code on GitHub, before YouTube -->

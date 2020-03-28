@@ -4,7 +4,7 @@ Responsible for – App idea, design and layout. Filling the database and editin
 
 <!-- Screenshots Slideshow -->
 
-[Portfolio](https://yuchingho.com/league-champion-pool)
+[Portfolio](https://yuchingho.com/university/league-champion-pool)
 
 <!-- Code on GitHub -->
 <!-- Game Design Document -->

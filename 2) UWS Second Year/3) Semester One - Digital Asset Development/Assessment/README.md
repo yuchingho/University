@@ -4,8 +4,7 @@ Responsible for – Level design, creating models and textures in Blender.
 
 <!-- Screenshots Slideshow -->
 
-[Portfolio](https://yuchingho.com/rooms)\
-[Play on Itch](https://yuchingho.itch.io/rooms)\
+[Portfolio](https://yuchingho.com/university/rooms)\
 [YouTube](https://youtu.be/XCwwLIuUZGs)
 
 <!-- Code on GitHub -->

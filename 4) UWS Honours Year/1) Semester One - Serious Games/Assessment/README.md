@@ -8,8 +8,7 @@ Contribution – [Mrs Jane Tobias](https://research-portal.uws.ac.uk/en/persons/
 
 <!-- Screenshots Slideshow -->
 
-[Portfolio](https://yuchingho.com/nutrition-blocks)\
-[Play on Itch](https://yuchingho.itch.io/nutrition-blocks)\
+[Portfolio](https://yuchingho.com/university/nutrition-blocks-proto)\
 [YouTube](https://youtu.be/Yodx6JlPS4Y)
 
 <!-- Code on GitHub, before YouTube -->

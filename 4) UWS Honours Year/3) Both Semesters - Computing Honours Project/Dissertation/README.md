@@ -21,10 +21,8 @@ Contribution – [Dr Iain McLellan](https://research-portal.uws.ac.uk/en/persons
 
 <!-- Screenshots Slideshow -->
 
-[Portfolio](https://yuchingho.com/atomic-attack)\
+[Portfolio](https://yuchingho.com/university/atomic-attack-proto)\
 [Download for Android](https://play.google.com/store/apps/details?id=com.yuchingho.atomic_attack)\
-[Download for PC](https://yuchingho.itch.io/atomic-attack)\
-[Play on Itch](https://yuchingho.itch.io/atomic-attack-web)\
 [YouTube](https://youtu.be/A2t76M7-ylU)
 
 <!-- Code on GitHub, before YouTube -->
