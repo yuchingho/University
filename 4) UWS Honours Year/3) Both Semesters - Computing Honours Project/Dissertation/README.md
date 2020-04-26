@@ -21,7 +21,7 @@ Contribution – [Dr Iain McLellan](https://research-portal.uws.ac.uk/en/persons
 
 <!-- Screenshots Slideshow -->
 
-[Portfolio](https://yuchingho.com/university/atomic-attack-proto)\
+[Portfolio](https://yuchingho.com/university/atomic-attack)\
 [Download for Android](https://play.google.com/store/apps/details?id=com.yuchingho.atomic_attack)\
 [YouTube](https://youtu.be/A2t76M7-ylU)
 
