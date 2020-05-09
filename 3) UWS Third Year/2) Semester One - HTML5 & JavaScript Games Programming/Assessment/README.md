@@ -2,7 +2,7 @@ Made in 2017, 3rd Year, Bubble Aliens is a short serious game designed to teach 
 
 The game is endless, competing to get the highest score. There are several bugs - collision handling sometimes messes up, text sprites aren't destroyed correctly, sounds overlap, and a major bug of which bubbles don't reset correctly until it's been popped again and thus the same unit can spawn multiple times.
 
-Responsible for – Scripting, finding free assets and editing if necessary.\
+Responsible for – Scripting, Level Design, finding copyright-free assets and editing if necessary.\
 Content creators are credited.
 
 <!-- Screenshots Slideshow -->

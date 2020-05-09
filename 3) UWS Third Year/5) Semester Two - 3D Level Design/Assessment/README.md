@@ -1,7 +1,7 @@
 Made in 2018, 3rd Year, SpaceX Travel is a Level Design Environment of a __to-scale model__ of half the Solar System.\
 Everything is scaled correctly, apart from the Sun.
 
-Responsible for – Blueprinting, level design, and creating Blender models.
+Responsible for – Blueprinting, Level Design, creating Blender models, finding copyright-free assets and editing if necessary.
 
 <!-- Screenshots Slideshow -->
 

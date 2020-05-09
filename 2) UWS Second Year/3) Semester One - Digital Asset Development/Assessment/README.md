@@ -1,6 +1,6 @@
 Made in 2015, 2nd Year, Rooms is a Level Design Environment to show off models and textures produced.
 
-Responsible for – Level design, creating models and textures in Blender.
+Responsible for – Level Design, creating Blender models, finding copyright-free assets and editing if necessary.
 
 <!-- Screenshots Slideshow -->
 

@@ -2,7 +2,7 @@ Made in 2014, 1st Year, The Maze of League of Legends was created to help comple
 
 It is a complex game, so a maze game with easy controls will show how the game can feel like by using allies, enemies, and objectives.
 
-Responsible for – Scripting, level design, finding free assets and editing if necessary.
+Responsible for – Scripting, Level Design, finding copyright-free assets and editing if necessary.
 
 <!-- Screenshots Slideshow -->
 

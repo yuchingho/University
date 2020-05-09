@@ -1,6 +1,6 @@
 Made in 2018, 3rd Year, Spelling Test is a small game about a young wizard apprentice overcoming his master, proving that he was worthy all along.
 
-Responsible for – Scripting, level design, and making assets. (Group Project).
+Responsible for – Scripting, Level Design, making assets, finding copyright-free assets and editing if necessary. (Group Project).
 
 <!-- Screenshots Slideshow -->
 
